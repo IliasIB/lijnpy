@@ -24,3 +24,23 @@ def get_vervoerregios() -> list[Vervoerregio]:
         raise DeLijnAPIException from e
 
     return vervoerregios
+
+
+def get_vervoerregio_by_code(code: str) -> Vervoerregio:
+    """Get a transport region by code
+
+    Args:
+        code (str): The code of the transport region
+
+    Returns:
+        Vervoerregio: The transport region
+    """
+    result = _rest_adapter.get(f"/vervoerregios/{code}")
+    try:
+        assert result.data is not None
+        vervoerregio = Vervoerregio(**result.data)
+    except (AssertionError, ValidationError) as e:
+        _logger.error(f"Failed to parse the response from the API: {e}")
+        raise DeLijnAPIException from e
+
+    return vervoerregio
