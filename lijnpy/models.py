@@ -149,3 +149,31 @@ class Lijn(BaseModel):
     lijn_geldig_van: str
     lijn_geldig_tot: str
     links: list[Link]
+
+
+class RGB(BaseModel):
+    """Represents a color
+
+    Attributes:
+        rood (int): The red value of the color
+        groen (int): The green value of the color
+        blauw (int): The blue value of the color
+    """
+
+    rood: int
+    groen: int
+    blauw: int
+
+
+class Kleur(BaseModel):
+    """Represents a color
+
+    Attributes:
+        hex (str): The hex code of the color
+    """
+
+    code: str
+    omschrijving: str
+    rgb: RGB
+    hex: str
+    links: list[Link]
