@@ -4,7 +4,7 @@ from logging import getLogger
 from pydantic import ValidationError
 
 from lijnpy.exceptions import DeLijnAPIException
-from lijnpy.models import Gemeenten
+from lijnpy.models import Gemeenten, Link
 from lijnpy.rest_adapter import RestAdapter
 
 _logger = getLogger(__name__)
@@ -21,7 +21,7 @@ def get_gemeenten() -> Gemeenten:
     """Get a list of all municipalities in Belgium
 
     Returns:
-        Result: The result of the request
+        Gemeenten: A list of all municipalities in Belgium
     """
     result = _rest_adapter.get("/gemeenten")
     try:
@@ -34,4 +34,18 @@ def get_gemeenten() -> Gemeenten:
     return gemeenten
 
 
-print(get_gemeenten().gemeenten[0])
+def get_api() -> list[Link]:
+    """Get a list of all available API endpoints
+
+    Returns:
+        list[Link]: A list of all available API endpoints
+    """
+    result = _rest_adapter.get("/api")
+    try:
+        assert result.data is not None
+        links = [Link(**link) for link in result.data["links"]]
+    except (AssertionError, ValidationError) as e:
+        _logger.error(f"Failed to parse the response from the API: {e}")
+        raise DeLijnAPIException from e
+
+    return links
