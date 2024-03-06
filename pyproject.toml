@@ -15,6 +15,12 @@ pydantic = "^2.6.3"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.2"
 
+# only used in github actions
+[tool.poetry.group.github-actions]
+optional = true
+[tool.poetry.group.github-actions.dependencies]
+pytest-github-actions-annotate-failures = "^0.1.7"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
