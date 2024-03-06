@@ -26,4 +26,5 @@
         "**/.mypy_cache": true,
         "**/.venv": true,
     },
+    "python.analysis.autoImportCompletions": true,
 }
