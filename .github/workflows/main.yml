@@ -41,4 +41,4 @@ jobs:
           env:
             POETRY_TEST_INTEGRATION_GIT_USERNAME: ${GITHUB_ACTOR}
             POETRY_TEST_INTEGRATION_GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
-          run: poetry run pytest --integration -v
+          run: poetry run pytest
