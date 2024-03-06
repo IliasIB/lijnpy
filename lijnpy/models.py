@@ -177,3 +177,19 @@ class Kleur(BaseModel):
     rgb: RGB
     hex: str
     links: list[Link]
+
+
+class Vervoerregio(BaseModel):
+    """Represents a transport region in Belgium
+
+    Attributes:
+        code (str): The code of the transport region
+        naam (str): The name of the transport region
+        nr (str): The number of the transport region
+        links (list[Link]): The links to other resources related to the transport region
+    """
+
+    code: str
+    naam: str
+    nr: str
+    links: list[Link]
