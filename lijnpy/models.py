@@ -67,3 +67,85 @@ class Gemeenten(BaseModel):
 
     gemeenten: list[Gemeente]
     links: list[Link]
+
+
+class Entiteit(BaseModel):
+    """Represents an entity in Belgium
+
+    Attributes:
+        entiteitnummer (str): The number of the entity
+        entiteitcode (str): The code of the entity
+        omschrijving (str): The description of the entity
+        links (list[Link]): The links to other resources related to the entity
+    """
+
+    entiteitnummer: str
+    entiteitcode: str
+    omschrijving: str
+    links: list[Link]
+
+
+class GeoCoordinaat(BaseModel):
+    """Represents a geographical coordinate
+
+    Attributes:
+        latitude (float): The latitude of the coordinate
+        longitude (float): The longitude of the coordinate
+    """
+
+    latitude: float
+    longitude: float
+
+
+class Halte(BaseModel):
+    """Represents a stop in Belgium
+
+    Attributes:
+        entiteitnummer (str): The number of the entity
+        haltenummer (str): The number of the stop
+        omschrijving (str): The description of the stop
+        omschrijving_lang (str): The long description of the stop
+        district_code (str): The code of the district
+        taal (str): The language of the stop
+        gemeentenummer (int): The number of the municipality
+        omschrijving_gemeente (str): The description of the municipality
+        geo_coordinaat (GeoCoordinaat): The geographical coordinate of the stop
+        halte_toegankelijkheden (str): The accessibility of the stop
+        hoofd_halte (bool): Whether the stop is the main stop
+        links (list[Link]): The links to other resources related to the stop
+    """
+
+    entiteitnummer: str
+    haltenummer: str
+    omschrijving: str
+    omschrijving_lang: str
+    taal: str
+    gemeentenummer: int
+    omschrijving_gemeente: str
+    geo_coordinaat: GeoCoordinaat
+    halte_toegankelijkheden: list[str]
+    hoofd_halte: bool | None = None
+    links: list[Link]
+
+
+class Lijn(BaseModel):
+    """Represents a line in Belgium
+
+    Attributes:
+        lijnnummer (str): The number of the line
+        omschrijving (str): The description of the line
+        entiteitnummer (str): The number of the entity
+        links (list[Link]): The links to other resources related to the line
+    """
+
+    entiteitnummer: str
+    lijnnummer: str
+    lijnnummer_publiek: str
+    omschrijving: str
+    vervoer_regio_code: str
+    publiek: bool
+    vervoertype: str
+    bedieningtype: str
+    lijn_geldig_van: str
+    lijn_geldig_tot: str
+    links: list[Link]

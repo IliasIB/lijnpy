@@ -3,7 +3,7 @@ from unittest import mock
 
 import requests
 
-from lijnpy.kern_open_data_services_api.v1 import get_gemeenten
+from lijnpy.kern_open_data_services_api.v1.gemeenten import get_gemeenten
 
 response = requests.Response()
 
@@ -34,15 +34,10 @@ def test_gemeenten_good_request():
     response._content = json.dumps(gemeenten_dict).encode()
     with mock.patch("requests.request", return_value=response):
         gemeenten = get_gemeenten()
-        assert gemeenten.gemeenten[0].gemeentenummer == 1
-        assert gemeenten.gemeenten[0].omschrijving == "Test"
-        assert gemeenten.gemeenten[0].links[0].rel == "self"
+        assert gemeenten[0].gemeentenummer == 1
+        assert gemeenten[0].omschrijving == "Test"
+        assert gemeenten[0].links[0].rel == "self"
         assert (
-            gemeenten.gemeenten[0].links[0].url
+            gemeenten[0].links[0].url
             == "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1"
-        )
-        assert gemeenten.links[0].rel == "self"
-        assert (
-            gemeenten.links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten"
         )
