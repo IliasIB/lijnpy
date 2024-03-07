@@ -1,7 +1,4 @@
-import json
 from unittest import mock
-
-import requests
 
 from lijnpy.kern_open_data_services_api.v1.entiteiten import (
     get_entiteit_by_entiteitnummer,
@@ -10,24 +7,13 @@ from lijnpy.kern_open_data_services_api.v1.entiteiten import (
     get_haltes_by_entiteitsnummer,
     get_lijnen_by_entiteitsnummer,
 )
-
-response = requests.Response()
+from tests.utils import get_good_request_input
 
 
 def test_entiteiten():
-    response.status_code = 200
-    response.reason = "OK"
-    entiteiten_dict = {
-        "entiteiten": [
-            {
-                "entiteitnummer": "1",
-                "entiteitcode": "A",
-                "omschrijving": "Antwerpen",
-                "links": [{"rel": "string", "url": "string"}],
-            }
-        ]
-    }
-    response._content = json.dumps(entiteiten_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/entiteiten.json"
+    )
     with mock.patch("requests.request", return_value=response):
         entiteiten = get_entiteiten()
         assert entiteiten[0].entiteitnummer == "1"
@@ -38,15 +24,9 @@ def test_entiteiten():
 
 
 def test_entiteit_by_entiteitnummer():
-    response.status_code = 200
-    response.reason = "OK"
-    entiteit_dict = {
-        "entiteitnummer": "1",
-        "entiteitcode": "A",
-        "omschrijving": "Antwerpen",
-        "links": [{"rel": "string", "url": "string"}],
-    }
-    response._content = json.dumps(entiteit_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/entiteit.json"
+    )
     with mock.patch("requests.request", return_value=response):
         entiteit = get_entiteit_by_entiteitnummer("1")
         assert entiteit.entiteitnummer == "1"
@@ -57,18 +37,9 @@ def test_entiteit_by_entiteitnummer():
 
 
 def test_gemeenten_by_entiteitsnummer():
-    response.status_code = 200
-    response.reason = "OK"
-    gemeenten_dict = {
-        "gemeenten": [
-            {
-                "gemeentenummer": 922,
-                "omschrijving": "HOOGSTRATEN",
-                "links": [{"rel": "string", "url": "string"}],
-            }
-        ]
-    }
-    response._content = json.dumps(gemeenten_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/gemeenten.json"
+    )
     with mock.patch("requests.request", return_value=response):
         gemeenten = get_gemeenten_by_entiteitsnummer("1")
         assert gemeenten[0].gemeentenummer == 922
@@ -78,31 +49,9 @@ def test_gemeenten_by_entiteitsnummer():
 
 
 def test_haltes_by_entiteitsnummer():
-    response.status_code = 200
-    response.reason = "OK"
-    haltes_dict = {
-        "haltes": [
-            {
-                "entiteitnummer": "1",
-                "haltenummer": "100118",
-                "omschrijving": "Station",
-                "omschrijvingLang": "Bornem Station",
-                "gemeentenummer": 1350,
-                "omschrijvingGemeente": "Bornem",
-                "geoCoordinaat": {"latitude": 51.099532, "longitude": 4.240739},
-                "halteToegankelijkheden": [],
-                "hoofdHalte": None,
-                "taal": "?",
-                "links": [
-                    {
-                        "rel": "detail",
-                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100118",
-                    }
-                ],
-            }
-        ]
-    }
-    response._content = json.dumps(haltes_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/haltes.json"
+    )
     with mock.patch("requests.request", return_value=response):
         haltes = get_haltes_by_entiteitsnummer("1")
         assert haltes[0].entiteitnummer == "1"
@@ -124,31 +73,9 @@ def test_haltes_by_entiteitsnummer():
 
 
 def test_lijnen_by_entiteitsnummer():
-    response.status_code = 200
-    response.reason = "OK"
-    lijnen_dict = {
-        "lijnen": [
-            {
-                "entiteitnummer": "1",
-                "lijnnummer": "63",
-                "lijnnummerPubliek": "Flex",
-                "omschrijving": "Regio Antwerpen (Rechteroever)",
-                "vervoerRegioCode": "AN",
-                "publiek": True,
-                "vervoertype": "BUS",
-                "bedieningtype": "NACHTLIJN",
-                "lijnGeldigVan": "2024-02-19",
-                "lijnGeldigTot": "2099-12-01",
-                "links": [
-                    {
-                        "rel": "detail",
-                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/63",
-                    }
-                ],
-            }
-        ]
-    }
-    response._content = json.dumps(lijnen_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/lijnen.json"
+    )
     with mock.patch("requests.request", return_value=response):
         lijnen = get_lijnen_by_entiteitsnummer("1")
         assert lijnen[0].entiteitnummer == "1"

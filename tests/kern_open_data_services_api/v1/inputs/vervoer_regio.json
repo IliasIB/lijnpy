@@ -1,0 +1,15 @@
+{
+    "code": "AA",
+    "naam": "Aalst",
+    "nr": "01",
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA"
+        },
+        {
+            "rel": "lijnen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA/lijnen"
+        }
+    ]
+}

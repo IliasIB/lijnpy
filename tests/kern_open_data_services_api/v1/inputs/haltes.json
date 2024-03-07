@@ -1,0 +1,25 @@
+{
+    "haltes": [
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "100118",
+            "omschrijving": "Station",
+            "omschrijvingLang": "Bornem Station",
+            "gemeentenummer": 1350,
+            "omschrijvingGemeente": "Bornem",
+            "geoCoordinaat": {
+                "latitude": 51.099532,
+                "longitude": 4.240739
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "?",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100118"
+                }
+            ]
+        }
+    ]
+}

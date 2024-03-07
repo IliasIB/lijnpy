@@ -1,0 +1,20 @@
+{
+    "haltes": [
+        {
+            "type": "DELIJN",
+            "id": "403022",
+            "naam": "Zonhoven Hulsbergweg",
+            "afstand": 0,
+            "geoCoordinaat": {
+                "latitude": 51.004652,
+                "longitude": 5.346613
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/lijnrichtingen"
+                }
+            ]
+        }
+    ]
+}

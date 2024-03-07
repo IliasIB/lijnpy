@@ -1,0 +1,10 @@
+{
+    "gemeentenummer": 1588,
+    "omschrijving": "ZONHOVEN",
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1"
+        }
+    ]
+}

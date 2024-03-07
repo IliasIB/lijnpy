@@ -1,0 +1,22 @@
+{
+    "lijnen": [
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "63",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Regio Antwerpen (Rechteroever)",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/63"
+                }
+            ]
+        }
+    ]
+}

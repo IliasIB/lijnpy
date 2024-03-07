@@ -1,8 +1,4 @@
-import json
-from pathlib import Path
 from unittest import mock
-
-import requests
 
 from lijnpy.kern_open_data_services_api.v1.haltes import (
     get_dienstregelingen,
@@ -15,78 +11,37 @@ from lijnpy.kern_open_data_services_api.v1.haltes import (
     get_storingen,
 )
 from lijnpy.models import GeoCoordinaat
-
-response = requests.Response()
+from tests.utils import get_good_request_input
 
 
 def test_haltes():
-    response.status_code = 200
-    response.reason = "OK"
-    haltes_dict = {
-        # TODO: Move this to a separate file
-        "haltes": [
-            {
-                "entiteitnummer": "4",
-                "haltenummer": "403022",
-                "omschrijving": "Hulsbergweg",
-                "omschrijvingLang": "Zonhoven Hulsbergweg",
-                "gemeentenummer": 1588,
-                "omschrijvingGemeente": "Zonhoven",
-                "geoCoordinaat": {"latitude": 51.004652, "longitude": 5.346613},
-                "halteToegankelijkheden": [],
-                "hoofdHalte": None,
-                "taal": "?",
-                "links": [
-                    {
-                        "rel": "detail",
-                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022",
-                    }
-                ],
-            },
-        ]
-    }
-    response._content = json.dumps(haltes_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/haltes.json"
+    )
     with mock.patch("requests.request", return_value=response):
         haltes = get_haltes()
-        assert haltes[0].entiteitnummer == "4"
-        assert haltes[0].haltenummer == "403022"
-        assert haltes[0].omschrijving == "Hulsbergweg"
-        assert haltes[0].omschrijving_lang == "Zonhoven Hulsbergweg"
-        assert haltes[0].gemeentenummer == 1588
-        assert haltes[0].omschrijving_gemeente == "Zonhoven"
-        assert haltes[0].geo_coordinaat.latitude == 51.004652
-        assert haltes[0].geo_coordinaat.longitude == 5.346613
+        assert haltes[0].entiteitnummer == "1"
+        assert haltes[0].haltenummer == "100118"
+        assert haltes[0].omschrijving == "Station"
+        assert haltes[0].omschrijving_lang == "Bornem Station"
+        assert haltes[0].gemeentenummer == 1350
+        assert haltes[0].omschrijving_gemeente == "Bornem"
+        assert haltes[0].geo_coordinaat.latitude == 51.099532
+        assert haltes[0].geo_coordinaat.longitude == 4.240739
         assert haltes[0].halte_toegankelijkheden == []
         assert haltes[0].hoofd_halte is None
         assert haltes[0].taal == "?"
         assert haltes[0].links[0].rel == "detail"
         assert (
             haltes[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
+            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100118"
         )
 
 
 def test_haltes_in_neighbourhood():
-    response.status_code = 200
-    response.reason = "OK"
-    haltes_dict = {
-        "haltes": [
-            {
-                "type": "DELIJN",
-                "id": "403022",
-                "naam": "Zonhoven Hulsbergweg",
-                "afstand": 0,
-                "geoCoordinaat": {"latitude": 51.004652, "longitude": 5.346613},
-                "links": [
-                    {
-                        "rel": "lijnrichtingen",
-                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/lijnrichtingen",
-                    },
-                ],
-            }
-        ]
-    }
-    response._content = json.dumps(haltes_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/haltes_indebuurt.json"
+    )
     with mock.patch("requests.request", return_value=response):
         haltes = get_haltes_in_neighbourhood(
             GeoCoordinaat(latitude=51.004652, longitude=5.346613)
@@ -105,27 +60,9 @@ def test_haltes_in_neighbourhood():
 
 
 def test_halte():
-    response.status_code = 200
-    response.reason = "OK"
-    halte_dict = {
-        "entiteitnummer": "4",
-        "haltenummer": "403022",
-        "omschrijving": "Hulsbergweg",
-        "omschrijvingLang": "Zonhoven Hulsbergweg",
-        "gemeentenummer": 1588,
-        "omschrijvingGemeente": "Zonhoven",
-        "geoCoordinaat": {"latitude": 51.004652, "longitude": 5.346613},
-        "halteToegankelijkheden": [],
-        "hoofdHalte": None,
-        "taal": "?",
-        "links": [
-            {
-                "rel": "detail",
-                "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022",
-            }
-        ],
-    }
-    response._content = json.dumps(halte_dict).encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/halte.json"
+    )
     with mock.patch("requests.request", return_value=response):
         halte = get_halte("4", "403022")
         assert halte.entiteitnummer == "4"
@@ -147,14 +84,9 @@ def test_halte():
 
 
 def test_dienstregelingen():
-    response.status_code = 200
-    response.reason = "OK"
-    dienstregeling_path = Path(
+    response = get_good_request_input(
         "tests/kern_open_data_services_api/v1/inputs/dienstregeling.json"
     )
-    with dienstregeling_path.open() as dienstregeling_file:
-        dienstregeling = dienstregeling_file.read()
-    response._content = dienstregeling.encode()
     with mock.patch("requests.request", return_value=response):
         dienstregeling = get_dienstregelingen("4", "403022")
         assert dienstregeling.doorkomsten[0].entiteitnummer == "4"
@@ -171,14 +103,9 @@ def test_dienstregelingen():
 
 
 def test_richtingen():
-    response.status_code = 200
-    response.reason = "OK"
-    richtingen_path = Path(
+    response = get_good_request_input(
         "tests/kern_open_data_services_api/v1/inputs/richtingen.json"
     )
-    with richtingen_path.open() as richtingen_file:
-        richtingen = richtingen_file.read()
-    response._content = richtingen.encode()
     with mock.patch("requests.request", return_value=response):
         richtingen = get_richtingen(4, 403022)
         assert richtingen[0].entiteitnummer == "4"
@@ -202,14 +129,9 @@ def test_richtingen():
 
 
 def test_omleidingen():
-    response.status_code = 200
-    response.reason = "OK"
-    omleidingen_path = Path(
+    response = get_good_request_input(
         "tests/kern_open_data_services_api/v1/inputs/omleidingen.json"
     )
-    with omleidingen_path.open() as omleidingen_file:
-        omleidingen = omleidingen_file.read()
-    response._content = omleidingen.encode()
     with mock.patch("requests.request", return_value=response):
         omleidingen = get_omleidingen(4, 403022)
         assert omleidingen[0].titel == "Werken thv de halte Aristide Briand"
@@ -237,14 +159,9 @@ def test_omleidingen():
 
 
 def test_real_time_doorkomsten():
-    response.status_code = 200
-    response.reason = "OK"
-    real_time_doorkomsten_path = Path(
+    response = get_good_request_input(
         "tests/kern_open_data_services_api/v1/inputs/realtime.json"
     )
-    with real_time_doorkomsten_path.open() as real_time_doorkomsten_file:
-        real_time_doorkomsten = real_time_doorkomsten_file.read()
-    response._content = real_time_doorkomsten.encode()
     with mock.patch("requests.request", return_value=response):
         real_time_doorkomsten = get_real_time_doorkomsten(4, 403022)
         assert real_time_doorkomsten[0].entiteitnummer == "4"
@@ -265,12 +182,9 @@ def test_real_time_doorkomsten():
 
 
 def test_storingen():
-    response.status_code = 200
-    response.reason = "OK"
-    storingen_path = Path("tests/kern_open_data_services_api/v1/inputs/storingen.json")
-    with storingen_path.open() as storingen_file:
-        storingen = storingen_file.read()
-    response._content = storingen.encode()
+    response = get_good_request_input(
+        "tests/kern_open_data_services_api/v1/inputs/storingen.json"
+    )
     with mock.patch("requests.request", return_value=response):
         storingen = get_storingen(4, 403022)
         assert (

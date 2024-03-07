@@ -1,0 +1,14 @@
+{
+    "gemeenten": [
+        {
+            "gemeentenummer": 922,
+            "omschrijving": "HOOGSTRATEN",
+            "links": [
+                {
+                    "rel": "string",
+                    "url": "string"
+                }
+            ]
+        }
+    ]
+}

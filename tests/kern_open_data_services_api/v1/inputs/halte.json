@@ -1,0 +1,21 @@
+{
+    "entiteitnummer": "4",
+    "haltenummer": "403022",
+    "omschrijving": "Hulsbergweg",
+    "omschrijvingLang": "Zonhoven Hulsbergweg",
+    "gemeentenummer": 1588,
+    "omschrijvingGemeente": "Zonhoven",
+    "geoCoordinaat": {
+        "latitude": 51.004652,
+        "longitude": 5.346613
+    },
+    "halteToegankelijkheden": [],
+    "hoofdHalte": null,
+    "taal": "?",
+    "links": [
+        {
+            "rel": "detail",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
+        }
+    ]
+}
