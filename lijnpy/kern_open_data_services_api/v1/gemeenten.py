@@ -4,7 +4,6 @@ from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kern_open_data_services_api.v1 import _rest_adapter
 from lijnpy.kern_open_data_services_api.v1.models import Gemeente, Halte, Lijn
-from lijnpy.utils import clean_halte, clean_lijn
 
 
 def get_gemeenten() -> list[Gemeente]:
@@ -37,7 +36,7 @@ def get_haltes_by_gemeentenummers(gemeentenummers: list[int]) -> list[Halte]:
     try:
         assert result.data is not None
         haltes = [
-            Halte(**clean_halte(halte))
+            Halte(**halte)
             for gemeentehalte in result.data["gemeenteHaltes"]
             for halte in gemeentehalte["haltes"]
         ]
@@ -60,7 +59,7 @@ def get_haltes_by_gemeentenummer(gemeentenummer: int) -> list[Halte]:
     result = _rest_adapter.get(f"/gemeenten/{gemeentenummer}/haltes")
     try:
         assert result.data is not None
-        haltes = [Halte(**clean_halte(halte)) for halte in result.data["haltes"]]
+        haltes = [Halte(**halte) for halte in result.data["haltes"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
@@ -80,7 +79,7 @@ def get_lijnen_by_gemeentenummer(gemeentenummer: int) -> list[Lijn]:
     result = _rest_adapter.get(f"/gemeenten/{gemeentenummer}/lijnen")
     try:
         assert result.data is not None
-        lijnen = [Lijn(**clean_lijn(lijn)) for lijn in result.data["lijnen"]]
+        lijnen = [Lijn(**lijn) for lijn in result.data["lijnen"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e

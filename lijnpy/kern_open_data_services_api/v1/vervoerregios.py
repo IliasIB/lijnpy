@@ -4,7 +4,6 @@ from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kern_open_data_services_api.v1 import _rest_adapter
 from lijnpy.kern_open_data_services_api.v1.models import Lijn, Vervoerregio
-from lijnpy.utils import clean_lijn
 
 
 def get_vervoerregios() -> list[Vervoerregio]:
@@ -59,7 +58,7 @@ def get_lijnen_by_vervoerregio_code(code: str) -> list[Lijn]:
     result = _rest_adapter.get(f"/vervoerregios/{code}/lijnen")
     try:
         assert result.data is not None
-        lijnen = [Lijn(**clean_lijn(lijn)) for lijn in result.data["lijnen"]]
+        lijnen = [Lijn(**lijn) for lijn in result.data["lijnen"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e

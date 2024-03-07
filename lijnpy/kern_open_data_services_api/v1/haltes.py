@@ -16,7 +16,6 @@ from lijnpy.kern_open_data_services_api.v1.models import (
     RitNota,
     Storing,
 )
-from lijnpy.utils import clean_doorkomst, clean_halte, clean_halte_in_de_buurt
 
 
 def get_haltes() -> list[Halte]:
@@ -31,7 +30,7 @@ def get_haltes() -> list[Halte]:
     result = _rest_adapter.get("/haltes")
     try:
         assert result.data is not None
-        haltes = [Halte(**clean_halte(halte)) for halte in result.data["haltes"]]
+        haltes = [Halte(**halte) for halte in result.data["haltes"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
@@ -56,10 +55,7 @@ def get_haltes_in_neighbourhood(geo_coordinaat: GeoCoordinate) -> list[HalteInDe
     )
     try:
         assert result.data is not None
-        haltes = [
-            HalteInDeBuurt(**clean_halte_in_de_buurt(halte))
-            for halte in result.data["haltes"]
-        ]
+        haltes = [HalteInDeBuurt(**halte) for halte in result.data["haltes"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
@@ -83,7 +79,7 @@ def get_halte(entiteitnummer: str, haltenummer: str) -> Halte:
     result = _rest_adapter.get(f"/haltes/{entiteitnummer}/{haltenummer}")
     try:
         assert result.data is not None
-        halte = Halte(**clean_halte(result.data))
+        halte = Halte(**result.data)
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
@@ -108,7 +104,7 @@ def get_dienstregelingen(entiteitnummer: str, haltenummer: str) -> Dienstregelin
         assert result.data is not None
         dienstregeling = Dienstregeling(
             doorkomsten=[
-                Doorkomst(**clean_doorkomst(doorkomst))
+                Doorkomst(**doorkomst)
                 for halte_doorkomsten in result.data["halteDoorkomsten"]
                 for doorkomst in halte_doorkomsten["doorkomsten"]
             ],

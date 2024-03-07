@@ -165,10 +165,10 @@ class Doorkomst(BaseModel):
     richting: str
     ritnummer: int
     bestemming: str
-    plaats_bestemming: str
+    plaats_bestemming: str = Field(validation_alias="plaatsBestemming")
     vias: list[str] | None = None
     # TODO: Properly parse the datetime
-    dienstregeling_tijdstip: str
+    dienstregeling_tijdstip: str = Field(validation_alias="dienstregelingTijdstip")
 
 
 class Dienstregeling(BaseModel):
@@ -214,7 +214,7 @@ class HalteInDeBuurt(BaseModel):
     id: int
     naam: str
     afstand: int
-    geo_coordinate: GeoCoordinate
+    geo_coordinate: GeoCoordinate = Field(validation_alias="geoCoordinaat")
 
 
 class Vervoerregio(BaseModel):
@@ -271,14 +271,14 @@ class Lijn(BaseModel):
 
     entiteitnummer: int
     lijnnummer: int
-    lijnnummer_publiek: str
+    lijnnummer_publiek: str = Field(validation_alias="lijnnummerPubliek")
     omschrijving: str
-    vervoer_regio_code: str
+    vervoer_regio_code: str = Field(validation_alias="vervoerRegioCode")
     publiek: bool
     vervoertype: str
     bedieningtype: str
-    lijn_geldig_van: date
-    lijn_geldig_tot: date
+    lijn_geldig_van: date = Field(validation_alias="lijnGeldigVan")
+    lijn_geldig_tot: date = Field(validation_alias="lijnGeldigTot")
 
 
 class Halte(BaseModel):
@@ -302,13 +302,15 @@ class Halte(BaseModel):
     entiteitnummer: int
     haltenummer: int
     omschrijving: str
-    omschrijving_lang: str
+    omschrijving_lang: str = Field(validation_alias="omschrijvingLang")
     taal: str
     gemeentenummer: int
-    omschrijving_gemeente: str
-    geo_coordinaat: GeoCoordinate
-    halte_toegankelijkheden: list[str]
-    hoofd_halte: bool | None = None
+    omschrijving_gemeente: str = Field(validation_alias="omschrijvingGemeente")
+    geo_coordinaat: GeoCoordinate = Field(validation_alias="geoCoordinaat")
+    halte_toegankelijkheden: list[str] = Field(
+        validation_alias="halteToegankelijkheden"
+    )
+    hoofd_halte: bool | None = Field(default=None, validation_alias="hoofdHalte")
 
 
 class Entiteit(BaseModel):
