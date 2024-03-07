@@ -1,0 +1,34 @@
+{
+    "lijnrichtingen": [
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "465",
+            "richting": "TERUG",
+            "omschrijving": "Genk - Houthalen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/465/lijnrichtingen/TERUG"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "950",
+            "richting": "HEEN",
+            "omschrijving": "Regio Limburg",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/950/lijnrichtingen/HEEN"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/lijnrichtingen?dateFormatted=string"
+        }
+    ]
+}

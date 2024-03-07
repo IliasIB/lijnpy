@@ -1,0 +1,45 @@
+{
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/310107/storingen?date=2024-03-07&dateFormatted=string"
+        }
+    ],
+    "storingen": [
+        {
+            "omschrijving": "Interventie hulpdiensten. Niet-bediende halte: Halle Colruyt.",
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "3",
+                    "lijnnummer": "157",
+                    "richting": "TERUG",
+                    "omschrijving": "Halle Don bosco - Lembeek",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/157/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "3",
+                    "lijnnummer": "157",
+                    "richting": "HEEN",
+                    "omschrijving": "Lembeek - Halle Don Bosco",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/157/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "links": [
+                {
+                    "rel": "omleidingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/omleidingen/0"
+                }
+            ]
+        }
+    ]
+}
