@@ -7,7 +7,7 @@ from lijnpy.models import (
     Dienstregeling,
     Doorkomst,
     DoorkomstNota,
-    GeoCoordinaat,
+    GeoCoordinate,
     Halte,
     HalteInDeBuurt,
     Omleiding,
@@ -39,7 +39,7 @@ def get_haltes() -> list[Halte]:
     return haltes
 
 
-def get_haltes_in_neighbourhood(geo_coordinaat: GeoCoordinaat) -> list[HalteInDeBuurt]:
+def get_haltes_in_neighbourhood(geo_coordinaat: GeoCoordinate) -> list[HalteInDeBuurt]:
     """Get a list of all available stops in the neighbourhood of the given geo-coordinates
 
     Args:

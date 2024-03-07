@@ -63,7 +63,7 @@ def clean_halte_in_de_buurt(halte: dict) -> dict:
         "id": halte["id"],
         "naam": halte["naam"],
         "afstand": halte["afstand"],
-        "geo_coordinaat": halte["geoCoordinaat"],
+        "geo_coordinate": halte["geoCoordinaat"],
         "links": halte["links"],
     }
 

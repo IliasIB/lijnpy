@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Any
 
 from pydantic import BaseModel, Field
@@ -15,20 +16,6 @@ class Result(BaseModel):
     status_code: int
     message: str = ""
     data: dict[str, Any] | None = None
-
-
-# TODO: Remove by expanding models with extra functions
-# TODO: Move v1 models under kern_open_data_services_api.v1
-class Link(BaseModel):
-    """Represents a link to a resource
-
-    Attributes:
-        rel (str): How the resource is related to the current resource
-        url (str): The URL of the resource
-    """
-
-    rel: str
-    url: str
 
 
 class HoofdGemeente(BaseModel):
@@ -57,38 +44,24 @@ class Gemeente(BaseModel):
     omschrijving: str
     # TODO: https://docs.pydantic.dev/latest/concepts/fields/#field-aliases
     hoofd_gemeente: HoofdGemeente | None = None
-    links: list[Link]
-
-
-class Gemeenten(BaseModel):
-    """Represents a list of municipalities in Belgium
-
-    Attributes:
-        gemeenten (list[Gemeente]): The list of municipalities
-        links (list[Link]): The links to other resources related to this endpoint
-    """
-
-    gemeenten: list[Gemeente]
-    links: list[Link]
 
 
 class Entiteit(BaseModel):
     """Represents an entity in Belgium
 
     Attributes:
-        entiteitnummer (str): The number of the entity
+        entiteitnummer (int): The number of the entity
         entiteitcode (str): The code of the entity
         omschrijving (str): The description of the entity
         links (list[Link]): The links to other resources related to the entity
     """
 
-    entiteitnummer: str
+    entiteitnummer: int
     entiteitcode: str
     omschrijving: str
-    links: list[Link]
 
 
-class GeoCoordinaat(BaseModel):
+class GeoCoordinate(BaseModel):
     """Represents a geographical coordinate
 
     Attributes:
@@ -118,17 +91,16 @@ class Halte(BaseModel):
         links (list[Link]): The links to other resources related to the stop
     """
 
-    entiteitnummer: str
-    haltenummer: str
+    entiteitnummer: int
+    haltenummer: int
     omschrijving: str
     omschrijving_lang: str
     taal: str
     gemeentenummer: int
     omschrijving_gemeente: str
-    geo_coordinaat: GeoCoordinaat
+    geo_coordinaat: GeoCoordinate
     halte_toegankelijkheden: list[str]
     hoofd_halte: bool | None = None
-    links: list[Link]
 
 
 class Lijn(BaseModel):
@@ -141,17 +113,16 @@ class Lijn(BaseModel):
         links (list[Link]): The links to other resources related to the line
     """
 
-    entiteitnummer: str
-    lijnnummer: str
+    entiteitnummer: int
+    lijnnummer: int
     lijnnummer_publiek: str
     omschrijving: str
     vervoer_regio_code: str
     publiek: bool
     vervoertype: str
     bedieningtype: str
-    lijn_geldig_van: str
-    lijn_geldig_tot: str
-    links: list[Link]
+    lijn_geldig_van: date
+    lijn_geldig_tot: date
 
 
 class RGB(BaseModel):
@@ -179,7 +150,6 @@ class Kleur(BaseModel):
     omschrijving: str
     rgb: RGB
     hex: str
-    links: list[Link]
 
 
 class Vervoerregio(BaseModel):
@@ -194,8 +164,7 @@ class Vervoerregio(BaseModel):
 
     code: str
     naam: str
-    nr: str
-    links: list[Link]
+    nr: int
 
 
 class HalteInDeBuurt(BaseModel):
@@ -211,11 +180,10 @@ class HalteInDeBuurt(BaseModel):
     """
 
     type: str
-    id: str
+    id: int
     naam: str
     afstand: int
-    geo_coordinaat: GeoCoordinaat
-    links: list[Link]
+    geo_coordinate: GeoCoordinate
 
 
 class Doorkomst(BaseModel):
@@ -233,7 +201,7 @@ class Doorkomst(BaseModel):
         links (list[Link]): The links to other resources related to the passage
     """
 
-    entiteitnummer: str
+    entiteitnummer: int
     lijnnummer: int
     richting: str
     ritnummer: int
@@ -242,7 +210,6 @@ class Doorkomst(BaseModel):
     vias: list[str] | None = None
     # TODO: Properly parse the datetime
     dienstregeling_tijdstip: str
-    links: list[Link]
 
 
 class RitNota(BaseModel):
@@ -262,8 +229,8 @@ class RitNota(BaseModel):
     id: int
     titel: str
     # TODO: Convert to int
-    ritnummer: str
-    haltenummer: str
+    ritnummer: int
+    haltenummer: int
     omschrijving: str
     entiteitnummer: int
     lijnnummer: int
@@ -286,7 +253,7 @@ class DoorkomstNota(BaseModel):
 
     id: int
     titel: str
-    ritnummer: str
+    ritnummer: int
     haltenummer: int
     omschrijving: str
     entiteitnummer: int
@@ -321,11 +288,10 @@ class Richting(BaseModel):
         links (list[Link]): The links to other resources related to the direction
     """
 
-    entiteitnummer: str
-    lijnnummer: str
+    entiteitnummer: int
+    lijnnummer: int
     richting: str
     omschrijving: str
-    links: list[Link]
 
 
 class OmleidingPeriode(BaseModel):
@@ -360,7 +326,6 @@ class Omleiding(BaseModel):
     referentie_omleiding: int = Field(validation_alias="referentieOmleiding")
     type: str
     omleidings_dagen: list[str] = Field(validation_alias="omleidingsDagen")
-    links: list[Link]
 
 
 class RealTimeDoorkomst(BaseModel):
@@ -380,18 +345,17 @@ class RealTimeDoorkomst(BaseModel):
         links (list[Link]): The links to other resources related to the real-time passage
     """
 
-    entiteitnummer: str
+    entiteitnummer: int
     lijnnummer: int
     richting: str
     # TODO: Search automatic pydantic conversion to int
-    ritnummer: str
+    ritnummer: int
     bestemming: str
     vias: list[str] | None = Field(default=None)
     dienstregeling_tijdstip: str = Field(validation_alias="dienstregelingTijdstip")
     real_time_tijdstip: str = Field(validation_alias="real-timeTijdstip")
-    vrtnum: str
+    vrtnum: int
     prediction_statussen: list[str] = Field(validation_alias="predictionStatussen")
-    links: list[Link]
 
 
 class Storing(BaseModel):

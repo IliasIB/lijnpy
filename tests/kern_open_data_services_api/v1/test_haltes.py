@@ -10,7 +10,7 @@ from lijnpy.kern_open_data_services_api.v1.haltes import (
     get_richtingen,
     get_storingen,
 )
-from lijnpy.models import GeoCoordinaat
+from lijnpy.models import GeoCoordinate
 from tests.utils import get_good_request_input
 
 
@@ -20,8 +20,8 @@ def test_haltes():
     )
     with mock.patch("requests.request", return_value=response):
         haltes = get_haltes()
-        assert haltes[0].entiteitnummer == "1"
-        assert haltes[0].haltenummer == "100118"
+        assert haltes[0].entiteitnummer == 1
+        assert haltes[0].haltenummer == 100118
         assert haltes[0].omschrijving == "Station"
         assert haltes[0].omschrijving_lang == "Bornem Station"
         assert haltes[0].gemeentenummer == 1350
@@ -31,11 +31,6 @@ def test_haltes():
         assert haltes[0].halte_toegankelijkheden == []
         assert haltes[0].hoofd_halte is None
         assert haltes[0].taal == "?"
-        assert haltes[0].links[0].rel == "detail"
-        assert (
-            haltes[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100118"
-        )
 
 
 def test_haltes_in_neighbourhood():
@@ -44,19 +39,14 @@ def test_haltes_in_neighbourhood():
     )
     with mock.patch("requests.request", return_value=response):
         haltes = get_haltes_in_neighbourhood(
-            GeoCoordinaat(latitude=51.004652, longitude=5.346613)
+            GeoCoordinate(latitude=51.004652, longitude=5.346613)
         )
         assert haltes[0].type == "DELIJN"
-        assert haltes[0].id == "403022"
+        assert haltes[0].id == 403022
         assert haltes[0].naam == "Zonhoven Hulsbergweg"
         assert haltes[0].afstand == 0
-        assert haltes[0].geo_coordinaat.latitude == 51.004652
-        assert haltes[0].geo_coordinaat.longitude == 5.346613
-        assert haltes[0].links[0].rel == "lijnrichtingen"
-        assert (
-            haltes[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/lijnrichtingen"
-        )
+        assert haltes[0].geo_coordinate.latitude == 51.004652
+        assert haltes[0].geo_coordinate.longitude == 5.346613
 
 
 def test_halte():
@@ -65,8 +55,8 @@ def test_halte():
     )
     with mock.patch("requests.request", return_value=response):
         halte = get_halte("4", "403022")
-        assert halte.entiteitnummer == "4"
-        assert halte.haltenummer == "403022"
+        assert halte.entiteitnummer == 4
+        assert halte.haltenummer == 403022
         assert halte.omschrijving == "Hulsbergweg"
         assert halte.omschrijving_lang == "Zonhoven Hulsbergweg"
         assert halte.gemeentenummer == 1588
@@ -76,11 +66,6 @@ def test_halte():
         assert halte.halte_toegankelijkheden == []
         assert halte.hoofd_halte is None
         assert halte.taal == "?"
-        assert halte.links[0].rel == "detail"
-        assert (
-            halte.links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
-        )
 
 
 def test_dienstregelingen():
@@ -89,7 +74,7 @@ def test_dienstregelingen():
     )
     with mock.patch("requests.request", return_value=response):
         dienstregeling = get_dienstregelingen("4", "403022")
-        assert dienstregeling.doorkomsten[0].entiteitnummer == "4"
+        assert dienstregeling.doorkomsten[0].entiteitnummer == 4
         assert dienstregeling.doorkomsten[0].lijnnummer == 465
         assert dienstregeling.doorkomsten[0].richting == "TERUG"
         assert dienstregeling.doorkomsten[0].ritnummer == 2
@@ -108,24 +93,14 @@ def test_richtingen():
     )
     with mock.patch("requests.request", return_value=response):
         richtingen = get_richtingen(4, 403022)
-        assert richtingen[0].entiteitnummer == "4"
-        assert richtingen[0].lijnnummer == "465"
+        assert richtingen[0].entiteitnummer == 4
+        assert richtingen[0].lijnnummer == 465
         assert richtingen[0].richting == "TERUG"
         assert richtingen[0].omschrijving == "Genk - Houthalen"
-        assert richtingen[0].links[0].rel == "detail"
-        assert (
-            richtingen[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/465/lijnrichtingen/TERUG"
-        )
-        assert richtingen[1].entiteitnummer == "4"
-        assert richtingen[1].lijnnummer == "950"
+        assert richtingen[1].entiteitnummer == 4
+        assert richtingen[1].lijnnummer == 950
         assert richtingen[1].richting == "HEEN"
         assert richtingen[1].omschrijving == "Regio Limburg"
-        assert richtingen[1].links[0].rel == "detail"
-        assert (
-            richtingen[1].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/950/lijnrichtingen/HEEN"
-        )
 
 
 def test_omleidingen():
@@ -151,11 +126,6 @@ def test_omleidingen():
             "ZATERDAG",
             "ZONDAG",
         ]
-        assert omleidingen[0].links[0].rel == "omleidingen"
-        assert (
-            omleidingen[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/omleidingen/873876"
-        )
 
 
 def test_real_time_doorkomsten():
@@ -164,21 +134,16 @@ def test_real_time_doorkomsten():
     )
     with mock.patch("requests.request", return_value=response):
         real_time_doorkomsten = get_real_time_doorkomsten(4, 403022)
-        assert real_time_doorkomsten[0].entiteitnummer == "4"
+        assert real_time_doorkomsten[0].entiteitnummer == 4
         assert real_time_doorkomsten[0].lijnnummer == 465
         assert real_time_doorkomsten[0].richting == "TERUG"
-        assert real_time_doorkomsten[0].ritnummer == "16"
+        assert real_time_doorkomsten[0].ritnummer == 16
         assert real_time_doorkomsten[0].bestemming == "Houthalen"
         assert real_time_doorkomsten[0].vias == []
         assert real_time_doorkomsten[0].dienstregeling_tijdstip == "2024-03-07T17:05:00"
         assert real_time_doorkomsten[0].real_time_tijdstip == "2024-03-07T17:05:20"
-        assert real_time_doorkomsten[0].vrtnum == "442079"
+        assert real_time_doorkomsten[0].vrtnum == 442079
         assert real_time_doorkomsten[0].prediction_statussen == ["REALTIME"]
-        assert real_time_doorkomsten[0].links[0].rel == "halte"
-        assert (
-            real_time_doorkomsten[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
-        )
 
 
 def test_storingen():
@@ -191,14 +156,9 @@ def test_storingen():
             storingen[0].omschrijving
             == "Interventie hulpdiensten. Niet-bediende halte: Halle Colruyt."
         )
-        assert storingen[0].lijnrichtingen[0].entiteitnummer == "3"
-        assert storingen[0].lijnrichtingen[0].lijnnummer == "157"
+        assert storingen[0].lijnrichtingen[0].entiteitnummer == 3
+        assert storingen[0].lijnrichtingen[0].lijnnummer == 157
         assert storingen[0].lijnrichtingen[0].richting == "TERUG"
         assert (
             storingen[0].lijnrichtingen[0].omschrijving == "Halle Don bosco - Lembeek"
-        )
-        assert storingen[0].lijnrichtingen[0].links[0].rel == "lijnrichting"
-        assert (
-            storingen[0].lijnrichtingen[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/157/lijnrichtingen/TERUG"
         )

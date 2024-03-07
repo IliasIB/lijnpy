@@ -24,11 +24,11 @@ def get_entiteiten() -> list[Entiteit]:
     return entiteiten
 
 
-def get_entiteit_by_entiteitnummer(entiteitnummer: str) -> Entiteit:
+def get_entiteit_by_entiteitnummer(entiteitnummer: int) -> Entiteit:
     """Get an entity by its number
 
     Args:
-        entiteitnummer (str): The number of the entity
+        entiteitnummer (int): The number of the entity
 
     Returns:
         Entiteit: The entity with the given number
@@ -44,7 +44,7 @@ def get_entiteit_by_entiteitnummer(entiteitnummer: str) -> Entiteit:
     return entiteit
 
 
-def get_gemeenten_by_entiteitsnummer(entiteitnummer: str) -> list[Gemeente]:
+def get_gemeenten_by_entiteitsnummer(entiteitnummer: int) -> list[Gemeente]:
     """Get a list of municipalities in Belgium for a given entity
 
     Args:
@@ -64,7 +64,7 @@ def get_gemeenten_by_entiteitsnummer(entiteitnummer: str) -> list[Gemeente]:
     return gemeenten
 
 
-def get_haltes_by_entiteitsnummer(entiteitnummer: str) -> list[Halte]:
+def get_haltes_by_entiteitsnummer(entiteitnummer: int) -> list[Halte]:
     """Get a list of stops in Belgium for a given entity
 
     Args:
@@ -84,7 +84,7 @@ def get_haltes_by_entiteitsnummer(entiteitnummer: str) -> list[Halte]:
     return haltes
 
 
-def get_lijnen_by_entiteitsnummer(entiteitsnummer: str) -> list[Lijn]:
+def get_lijnen_by_entiteitsnummer(entiteitsnummer: int) -> list[Lijn]:
     """Get a list of lines in Belgium for a given entity
 
     Args:

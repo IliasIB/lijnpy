@@ -16,11 +16,6 @@ def test_kleuren():
         assert kleuren[0].rgb.groen == 153
         assert kleuren[0].rgb.blauw == 170
         assert kleuren[0].hex == "0099AA"
-        assert kleuren[0].links[0].rel == "detail"
-        assert (
-            kleuren[0].links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/TU"
-        )
 
 
 def test_kleur_by_code():
@@ -35,8 +30,3 @@ def test_kleur_by_code():
         assert kleur.rgb.groen == 0
         assert kleur.rgb.blauw == 153
         assert kleur.hex == "000099"
-        assert kleur.links[0].rel == "self"
-        assert (
-            kleur.links[0].url
-            == "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/BD"
-        )
