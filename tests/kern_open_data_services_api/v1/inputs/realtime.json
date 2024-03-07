@@ -1,0 +1,42 @@
+{
+    "halteDoorkomsten": [
+        {
+            "haltenummer": "403022",
+            "doorkomsten": [
+                {
+                    "entiteitnummer": "4",
+                    "lijnnummer": 465,
+                    "richting": "TERUG",
+                    "ritnummer": "16",
+                    "bestemming": "Houthalen",
+                    "vias": [],
+                    "dienstregelingTijdstip": "2024-03-07T17:05:00",
+                    "real-timeTijdstip": "2024-03-07T17:05:20",
+                    "vrtnum": "442079",
+                    "predictionStatussen": [
+                        "REALTIME"
+                    ],
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/465/lijnrichtingen/TERUG"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/real-time?maxAantalDoorkomsten=1"
+        }
+    ],
+    "doorkomstNotas": [],
+    "ritNotas": [],
+    "omleidingen": []
+}

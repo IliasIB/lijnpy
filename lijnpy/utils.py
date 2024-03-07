@@ -1,3 +1,6 @@
+# TODO: Replace with transformation in pydantic models
+
+
 def clean_halte(halte: dict) -> dict:
     """Clean the stop data
 
@@ -43,4 +46,45 @@ def clean_lijn(lijn: dict) -> dict:
         "lijn_geldig_van": lijn["lijnGeldigVan"],
         "lijn_geldig_tot": lijn["lijnGeldigTot"],
         "links": lijn["links"],
+    }
+
+
+def clean_halte_in_de_buurt(halte: dict) -> dict:
+    """Clean the stop data
+
+    Args:
+        halte (dict): The stop data
+
+    Returns:
+        dict: The cleaned stop data
+    """
+    return {
+        "type": halte["type"],
+        "id": halte["id"],
+        "naam": halte["naam"],
+        "afstand": halte["afstand"],
+        "geo_coordinaat": halte["geoCoordinaat"],
+        "links": halte["links"],
+    }
+
+
+def clean_doorkomst(doorkomst: dict) -> dict:
+    """Clean the passage data
+
+    Args:
+        doorkomst (dict): The passage data
+
+    Returns:
+        dict: The cleaned passage data
+    """
+    return {
+        "entiteitnummer": doorkomst["entiteitnummer"],
+        "lijnnummer": doorkomst["lijnnummer"],
+        "richting": doorkomst["richting"],
+        "ritnummer": doorkomst["ritnummer"],
+        "bestemming": doorkomst["bestemming"],
+        "plaats_bestemming": doorkomst["plaatsBestemming"],
+        "vias": doorkomst["vias"],
+        "dienstregeling_tijdstip": doorkomst["dienstregelingTijdstip"],
+        "links": doorkomst["links"],
     }
