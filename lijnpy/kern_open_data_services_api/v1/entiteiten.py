@@ -3,7 +3,7 @@ from pydantic import ValidationError
 from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kern_open_data_services_api.v1 import _rest_adapter
-from lijnpy.models import Entiteit, Gemeente, Halte, Lijn
+from lijnpy.kern_open_data_services_api.v1.models import Entiteit, Gemeente, Halte, Lijn
 from lijnpy.utils import clean_halte, clean_lijn
 
 
