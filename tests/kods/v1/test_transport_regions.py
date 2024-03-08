@@ -1,6 +1,6 @@
 from unittest import mock
 
-from lijnpy.kern_open_data_services_api.v1.transport_regions import (
+from lijnpy.kods.v1.transport_regions import (
     get_lines,
     get_transport_region,
     get_transport_regions,

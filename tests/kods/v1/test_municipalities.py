@@ -1,6 +1,6 @@
 from unittest import mock
 
-from lijnpy.kern_open_data_services_api.v1.municipalities import (
+from lijnpy.kods.v1.municipalities import (
     get_lines,
     get_municipalities,
     get_municipality,

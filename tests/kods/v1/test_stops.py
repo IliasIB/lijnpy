@@ -1,7 +1,7 @@
 from unittest import mock
 
-from lijnpy.kern_open_data_services_api.v1.models import GeoCoordinate
-from lijnpy.kern_open_data_services_api.v1.stops import (
+from lijnpy.kods.v1.models import GeoCoordinate
+from lijnpy.kods.v1.stops import (
     get_detours,
     get_directions,
     get_disruptions,

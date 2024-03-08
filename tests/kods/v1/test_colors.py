@@ -1,6 +1,6 @@
 from unittest import mock
 
-from lijnpy.kern_open_data_services_api.v1.colors import get_color, get_colors
+from lijnpy.kods.v1.colors import get_color, get_colors
 from tests.utils import input_as_response
 
 
