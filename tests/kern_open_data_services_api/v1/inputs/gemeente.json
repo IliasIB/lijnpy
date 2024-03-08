@@ -1,10 +1,22 @@
 {
-    "gemeentenummer": 1588,
-    "omschrijving": "ZONHOVEN",
+    "gemeentenummer": 951,
+    "omschrijving": "KALMTHOUT",
+    "hoofdGemeente": {
+        "gemeentenummer": 937,
+        "omschrijving": "KALMTHOUT"
+    },
     "links": [
         {
-            "rel": "self",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1"
+            "rel": "detail",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/951"
+        },
+        {
+            "rel": "haltes",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/951/haltes"
+        },
+        {
+            "rel": "lijnen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/951/lijnen"
         }
     ]
 }

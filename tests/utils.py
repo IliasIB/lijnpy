@@ -1,6 +1,13 @@
+import json
 from pathlib import Path
 
 import requests
+
+
+def load_json_file(file_path):
+    with open(file_path, "r") as file:
+        data = json.load(file)
+    return data
 
 
 def _get_encoded_input(path: str) -> bytes:
@@ -18,7 +25,7 @@ def _get_encoded_input(path: str) -> bytes:
     return contents.encode()
 
 
-def get_good_request_input(path: str) -> requests.Response:
+def input_as_response(path: str) -> requests.Response:
     """Gets an input file and returns it as a Response object with status code 200.
 
     Args:

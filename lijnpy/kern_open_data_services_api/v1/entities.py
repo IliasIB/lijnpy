@@ -3,101 +3,108 @@ from pydantic import ValidationError
 from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kern_open_data_services_api.v1 import _rest_adapter
-from lijnpy.kern_open_data_services_api.v1.models import Entiteit, Gemeente, Halte, Lijn
+from lijnpy.kern_open_data_services_api.v1.models import (
+    Entity,
+    Line,
+    Municipality,
+    Stop,
+)
 
 
-def get_entiteiten() -> list[Entiteit]:
+def get_entities() -> list[Entity]:
     """Get a list of all entities
 
     Returns:
-        list[Entiteit]: A list of all entities
+        list[Entity]: A list of all entities
     """
     result = _rest_adapter.get("/entiteiten")
     try:
         assert result.data is not None
-        entiteiten = [Entiteit(**entiteit) for entiteit in result.data["entiteiten"]]
+        entities = [Entity(**entity) for entity in result.data["entiteiten"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return entiteiten
+    return entities
 
 
-def get_entiteit_by_entiteitnummer(entiteitnummer: int) -> Entiteit:
+def get_entity(entity_number: int) -> Entity:
     """Get an entity by its number
 
     Args:
-        entiteitnummer (int): The number of the entity
+        entity_number (int): The number of the entity
 
     Returns:
-        Entiteit: The entity with the given number
+        Entity: The entity with the given number
     """
-    result = _rest_adapter.get(f"/entiteiten/{entiteitnummer}")
+    result = _rest_adapter.get(f"/entiteiten/{entity_number}")
     try:
         assert result.data is not None
-        entiteit = Entiteit(**result.data)
+        entity = Entity(**result.data)
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return entiteit
+    return entity
 
 
-def get_gemeenten_by_entiteitsnummer(entiteitnummer: int) -> list[Gemeente]:
+def get_municipality(entity_number: int) -> list[Municipality]:
     """Get a list of municipalities in Belgium for a given entity
 
     Args:
-        entiteitnummer (str): The number of the entity
+        entity_number (str): The number of the entity
 
     Returns:
-        Gemeenten: A list of municipalities in Belgium for a given entity
+        Municipalities: A list of municipalities in Belgium for a given entity
     """
-    result = _rest_adapter.get(f"/entiteiten/{entiteitnummer}/gemeenten")
+    result = _rest_adapter.get(f"/entiteiten/{entity_number}/gemeenten")
     try:
         assert result.data is not None
-        gemeenten = [Gemeente(**gemeente) for gemeente in result.data["gemeenten"]]
+        municipalities = [
+            Municipality(**municipality) for municipality in result.data["gemeenten"]
+        ]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return gemeenten
+    return municipalities
 
 
-def get_haltes_by_entiteitsnummer(entiteitnummer: int) -> list[Halte]:
+def get_stops(entity_number: int) -> list[Stop]:
     """Get a list of stops in Belgium for a given entity
 
     Args:
-        entiteitnummer (str): The number of the entity
+        entity_number (str): The number of the entity
 
     Returns:
-        Haltes: A list of stops in Belgium for a given entity
+        Stops: A list of stops in Belgium for a given entity
     """
-    result = _rest_adapter.get(f"/entiteiten/{entiteitnummer}/haltes")
+    result = _rest_adapter.get(f"/entiteiten/{entity_number}/haltes")
     try:
         assert result.data is not None
-        haltes = [Halte(**halte) for halte in result.data["haltes"]]
+        stops = [Stop(**stop) for stop in result.data["haltes"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return haltes
+    return stops
 
 
-def get_lijnen_by_entiteitsnummer(entiteitsnummer: int) -> list[Lijn]:
+def get_lines(entity_number: int) -> list[Line]:
     """Get a list of lines in Belgium for a given entity
 
     Args:
-        entiteitsnummer (str): The number of the entity
+        entity_number (str): The number of the entity
 
     Returns:
-        Lijnen: A list of lines in Belgium for a given entity
+        Lines: A list of lines in Belgium for a given entity
     """
-    result = _rest_adapter.get(f"/entiteiten/{entiteitsnummer}/lijnen")
+    result = _rest_adapter.get(f"/entiteiten/{entity_number}/lijnen")
     try:
         assert result.data is not None
-        lijnen = [Lijn(**lijn) for lijn in result.data["lijnen"]]
+        lines = [Line(**line) for line in result.data["lijnen"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return lijnen
+    return lines

@@ -3,64 +3,64 @@ from pydantic import ValidationError
 from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kern_open_data_services_api.v1 import _rest_adapter
-from lijnpy.kern_open_data_services_api.v1.models import Lijn, Vervoerregio
+from lijnpy.kern_open_data_services_api.v1.models import Line, TransportRegion
 
 
-def get_vervoerregios() -> list[Vervoerregio]:
+def get_transport_regions() -> list[TransportRegion]:
     """Get a list of all transport regions
 
     Returns:
-        list[Vervoerregio]: A list of all transport regions
+        list[TransportRegion]: A list of all transport regions
     """
     result = _rest_adapter.get("/vervoerregios")
     try:
         assert result.data is not None
-        vervoerregios = [
-            Vervoerregio(**vervoerregio)
-            for vervoerregio in result.data["vervoerRegios"]
+        transport_regions = [
+            TransportRegion(**transport_region)
+            for transport_region in result.data["vervoerRegios"]
         ]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return vervoerregios
+    return transport_regions
 
 
-def get_vervoerregio_by_code(code: str) -> Vervoerregio:
+def get_transport_region(transport_region_code: str) -> TransportRegion:
     """Get a transport region by code
 
     Args:
-        code (str): The code of the transport region
+        transport_region_code (str): The code of the transport region
 
     Returns:
-        Vervoerregio: The transport region
+        TransportRegion: The transport region
     """
-    result = _rest_adapter.get(f"/vervoerregios/{code}")
+    result = _rest_adapter.get(f"/vervoerregios/{transport_region_code}")
     try:
         assert result.data is not None
-        vervoerregio = Vervoerregio(**result.data)
+        transport_region = TransportRegion(**result.data)
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return vervoerregio
+    return transport_region
 
 
-def get_lijnen_by_vervoerregio_code(code: str) -> list[Lijn]:
+def get_lines(transport_region_code: str) -> list[Line]:
     """Get a list of lines by transport region code
 
     Args:
-        code (str): The code of the transport region
+        transport_region_code (str): The code of the transport region
 
     Returns:
-        list[Lijn]: A list of lines
+        list[Line]: A list of lines
     """
-    result = _rest_adapter.get(f"/vervoerregios/{code}/lijnen")
+    result = _rest_adapter.get(f"/vervoerregios/{transport_region_code}/lijnen")
     try:
         assert result.data is not None
-        lijnen = [Lijn(**lijn) for lijn in result.data["lijnen"]]
+        lines = [Line(**line) for line in result.data["lijnen"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return lijnen
+    return lines

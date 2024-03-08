@@ -2,14 +2,8 @@
     "entiteiten": [
         {
             "entiteitnummer": "1",
-            "entiteitcode": "A",
-            "omschrijving": "Antwerpen",
-            "links": [
-                {
-                    "rel": "string",
-                    "url": "string"
-                }
-            ]
+            "entiteitcode": "L",
+            "omschrijving": "Limburg"
         }
     ]
 }

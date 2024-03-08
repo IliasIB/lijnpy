@@ -1,14 +1,16 @@
 {
     "gemeenten": [
         {
-            "gemeentenummer": 922,
-            "omschrijving": "HOOGSTRATEN",
-            "links": [
-                {
-                    "rel": "string",
-                    "url": "string"
-                }
-            ]
+            "gemeentenummer": 1,
+            "omschrijving": "HOUTHALEN",
+            "hoofdGemeente": {
+                "gemeentenummer": 2,
+                "omschrijving": "HOUTHALEN-HELCHTEREN"
+            }
+        },
+        {
+            "gemeentenummer": 2,
+            "omschrijving": "HOUTHALEN-HELCHTEREN"
         }
     ]
 }
