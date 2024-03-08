@@ -16,9 +16,7 @@ from tests.utils import input_as_response
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/haltes.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/haltes.json"),
 )
 def test_stops(_):
     haltes = get_stops()
@@ -27,9 +25,7 @@ def test_stops(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/haltes_indebuurt.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/haltes_indebuurt.json"),
 )
 def test_stops_in_vicinity(_):
     haltes = get_stops_in_vicinity(
@@ -40,9 +36,7 @@ def test_stops_in_vicinity(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/halte.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/halte.json"),
 )
 def test_stop(_):
     halte = get_stop("4", "403022")
@@ -61,9 +55,7 @@ def test_stop(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/dienstregeling.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/dienstregeling.json"),
 )
 def test_timetable(_):
     dienstregeling = get_timetable(4, 403022)
@@ -72,9 +64,7 @@ def test_timetable(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/richtingen.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/richtingen.json"),
 )
 def test_directions(_):
     richtingen = get_directions(4, 403022)
@@ -83,9 +73,7 @@ def test_directions(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/omleidingen.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/omleidingen.json"),
 )
 def test_detours(_):
     omleidingen = get_detours(4, 403022)
@@ -94,9 +82,7 @@ def test_detours(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/realtime.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/realtime.json"),
 )
 def test_real_time_passages(_):
     real_time_doorkomsten = get_real_time_passages(4, 403022)
@@ -105,9 +91,7 @@ def test_real_time_passages(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/storingen.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/storingen.json"),
 )
 def test_disruption(_):
     storingen = get_disruptions(4, 403022)

@@ -11,9 +11,7 @@ from tests.utils import input_as_response
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/gemeenten.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/gemeenten.json"),
 )
 def test_municipalities(_):
     gemeenten = get_municipalities()
@@ -22,9 +20,7 @@ def test_municipalities(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/haltes.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/haltes.json"),
 )
 def test_stops(_):
     haltes = get_stops(1350)
@@ -33,9 +29,7 @@ def test_stops(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/lijnen.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/lijnen.json"),
 )
 def test_lines(_):
     lijnen = get_lines(1588)
@@ -44,9 +38,7 @@ def test_lines(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/gemeente.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/gemeente.json"),
 )
 def test_municipality(_):
     gemeente = get_municipality(1)

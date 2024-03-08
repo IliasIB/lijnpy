@@ -6,9 +6,7 @@ from tests.utils import input_as_response
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/kleuren.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/kleuren.json"),
 )
 def test_colors(_):
     kleuren = get_colors()
@@ -17,9 +15,7 @@ def test_colors(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/kleur.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/kleur.json"),
 )
 def test_color(_):
     kleur = get_color("TU")

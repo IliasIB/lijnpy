@@ -10,9 +10,7 @@ from tests.utils import input_as_response
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/vervoer_regios.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/vervoer_regios.json"),
 )
 def test_transport_regions(_):
     vervoerregios = get_transport_regions()
@@ -21,9 +19,7 @@ def test_transport_regions(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/vervoer_regio.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/vervoer_regio.json"),
 )
 def test_transport_region(_):
     vervoerregio = get_transport_region("AA")
@@ -34,9 +30,7 @@ def test_transport_region(_):
 
 @mock.patch(
     "requests.request",
-    return_value=input_as_response(
-        "tests/kern_open_data_services_api/v1/inputs/lijnen.json"
-    ),
+    return_value=input_as_response("tests/kods/v1/inputs/lijnen.json"),
 )
 def test_lines(_):
     lijnen = get_lines("AN")
