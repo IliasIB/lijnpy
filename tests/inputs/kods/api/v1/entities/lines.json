@@ -1,0 +1,5158 @@
+{
+    "lijnen": [
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "63",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Regio Antwerpen (Rechteroever)",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/63"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "406",
+            "lijnnummerPubliek": "406",
+            "omschrijving": "scholen Malle - Zandhoven via Halle",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/406"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "571",
+            "lijnnummerPubliek": "571",
+            "omschrijving": "Lier - Putte - Berlaar Heikant - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/571"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "443",
+            "lijnnummerPubliek": "443",
+            "omschrijving": "Sint-Job - Kalmthout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/443"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "908",
+            "lijnnummerPubliek": "8",
+            "omschrijving": "De Beemden - Station",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/908"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "161",
+            "lijnnummerPubliek": "161",
+            "omschrijving": "Heist op Den Berg - Booischot - Aarschot",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/161"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "250",
+            "lijnnummerPubliek": "25",
+            "omschrijving": "Sint-Amands - Bornem - Hingene - Puurs",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/250"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "551",
+            "lijnnummerPubliek": "551",
+            "omschrijving": "Sint-Katelijne-Waver - Mechelen Gandhi",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/551"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "1",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Zuid - P+R Luchtbal",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/1"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "5",
+            "lijnnummerPubliek": "5",
+            "omschrijving": "Wijnegem - P+R Linkeroever",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/5"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "2",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "P+R Merksem - Hoboken Zwaantjes",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/2"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "3",
+            "lijnnummerPubliek": "3",
+            "omschrijving": "P+R Merksem - P+R Melsele",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/3"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "4",
+            "lijnnummerPubliek": "4",
+            "omschrijving": "Berchem station - Groenplaats - Hoboken Zwaantjes",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/4"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "8",
+            "lijnnummerPubliek": "8",
+            "omschrijving": "P+R Wommelgem - Astrid",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/8"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "10",
+            "lijnnummerPubliek": "10",
+            "omschrijving": "P+R Schoonselhof - Wijnegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/10"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "12",
+            "lijnnummerPubliek": "12",
+            "omschrijving": "Schijnpoort  - Centraal Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/12"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "22",
+            "lijnnummerPubliek": "22",
+            "omschrijving": "UZA - Valaar - Groenplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "30",
+            "lijnnummerPubliek": "30",
+            "omschrijving": "Stuivenberg - Berchem Station - Station Zuid",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/30"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "32",
+            "lijnnummerPubliek": "32",
+            "omschrijving": "Rooseveltplaats  - Berchem Station - Edegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/32"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "545",
+            "lijnnummerPubliek": "545",
+            "omschrijving": "Averbode - Veerle Heide - Westerlo",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/545"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "64",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Klein-Brabant",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/64"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "75",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Olen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/75"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "141",
+            "lijnnummerPubliek": "141",
+            "omschrijving": "Hoboken Polderstad - Wilrijk -  UZA - Mortsel - Wijnegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/141"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "200",
+            "lijnnummerPubliek": "200",
+            "omschrijving": "Kasterlee - Tielen - Vosselaar - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/200"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "209",
+            "lijnnummerPubliek": "209",
+            "omschrijving": "Lidwina - Mol station",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/209"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "212",
+            "lijnnummerPubliek": "212",
+            "omschrijving": "Herentals - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/212"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "221",
+            "lijnnummerPubliek": "221",
+            "omschrijving": "Heultje - Westmeerbeek - Houtvenne - Ramsel - Aarschot",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/221"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "257",
+            "lijnnummerPubliek": "257",
+            "omschrijving": "Dendermonde - Bornem - Boom",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/257"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "260",
+            "lijnnummerPubliek": "26",
+            "omschrijving": "Sint-Amands - Oppuurs - Puurs",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/260"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "378",
+            "lijnnummerPubliek": "378",
+            "omschrijving": "scholen Stabroek - Kapellen - Brasschaat - Schoten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/378"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "381",
+            "lijnnummerPubliek": "381",
+            "omschrijving": "Arendonk - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/381"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "418",
+            "lijnnummerPubliek": "418",
+            "omschrijving": "Snelbus Herentals - Poederlee - Lille - Antwerpen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/418"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "433",
+            "lijnnummerPubliek": "433",
+            "omschrijving": "Turnhout - Beerse - Rijkevorsel - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/433"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "451",
+            "lijnnummerPubliek": "451",
+            "omschrijving": "Turnhout - Poppel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/451"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "459",
+            "lijnnummerPubliek": "459",
+            "omschrijving": "Hoogstraten - Merksplas - Weelde - Ravels",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/459"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "483",
+            "lijnnummerPubliek": "483",
+            "omschrijving": "Hoogstraten 't Spijker - Rijkevorsel - Oostmalle",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/483"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "508",
+            "lijnnummerPubliek": "508",
+            "omschrijving": "Snelbus Mechelen - Rumst - Aartselaar",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/508"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "530",
+            "lijnnummerPubliek": "530",
+            "omschrijving": "Aarschot - Tremelo - Keerbergen - Mechelen",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/530"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "570",
+            "lijnnummerPubliek": "570",
+            "omschrijving": "Berlaar - Berlaar Heikant - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/570"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "601",
+            "lijnnummerPubliek": "601",
+            "omschrijving": "Antwerpen - St. Job",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/601"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "602",
+            "lijnnummerPubliek": "602",
+            "omschrijving": "Meerle - Hoogstraten - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/602"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "618",
+            "lijnnummerPubliek": "618",
+            "omschrijving": "scholen Malle - 's-Gravenwezel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/618"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "619",
+            "lijnnummerPubliek": "619",
+            "omschrijving": "scholen Malle - Oelegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/619"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "660",
+            "lijnnummerPubliek": "66",
+            "omschrijving": "Schoten - Ekeren - P+R Luchtbal",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/660"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "670",
+            "lijnnummerPubliek": "67",
+            "omschrijving": "(Merksem) - Kapellen - Essen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/670"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "700",
+            "lijnnummerPubliek": "70",
+            "omschrijving": "Antwerpen - Hoevenen - Stabroek - Zandvliet",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/700"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "708",
+            "lijnnummerPubliek": "708",
+            "omschrijving": "Zandvliet - Stabroek - scholen Ekeren",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/708"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "801",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Beerse - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/801"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "812",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Achterbos - Mol - Europawijk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/812"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "903",
+            "lijnnummerPubliek": "3",
+            "omschrijving": "Muizen - Mechelen station",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/903"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "953",
+            "lijnnummerPubliek": "F3",
+            "omschrijving": "Herentals - Noorderwijk - Morkhoven",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/953"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "954",
+            "lijnnummerPubliek": "F4",
+            "omschrijving": "Turnhout - Kasterlee - Lichtaart - Tielen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/954"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "958",
+            "lijnnummerPubliek": "F8",
+            "omschrijving": "Waarloos - Lint - Hove - Kontich - E19 - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/958"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "960",
+            "lijnnummerPubliek": "F10",
+            "omschrijving": "Antwerpen - Ekeren-Donk - Brasschaat Mariaburg",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/960"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "966",
+            "lijnnummerPubliek": "F16",
+            "omschrijving": "Turnhout-Rijkevorsel-Merksplas-Hoogstraten-Meerseldreef",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/966"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "976",
+            "lijnnummerPubliek": "F26",
+            "omschrijving": "Geel - Eindhout - Veerle - Vorst",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/976"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "764",
+            "lijnnummerPubliek": "764",
+            "omschrijving": "P+R Luchtbal - Van Cauwelaertsluis",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FABRIEKSLIJN",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/764"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "780",
+            "lijnnummerPubliek": "780",
+            "omschrijving": "Hoevenen - Kapellen - Brasschaat - Schoten - Wijnegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/780"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "802",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Markt - Station - Parkwijk - Den Brand",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/802"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "761",
+            "lijnnummerPubliek": "761",
+            "omschrijving": "Antwerpen - Luithagen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/761"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "992",
+            "lijnnummerPubliek": "99",
+            "omschrijving": "Merksem Nolfplein  - AZ Jan Palfijn - Luchtbal",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/992"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "500",
+            "lijnnummerPubliek": "500",
+            "omschrijving": "Mechelen - Rumst - Boom - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/500"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "947",
+            "lijnnummerPubliek": "3",
+            "omschrijving": "Emblem - Kessel - Lier Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/947"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "674",
+            "lijnnummerPubliek": "674",
+            "omschrijving": "Stabroek - Kalmthout - Essen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/674"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "17",
+            "lijnnummerPubliek": "17",
+            "omschrijving": "UZA - Centraal Station - Brouwersvliet",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/17"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "20",
+            "lijnnummerPubliek": "20",
+            "omschrijving": "Borsbeek - Berchem - Rooseveltplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/20"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "88",
+            "lijnnummerPubliek": "88",
+            "omschrijving": "Londerzeel - Kapelle-op-den-Bos - Hombeek - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/88"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "92",
+            "lijnnummerPubliek": "92",
+            "omschrijving": "Kontich Station - Mortsel - Berchem Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/92"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "110",
+            "lijnnummerPubliek": "11",
+            "omschrijving": "Geel station - Geel Thomas More",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/110"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "111",
+            "lijnnummerPubliek": "111",
+            "omschrijving": "Vosselaar - Tielen - Onze-Lieve-Vrouw-Olen - Larum - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/111"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "154",
+            "lijnnummerPubliek": "154",
+            "omschrijving": "Lisp-Markt-KLoosterhei- Kessel station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FABRIEKSLIJN",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/154"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "160",
+            "lijnnummerPubliek": "160",
+            "omschrijving": "Heist-op-den-Berg - Pijpelheide - Aarschot",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/160"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "190",
+            "lijnnummerPubliek": "19",
+            "omschrijving": "Diest - Veerle - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/190"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "219",
+            "lijnnummerPubliek": "219",
+            "omschrijving": "Vorselaar - Poederlee",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/219"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "220",
+            "lijnnummerPubliek": "220",
+            "omschrijving": "Wiekevorst - Hulshout - Westmeerbeek - Ramsel - Aarschot",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FABRIEKSLIJN",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/220"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "269",
+            "lijnnummerPubliek": "269",
+            "omschrijving": "Dendermonde - Sint-Amands - Lippelo - Puurs - Boom",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/269"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "391",
+            "lijnnummerPubliek": "391",
+            "omschrijving": "Mol - Arendonk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/391"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "414",
+            "lijnnummerPubliek": "414",
+            "omschrijving": "Sint-Antonius - Malle -Zandhoven VTI",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/414"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "419",
+            "lijnnummerPubliek": "419",
+            "omschrijving": "Zandhoven - Turnhout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/419"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "420",
+            "lijnnummerPubliek": "420",
+            "omschrijving": "Berchem - Broechem - Massenhoven - Herentals",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/420"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "719",
+            "lijnnummerPubliek": "719",
+            "omschrijving": "scholen Stabroek - Antwerpen Rooseveltplaats via A12",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/719"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "422",
+            "lijnnummerPubliek": "422",
+            "omschrijving": "Berchem - Broechem - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/422"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "427",
+            "lijnnummerPubliek": "427",
+            "omschrijving": "Snelbus Herentals - Massenhoven - Antwerpen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/427"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "434",
+            "lijnnummerPubliek": "434",
+            "omschrijving": "Hoogstraten - Merksplas - Beerse - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/434"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "470",
+            "lijnnummerPubliek": "470",
+            "omschrijving": "Mol - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/470"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "515",
+            "lijnnummerPubliek": "515",
+            "omschrijving": "Heist op den Berg Scholen  - Herselt",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/515"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "520",
+            "lijnnummerPubliek": "520",
+            "omschrijving": "Mechelen - Putte - Schriek - Tremelo",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/520"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "529",
+            "lijnnummerPubliek": "529",
+            "omschrijving": "Tremelo - Waver Scholen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/529"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "532",
+            "lijnnummerPubliek": "532",
+            "omschrijving": "Aarschot - Werchter - Tremelo - Keerbergen - Mechelen",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/532"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "533",
+            "lijnnummerPubliek": "533",
+            "omschrijving": "Mechelen - Rijmenam - Haacht Don Bosco",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/533"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "539",
+            "lijnnummerPubliek": "539",
+            "omschrijving": "Waver Scholen - Bonheiden - Keerbergen - Baal",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/539"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "543",
+            "lijnnummerPubliek": "543",
+            "omschrijving": "Westerlo - Voortkapel - Olen - Morkhoven",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/543"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "560",
+            "lijnnummerPubliek": "560",
+            "omschrijving": "Mechelen - Sint-Katelijne-Waver - Beukheuvel - Lier",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/560"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "580",
+            "lijnnummerPubliek": "58",
+            "omschrijving": "Lier - Koningshooikt - Berlaar - Heist-op-den-Berg",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/580"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "629",
+            "lijnnummerPubliek": "629",
+            "omschrijving": "scholen Malle - Brecht - Schoten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/629"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "649",
+            "lijnnummerPubliek": "649",
+            "omschrijving": "Brasschaat - Wuustwezel - Hoogstraten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/649"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "671",
+            "lijnnummerPubliek": "671",
+            "omschrijving": "Zandvliet - Stabroek - Kalmthout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/671"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "830",
+            "lijnnummerPubliek": "83",
+            "omschrijving": "Lommel - Wezel - Gerheide - Balen - Mol",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/830"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "902",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Vrijbroekpark - Station - AZ Sint-Maarten",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/902"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "904",
+            "lijnnummerPubliek": "4",
+            "omschrijving": "Station - Battel - Leest",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/904"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "911",
+            "lijnnummerPubliek": "P",
+            "omschrijving": "Rooseveltplaats - P+R Boechout Capenberg",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/911"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "964",
+            "lijnnummerPubliek": "F14",
+            "omschrijving": "Antwerpen - Ekeren - Stabroek - Zandvliet",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/964"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "970",
+            "lijnnummerPubliek": "F20",
+            "omschrijving": "Arendonk - Oud-Turnhout -Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/970"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "971",
+            "lijnnummerPubliek": "F21",
+            "omschrijving": "Turnhout - Ravels - Weelde -Poppel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/971"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "981",
+            "lijnnummerPubliek": "981",
+            "omschrijving": "Tessenderlo - Meerhout - Mol",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/981"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "982",
+            "lijnnummerPubliek": "982",
+            "omschrijving": "Tessenderlo - Meerhout - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/982"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "901",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Sint-Libertuskerk - Centrum - Mechelen Station",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/901"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "14",
+            "lijnnummerPubliek": "14",
+            "omschrijving": "Opera - Hoboken - Hemiksem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/14"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "51",
+            "lijnnummerPubliek": "51",
+            "omschrijving": "Berchem Station - Hove - Vremde",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/51"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "412",
+            "lijnnummerPubliek": "412",
+            "omschrijving": "Zandhoven - Westmalle - Sint-Job-in-'t-Goor",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/412"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "73",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Retie - Dessel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/73"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "89",
+            "lijnnummerPubliek": "89",
+            "omschrijving": "Puurs - Breendonk - Tisselt - Leest - Hombeek - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/89"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "133",
+            "lijnnummerPubliek": "133",
+            "omschrijving": "Kontich Scholen - Aartselaar - Schelle",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/133"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "135",
+            "lijnnummerPubliek": "35",
+            "omschrijving": "UZA - Kontich - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/135"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "286",
+            "lijnnummerPubliek": "286",
+            "omschrijving": "Mechelen - Willebroek - Boom",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/286"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "294",
+            "lijnnummerPubliek": "294",
+            "omschrijving": "Boom - Niel - Aartselaar",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/294"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "400",
+            "lijnnummerPubliek": "400",
+            "omschrijving": "Vlimmeren - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/400"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "409",
+            "lijnnummerPubliek": "409",
+            "omschrijving": "Herentals - Malle",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/409"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "421",
+            "lijnnummerPubliek": "421",
+            "omschrijving": "Berchem - Broechem - Viersel - Zandhoven",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/421"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "436",
+            "lijnnummerPubliek": "436",
+            "omschrijving": "Loenhout - Brecht",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/436"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "446",
+            "lijnnummerPubliek": "446",
+            "omschrijving": "Oostmalle - Brecht - Nieuwmoer",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/446"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "481",
+            "lijnnummerPubliek": "481",
+            "omschrijving": "Vorselaar - Lille - Malle - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/481"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "510",
+            "lijnnummerPubliek": "510",
+            "omschrijving": "Geel - Westerlo - Heist-op-den-Berg - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/510"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "527",
+            "lijnnummerPubliek": "527",
+            "omschrijving": "Tremelo - Heist op den  Berg",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/527"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "781",
+            "lijnnummerPubliek": "781",
+            "omschrijving": "Brasschaat - Kapellen - Hoevenen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/781"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "608",
+            "lijnnummerPubliek": "608",
+            "omschrijving": "Hoogstraten - St. Job",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/608"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "640",
+            "lijnnummerPubliek": "640",
+            "omschrijving": "Loenhout - Wuustwezel - Brasschaat - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/640"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "659",
+            "lijnnummerPubliek": "659",
+            "omschrijving": "Ekeren-Donk - Hoogstraten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/659"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "821",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Lier Herderin - Lisp - Broechem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/821"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "707",
+            "lijnnummerPubliek": "707",
+            "omschrijving": "scholen Merksem - Stabroek - Zandvliet",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/707"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "710",
+            "lijnnummerPubliek": "X71",
+            "omschrijving": "Snelbus Putte - Stabroek - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/710"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "766",
+            "lijnnummerPubliek": "760",
+            "omschrijving": "Antwerpen - Noorderlaan - Bevrijdingsdok",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/766"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "811",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Mol - Zilvermeer - Rauw",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/811"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "905",
+            "lijnnummerPubliek": "5",
+            "omschrijving": "AZ Sint-Maarten - Station - Geerdegemdries",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/905"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "957",
+            "lijnnummerPubliek": "F7",
+            "omschrijving": "Mechelen - Hombeek - Leest",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/957"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "968",
+            "lijnnummerPubliek": "F18",
+            "omschrijving": "Mol - Dessel - Retie - Arendonk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/968"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "973",
+            "lijnnummerPubliek": "F23",
+            "omschrijving": "Herentals - Olen - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/973"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "975",
+            "lijnnummerPubliek": "F2",
+            "omschrijving": "Eilandje - Hoboken Zwaantjes Feestram",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/975"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "66",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Heist-op-den-Berg - Herselt - Westerlo",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/66"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "91",
+            "lijnnummerPubliek": "91",
+            "omschrijving": "Waarloos - Mortsel - Berchem Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/91"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "172",
+            "lijnnummerPubliek": "172",
+            "omschrijving": "Mol - Gompel - Balen - Heppen - Leopoldsburg",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/172"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "180",
+            "lijnnummerPubliek": "180",
+            "omschrijving": "Groenplaats - Aartselaar",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "181",
+            "lijnnummerPubliek": "181",
+            "omschrijving": "Rumst - Aartselaar - Groenplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/181"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "210",
+            "lijnnummerPubliek": "210",
+            "omschrijving": "Herentals - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/210"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "295",
+            "lijnnummerPubliek": "295",
+            "omschrijving": "Boom - Reet - Niel - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/295"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "330",
+            "lijnnummerPubliek": "33",
+            "omschrijving": "Herentals - Kasterlee - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/330"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "408",
+            "lijnnummerPubliek": "408",
+            "omschrijving": "Zandhoven - Malle - Hoogstraten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/408"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "411",
+            "lijnnummerPubliek": "411",
+            "omschrijving": "Zandhoven - Zoersel - scholen Malle",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/411"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "442",
+            "lijnnummerPubliek": "442",
+            "omschrijving": "Sint-Lenaarts - Wuustwezel - Kalmthout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/442"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "444",
+            "lijnnummerPubliek": "444",
+            "omschrijving": "Essen - Maria-ter-Heide - Gooreind - Wuustwezel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/444"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "552",
+            "lijnnummerPubliek": "552",
+            "omschrijving": "(Sint-Katelijne-Waver) - Elzestraat - Mechelen Gandhi",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/552"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "556",
+            "lijnnummerPubliek": "556",
+            "omschrijving": "Waarloos - Duffel - Herderin - Lier Station",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/556"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "600",
+            "lijnnummerPubliek": "600",
+            "omschrijving": "Meersel-Dreef - Hoogstraten - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/600"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "620",
+            "lijnnummerPubliek": "620",
+            "omschrijving": "Meer - Hoogstraten - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/620"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "641",
+            "lijnnummerPubliek": "641",
+            "omschrijving": "Snelbus Antwerpen - Wuustwezel via E19",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/641"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "642",
+            "lijnnummerPubliek": "642",
+            "omschrijving": "Antwerpen - Maria ter Heide via Miksebaan",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/642"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "650",
+            "lijnnummerPubliek": "65",
+            "omschrijving": "Kapellen - Merksem Zwaantjeslei",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/650"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "675",
+            "lijnnummerPubliek": "675",
+            "omschrijving": "Wuustwezel - Kalmthout - Putte - Stabroek",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/675"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "701",
+            "lijnnummerPubliek": "X70",
+            "omschrijving": "Sneldienst Zandvliet - Antwerpen via A12",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/701"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "720",
+            "lijnnummerPubliek": "72",
+            "omschrijving": "Antwerpen - Ekeren - Kapellen - Putte",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/720"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "765",
+            "lijnnummerPubliek": "762",
+            "omschrijving": "P+R Luchtbal - Kaai 210 CMB (-AOR)",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FABRIEKSLIJN",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/765"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "859",
+            "lijnnummerPubliek": "859",
+            "omschrijving": "Lier - Nijlen - Emblem - Broechem - Ranst",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/859"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "869",
+            "lijnnummerPubliek": "869",
+            "omschrijving": "Boom - Willebroek - Heindonk - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/869"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "951",
+            "lijnnummerPubliek": "F1",
+            "omschrijving": "Mechelen - Duffel - Lier",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/951"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "962",
+            "lijnnummerPubliek": "F12",
+            "omschrijving": "Stabroek - Putte - Kapellen - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/962"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "974",
+            "lijnnummerPubliek": "F24",
+            "omschrijving": "Lier - Nijlen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/974"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "997",
+            "lijnnummerPubliek": "Buur",
+            "omschrijving": "Buurtbus : Mariaburg - Maria Ter Heide",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/997"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "132",
+            "lijnnummerPubliek": "351",
+            "omschrijving": "Boom - Kontich - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/132"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "182",
+            "lijnnummerPubliek": "182",
+            "omschrijving": "Boom - Aartselaar - Groenplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "15",
+            "lijnnummerPubliek": "15",
+            "omschrijving": "P+R Boechout - Regatta",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/15"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "16",
+            "lijnnummerPubliek": "16",
+            "omschrijving": "P+R Olympiade - P+R Melsele",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/16"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "441",
+            "lijnnummerPubliek": "441",
+            "omschrijving": "Wildert - Wuustwezel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/441"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "6",
+            "lijnnummerPubliek": "6",
+            "omschrijving": "P+R Luchtbal - P+R Olympiade",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/6"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "9",
+            "lijnnummerPubliek": "9",
+            "omschrijving": "P+R Linkeroever - Berchem Station - Silsburg",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/9"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "13",
+            "lijnnummerPubliek": "13",
+            "omschrijving": "Opera - Hoboken - Polderstad",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/13"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "23",
+            "lijnnummerPubliek": "23",
+            "omschrijving": "Noorderplaats - Dam - Centraal Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/23"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "36",
+            "lijnnummerPubliek": "36",
+            "omschrijving": "IGLO - Vuylstekelaan",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/36"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "40",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Hoboken Lelieplaats - Zwaantjes",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2023-10-30",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/40"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "52",
+            "lijnnummerPubliek": "52",
+            "omschrijving": "Berchem Station - Hove - Duffel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/52"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "676",
+            "lijnnummerPubliek": "676",
+            "omschrijving": "Essen - Kalmthout - Kapellen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/676"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "223",
+            "lijnnummerPubliek": "223",
+            "omschrijving": "Herentals - Olen - Voortkapel - Heultje - Hulshout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/223"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "258",
+            "lijnnummerPubliek": "258",
+            "omschrijving": "Boom - Willebroek - Tisselt",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/258"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "709",
+            "lijnnummerPubliek": "709",
+            "omschrijving": "scholen Stabroek - Zandvliet",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/709"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "270",
+            "lijnnummerPubliek": "27",
+            "omschrijving": "Sint-Amands - Baasrode - Dendermonde",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/270"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "287",
+            "lijnnummerPubliek": "287",
+            "omschrijving": "Boom - Willebroek - Heindonk - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/287"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "298",
+            "lijnnummerPubliek": "298",
+            "omschrijving": "Berchem - Niel - Boom",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/298"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "379",
+            "lijnnummerPubliek": "379",
+            "omschrijving": "Zandvliet - Stabroek - Kapellen - scholen Brasschaat",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/379"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "380",
+            "lijnnummerPubliek": "380",
+            "omschrijving": "Geel - Retie - Arendonk/Oud-Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/380"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "449",
+            "lijnnummerPubliek": "449",
+            "omschrijving": "Vorselaar - Lille - Vlimmeren - Oostmalle",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/449"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "450",
+            "lijnnummerPubliek": "450",
+            "omschrijving": "Tilburg - Poppel - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/450"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "455",
+            "lijnnummerPubliek": "455",
+            "omschrijving": "Arendonk - Zondereigen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/455"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "458",
+            "lijnnummerPubliek": "458",
+            "omschrijving": "Poppel - Weelde - Merksplas - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/458"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "848",
+            "lijnnummerPubliek": "848",
+            "omschrijving": "Herentals - Bouwel - Nijlen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/848"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "490",
+            "lijnnummerPubliek": "490",
+            "omschrijving": "Turnhout - Kasterlee - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/490"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "534",
+            "lijnnummerPubliek": "534",
+            "omschrijving": "Keerbergen scholen - Putte - Heist",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/534"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "558",
+            "lijnnummerPubliek": "558",
+            "omschrijving": "Waver scholen - Sint-Katelijne-Waver - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/558"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "849",
+            "lijnnummerPubliek": "849",
+            "omschrijving": "Heist-op-den-Berg - Herenthout - Grobbendonk - Vorselaar",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/849"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "568",
+            "lijnnummerPubliek": "568",
+            "omschrijving": "Westerlo Scholen - Westmeerbeek - Booischot - Hulshout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/568"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "906",
+            "lijnnummerPubliek": "6",
+            "omschrijving": "Mechelen Stat - Industrie Noord - Mechelen Stat.",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FABRIEKSLIJN",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/906"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "910",
+            "lijnnummerPubliek": "PM",
+            "omschrijving": "Malinas - Mechelen Station",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/910"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "948",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Lier Station - Herderin - Duffel Station",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/948"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "959",
+            "lijnnummerPubliek": "F9",
+            "omschrijving": "Turnhout-Gierle-Lille-Wechelderzande-Poederlee-Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/959"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "965",
+            "lijnnummerPubliek": "F15",
+            "omschrijving": "Antwerpen - Hemiksem - Schelle - Niel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/965"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "967",
+            "lijnnummerPubliek": "F17",
+            "omschrijving": "Baarle - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/967"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "980",
+            "lijnnummerPubliek": "98",
+            "omschrijving": "Geel - Meerhout - Zittaart - Vorst - Tessenderlo",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/980"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "448",
+            "lijnnummerPubliek": "448",
+            "omschrijving": "Brecht - Wuustwezel - Essen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/448"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "718",
+            "lijnnummerPubliek": "718",
+            "omschrijving": "Antwerpen P+R Luchtbal - scholen Stabroek",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/718"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "417",
+            "lijnnummerPubliek": "417",
+            "omschrijving": "Snelbus Turnhout - Zoersel - Antwerpen",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/417"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "19",
+            "lijnnummerPubliek": "19",
+            "omschrijving": "Sportpaleis - Deurne Zuid",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/19"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "21",
+            "lijnnummerPubliek": "21",
+            "omschrijving": "Neerland - Middelheim - Rooseveltplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/21"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "621",
+            "lijnnummerPubliek": "621",
+            "omschrijving": "Sint-Job - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/621"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "65",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Boortmeerbeek - Bonheiden - Heist-op-den-Berg",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/65"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "131",
+            "lijnnummerPubliek": "359",
+            "omschrijving": "Wilrijk - Kontich scholen - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/131"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "230",
+            "lijnnummerPubliek": "23",
+            "omschrijving": "Mol - Meerhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/230"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "280",
+            "lijnnummerPubliek": "280",
+            "omschrijving": "Puurs - Liezele - Londerzeel",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/280"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "321",
+            "lijnnummerPubliek": "32b",
+            "omschrijving": "Leuven - Aarschot - Herselt - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/321"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "404",
+            "lijnnummerPubliek": "404",
+            "omschrijving": "Zandhoven VTI  - Halle - Wijnegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/404"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "431",
+            "lijnnummerPubliek": "431",
+            "omschrijving": "Turnhout - Vosselaar Dorp - Beerse - Rijkevorsel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/431"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "432",
+            "lijnnummerPubliek": "432",
+            "omschrijving": "Brecht - Rijkevorsel - Merksplas - Turnhout - Arendonk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/432"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "850",
+            "lijnnummerPubliek": "85",
+            "omschrijving": "Lier - Nijlen - Herenthout - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/850"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "439",
+            "lijnnummerPubliek": "439",
+            "omschrijving": "Hoogstraten - Turnhout - Meersel-Dreef",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/439"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "456",
+            "lijnnummerPubliek": "456",
+            "omschrijving": "Poppel - Arendonk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/456"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "461",
+            "lijnnummerPubliek": "461",
+            "omschrijving": "Baarle - Zondereigen - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/461"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "512",
+            "lijnnummerPubliek": "512",
+            "omschrijving": "Wiekevorst - Heist-op-den-Berg - Putte - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/512"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "540",
+            "lijnnummerPubliek": "54",
+            "omschrijving": "Tessenderlo - Westerlo - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/540"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "541",
+            "lijnnummerPubliek": "541",
+            "omschrijving": "Herentals - Olen - Voortkapel - Westerlo",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/541"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "550",
+            "lijnnummerPubliek": "550",
+            "omschrijving": "Mechelen Gandhi - Duffel - Lier",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/550"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "569",
+            "lijnnummerPubliek": "569",
+            "omschrijving": "Sint-Katelijne-Waver Hagelstein - Lier",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/569"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "956",
+            "lijnnummerPubliek": "F6",
+            "omschrijving": "Malle-Zoersel-Halle-St.Antonius-Malle",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/956"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "963",
+            "lijnnummerPubliek": "F13",
+            "omschrijving": "Loenhout - Wuustwezel - Brasschaat - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/963"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "503",
+            "lijnnummerPubliek": "503",
+            "omschrijving": "Wilrijk Centrum - Industrie - Wilrijk Centrum",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/503"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "528",
+            "lijnnummerPubliek": "528",
+            "omschrijving": "Mechelen - Peulis - Waver scholen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/528"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "67",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Heist-op-den-Berg - Nijlen - Herenthout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/67"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "283",
+            "lijnnummerPubliek": "283",
+            "omschrijving": "Weerde - Zemst - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/283"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "33",
+            "lijnnummerPubliek": "33",
+            "omschrijving": "Hoboken - Wilrijk - Merksem - P+R Luchtbal",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-08-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/33"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "38",
+            "lijnnummerPubliek": "38",
+            "omschrijving": "Station Zuid - Berchem - Schijnpoort",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/38"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "53",
+            "lijnnummerPubliek": "53",
+            "omschrijving": "Berchem Station - Hove - Duffel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/53"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "183",
+            "lijnnummerPubliek": "183",
+            "omschrijving": "Groenplaats - Aartselaar - Niel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/183"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "243",
+            "lijnnummerPubliek": "243",
+            "omschrijving": "Broechem - Boechout - Hove - Kontich",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/243"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "329",
+            "lijnnummerPubliek": "329",
+            "omschrijving": "Aarschot - Herselt - Blauberg - Westerlo - Oevel - Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/329"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "410",
+            "lijnnummerPubliek": "410",
+            "omschrijving": "Antwerpen - Wijnegem - Malle - Beerse - Turnhout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/410"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "415",
+            "lijnnummerPubliek": "415",
+            "omschrijving": "Snelbus Antwerpen - Beerse - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/415"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "424",
+            "lijnnummerPubliek": "424",
+            "omschrijving": "Schilde - Zandhoven VTI",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/424"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "428",
+            "lijnnummerPubliek": "428",
+            "omschrijving": "Vorselaar - Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/428"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "429",
+            "lijnnummerPubliek": "429",
+            "omschrijving": "Snelbus Antwerpen -Zoersel - Malle - Lille - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/429"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "430",
+            "lijnnummerPubliek": "430",
+            "omschrijving": "Reusel  - Turnhout - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/430"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "440",
+            "lijnnummerPubliek": "440",
+            "omschrijving": "Brecht -  Oostmalle",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/440"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "445",
+            "lijnnummerPubliek": "445",
+            "omschrijving": "Brasschaat - Gooreind - Kalmthout",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/445"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "610",
+            "lijnnummerPubliek": "610",
+            "omschrijving": "Antwerpen - Oelegem",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/610"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "460",
+            "lijnnummerPubliek": "460",
+            "omschrijving": "Baarle - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/460"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "473",
+            "lijnnummerPubliek": "473",
+            "omschrijving": "Turnhout - Oud-Turnhout - Retie - Dessel - Mol TISP",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/473"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "538",
+            "lijnnummerPubliek": "538",
+            "omschrijving": "Keerbergen - Bonheiden - Pasbrug - Waver scholen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/538"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "544",
+            "lijnnummerPubliek": "544",
+            "omschrijving": "Tongelsbos - Westerlo - Olen - Herentals",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/544"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "840",
+            "lijnnummerPubliek": "84",
+            "omschrijving": "Lier - Nijlen - Grobbendonk - Vorselaar",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/840"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "860",
+            "lijnnummerPubliek": "86",
+            "omschrijving": "Boom - Willebroek - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/860"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "952",
+            "lijnnummerPubliek": "F2",
+            "omschrijving": "Mechelen - Rumst - Aartselaar - Groenplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/952"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "961",
+            "lijnnummerPubliek": "F11",
+            "omschrijving": "Wildert - Kalmthout - Essen - Wildert",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/961"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "969",
+            "lijnnummerPubliek": "F19",
+            "omschrijving": "Wijnegem - Sint-Antonius",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/969"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "972",
+            "lijnnummerPubliek": "F22",
+            "omschrijving": "Meer - Hoogstraten - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/972"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "140",
+            "lijnnummerPubliek": "140",
+            "omschrijving": "Wijnegem - Mortsel - UZA - Hoboken Polderstad",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/140"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "213",
+            "lijnnummerPubliek": "213",
+            "omschrijving": "Turnhout - Gierle - Lille - Vorselaar",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/213"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "320",
+            "lijnnummerPubliek": "32a",
+            "omschrijving": "Geel - Oevel - Westerlo - Herselt - Aarschot - Leuven",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/320"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "435",
+            "lijnnummerPubliek": "435",
+            "omschrijving": "Hoogstraten - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/435"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "390",
+            "lijnnummerPubliek": "390",
+            "omschrijving": "Mol - Arendonk",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/390"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "401",
+            "lijnnummerPubliek": "401",
+            "omschrijving": "Oostmalle - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/401"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "447",
+            "lijnnummerPubliek": "447",
+            "omschrijving": "Wuustwezel - Horendonk - Essen Hoek",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/447"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "482",
+            "lijnnummerPubliek": "482",
+            "omschrijving": "Westmalle - Oostmalle - Rijkevorsel - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/482"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "555",
+            "lijnnummerPubliek": "555",
+            "omschrijving": "Lier - Duffel - Rumst",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/555"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "561",
+            "lijnnummerPubliek": "561",
+            "omschrijving": "Mechelen - Sint-Katelijne-Waver - Berlaarbaan - Lier",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/561"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "592",
+            "lijnnummerPubliek": "592",
+            "omschrijving": "Herentals - Lille - Vlimmeren - Oostmalle - Westmalle",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/592"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "955",
+            "lijnnummerPubliek": "F5",
+            "omschrijving": "Broechem - Rooseveltplaats",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/955"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "191",
+            "lijnnummerPubliek": "191",
+            "omschrijving": "Snelbus Rumst - Kontich - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/191"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "607",
+            "lijnnummerPubliek": "607",
+            "omschrijving": "scholen Malle - Sint-Job",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/607"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "7",
+            "lijnnummerPubliek": "7",
+            "omschrijving": "Eilandje - Mortsel",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/7"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "24",
+            "lijnnummerPubliek": "24",
+            "omschrijving": "Havenhuis - Silsburg",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "TRAM",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-01",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/24"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "68",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Laakdal",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/68"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "74",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Balen - Mol",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/74"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "76",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Geel",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NACHTLIJN",
+            "lijnGeldigVan": "2024-02-19",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/76"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "90",
+            "lijnnummerPubliek": "90",
+            "omschrijving": "Berchem Station - Mortsel -  Lier",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/90"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "290",
+            "lijnnummerPubliek": "290",
+            "omschrijving": "Antwerpen - Niel - Boom",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/290"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "416",
+            "lijnnummerPubliek": "416",
+            "omschrijving": "Snelbus Antwerpen - Wechelderzande - Turnhout",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/416"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "457",
+            "lijnnummerPubliek": "457",
+            "omschrijving": "Weelde - Baarle - Hoogstraten",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/457"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "730",
+            "lijnnummerPubliek": "730",
+            "omschrijving": "Brasschaat - Ekeren - Antwerpen",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/730"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "511",
+            "lijnnummerPubliek": "511",
+            "omschrijving": "Herentals - Heist-op-den-Berg - Mechelen",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/511"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "679",
+            "lijnnummerPubliek": "679",
+            "omschrijving": "Essen - Hoogstraten",
+            "vervoerRegioCode": "AN",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-06-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/679"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "868",
+            "lijnnummerPubliek": "868",
+            "omschrijving": "Boom - Willebroek - Tisselt",
+            "vervoerRegioCode": "ME",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SCHOOLBUS",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/868"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/1/lijnen?dateFormatted=string"
+        }
+    ]
+}

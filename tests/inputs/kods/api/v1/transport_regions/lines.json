@@ -1,0 +1,622 @@
+{
+    "lijnen": [
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "803",
+            "lijnnummerPubliek": "803",
+            "omschrijving": "Aalst - Ede - Kerksken Stichelen",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/803"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "591",
+            "lijnnummerPubliek": "591",
+            "omschrijving": "Aalst - Hofstade - Lede - Serskamp - Wetteren",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/591"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "313",
+            "lijnnummerPubliek": "313",
+            "omschrijving": "Aalst - Denderleeuw Hemelrijk - Aspelare - Ninove",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/313"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "23",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Aalst Station - Erembodegem - ASZ",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/23"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "875",
+            "lijnnummerPubliek": "87",
+            "omschrijving": "Aalst - Haaltert - Aspelare - Geraardsbergen",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/875"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "923",
+            "lijnnummerPubliek": "92",
+            "omschrijving": "Hamme - Moerzeke - Kastel",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/923"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "807",
+            "lijnnummerPubliek": "80",
+            "omschrijving": "Aalst - Ede - Mere - Aaigem - Heldergem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/807"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "403",
+            "lijnnummerPubliek": "403",
+            "omschrijving": "Aalst - Moorsel - Baardegem - Droeshout - Opwijk",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/403"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "919",
+            "lijnnummerPubliek": "91",
+            "omschrijving": "Aalst -Lebbeke -Dendermonde -Hamme -Sint-Niklaas",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/919"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "13",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "Dendermonde Station - Ziekenhuis - Station",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/13"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "317",
+            "lijnnummerPubliek": "31",
+            "omschrijving": "Aalst - Denderleeuw - Ninove",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/317"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "802",
+            "lijnnummerPubliek": "802",
+            "omschrijving": "Aalst - Ede - Haaltert - Heldergem - Woubrechtegem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/802"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "257",
+            "lijnnummerPubliek": "25",
+            "omschrijving": "Aalst-Erpe-Burst-Houtem-Herzele-Zottegem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/257"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "547",
+            "lijnnummerPubliek": "54",
+            "omschrijving": "Aalst - Hofstade - Berlare - Lokeren",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/547"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "234",
+            "lijnnummerPubliek": "234",
+            "omschrijving": "Berlare - Schoonaarde - Dendermonde",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/234"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "597",
+            "lijnnummerPubliek": "59",
+            "omschrijving": "Aalst - Hofstade - Lede - Oordegem - Wetteren",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/597"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "804",
+            "lijnnummerPubliek": "804",
+            "omschrijving": "Aalst - Mere - Burst - Heldergem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/804"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "312",
+            "lijnnummerPubliek": "312",
+            "omschrijving": "Aalst - Denderleeuw - Aspelare - Ninove",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/312"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "314",
+            "lijnnummerPubliek": "314",
+            "omschrijving": "Aalst - Denderhoutem -  Ninove",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/314"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "577",
+            "lijnnummerPubliek": "57",
+            "omschrijving": "Aalst - Hofstade - Gijzegem - Dendermonde",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/577"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "213",
+            "lijnnummerPubliek": "21",
+            "omschrijving": "Zele - Overmere - Wichelen - Lede - Erpe - Mere",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-30",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/213"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "911",
+            "lijnnummerPubliek": "911",
+            "omschrijving": "Dendermonde - Hamme - Waasmunster",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/911"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "107",
+            "lijnnummerPubliek": "1",
+            "omschrijving": "ASZ - Station - Oude Abdijstraat",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/107"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "253",
+            "lijnnummerPubliek": "253",
+            "omschrijving": "Aalst - Erpe - Ressegem - Herzele",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/253"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "402",
+            "lijnnummerPubliek": "402",
+            "omschrijving": "Aalst - Meldert - Asse",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/402"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "912",
+            "lijnnummerPubliek": "912",
+            "omschrijving": "Dendermonde - Moerzeke - Hamme - Sint-Niklaas",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/912"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "404",
+            "lijnnummerPubliek": "404",
+            "omschrijving": "Aalst - Meldert - Opwijk",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/404"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "407",
+            "lijnnummerPubliek": "40",
+            "omschrijving": "Aalst - Moorsel - Opwijk (- Londerzeel)",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-04-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/407"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "254",
+            "lijnnummerPubliek": "254",
+            "omschrijving": "Uitbergen - Lede - Erpe Vijfhuizen  Aalst",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/254"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "252",
+            "lijnnummerPubliek": "252",
+            "omschrijving": "Aalst-Erpe-Vlekkem-Borsbeke-Hillegem-Zottegem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/252"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "541",
+            "lijnnummerPubliek": "541",
+            "omschrijving": "Aalst - Hofstade - Gijzegem - Berlare - Lokeren",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/541"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "251",
+            "lijnnummerPubliek": "251",
+            "omschrijving": "Woubrechtegem - Herzele - Zottegem",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/251"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "914",
+            "lijnnummerPubliek": "914",
+            "omschrijving": "Aalst Station - Wijngaardveld",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/914"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "913",
+            "lijnnummerPubliek": "913",
+            "omschrijving": "Aalst - Wieze - Denderbelle - Dendermonde",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-02-26",
+            "lijnGeldigTot": "2024-03-29",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/913"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA/lijnen"
+        }
+    ]
+}

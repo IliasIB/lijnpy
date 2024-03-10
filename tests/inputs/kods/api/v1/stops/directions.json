@@ -1,0 +1,34 @@
+{
+    "lijnrichtingen": [
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "178",
+            "richting": "HEEN",
+            "omschrijving": "Maaseik - Brussel",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/178/lijnrichtingen/HEEN"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "179",
+            "richting": "TERUG",
+            "omschrijving": "Bocholt - Brussel",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/179/lijnrichtingen/TERUG"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581/lijnrichtingen?dateFormatted=string"
+        }
+    ]
+}

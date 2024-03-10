@@ -1,0 +1,1342 @@
+{
+    "lijnen": [
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "555",
+            "lijnnummerPubliek": "555",
+            "omschrijving": "Leuven - Sint-Pieters-Woluwe",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/555"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "558",
+            "lijnnummerPubliek": "558",
+            "omschrijving": "Leuven - Tervuren",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/558"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "302",
+            "lijnnummerPubliek": "2",
+            "omschrijving": "Kessel-Lo - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/302"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "303",
+            "lijnnummerPubliek": "3",
+            "omschrijving": "Lubbeek - Pellenberg - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/303"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "304",
+            "lijnnummerPubliek": "4",
+            "omschrijving": "Herent - Haasrode",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/304"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "305",
+            "lijnnummerPubliek": "5",
+            "omschrijving": "Wakkerzeel - Vaalbeek",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/305"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "433",
+            "lijnnummerPubliek": "433",
+            "omschrijving": "Tremelo - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/433"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "306",
+            "lijnnummerPubliek": "6",
+            "omschrijving": "Wijgmaal - Hoegaarden",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/306"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "307",
+            "lijnnummerPubliek": "7",
+            "omschrijving": "Bierbeek - Bertem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/307"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "308",
+            "lijnnummerPubliek": "8",
+            "omschrijving": "Bierbeek - Bertem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/308"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "309",
+            "lijnnummerPubliek": "9",
+            "omschrijving": "Korbeek-Lo - Bertem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/309"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "310",
+            "lijnnummerPubliek": "310",
+            "omschrijving": "Aarschot - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/310"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "315",
+            "lijnnummerPubliek": "315",
+            "omschrijving": "Leuven - Leefd. - Terv. - Kraainem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/315"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "316",
+            "lijnnummerPubliek": "316",
+            "omschrijving": "Leuven - Sterrebeek - Kraainem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/316"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "317",
+            "lijnnummerPubliek": "317",
+            "omschrijving": "Leuven - Bert. - Terv. - Kraainem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/317"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "318",
+            "lijnnummerPubliek": "318",
+            "omschrijving": "Leuven - Moorsel - Brussel",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/318"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "576",
+            "lijnnummerPubliek": "576",
+            "omschrijving": "Kortenberg - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/576"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "577",
+            "lijnnummerPubliek": "577",
+            "omschrijving": "Veltem-Beisem - Herent - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/577"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "70",
+            "lijnnummerPubliek": "70",
+            "omschrijving": "Leuven - Overijse - Hoeilaart - Groenendaal",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/70"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "333",
+            "lijnnummerPubliek": "333",
+            "omschrijving": "Tremelo - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/333"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "334",
+            "lijnnummerPubliek": "334",
+            "omschrijving": "Aarschot - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/334"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "79",
+            "lijnnummerPubliek": "79",
+            "omschrijving": "Leuven - Sint-Joris-Weert - Waver",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/79"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "335",
+            "lijnnummerPubliek": "335",
+            "omschrijving": "Aarschot - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/335"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "178",
+            "lijnnummerPubliek": "178",
+            "omschrijving": "Maaseik - Brussel",
+            "vervoerRegioCode": "LI",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/178"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "179",
+            "lijnnummerPubliek": "179",
+            "omschrijving": "Brussel - Bocholt",
+            "vervoerRegioCode": "LI",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/179"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "595",
+            "lijnnummerPubliek": "595",
+            "omschrijving": "Groenendaal - Hoeilaart - Overijse - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/595"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "597",
+            "lijnnummerPubliek": "597",
+            "omschrijving": "Wilsele - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/597"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "598",
+            "lijnnummerPubliek": "598",
+            "omschrijving": "Groenendaal - Overijse - Oud-Heverlee - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/598"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "600",
+            "lijnnummerPubliek": "600",
+            "omschrijving": "Buitenringbus Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/600"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "90",
+            "lijnnummerPubliek": "R90",
+            "omschrijving": "Brussel Noord - Kortenberg - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/90"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "475",
+            "lijnnummerPubliek": "475",
+            "omschrijving": "Tielt - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/475"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "91",
+            "lijnnummerPubliek": "91",
+            "omschrijving": "Zaventem Luchthaven - Kortenberg - Everberg - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/91"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "92",
+            "lijnnummerPubliek": "R92",
+            "omschrijving": "Kraainem - Kortenberg - Erps-Kwerps - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/92"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "485",
+            "lijnnummerPubliek": "485",
+            "omschrijving": "Tienen - Lubbeek - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/485"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "616",
+            "lijnnummerPubliek": "616",
+            "omschrijving": "Leuven - Bertem - Moorsel - Zaventem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/616"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "370",
+            "lijnnummerPubliek": "370",
+            "omschrijving": "Diest - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/370"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "371",
+            "lijnnummerPubliek": "371",
+            "omschrijving": "Linden - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/371"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "500",
+            "lijnnummerPubliek": "500",
+            "omschrijving": "Keerbergen - Wespelaar",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/500"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "373",
+            "lijnnummerPubliek": "373",
+            "omschrijving": "Assent - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/373"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "630",
+            "lijnnummerPubliek": "630",
+            "omschrijving": "Wijgmaal - Haasrode",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/630"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "374",
+            "lijnnummerPubliek": "374",
+            "omschrijving": "Tielt - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/374"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "631",
+            "lijnnummerPubliek": "631",
+            "omschrijving": "Leuven - Heverlee - Haasrode",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/631"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "380",
+            "lijnnummerPubliek": "380",
+            "omschrijving": "Tienen - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/380"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "511",
+            "lijnnummerPubliek": "511",
+            "omschrijving": "Rotselaar - Haacht",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/511"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "512",
+            "lijnnummerPubliek": "512",
+            "omschrijving": "Tildonk - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/512"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "513",
+            "lijnnummerPubliek": "513",
+            "omschrijving": "Tildonk - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/513"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "320",
+            "lijnnummerPubliek": "32a",
+            "omschrijving": "Geel - Oevel - Westerlo - Herselt - Aarschot - Leuven",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/320"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "321",
+            "lijnnummerPubliek": "32b",
+            "omschrijving": "Herentals - Herselt - Aarschot - Leuven",
+            "vervoerRegioCode": "KE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-01-06",
+            "lijnGeldigTot": "2099-12-01",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/321"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "901",
+            "lijnnummerPubliek": "N1",
+            "omschrijving": "Hever - Haacht - Herent - Leuven - Kessel-Lo",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/901"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "902",
+            "lijnnummerPubliek": "N2",
+            "omschrijving": "Tervuren - Leuven - Tienen",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/902"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "903",
+            "lijnnummerPubliek": "N3",
+            "omschrijving": "Kortenberg - Erps-Kwerps - Leuven - Lubbeek",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/903"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "520",
+            "lijnnummerPubliek": "520",
+            "omschrijving": "Linden - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/520"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "904",
+            "lijnnummerPubliek": "N4",
+            "omschrijving": "Kortenberg - Leuven - Rotselaar - Aarschot",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/904"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "905",
+            "lijnnummerPubliek": "N5",
+            "omschrijving": "Kortrijk-Dutsel - Leuven - Overijse - Hoeilaart",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/905"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "521",
+            "lijnnummerPubliek": "521",
+            "omschrijving": "Kortenberg - Everberg - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/521"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "906",
+            "lijnnummerPubliek": "N6",
+            "omschrijving": "Sterrebeek - Leefdaal - Leuven - Vaalbeek",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/906"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "522",
+            "lijnnummerPubliek": "522",
+            "omschrijving": "Kortenberg - Erps-Kwerps - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/522"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "907",
+            "lijnnummerPubliek": "N7",
+            "omschrijving": "Tremelo - Wakkerzeel - Leuven - Tielt-Winge",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/907"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "523",
+            "lijnnummerPubliek": "523",
+            "omschrijving": "Kortenberg - Winksele - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/523"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "908",
+            "lijnnummerPubliek": "N8",
+            "omschrijving": "Bierbeek - Leuven - Bertem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/908"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "524",
+            "lijnnummerPubliek": "524",
+            "omschrijving": "Tielt - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/524"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "525",
+            "lijnnummerPubliek": "525",
+            "omschrijving": "Geestbeek - Heverlee",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/525"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "909",
+            "lijnnummerPubliek": "N9",
+            "omschrijving": "Leuven - Sint-Joris-Weert - Ottenburg",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/909"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "13",
+            "lijnnummerPubliek": "13",
+            "omschrijving": "Leuven - Heverlee - Blanden",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/13"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "526",
+            "lijnnummerPubliek": "526",
+            "omschrijving": "Heverlee - Tervuren",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/526"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "527",
+            "lijnnummerPubliek": "527",
+            "omschrijving": "Heverlee - Pellenberg - Honsem",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/527"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "529",
+            "lijnnummerPubliek": "529",
+            "omschrijving": "Herent - Heverlee Heilig Hart",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/529"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "537",
+            "lijnnummerPubliek": "537",
+            "omschrijving": "Terlanen - Ottenburg - Oud-Heverlee -Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/537"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "410",
+            "lijnnummerPubliek": "410",
+            "omschrijving": "Leuven - Brussel",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "SNELDIENST",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/410"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "539",
+            "lijnnummerPubliek": "539",
+            "omschrijving": "Heverlee Woudlucht - Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/539"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "284",
+            "lijnnummerPubliek": "284",
+            "omschrijving": "Leuven - Mechelen",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/284"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "285",
+            "lijnnummerPubliek": "285",
+            "omschrijving": "Leuven - Mechelen",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/285"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "586",
+            "lijnnummerPubliek": "586",
+            "omschrijving": "Heverlee Campus - Leuven Station",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/586"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "lijnnummer": "601",
+            "lijnnummerPubliek": "601",
+            "omschrijving": "Binnenringbus Leuven",
+            "vervoerRegioCode": "LV",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2024-03-04",
+            "lijnGeldigTot": "2024-03-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/601"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1866/lijnen?dateFormatted=string"
+        }
+    ]
+}

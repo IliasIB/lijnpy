@@ -1,0 +1,24 @@
+{
+    "entiteitnummer": "4",
+    "haltenummer": "408581",
+    "omschrijving": "Koning Boudewijnlaan",
+    "omschrijvingLang": "Heverlee Koning Boudewijnlaan",
+    "gemeentenummer": 1866,
+    "omschrijvingGemeente": "Leuven",
+    "geoCoordinaat": {
+        "latitude": 50.868276,
+        "longitude": 4.68115
+    },
+    "halteToegankelijkheden": [
+        "MOTORISCH_MET_ASSIST",
+        "MOTORISCHE_BEPERKING"
+    ],
+    "hoofdHalte": null,
+    "taal": "?",
+    "links": [
+        {
+            "rel": "detail",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581"
+        }
+    ]
+}

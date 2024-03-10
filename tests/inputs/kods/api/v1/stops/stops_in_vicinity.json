@@ -1,0 +1,178 @@
+{
+    "haltes": [
+        {
+            "type": "DELIJN",
+            "id": "403022",
+            "naam": "Zonhoven Hulsbergweg",
+            "afstand": 0,
+            "geoCoordinaat": {
+                "latitude": 51.004652,
+                "longitude": 5.346613
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "403023",
+            "naam": "Zonhoven Hulsbergweg",
+            "afstand": 20,
+            "geoCoordinaat": {
+                "latitude": 51.004469,
+                "longitude": 5.346615
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403023/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403023/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403023/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "403484",
+            "naam": "Zonhoven Oudestraat",
+            "afstand": 387,
+            "geoCoordinaat": {
+                "latitude": 51.004126,
+                "longitude": 5.352072
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403484/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403484/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403484/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "403585",
+            "naam": "Zonhoven Oudestraat",
+            "afstand": 412,
+            "geoCoordinaat": {
+                "latitude": 51.004084,
+                "longitude": 5.352417
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403585/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403585/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403585/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "435507",
+            "naam": "Zonhoven Vogelzangstraat",
+            "afstand": 467,
+            "geoCoordinaat": {
+                "latitude": 51.003394,
+                "longitude": 5.340259
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/435507/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/435507/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/435507/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "404263",
+            "naam": "Zonhoven Dwarsstraat",
+            "afstand": 628,
+            "geoCoordinaat": {
+                "latitude": 50.999008,
+                "longitude": 5.346311
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404263/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404263/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404263/dienstregelingen"
+                }
+            ]
+        },
+        {
+            "type": "DELIJN",
+            "id": "404260",
+            "naam": "Zonhoven Dwarsstraat",
+            "afstand": 634,
+            "geoCoordinaat": {
+                "latitude": 50.998974,
+                "longitude": 5.345711
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404260/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404260/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/404260/dienstregelingen"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/indebuurt/51.004652%2C5.346613?maxAantalHaltes=10&radius=750"
+        }
+    ]
+}

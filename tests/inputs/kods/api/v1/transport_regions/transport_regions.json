@@ -1,0 +1,175 @@
+{
+    "vervoerRegios": [
+        {
+            "code": "AA",
+            "naam": "Aalst",
+            "nr": "01",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "AN",
+            "naam": "Antwerpen",
+            "nr": "02",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AN/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "BR",
+            "naam": "Brugge",
+            "nr": "03",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/BR/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "GE",
+            "naam": "Gent",
+            "nr": "04",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/GE/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "KE",
+            "naam": "Kempen",
+            "nr": "05",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/KE/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "KO",
+            "naam": "Kortrijk",
+            "nr": "06",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/KO/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "LV",
+            "naam": "Leuven",
+            "nr": "07",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/LV/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "LI",
+            "naam": "Limburg",
+            "nr": "08",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/LI/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "ME",
+            "naam": "Mechelen",
+            "nr": "09",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/ME/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "OO",
+            "naam": "Oostende",
+            "nr": "10",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/OO/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "RO",
+            "naam": "Midwest (Roeselare)",
+            "nr": "11",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/RO/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "VA",
+            "naam": "Vlaamse Ardennen",
+            "nr": "12",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/VA/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "VR",
+            "naam": "Vlaamse Rand",
+            "nr": "13",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/VR/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "WA",
+            "naam": "Waasland",
+            "nr": "14",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/WA/lijnen"
+                }
+            ]
+        },
+        {
+            "code": "WH",
+            "naam": "Westhoek",
+            "nr": "15",
+            "links": [
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/WH/lijnen"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios"
+        }
+    ]
+}

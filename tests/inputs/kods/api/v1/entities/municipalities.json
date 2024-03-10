@@ -1,0 +1,22 @@
+{
+    "gemeenten": [
+        {
+            "gemeentenummer": 1,
+            "omschrijving": "HOUTHALEN",
+            "hoofdGemeente": {
+                "gemeentenummer": 2,
+                "omschrijving": "HOUTHALEN-HELCHTEREN"
+            }
+        },
+        {
+            "gemeentenummer": 2,
+            "omschrijving": "HOUTHALEN-HELCHTEREN"
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten"
+        }
+    ]
+}

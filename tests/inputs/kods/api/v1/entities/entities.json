@@ -1,0 +1,125 @@
+{
+    "entiteiten": [
+        {
+            "entiteitnummer": "1",
+            "entiteitcode": "A",
+            "omschrijving": "Antwerpen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/1"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/1/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/1/lijnen"
+                },
+                {
+                    "rel": "gemeenten",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/1/gemeenten"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "entiteitcode": "O",
+            "omschrijving": "Oost-Vlaanderen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/2"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/2/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/2/lijnen"
+                },
+                {
+                    "rel": "gemeenten",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/2/gemeenten"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "3",
+            "entiteitcode": "B",
+            "omschrijving": "Vlaams-Brabant",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/3"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/3/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/3/lijnen"
+                },
+                {
+                    "rel": "gemeenten",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/3/gemeenten"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "entiteitcode": "L",
+            "omschrijving": "Limburg",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/4"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/4/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/4/lijnen"
+                },
+                {
+                    "rel": "gemeenten",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/4/gemeenten"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "5",
+            "entiteitcode": "W",
+            "omschrijving": "West-Vlaanderen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/5"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/5/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/5/lijnen"
+                },
+                {
+                    "rel": "gemeenten",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten/5/gemeenten"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/entiteiten"
+        }
+    ]
+}

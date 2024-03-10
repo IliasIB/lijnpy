@@ -1,0 +1,14 @@
+{
+    "gemeentenummer": 1491,
+    "omschrijving": "HOUTHALEN",
+    "hoofdGemeente": {
+        "gemeentenummer": 1422,
+        "omschrijving": "HOUTHALEN-HELCHTEREN"
+    },
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1491"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "halteDoorkomsten": [
+        {
+            "haltenummer": "408581",
+            "doorkomsten": [
+                {
+                    "entiteitnummer": "4",
+                    "lijnnummer": 178,
+                    "richting": "HEEN",
+                    "ritnummer": "1001",
+                    "bestemming": "Elsene VUB",
+                    "plaatsBestemming": "Elsene VUB Gebouw M (inrit 11)",
+                    "vias": [],
+                    "dienstregelingTijdstip": "2024-03-10T21:24:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/178/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "4",
+                    "lijnnummer": 179,
+                    "richting": "TERUG",
+                    "ritnummer": "2",
+                    "bestemming": "Elsene VUB",
+                    "plaatsBestemming": "Elsene VUB Gebouw M (inrit 11)",
+                    "vias": [],
+                    "dienstregelingTijdstip": "2024-03-10T21:46:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/179/lijnrichtingen/TERUG"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581/dienstregelingen?date=2024-03-10&dateFormatted=string"
+        }
+    ],
+    "doorkomstNotas": [],
+    "ritNotas": [],
+    "omleidingen": []
+}
