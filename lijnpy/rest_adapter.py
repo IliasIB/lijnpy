@@ -1,10 +1,26 @@
 from json import JSONDecodeError
 from logging import Logger, getLogger
+from typing import Any
 
 import requests
+from pydantic import BaseModel
 
-from lijnpy.exceptions import DeLijnAPIException
-from lijnpy.models import Result
+
+class Result(BaseModel):
+    """The result of a request to the De Lijn API
+
+    Attributes:
+        status_code (int): The status code of the request
+        message (str, optional): The message of the request. Defaults to "".
+        data (dict[str, Any] | None, optional): The data of the request. Defaults to None.
+    """
+
+    status_code: int
+    message: str = ""
+    data: dict[str, Any] | None = None
+
+
+class DeLijnAPIException(Exception): ...
 
 
 class RestAdapter:

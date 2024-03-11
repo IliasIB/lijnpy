@@ -1,13 +1,13 @@
 from pydantic import ValidationError
 
 from lijnpy import _logger
-from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kods.api.v1 import _rest_adapter
 from lijnpy.kods.api.v1.models.transport_regions import (
     LinesResponse,
     TransportRegionResponse,
     TransportRegionsResponse,
 )
+from lijnpy.rest_adapter import DeLijnAPIException
 
 
 def get_transport_regions() -> TransportRegionsResponse:
