@@ -3,16 +3,16 @@ from pydantic_core import ValidationError
 from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kods.api.v1 import _rest_adapter
-from lijnpy.kods.api.v1.models import (
+from lijnpy.kods.api.v1.models.stops import (
     DetoursResponse,
     DirectionsResponse,
     DisruptionsResponse,
-    GeoCoordinate,
     RealTimePassagesResponse,
     StopResponse,
     StopsInVicinityResponse,
     TimetableResponse,
 )
+from lijnpy.kods.api.v1.models.utils import GeoCoordinate
 
 
 def get_stops_in_vicinity(

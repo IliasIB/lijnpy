@@ -1,6 +1,6 @@
 from unittest import mock
 
-from lijnpy.kods.api.v1.models import GeoCoordinate
+from lijnpy.kods.api.v1.models.utils import GeoCoordinate
 from lijnpy.kods.api.v1.stops import (
     get_detours,
     get_directions,

@@ -3,7 +3,7 @@ from pydantic import ValidationError
 from lijnpy import _logger
 from lijnpy.exceptions import DeLijnAPIException
 from lijnpy.kods.api.v1 import _rest_adapter
-from lijnpy.kods.api.v1.models import (
+from lijnpy.kods.api.v1.models.entities import (
     EntitiesResponse,
     EntityResponse,
     LinesResponse,

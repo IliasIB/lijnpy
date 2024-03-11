@@ -42,8 +42,8 @@ def test_entity(_):
 )
 def test_municipalities(_):
     municipalities = get_municipalities(1)
-    assert len(municipalities.municipalities) == 2
-    assert isinstance(municipalities.links, list)
+    assert len(municipalities.municipalities) == 341
+    assert municipalities.links is not None
     assert len(municipalities.links) == 1
 
 
