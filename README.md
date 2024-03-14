@@ -17,7 +17,3 @@ lijnpy is een Python-wrapper voor de De Lijn API, waarmee ontwikkelaars gemakkel
 ```sh
 pip install lijnpy
 ```
-
-
-
-
