@@ -16,9 +16,7 @@ from tests.utils import input_as_response
 )
 def test_entities(_):
     entities = get_entities()
-    assert len(entities.entities) == 5
-    assert isinstance(entities.links, list)
-    assert len(entities.links) == 1
+    assert len(entities) == 5
 
 
 @mock.patch(
@@ -30,8 +28,6 @@ def test_entity(_):
     assert entiteit.number == 1
     assert entiteit.code == "A"
     assert entiteit.description == "Antwerpen"
-    assert isinstance(entiteit.links, list)
-    assert len(entiteit.links) == 1
 
 
 @mock.patch(
@@ -42,9 +38,7 @@ def test_entity(_):
 )
 def test_municipalities(_):
     municipalities = get_municipalities(1)
-    assert len(municipalities.municipalities) == 341
-    assert municipalities.links is not None
-    assert len(municipalities.links) == 1
+    assert len(municipalities) == 341
 
 
 @mock.patch(
@@ -53,9 +47,7 @@ def test_municipalities(_):
 )
 def test_stops(_):
     stops = get_stops(1)
-    assert len(stops.stops) == 6801
-    assert isinstance(stops.links, list)
-    assert len(stops.links) == 1
+    assert len(stops) == 6801
 
 
 @mock.patch(
@@ -64,6 +56,4 @@ def test_stops(_):
 )
 def test_lines(_):
     lines = get_lines(1)
-    assert len(lines.lines) == 286
-    assert lines.links is not None
-    assert len(lines.links) == 1
+    assert len(lines) == 286

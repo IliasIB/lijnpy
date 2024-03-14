@@ -2,22 +2,26 @@ from pydantic_core import ValidationError
 
 from lijnpy import _logger
 from lijnpy.kods.api.v1 import _rest_adapter
-from lijnpy.kods.api.v1.models.stops import (
-    DetoursResponse,
-    DirectionsResponse,
-    DisruptionsResponse,
-    RealTimePassagesResponse,
-    StopResponse,
-    StopsInVicinityResponse,
-    TimetableResponse,
+from lijnpy.kods.api.v1.models import (
+    Detour,
+    Direction,
+    Disruption,
+    GeoCoordinate,
+    Passage,
+    PassageNote,
+    RealTimePassage,
+    RealTimeTimetable,
+    RideNote,
+    Stop,
+    StopInVicinity,
+    Timetable,
 )
-from lijnpy.kods.api.v1.models.utils import GeoCoordinate
 from lijnpy.rest_adapter import DeLijnAPIException
 
 
 def get_stops_in_vicinity(
     geo_coordinate: GeoCoordinate,
-) -> StopsInVicinityResponse:
+) -> list[StopInVicinity]:
     """Get a list of all available stops in the neighbourhood of the given geo-coordinates
 
     Args:
@@ -34,15 +38,15 @@ def get_stops_in_vicinity(
     )
     try:
         assert result.data is not None
-        stops_in_vicinity_response = StopsInVicinityResponse(**result.data)
+        stops_in_vicinity = [StopInVicinity(**stop) for stop in result.data["haltes"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return stops_in_vicinity_response
+    return stops_in_vicinity
 
 
-def get_stop(entity_number: int, stop_number: int) -> StopResponse:
+def get_stop(entity_number: int, stop_number: int) -> Stop:
     """Get the stop with the given entity and stop number
 
     Args:
@@ -58,7 +62,7 @@ def get_stop(entity_number: int, stop_number: int) -> StopResponse:
     result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}")
     try:
         assert result.data is not None
-        stop = StopResponse(**result.data)
+        stop = Stop(**result.data)
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
@@ -66,7 +70,7 @@ def get_stop(entity_number: int, stop_number: int) -> StopResponse:
     return stop
 
 
-def get_timetable(entity_number: int, stop_number: int) -> TimetableResponse:
+def get_timetable(entity_number: int, stop_number: int) -> Timetable:
     """Get the schedule of the stop with the given entity and stop number
 
     Returns:
@@ -80,15 +84,25 @@ def get_timetable(entity_number: int, stop_number: int) -> TimetableResponse:
     )
     try:
         assert result.data is not None
-        timetable_response = TimetableResponse(**result.data)
+        timetable = Timetable(
+            passages=[
+                Passage(**passage)
+                for passage in result.data["halteDoorkomsten"][0]["doorkomsten"]
+            ],
+            passage_notes=[
+                PassageNote(**note) for note in result.data["doorkomstNotas"]
+            ],
+            ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
+            detours=[Detour(**detour) for detour in result.data["omleidingen"]],
+        )
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return timetable_response
+    return timetable
 
 
-def get_directions(entity_number: int, stop_number: int) -> DirectionsResponse:
+def get_directions(entity_number: int, stop_number: int) -> list[Direction]:
     """Get the directions of the stop with the given entity and stop number
 
     Args:
@@ -104,15 +118,17 @@ def get_directions(entity_number: int, stop_number: int) -> DirectionsResponse:
     result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/lijnrichtingen")
     try:
         assert result.data is not None
-        directions_response = DirectionsResponse(**result.data)
+        directions = [
+            Direction(**direction) for direction in result.data["lijnrichtingen"]
+        ]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return directions_response
+    return directions
 
 
-def get_detours(entity_number: int, stop_number: int) -> DetoursResponse:
+def get_detours(entity_number: int, stop_number: int) -> list[Detour]:
     """Get the detours of the stop with the given entity and stop number
 
     Args:
@@ -128,17 +144,15 @@ def get_detours(entity_number: int, stop_number: int) -> DetoursResponse:
     result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/omleidingen")
     try:
         assert result.data is not None
-        detours_response = DetoursResponse(**result.data)
+        detours = [Detour(**detour) for detour in result.data["omleidingen"]]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return detours_response
+    return detours
 
 
-def get_real_time_passages(
-    entity_number: int, stop_number: int
-) -> RealTimePassagesResponse:
+def get_real_time_timetable(entity_number: int, stop_number: int) -> RealTimeTimetable:
     """Get the real-time arrivals of the stop with the given entity and stop number
 
     Args:
@@ -156,15 +170,25 @@ def get_real_time_passages(
     )
     try:
         assert result.data is not None
-        real_time_passages = RealTimePassagesResponse(**result.data)
+        real_time_timetable = RealTimeTimetable(
+            passages=[
+                RealTimePassage(**passage)
+                for passage in result.data["halteDoorkomsten"][0]["doorkomsten"]
+            ],
+            passage_notes=[
+                PassageNote(**note) for note in result.data["doorkomstNotas"]
+            ],
+            ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
+            detours=[Detour(**detour) for detour in result.data["omleidingen"]],
+        )
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return real_time_passages
+    return real_time_timetable
 
 
-def get_disruptions(entity_number: int, stop_number: int) -> DisruptionsResponse:
+def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]:
     """Get the directions of the stop with the given entity and stop number
 
     Args:
@@ -179,9 +203,11 @@ def get_disruptions(entity_number: int, stop_number: int) -> DisruptionsResponse
     result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/storingen")
     try:
         assert result.data is not None
-        disruptions_response = DisruptionsResponse(**result.data)
+        disruptions = [
+            Disruption(**disruption) for disruption in result.data["storingen"]
+        ]
     except (AssertionError, ValidationError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
-    return disruptions_response
+    return disruptions

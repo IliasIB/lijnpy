@@ -10,9 +10,7 @@ from tests.utils import input_as_response
 )
 def test_colors(_):
     colors = get_colors()
-    assert len(colors.colors) == 24
-    assert colors.links is not None
-    assert len(colors.links) == 1
+    assert len(colors) == 24
 
 
 @mock.patch(
@@ -20,10 +18,7 @@ def test_colors(_):
     return_value=input_as_response("tests/inputs/kods/api/v1/colors/color.json"),
 )
 def test_color(_):
-    kleur = get_color("TU")
-    assert kleur.code == "TU"
-    assert kleur.description == "Turkoois"
-    assert kleur.rgb.red == 0
-    assert kleur.rgb.green == 153
-    assert kleur.rgb.blue == 170
-    assert kleur.hex == "0099AA"
+    color = get_color("TU")
+    assert color.code == "TU"
+    assert color.description == "Turkoois"
+    assert color.color.as_hex() == "#09a"

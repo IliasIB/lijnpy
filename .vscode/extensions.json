@@ -1,8 +1,9 @@
 {
     "recommendations": [
         "tamasfe.even-better-toml",
-        "ms-toolsai.jupyter",
         "ms-python.python",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "davidanson.vscode-markdownlint",
+        "github.vscode-github-actions"
     ]
 }

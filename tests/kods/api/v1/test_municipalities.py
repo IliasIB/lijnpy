@@ -17,9 +17,7 @@ from tests.utils import input_as_response
 )
 def test_municipalities(_):
     municipalities = get_municipalities()
-    assert len(municipalities.municipalities) == 1913
-    assert municipalities.links is not None
-    assert len(municipalities.links) == 1
+    assert len(municipalities) == 1913
 
 
 @mock.patch(
@@ -29,10 +27,8 @@ def test_municipalities(_):
     ),
 )
 def test_stops(_):
-    stops_response = get_stops(1866)
-    assert len(stops_response.stops) == 417
-    assert stops_response.links is not None
-    assert len(stops_response.links) == 1
+    stops = get_stops(1866)
+    assert len(stops) == 417
 
 
 @mock.patch(
@@ -43,9 +39,7 @@ def test_stops(_):
 )
 def test_lines(_):
     lines_response = get_lines(1866)
-    assert len(lines_response.lines) == 74
-    assert lines_response.links is not None
-    assert len(lines_response.links) == 1
+    assert len(lines_response) == 74
 
 
 @mock.patch(
@@ -61,5 +55,3 @@ def test_municipality(_):
     assert gemeente.main_municipality is not None
     assert gemeente.main_municipality.number == 1422
     assert gemeente.main_municipality.description == "HOUTHALEN-HELCHTEREN"
-    assert gemeente.links is not None
-    assert len(gemeente.links) == 1

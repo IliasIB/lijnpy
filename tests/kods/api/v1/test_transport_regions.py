@@ -15,10 +15,8 @@ from tests.utils import input_as_response
     ),
 )
 def test_transport_regions(_):
-    transport_regions_reponse = get_transport_regions()
-    assert len(transport_regions_reponse.transport_regions) == 15
-    assert transport_regions_reponse.links is not None
-    assert len(transport_regions_reponse.links) == 1
+    transport_regions = get_transport_regions()
+    assert len(transport_regions) == 15
 
 
 @mock.patch(
@@ -41,7 +39,5 @@ def test_transport_region(_):
     ),
 )
 def test_lines(_):
-    lines_response = get_lines("AN")
-    assert len(lines_response.lines) == 34
-    assert lines_response.links is not None
-    assert len(lines_response.links) == 1
+    lines = get_lines("AN")
+    assert len(lines) == 34
