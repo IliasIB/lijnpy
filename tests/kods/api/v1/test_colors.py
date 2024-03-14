@@ -2,8 +2,8 @@ from unittest import mock
 
 import pytest
 
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.colors import get_color, get_colors
-from lijnpy.rest_adapter import DeLijnAPIException
 from tests.utils import input_as_response
 
 

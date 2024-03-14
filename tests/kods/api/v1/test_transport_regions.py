@@ -2,12 +2,12 @@ from unittest import mock
 
 import pytest
 
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.transport_regions import (
     get_lines,
     get_transport_region,
     get_transport_regions,
 )
-from lijnpy.rest_adapter import DeLijnAPIException
 from tests.utils import input_as_response
 
 

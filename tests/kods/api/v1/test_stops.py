@@ -4,6 +4,7 @@ from unittest import mock
 import pytest
 from pydantic_extra_types.coordinate import Latitude, Longitude
 
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.enums import Accessibility, Language
 from lijnpy.kods.api.v1.models import GeoCoordinate
 from lijnpy.kods.api.v1.stops import (
@@ -15,7 +16,6 @@ from lijnpy.kods.api.v1.stops import (
     get_stops_in_vicinity,
     get_timetable,
 )
-from lijnpy.rest_adapter import DeLijnAPIException
 from tests.utils import input_as_response
 
 

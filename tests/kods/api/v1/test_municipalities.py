@@ -2,13 +2,13 @@ from unittest import mock
 
 import pytest
 
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.municipalities import (
     get_lines,
     get_municipalities,
     get_municipality,
     get_stops,
 )
-from lijnpy.rest_adapter import DeLijnAPIException
 from tests.utils import input_as_response
 
 

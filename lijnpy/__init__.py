@@ -1,3 +1,5 @@
-from logging import getLogger
+import logging
+import os
 
-_logger = getLogger(__name__)
+API_KEY = os.environ.get("DELIJN_API_KEY", "NO_API_KEY")
+_logger = logging.getLogger(__name__)

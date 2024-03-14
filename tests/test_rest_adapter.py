@@ -3,7 +3,7 @@ from unittest import mock
 import pytest
 import requests
 
-from lijnpy.rest_adapter import DeLijnAPIException, RestAdapter, Result
+from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter, Result
 
 rest_adapter = RestAdapter()
 response = requests.Response()

@@ -1,6 +1,7 @@
 from pydantic_core import ValidationError
 
 from lijnpy import _logger
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1 import _rest_adapter
 from lijnpy.kods.api.v1.models import (
     Detour,
@@ -16,7 +17,6 @@ from lijnpy.kods.api.v1.models import (
     StopInVicinity,
     Timetable,
 )
-from lijnpy.rest_adapter import DeLijnAPIException
 
 
 def get_stops_in_vicinity(

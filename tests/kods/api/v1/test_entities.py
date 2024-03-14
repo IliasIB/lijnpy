@@ -2,6 +2,7 @@ from unittest import mock
 
 import pytest
 
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.entities import (
     get_entities,
     get_entity,
@@ -9,7 +10,6 @@ from lijnpy.kods.api.v1.entities import (
     get_municipalities,
     get_stops,
 )
-from lijnpy.rest_adapter import DeLijnAPIException
 from tests.utils import input_as_response
 
 
