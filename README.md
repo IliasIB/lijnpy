@@ -8,23 +8,23 @@
 | lijnpy/kods/\_\_init\_\_.py                   |        0 |        0 |    100% |           |
 | lijnpy/kods/api/\_\_init\_\_.py               |        0 |        0 |    100% |           |
 | lijnpy/kods/api/v1/\_\_init\_\_.py            |        5 |        0 |    100% |           |
-| lijnpy/kods/api/v1/colors.py                  |       23 |        6 |     74% |19-21, 39-41 |
-| lijnpy/kods/api/v1/entities.py                |       50 |       15 |     70% |24-26, 44-46, 66-68, 86-88, 106-108 |
+| lijnpy/kods/api/v1/colors.py                  |       23 |        0 |    100% |           |
+| lijnpy/kods/api/v1/entities.py                |       50 |        0 |    100% |           |
 | lijnpy/kods/api/v1/enums.py                   |       23 |        0 |    100% |           |
 | lijnpy/kods/api/v1/models.py                  |      119 |        0 |    100% |           |
-| lijnpy/kods/api/v1/municipalities.py          |       41 |       12 |     71% |25-27, 45-47, 65-67, 85-87 |
-| lijnpy/kods/api/v1/stops.py                   |       68 |       21 |     69% |42-44, 66-68, 98-100, 124-126, 148-150, 184-186, 209-211 |
-| lijnpy/kods/api/v1/transport\_regions.py      |       32 |        9 |     72% |22-24, 42-44, 62-64 |
+| lijnpy/kods/api/v1/municipalities.py          |       41 |        0 |    100% |           |
+| lijnpy/kods/api/v1/stops.py                   |       68 |        0 |    100% |           |
+| lijnpy/kods/api/v1/transport\_regions.py      |       32 |        0 |    100% |           |
 | lijnpy/rest\_adapter.py                       |       45 |        7 |     84% |89-91, 112-113, 140, 157 |
 | tests/\_\_init\_\_.py                         |        0 |        0 |    100% |           |
-| tests/kods/api/v1/test\_colors.py             |       13 |        0 |    100% |           |
-| tests/kods/api/v1/test\_entities.py           |       25 |        0 |    100% |           |
-| tests/kods/api/v1/test\_municipalities.py     |       23 |        0 |    100% |           |
-| tests/kods/api/v1/test\_stops.py              |       51 |        0 |    100% |           |
-| tests/kods/api/v1/test\_transport\_regions.py |       17 |        0 |    100% |           |
+| tests/kods/api/v1/test\_colors.py             |       23 |        0 |    100% |           |
+| tests/kods/api/v1/test\_entities.py           |       47 |        0 |    100% |           |
+| tests/kods/api/v1/test\_municipalities.py     |       41 |        0 |    100% |           |
+| tests/kods/api/v1/test\_stops.py              |       81 |        0 |    100% |           |
+| tests/kods/api/v1/test\_transport\_regions.py |       31 |        0 |    100% |           |
 | tests/test\_rest\_adapter.py                  |       19 |        0 |    100% |           |
-| tests/utils.py                                |       18 |        3 |     83% |      8-10 |
-|                                     **TOTAL** |  **574** |   **73** | **87%** |           |
+| tests/utils.py                                |       13 |        0 |    100% |           |
+|                                     **TOTAL** |  **663** |    **7** | **99%** |           |
 
 
 ## Setup coverage badge
