@@ -39,7 +39,7 @@ def get_stops_in_vicinity(
     try:
         assert result.data is not None
         stops_in_vicinity = [StopInVicinity(**stop) for stop in result.data["haltes"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -95,7 +95,7 @@ def get_timetable(entity_number: int, stop_number: int) -> Timetable:
             ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
             detours=[Detour(**detour) for detour in result.data["omleidingen"]],
         )
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -121,7 +121,7 @@ def get_directions(entity_number: int, stop_number: int) -> list[Direction]:
         directions = [
             Direction(**direction) for direction in result.data["lijnrichtingen"]
         ]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -145,7 +145,7 @@ def get_detours(entity_number: int, stop_number: int) -> list[Detour]:
     try:
         assert result.data is not None
         detours = [Detour(**detour) for detour in result.data["omleidingen"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -181,7 +181,7 @@ def get_real_time_timetable(entity_number: int, stop_number: int) -> RealTimeTim
             ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
             detours=[Detour(**detour) for detour in result.data["omleidingen"]],
         )
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -206,7 +206,7 @@ def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]:
         disruptions = [
             Disruption(**disruption) for disruption in result.data["storingen"]
         ]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 

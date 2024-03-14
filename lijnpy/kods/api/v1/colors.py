@@ -16,7 +16,7 @@ def get_colors() -> list[LineColor]:
     try:
         assert result.data is not None
         colors = [LineColor(**color) for color in result.data["kleuren"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
