@@ -21,7 +21,7 @@ def get_entities() -> list[Entity]:
     try:
         assert result.data is not None
         entities = [Entity(**entity) for entity in result.data["entiteiten"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -63,7 +63,7 @@ def get_municipalities(entity_number: int) -> list[Municipality]:
         municipalities = [
             Municipality(**municipality) for municipality in result.data["gemeenten"]
         ]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -83,7 +83,7 @@ def get_stops(entity_number: int) -> list[Stop]:
     try:
         assert result.data is not None
         stops = [Stop(**stop) for stop in result.data["haltes"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -103,7 +103,7 @@ def get_lines(entity_number: int) -> list[Line]:
     try:
         assert result.data is not None
         lines = [Line(**line) for line in result.data["lijnen"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 

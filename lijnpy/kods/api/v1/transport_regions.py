@@ -19,7 +19,7 @@ def get_transport_regions() -> list[TransportRegion]:
             TransportRegion(**transport_region)
             for transport_region in result.data["vervoerRegios"]
         ]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
@@ -59,7 +59,7 @@ def get_lines(transport_region_code: str) -> list[Line]:
     try:
         assert result.data is not None
         lines_response = [Line(**line) for line in result.data["lijnen"]]
-    except (AssertionError, ValidationError) as e:
+    except (AssertionError, ValidationError, KeyError) as e:
         _logger.error(f"Failed to parse the response from the API: {e}")
         raise DeLijnAPIException from e
 
