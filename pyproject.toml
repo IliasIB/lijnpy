@@ -22,6 +22,10 @@ optional = true
 [tool.poetry.group.github-actions.dependencies]
 pytest-github-actions-annotate-failures = "^0.1.7"
 
+
+[tool.poetry.group.docs.dependencies]
+handsdown = "^2.1.0"
+
 [tool.coverage.run]
 relative_files = true
 
