@@ -4,10 +4,11 @@
 
 | Name                                          |    Stmts |     Miss |   Cover |   Missing |
 |---------------------------------------------- | -------: | -------: | ------: | --------: |
-| lijnpy/\_\_init\_\_.py                        |        2 |        0 |    100% |           |
+| lijnpy/\_\_init\_\_.py                        |        4 |        0 |    100% |           |
+| lijnpy/\_rest\_adapter.py                     |       45 |        7 |     84% |89-91, 112-113, 140, 157 |
 | lijnpy/kods/\_\_init\_\_.py                   |        0 |        0 |    100% |           |
 | lijnpy/kods/api/\_\_init\_\_.py               |        0 |        0 |    100% |           |
-| lijnpy/kods/api/v1/\_\_init\_\_.py            |        5 |        0 |    100% |           |
+| lijnpy/kods/api/v1/\_\_init\_\_.py            |        3 |        0 |    100% |           |
 | lijnpy/kods/api/v1/colors.py                  |       23 |        0 |    100% |           |
 | lijnpy/kods/api/v1/entities.py                |       50 |        0 |    100% |           |
 | lijnpy/kods/api/v1/enums.py                   |       23 |        0 |    100% |           |
@@ -15,7 +16,6 @@
 | lijnpy/kods/api/v1/municipalities.py          |       41 |        0 |    100% |           |
 | lijnpy/kods/api/v1/stops.py                   |       68 |        0 |    100% |           |
 | lijnpy/kods/api/v1/transport\_regions.py      |       32 |        0 |    100% |           |
-| lijnpy/rest\_adapter.py                       |       45 |        7 |     84% |89-91, 112-113, 140, 157 |
 | tests/\_\_init\_\_.py                         |        0 |        0 |    100% |           |
 | tests/kods/api/v1/test\_colors.py             |       23 |        0 |    100% |           |
 | tests/kods/api/v1/test\_entities.py           |       47 |        0 |    100% |           |
