@@ -1,0 +1,60 @@
+name: Update docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  update-docs:
+    name: Update docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: docs
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Bootstrap poetry
+        run: pipx install poetry
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: poetry
+
+      - name: Configure poetry
+        run: |
+          poetry config virtualenvs.in-project true
+          poetry config virtualenvs.options.no-pip true
+          poetry config virtualenvs.options.no-setuptools true
+
+      - name: Check lock file
+        run: poetry check --lock
+
+      - name: Install dependencies
+        run: poetry install --with github-actions
+
+      - name: Setup git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
+      - name: Reset branch to main
+        run: |
+          git fetch origin main:main
+          git reset --hard main
+          git rebase main
+
+      - name: Build docs
+        run: |
+          poetry run handsdown --external `git config --get remote.origin.url` --create-configs
+
+      - name: Commit docs
+        run: |
+          git add docs
+          git commit -m "Update docs"
+          git push -f
