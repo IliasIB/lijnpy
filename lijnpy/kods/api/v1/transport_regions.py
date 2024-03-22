@@ -10,7 +10,7 @@ def get_transport_regions() -> list[TransportRegion]:
     """Get a list of all transport regions
 
     Returns:
-        TransportRegionsResponse: A list of all transport regions
+        list[TransportRegion]: A list of all transport regions
     """
     result = _rest_adapter.get("/vervoerregios")
     try:
@@ -53,7 +53,7 @@ def get_lines(transport_region_code: str) -> list[Line]:
         transport_region_code (str): The code of the transport region
 
     Returns:
-        LinesResponse: A list of lines
+        list[Line]: A list of lines
     """
     result = _rest_adapter.get(f"/vervoerregios/{transport_region_code}/lijnen")
     try:

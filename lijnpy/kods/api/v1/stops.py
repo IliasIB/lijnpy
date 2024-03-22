@@ -28,7 +28,7 @@ def get_stops_in_vicinity(
         geo_coordinate (GeoCoordinate): The geo-coordinates to search around
 
     Returns:
-        StopsInVicinityResponse: A list of all available stops in the neighbourhood of the given geo-coordinates
+        list[StopInVicinity]: A list of all available stops in the neighbourhood of the given geo-coordinates
 
     Raises:
         DeLijnAPIException: If the API request fails
@@ -54,7 +54,7 @@ def get_stop(entity_number: int, stop_number: int) -> Stop:
         stop_number (int): The number of the stop
 
     Returns:
-        StopResponse: The stop with the given entity and stop number
+        Stop: The stop with the given entity and stop number
 
     Raises:
         DeLijnAPIException: If the API request fails
@@ -110,7 +110,7 @@ def get_directions(entity_number: int, stop_number: int) -> list[Direction]:
         stop_number (int): The number of the stop
 
     Returns:
-        DirectionsResponse: The directions of the stop with the given entity and stop number
+        list[Direction]: The directions of the stop with the given entity and stop number
 
     Raises:
         DeLijnAPIException: If the API request fails
@@ -136,7 +136,7 @@ def get_detours(entity_number: int, stop_number: int) -> list[Detour]:
         stop_number (int): The number of the stop
 
     Returns:
-        DetoursResponse: The detours of the stop with the given entity and stop number
+        list[Detour]: The detours of the stop with the given entity and stop number
 
     Raises:
         DeLijnAPIException: If the API request fails
@@ -160,7 +160,7 @@ def get_real_time_timetable(entity_number: int, stop_number: int) -> RealTimeTim
         stop_number (int): The number of the stop
 
     Returns:
-        RealTimePassagesResponse: The real-time arrivals of the stop with the given entity and stop number
+        RealTimeTimetable: The real-time arrivals of the stop with the given entity and stop number
 
     Raises:
         DeLijnAPIException: If the API request fails
@@ -196,7 +196,7 @@ def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]:
         stop_number (int): The number of the stop
 
     Returns:
-        DisruptionsResponse: The disruptions of the stop with the given entity and stop number
+        list[Disruption]: The disruptions of the stop with the given entity and stop number
     Raises:
         DeLijnAPIException: If the API request fails
     """

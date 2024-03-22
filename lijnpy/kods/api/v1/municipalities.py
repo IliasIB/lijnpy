@@ -14,7 +14,7 @@ def get_municipalities() -> list[Municipality]:
     """Get a list of all municipalities in Belgium
 
     Returns:
-        MunicipalitiesResponse: A list of all municipalities in Belgium
+        list[Municipality]: A list of all municipalities in Belgium
     """
     result = _rest_adapter.get("/gemeenten")
     try:
@@ -36,7 +36,7 @@ def get_stops(municipality_number: int) -> list[Stop]:
         municipality_number (int): The municipality number
 
     Returns:
-        StopsResponse: A list of stops in the municipality
+        list[Stop]: A list of stops in the municipality
     """
     result = _rest_adapter.get(f"/gemeenten/{municipality_number}/haltes")
     try:
@@ -56,7 +56,7 @@ def get_lines(municipality_number: int) -> list[Line]:
         municipality_number (int): The municipality number
 
     Returns:
-        LinesResponse: A list of lines in the municipality
+        list[Line]: A list of lines in the municipality
     """
     result = _rest_adapter.get(f"/gemeenten/{municipality_number}/lijnen")
     try:

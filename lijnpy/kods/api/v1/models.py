@@ -16,7 +16,7 @@ from lijnpy.kods.api.v1.enums import (
 
 
 class GeoCoordinate(Coordinate):
-    """Represents a geographical coordinate
+    """A geographical coordinate with a latitude and longitude
 
     Attributes:
         latitude (Latitude): The latitude of the coordinate
@@ -28,7 +28,7 @@ class GeoCoordinate(Coordinate):
 
 
 class DetourPeriod(BaseModel):
-    """Represents a period of a detour of a line
+    """A period of a detour of a line
 
     Attributes:
         start_date (datetime): The start date of the period
@@ -40,19 +40,19 @@ class DetourPeriod(BaseModel):
 
 
 class Stop(BaseModel):
-    """Represents a response from the stop API
+    """A bus stop
 
     Attributes:
         entity_number (int): The number of the entity
         number (int): The number of the stop
-        description (str): The description of the stop
+        description (str, optional): The description of the stop. Defaults to None.
         description_long (str): The long description of the stop
-        language (str): The language of the stop
         municipality_number (int): The number of the municipality
-        omschrijving_gemeente (str): The description of the municipality
+        municipality_description (str): The description of the municipality
         geo_coordinate (GeoCoordinate): The geographical coordinate of the stop
-        accessibilities (list[str]): The accessibilities of the stop
-        is_main (bool): Whether the stop is main
+        accessibilities (list[Accessibility]): The accessibilities of the stop
+        is_main (bool, optional): Whether the stop is the main stop. Defaults to None.
+        language (Language): The language of the stop
     """
 
     entity_number: int = Field(validation_alias="entiteitnummer")
@@ -70,7 +70,7 @@ class Stop(BaseModel):
 
 
 class Line(BaseModel):
-    """Represents a response from the lines API
+    """A bus line
 
     Attributes:
         entity_number (int): The number of the entity
@@ -98,7 +98,7 @@ class Line(BaseModel):
 
 
 class Entity(BaseModel):
-    """Represents a response from the entity API
+    """An entity
 
     Attributes:
         number (int): The number of the entity
@@ -112,13 +112,12 @@ class Entity(BaseModel):
 
 
 class LineColor(BaseModel):
-    """Represents a response from the color API
+    """A color of a bus line
 
     Attributes:
         code (str): The code of the color
         description (str): The description of the color
-        rgb (RGB): The RGB values of the color
-        hex (str): The hexadecimal value of the color
+        color (Color): The color of the line
     """
 
     code: str
@@ -127,7 +126,7 @@ class LineColor(BaseModel):
 
 
 class Municipality(BaseModel):
-    """Represents a response from the municipality API
+    """A municipality in Belgium
 
     Attributes:
         number (int): The number of the municipality
@@ -143,15 +142,17 @@ class Municipality(BaseModel):
 
 
 class StopInVicinity(BaseModel):
-    """Represents a response from the stops in vicinity API
+    """A stop in the vicinity of a geographical coordinate
 
     Attributes:
+        type (str): The type of the stop
         id (int): The id of the stop
         name (str): The name of the stop
         distance (int): The distance of the stop
         geo_coordinate (GeoCoordinate): The geographical coordinate of the stop
     """
 
+    # TODO: enum for type
     type: str
     id: int
     name: str = Field(validation_alias="naam")
@@ -160,7 +161,7 @@ class StopInVicinity(BaseModel):
 
 
 class Passage(BaseModel):
-    """Represents a passage of a schedule
+    """A passage of a bus line
 
     Attributes:
         entity_number (int): The number of the entity
@@ -184,7 +185,7 @@ class Passage(BaseModel):
 
 
 class TransportRegion(BaseModel):
-    """Represents a transport region in Belgium
+    """A transport region in Belgium
 
     Attributes:
         code (str): The code of the transport region
@@ -198,7 +199,7 @@ class TransportRegion(BaseModel):
 
 
 class RideNote(BaseModel):
-    """Represents a note of a ride
+    """A note for a ride
 
     Attributes:
         id (int): The id of the note
@@ -208,7 +209,7 @@ class RideNote(BaseModel):
         description (str): The description of the note
         entity_number (int): The number of the entity
         line_number (int): The number of the line
-        direction (str): The direction of the line
+        direction (LineDirection): The direction of the line
     """
 
     id: int
@@ -222,7 +223,7 @@ class RideNote(BaseModel):
 
 
 class PassageNote(BaseModel):
-    """Represents a note of a passage
+    """A note for a passage
 
     Attributes:
         id (int): The id of the note
@@ -232,7 +233,7 @@ class PassageNote(BaseModel):
         description (str): The description of the note
         entity_number (int): The number of the entity
         line_number (int): The number of the line
-        direction (str): The direction of the line
+        direction (LineDirection): The direction of the line
     """
 
     id: int
@@ -246,7 +247,7 @@ class PassageNote(BaseModel):
 
 
 class Timetable(BaseModel):
-    """Represents a schedule
+    """A timetable of a stop
 
     Attributes:
         passages (list[Passage]): The passages of the schedule
@@ -262,12 +263,12 @@ class Timetable(BaseModel):
 
 
 class Direction(BaseModel):
-    """Represents a direction of a line
+    """A direction of a line
 
     Attributes:
         entity_number (int): The number of the entity
         line_number (int): The number of the line
-        direction (str): The direction of the line
+        direction (LineDirection): The direction of the line
         description (str): The description of the direction
     """
 
@@ -278,7 +279,7 @@ class Direction(BaseModel):
 
 
 class Detour(BaseModel):
-    """Represents a detour of a line
+    """A detour of a line
 
     Attributes:
         title (str): The title of the detour
@@ -298,17 +299,17 @@ class Detour(BaseModel):
 
 
 class RealTimePassage(BaseModel):
-    """Represents a real-time passage of a stop
+    """A real-time passage of a bus line
 
     Attributes:
         entity_number (int): The number of the entity
         line_number (int): The number of the line
-        direction (str): The direction of the line
+        direction (LineDirection): The direction of the line
         ride_number (int): The number of the ride
         destination (str): The destination of the ride
         vias (list[str], optional): The vias of the ride. Defaults to None.
-        timetable_timestamp (str): The timestamp of the timetable
-        real_time_timestamp (str): The timestamp of the real-time
+        timetable_timestamp (datetime): The timestamp of the timetable
+        real_time_timestamp (datetime): The timestamp of the real-time
         vrtnum (int): The number of the real-time
         prediction_statuses (list[str]): The statuses of the prediction
     """
@@ -326,13 +327,13 @@ class RealTimePassage(BaseModel):
 
 
 class RealTimeTimetable(BaseModel):
-    """Represents the real-time arrivals of a stop
+    """A real-time timetable of a stop
 
     Attributes:
-        passages (list[RealTimePassageStopResponse]): The real-time arrivals of the stop
-        passage_notes (list[PassageNoteResponse]): The notes of the passages
-        ride_notes (list[RideNoteResponse]): The notes of the rides
-        detours (list[DetourResponse]): The detours of the stop
+        passages (list[RealTimePassage]): The real-time arrivals of the stop
+        passage_notes (list[PassageNote]): The notes of the passages
+        ride_notes (list[RideNote]): The notes of the rides
+        detours (list[Detour]): The detours of the stop
     """
 
     passages: list[RealTimePassage]
@@ -342,14 +343,11 @@ class RealTimeTimetable(BaseModel):
 
 
 class Disruption(BaseModel):
-    """Represents a disruption
+    """A disruption of a line
 
     Attributes:
-        id (int): The id of the disruption
-        title (str): The title of the disruption
         description (str): The description of the disruption
-        start_date (str): The start date of the disruption
-        end_date (str): The end date of the disruption
+        line_directions (list[Direction]): The directions of the line
     """
 
     description: str = Field(validation_alias="omschrijving")

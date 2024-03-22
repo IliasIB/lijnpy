@@ -10,7 +10,7 @@ def get_colors() -> list[LineColor]:
     """Get a list of all colors
 
     Returns:
-        list[Color]: A list of all colors
+        list[LineColor]: A list of all colors
     """
     result = _rest_adapter.get("/kleuren")
     try:
