@@ -2,7 +2,7 @@
 
 > Auto-generated documentation index.
 
-A full list of `Lijnpy` project modules.
+A full list of [Lijnpy](https://github.com/IliasIB/lijnpy) project modules.
 
 - [Lijnpy](lijnpy/index.md#lijnpy)
     - [RestAdapter](lijnpy/_rest_adapter.md#restadapter)

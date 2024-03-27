@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../README.md#lijnpy-index) / [Lijnpy](../../index.md#lijnpy) / [Kods](../index.md#kods) / Api
 
-> Auto-generated documentation for [lijnpy.kods.api](../../../../lijnpy/kods/api/__init__.py) module.
+> Auto-generated documentation for [lijnpy.kods.api](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/__init__.py) module.
 
 - [Api](#api)
   - [Modules](#modules)

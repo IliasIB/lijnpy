@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../../README.md#lijnpy-index) / [Lijnpy](../../../index.md#lijnpy) / [Kods](../../index.md#kods) / [Api](../index.md#api) / [V1](./index.md#v1) / Transport Regions
 
-> Auto-generated documentation for [lijnpy.kods.api.v1.transport_regions](../../../../../lijnpy/kods/api/v1/transport_regions.py) module.
+> Auto-generated documentation for [lijnpy.kods.api.v1.transport_regions](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/transport_regions.py) module.
 
 - [Transport Regions](#transport-regions)
   - [get_lines](#get_lines)
@@ -11,7 +11,7 @@
 
 ## get_lines
 
-[Show source in transport_regions.py:49](../../../../../lijnpy/kods/api/v1/transport_regions.py#L49)
+[Show source in transport_regions.py:49](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/transport_regions.py#L49)
 
 Get a list of lines by transport region code
 
@@ -21,7 +21,7 @@ Get a list of lines by transport region code
 
 #### Returns
 
-- `LinesResponse` - A list of lines
+- `list[Line]` - A list of lines
 
 #### Signature
 
@@ -37,7 +37,7 @@ def get_lines(transport_region_code: str) -> list[Line]: ...
 
 ## get_transport_region
 
-[Show source in transport_regions.py:29](../../../../../lijnpy/kods/api/v1/transport_regions.py#L29)
+[Show source in transport_regions.py:29](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/transport_regions.py#L29)
 
 Get a transport region by code
 
@@ -63,13 +63,13 @@ def get_transport_region(transport_region_code: str) -> TransportRegion: ...
 
 ## get_transport_regions
 
-[Show source in transport_regions.py:9](../../../../../lijnpy/kods/api/v1/transport_regions.py#L9)
+[Show source in transport_regions.py:9](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/transport_regions.py#L9)
 
 Get a list of all transport regions
 
 #### Returns
 
-- `TransportRegionsResponse` - A list of all transport regions
+- `list[TransportRegion]` - A list of all transport regions
 
 #### Signature
 

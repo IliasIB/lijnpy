@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../../README.md#lijnpy-index) / [Lijnpy](../../../index.md#lijnpy) / [Kods](../../index.md#kods) / [Api](../index.md#api) / [V1](./index.md#v1) / Models
 
-> Auto-generated documentation for [lijnpy.kods.api.v1.models](../../../../../lijnpy/kods/api/v1/models.py) module.
+> Auto-generated documentation for [lijnpy.kods.api.v1.models](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py) module.
 
 - [Models](#models)
   - [Detour](#detour)
@@ -26,9 +26,9 @@
 
 ## Detour
 
-[Show source in models.py:280](../../../../../lijnpy/kods/api/v1/models.py#L280)
+[Show source in models.py:281](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L281)
 
-Represents a detour of a line
+A detour of a line
 
 #### Attributes
 
@@ -49,9 +49,9 @@ class Detour(BaseModel): ...
 
 ## DetourPeriod
 
-[Show source in models.py:30](../../../../../lijnpy/kods/api/v1/models.py#L30)
+[Show source in models.py:30](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L30)
 
-Represents a period of a detour of a line
+A period of a detour of a line
 
 #### Attributes
 
@@ -68,15 +68,15 @@ class DetourPeriod(BaseModel): ...
 
 ## Direction
 
-[Show source in models.py:264](../../../../../lijnpy/kods/api/v1/models.py#L264)
+[Show source in models.py:265](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L265)
 
-Represents a direction of a line
+A direction of a line
 
 #### Attributes
 
 - `entity_number` *int* - The number of the entity
 - `line_number` *int* - The number of the line
-- `direction` *str* - The direction of the line
+- `direction` *LineDirection* - The direction of the line
 - `description` *str* - The description of the direction
 
 #### Signature
@@ -89,17 +89,14 @@ class Direction(BaseModel): ...
 
 ## Disruption
 
-[Show source in models.py:344](../../../../../lijnpy/kods/api/v1/models.py#L344)
+[Show source in models.py:345](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L345)
 
-Represents a disruption
+A disruption of a line
 
 #### Attributes
 
-- `id` *int* - The id of the disruption
-- `title` *str* - The title of the disruption
 - `description` *str* - The description of the disruption
-- `start_date` *str* - The start date of the disruption
-- `end_date` *str* - The end date of the disruption
+- `line_directions` *list[Direction]* - The directions of the line
 
 #### Signature
 
@@ -111,9 +108,9 @@ class Disruption(BaseModel): ...
 
 ## Entity
 
-[Show source in models.py:100](../../../../../lijnpy/kods/api/v1/models.py#L100)
+[Show source in models.py:100](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L100)
 
-Represents a response from the entity API
+An entity
 
 #### Attributes
 
@@ -131,9 +128,9 @@ class Entity(BaseModel): ...
 
 ## GeoCoordinate
 
-[Show source in models.py:18](../../../../../lijnpy/kods/api/v1/models.py#L18)
+[Show source in models.py:18](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L18)
 
-Represents a geographical coordinate
+A geographical coordinate with a latitude and longitude
 
 #### Attributes
 
@@ -150,9 +147,9 @@ class GeoCoordinate(Coordinate): ...
 
 ## Line
 
-[Show source in models.py:72](../../../../../lijnpy/kods/api/v1/models.py#L72)
+[Show source in models.py:72](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L72)
 
-Represents a response from the lines API
+A bus line
 
 #### Attributes
 
@@ -177,16 +174,15 @@ class Line(BaseModel): ...
 
 ## LineColor
 
-[Show source in models.py:114](../../../../../lijnpy/kods/api/v1/models.py#L114)
+[Show source in models.py:114](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L114)
 
-Represents a response from the color API
+A color of a bus line
 
 #### Attributes
 
 - `code` *str* - The code of the color
 - `description` *str* - The description of the color
-- `rgb` *RGB* - The RGB values of the color
-- `hex` *str* - The hexadecimal value of the color
+- `color` *Color* - The color of the line
 
 #### Signature
 
@@ -198,9 +194,9 @@ class LineColor(BaseModel): ...
 
 ## Municipality
 
-[Show source in models.py:129](../../../../../lijnpy/kods/api/v1/models.py#L129)
+[Show source in models.py:128](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L128)
 
-Represents a response from the municipality API
+A municipality in Belgium
 
 #### Attributes
 
@@ -218,9 +214,9 @@ class Municipality(BaseModel): ...
 
 ## Passage
 
-[Show source in models.py:162](../../../../../lijnpy/kods/api/v1/models.py#L162)
+[Show source in models.py:163](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L163)
 
-Represents a passage of a schedule
+A passage of a bus line
 
 #### Attributes
 
@@ -243,9 +239,9 @@ class Passage(BaseModel): ...
 
 ## PassageNote
 
-[Show source in models.py:224](../../../../../lijnpy/kods/api/v1/models.py#L224)
+[Show source in models.py:225](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L225)
 
-Represents a note of a passage
+A note for a passage
 
 #### Attributes
 
@@ -256,7 +252,7 @@ Represents a note of a passage
 - `description` *str* - The description of the note
 - `entity_number` *int* - The number of the entity
 - `line_number` *int* - The number of the line
-- `direction` *str* - The direction of the line
+- `direction` *LineDirection* - The direction of the line
 
 #### Signature
 
@@ -268,20 +264,20 @@ class PassageNote(BaseModel): ...
 
 ## RealTimePassage
 
-[Show source in models.py:300](../../../../../lijnpy/kods/api/v1/models.py#L300)
+[Show source in models.py:301](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L301)
 
-Represents a real-time passage of a stop
+A real-time passage of a bus line
 
 #### Attributes
 
 - `entity_number` *int* - The number of the entity
 - `line_number` *int* - The number of the line
-- `direction` *str* - The direction of the line
+- `direction` *LineDirection* - The direction of the line
 - `ride_number` *int* - The number of the ride
 - `destination` *str* - The destination of the ride
 - `vias` *list[str], optional* - The vias of the ride. Defaults to None.
-- `timetable_timestamp` *str* - The timestamp of the timetable
-- `real_time_timestamp` *str* - The timestamp of the real-time
+- `timetable_timestamp` *datetime* - The timestamp of the timetable
+- `real_time_timestamp` *datetime* - The timestamp of the real-time
 - `vrtnum` *int* - The number of the real-time
 - `prediction_statuses` *list[str]* - The statuses of the prediction
 
@@ -295,16 +291,16 @@ class RealTimePassage(BaseModel): ...
 
 ## RealTimeTimetable
 
-[Show source in models.py:328](../../../../../lijnpy/kods/api/v1/models.py#L328)
+[Show source in models.py:329](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L329)
 
-Represents the real-time arrivals of a stop
+A real-time timetable of a stop
 
 #### Attributes
 
-- `passages` *list[RealTimePassageStopResponse]* - The real-time arrivals of the stop
-- `passage_notes` *list[PassageNoteResponse]* - The notes of the passages
-- `ride_notes` *list[RideNoteResponse]* - The notes of the rides
-- `detours` *list[DetourResponse]* - The detours of the stop
+- `passages` *list[RealTimePassage]* - The real-time arrivals of the stop
+- `passage_notes` *list[PassageNote]* - The notes of the passages
+- `ride_notes` *list[RideNote]* - The notes of the rides
+- `detours` *list[Detour]* - The detours of the stop
 
 #### Signature
 
@@ -316,9 +312,9 @@ class RealTimeTimetable(BaseModel): ...
 
 ## RideNote
 
-[Show source in models.py:200](../../../../../lijnpy/kods/api/v1/models.py#L200)
+[Show source in models.py:201](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L201)
 
-Represents a note of a ride
+A note for a ride
 
 #### Attributes
 
@@ -329,7 +325,7 @@ Represents a note of a ride
 - `description` *str* - The description of the note
 - `entity_number` *int* - The number of the entity
 - `line_number` *int* - The number of the line
-- `direction` *str* - The direction of the line
+- `direction` *LineDirection* - The direction of the line
 
 #### Signature
 
@@ -341,22 +337,22 @@ class RideNote(BaseModel): ...
 
 ## Stop
 
-[Show source in models.py:42](../../../../../lijnpy/kods/api/v1/models.py#L42)
+[Show source in models.py:42](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L42)
 
-Represents a response from the stop API
+A bus stop
 
 #### Attributes
 
 - `entity_number` *int* - The number of the entity
 - `number` *int* - The number of the stop
-- `description` *str* - The description of the stop
+- `description` *str, optional* - The description of the stop. Defaults to None.
 - `description_long` *str* - The long description of the stop
-- `language` *str* - The language of the stop
 - `municipality_number` *int* - The number of the municipality
-- `omschrijving_gemeente` *str* - The description of the municipality
+- `municipality_description` *str* - The description of the municipality
 - `geo_coordinate` *GeoCoordinate* - The geographical coordinate of the stop
-- `accessibilities` *list[str]* - The accessibilities of the stop
-- `is_main` *bool* - Whether the stop is main
+- `accessibilities` *list[Accessibility]* - The accessibilities of the stop
+- `is_main` *bool, optional* - Whether the stop is the main stop. Defaults to None.
+- `language` *Language* - The language of the stop
 
 #### Signature
 
@@ -368,12 +364,13 @@ class Stop(BaseModel): ...
 
 ## StopInVicinity
 
-[Show source in models.py:145](../../../../../lijnpy/kods/api/v1/models.py#L145)
+[Show source in models.py:144](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L144)
 
-Represents a response from the stops in vicinity API
+A stop in the vicinity of a geographical coordinate
 
 #### Attributes
 
+- `type` *str* - The type of the stop
 - `id` *int* - The id of the stop
 - `name` *str* - The name of the stop
 - `distance` *int* - The distance of the stop
@@ -389,9 +386,9 @@ class StopInVicinity(BaseModel): ...
 
 ## Timetable
 
-[Show source in models.py:248](../../../../../lijnpy/kods/api/v1/models.py#L248)
+[Show source in models.py:249](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L249)
 
-Represents a schedule
+A timetable of a stop
 
 #### Attributes
 
@@ -410,9 +407,9 @@ class Timetable(BaseModel): ...
 
 ## TransportRegion
 
-[Show source in models.py:186](../../../../../lijnpy/kods/api/v1/models.py#L186)
+[Show source in models.py:187](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/models.py#L187)
 
-Represents a transport region in Belgium
+A transport region in Belgium
 
 #### Attributes
 

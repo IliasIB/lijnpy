@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../../README.md#lijnpy-index) / [Lijnpy](../../../index.md#lijnpy) / [Kods](../../index.md#kods) / [Api](../index.md#api) / [V1](./index.md#v1) / Stops
 
-> Auto-generated documentation for [lijnpy.kods.api.v1.stops](../../../../../lijnpy/kods/api/v1/stops.py) module.
+> Auto-generated documentation for [lijnpy.kods.api.v1.stops](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py) module.
 
 - [Stops](#stops)
   - [get_detours](#get_detours)
@@ -15,7 +15,7 @@
 
 ## get_detours
 
-[Show source in stops.py:131](../../../../../lijnpy/kods/api/v1/stops.py#L131)
+[Show source in stops.py:131](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L131)
 
 Get the detours of the stop with the given entity and stop number
 
@@ -26,7 +26,7 @@ Get the detours of the stop with the given entity and stop number
 
 #### Returns
 
-- `DetoursResponse` - The detours of the stop with the given entity and stop number
+- `list[Detour]` - The detours of the stop with the given entity and stop number
 
 #### Raises
 
@@ -46,7 +46,7 @@ def get_detours(entity_number: int, stop_number: int) -> list[Detour]: ...
 
 ## get_directions
 
-[Show source in stops.py:105](../../../../../lijnpy/kods/api/v1/stops.py#L105)
+[Show source in stops.py:105](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L105)
 
 Get the directions of the stop with the given entity and stop number
 
@@ -57,7 +57,7 @@ Get the directions of the stop with the given entity and stop number
 
 #### Returns
 
-- `DirectionsResponse` - The directions of the stop with the given entity and stop number
+- `list[Direction]` - The directions of the stop with the given entity and stop number
 
 #### Raises
 
@@ -77,7 +77,7 @@ def get_directions(entity_number: int, stop_number: int) -> list[Direction]: ...
 
 ## get_disruptions
 
-[Show source in stops.py:191](../../../../../lijnpy/kods/api/v1/stops.py#L191)
+[Show source in stops.py:191](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L191)
 
 Get the directions of the stop with the given entity and stop number
 
@@ -88,7 +88,7 @@ Get the directions of the stop with the given entity and stop number
 
 #### Returns
 
-- `DisruptionsResponse` - The disruptions of the stop with the given entity and stop number
+- `list[Disruption]` - The disruptions of the stop with the given entity and stop number
 
 #### Raises
 
@@ -108,7 +108,7 @@ def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]: .
 
 ## get_real_time_timetable
 
-[Show source in stops.py:155](../../../../../lijnpy/kods/api/v1/stops.py#L155)
+[Show source in stops.py:155](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L155)
 
 Get the real-time arrivals of the stop with the given entity and stop number
 
@@ -119,7 +119,7 @@ Get the real-time arrivals of the stop with the given entity and stop number
 
 #### Returns
 
-- `RealTimePassagesResponse` - The real-time arrivals of the stop with the given entity and stop number
+- `RealTimeTimetable` - The real-time arrivals of the stop with the given entity and stop number
 
 #### Raises
 
@@ -141,7 +141,7 @@ def get_real_time_timetable(
 
 ## get_stop
 
-[Show source in stops.py:49](../../../../../lijnpy/kods/api/v1/stops.py#L49)
+[Show source in stops.py:49](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L49)
 
 Get the stop with the given entity and stop number
 
@@ -152,7 +152,7 @@ Get the stop with the given entity and stop number
 
 #### Returns
 
-- `StopResponse` - The stop with the given entity and stop number
+- `Stop` - The stop with the given entity and stop number
 
 #### Raises
 
@@ -172,7 +172,7 @@ def get_stop(entity_number: int, stop_number: int) -> Stop: ...
 
 ## get_stops_in_vicinity
 
-[Show source in stops.py:22](../../../../../lijnpy/kods/api/v1/stops.py#L22)
+[Show source in stops.py:22](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L22)
 
 Get a list of all available stops in the neighbourhood of the given geo-coordinates
 
@@ -182,7 +182,7 @@ Get a list of all available stops in the neighbourhood of the given geo-coordina
 
 #### Returns
 
-- `StopsInVicinityResponse` - A list of all available stops in the neighbourhood of the given geo-coordinates
+- `list[StopInVicinity]` - A list of all available stops in the neighbourhood of the given geo-coordinates
 
 #### Raises
 
@@ -203,7 +203,7 @@ def get_stops_in_vicinity(geo_coordinate: GeoCoordinate) -> list[StopInVicinity]
 
 ## get_timetable
 
-[Show source in stops.py:73](../../../../../lijnpy/kods/api/v1/stops.py#L73)
+[Show source in stops.py:73](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/stops.py#L73)
 
 Get the schedule of the stop with the given entity and stop number
 

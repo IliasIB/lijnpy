@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../../README.md#lijnpy-index) / [Lijnpy](../../../index.md#lijnpy) / [Kods](../../index.md#kods) / [Api](../index.md#api) / [V1](./index.md#v1) / Entities
 
-> Auto-generated documentation for [lijnpy.kods.api.v1.entities](../../../../../lijnpy/kods/api/v1/entities.py) module.
+> Auto-generated documentation for [lijnpy.kods.api.v1.entities](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py) module.
 
 - [Entities](#entities)
   - [get_entities](#get_entities)
@@ -13,7 +13,7 @@
 
 ## get_entities
 
-[Show source in entities.py:14](../../../../../lijnpy/kods/api/v1/entities.py#L14)
+[Show source in entities.py:14](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py#L14)
 
 Get a list of all entities
 
@@ -35,7 +35,7 @@ def get_entities() -> list[Entity]: ...
 
 ## get_entity
 
-[Show source in entities.py:31](../../../../../lijnpy/kods/api/v1/entities.py#L31)
+[Show source in entities.py:31](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py#L31)
 
 Get an entity by its number
 
@@ -61,7 +61,7 @@ def get_entity(entity_number: int) -> Entity: ...
 
 ## get_lines
 
-[Show source in entities.py:93](../../../../../lijnpy/kods/api/v1/entities.py#L93)
+[Show source in entities.py:93](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py#L93)
 
 Get a list of lines in Belgium for a given entity
 
@@ -87,7 +87,7 @@ def get_lines(entity_number: int) -> list[Line]: ...
 
 ## get_municipalities
 
-[Show source in entities.py:51](../../../../../lijnpy/kods/api/v1/entities.py#L51)
+[Show source in entities.py:51](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py#L51)
 
 Get a list of municipalities in Belgium for a given entity
 
@@ -113,7 +113,7 @@ def get_municipalities(entity_number: int) -> list[Municipality]: ...
 
 ## get_stops
 
-[Show source in entities.py:73](../../../../../lijnpy/kods/api/v1/entities.py#L73)
+[Show source in entities.py:73](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/entities.py#L73)
 
 Get a list of stops in Belgium for a given entity
 

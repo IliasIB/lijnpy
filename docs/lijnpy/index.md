@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../README.md#lijnpy-index) / Lijnpy
 
-> Auto-generated documentation for [lijnpy](../../lijnpy/__init__.py) module.
+> Auto-generated documentation for [lijnpy](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/__init__.py) module.
 
 - [Lijnpy](#lijnpy)
   - [Modules](#modules)

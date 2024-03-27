@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../../../../README.md#lijnpy-index) / [Lijnpy](../../../index.md#lijnpy) / [Kods](../../index.md#kods) / [Api](../index.md#api) / [V1](./index.md#v1) / Municipalities
 
-> Auto-generated documentation for [lijnpy.kods.api.v1.municipalities](../../../../../lijnpy/kods/api/v1/municipalities.py) module.
+> Auto-generated documentation for [lijnpy.kods.api.v1.municipalities](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/municipalities.py) module.
 
 - [Municipalities](#municipalities)
   - [get_lines](#get_lines)
@@ -12,7 +12,7 @@
 
 ## get_lines
 
-[Show source in municipalities.py:52](../../../../../lijnpy/kods/api/v1/municipalities.py#L52)
+[Show source in municipalities.py:52](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/municipalities.py#L52)
 
 Get a list of lines in a municipality
 
@@ -22,7 +22,7 @@ Get a list of lines in a municipality
 
 #### Returns
 
-- `LinesResponse` - A list of lines in the municipality
+- `list[Line]` - A list of lines in the municipality
 
 #### Signature
 
@@ -38,13 +38,13 @@ def get_lines(municipality_number: int) -> list[Line]: ...
 
 ## get_municipalities
 
-[Show source in municipalities.py:13](../../../../../lijnpy/kods/api/v1/municipalities.py#L13)
+[Show source in municipalities.py:13](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/municipalities.py#L13)
 
 Get a list of all municipalities in Belgium
 
 #### Returns
 
-- `MunicipalitiesResponse` - A list of all municipalities in Belgium
+- `list[Municipality]` - A list of all municipalities in Belgium
 
 #### Signature
 
@@ -60,7 +60,7 @@ def get_municipalities() -> list[Municipality]: ...
 
 ## get_municipality
 
-[Show source in municipalities.py:72](../../../../../lijnpy/kods/api/v1/municipalities.py#L72)
+[Show source in municipalities.py:72](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/municipalities.py#L72)
 
 Get a municipality by its number
 
@@ -86,7 +86,7 @@ def get_municipality(municipality_number: int) -> Municipality: ...
 
 ## get_stops
 
-[Show source in municipalities.py:32](../../../../../lijnpy/kods/api/v1/municipalities.py#L32)
+[Show source in municipalities.py:32](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/kods/api/v1/municipalities.py#L32)
 
 Get a list of stops in a municipality
 
@@ -96,7 +96,7 @@ Get a list of stops in a municipality
 
 #### Returns
 
-- `StopsResponse` - A list of stops in the municipality
+- `list[Stop]` - A list of stops in the municipality
 
 #### Signature
 
