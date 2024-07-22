@@ -1,12 +1,11 @@
-from pydantic import ValidationError
-
-from lijnpy import _logger
-from lijnpy._rest_adapter import DeLijnAPIException
-from lijnpy.kods.api.v1 import _rest_adapter
+from lijnpy._rest_adapter import parse_api_call
 from lijnpy.kods.api.v1.models import (
     Line,
+    LineList,
     Municipality,
+    MunicipalityList,
     Stop,
+    StopList,
 )
 
 
@@ -16,17 +15,8 @@ def get_municipalities() -> list[Municipality]:
     Returns:
         list[Municipality]: A list of all municipalities in Belgium
     """
-    result = _rest_adapter.get("/gemeenten")
-    try:
-        assert result.data is not None
-        municipalities = [
-            Municipality(**municipality) for municipality in result.data["gemeenten"]
-        ]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return municipalities
+    return parse_api_call("/gemeenten", MunicipalityList).municipalities
 
 
 def get_stops(municipality_number: int) -> list[Stop]:
@@ -38,15 +28,8 @@ def get_stops(municipality_number: int) -> list[Stop]:
     Returns:
         list[Stop]: A list of stops in the municipality
     """
-    result = _rest_adapter.get(f"/gemeenten/{municipality_number}/haltes")
-    try:
-        assert result.data is not None
-        stops = [Stop(**stop) for stop in result.data["haltes"]]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return stops
+    return parse_api_call(f"/gemeenten/{municipality_number}/haltes", StopList).stops
 
 
 def get_lines(municipality_number: int) -> list[Line]:
@@ -58,15 +41,8 @@ def get_lines(municipality_number: int) -> list[Line]:
     Returns:
         list[Line]: A list of lines in the municipality
     """
-    result = _rest_adapter.get(f"/gemeenten/{municipality_number}/lijnen")
-    try:
-        assert result.data is not None
-        lines = [Line(**line) for line in result.data["lijnen"]]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return lines
+    return parse_api_call(f"/gemeenten/{municipality_number}/lijnen", LineList).lines
 
 
 def get_municipality(municipality_number: int) -> Municipality:
@@ -78,12 +54,5 @@ def get_municipality(municipality_number: int) -> Municipality:
     Returns:
         Municipality: The municipality with the given number
     """
-    result = _rest_adapter.get(f"/gemeenten/{municipality_number}")
-    try:
-        assert result.data is not None
-        municipality = Municipality(**result.data)
-    except (AssertionError, ValidationError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return municipality
+    return parse_api_call(f"/gemeenten/{municipality_number}", Municipality)

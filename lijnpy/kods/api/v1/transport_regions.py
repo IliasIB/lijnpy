@@ -1,9 +1,10 @@
-from pydantic import ValidationError
-
-from lijnpy import _logger
-from lijnpy._rest_adapter import DeLijnAPIException
-from lijnpy.kods.api.v1 import _rest_adapter
-from lijnpy.kods.api.v1.models import Line, TransportRegion
+from lijnpy._rest_adapter import parse_api_call
+from lijnpy.kods.api.v1.models import (
+    Line,
+    LineList,
+    TransportRegion,
+    TransportRegionList,
+)
 
 
 def get_transport_regions() -> list[TransportRegion]:
@@ -12,18 +13,11 @@ def get_transport_regions() -> list[TransportRegion]:
     Returns:
         list[TransportRegion]: A list of all transport regions
     """
-    result = _rest_adapter.get("/vervoerregios")
-    try:
-        assert result.data is not None
-        transport_regions = [
-            TransportRegion(**transport_region)
-            for transport_region in result.data["vervoerRegios"]
-        ]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return transport_regions
+    return parse_api_call(
+        "/vervoerregios",
+        TransportRegionList,
+    ).transport_regions
 
 
 def get_transport_region(transport_region_code: str) -> TransportRegion:
@@ -35,15 +29,11 @@ def get_transport_region(transport_region_code: str) -> TransportRegion:
     Returns:
         TransportRegion: The transport region
     """
-    result = _rest_adapter.get(f"/vervoerregios/{transport_region_code}")
-    try:
-        assert result.data is not None
-        transport_region = TransportRegion(**result.data)
-    except (AssertionError, ValidationError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return transport_region
+    return parse_api_call(
+        f"/vervoerregios/{transport_region_code}",
+        TransportRegion,
+    )
 
 
 def get_lines(transport_region_code: str) -> list[Line]:
@@ -55,12 +45,8 @@ def get_lines(transport_region_code: str) -> list[Line]:
     Returns:
         list[Line]: A list of lines
     """
-    result = _rest_adapter.get(f"/vervoerregios/{transport_region_code}/lijnen")
-    try:
-        assert result.data is not None
-        lines_response = [Line(**line) for line in result.data["lijnen"]]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return lines_response
+    return parse_api_call(
+        f"/vervoerregios/{transport_region_code}/lijnen",
+        LineList,
+    ).lines

@@ -1,20 +1,16 @@
-from pydantic_core import ValidationError
-
-from lijnpy import _logger
-from lijnpy._rest_adapter import DeLijnAPIException
-from lijnpy.kods.api.v1 import _rest_adapter
+from lijnpy._rest_adapter import parse_api_call
 from lijnpy.kods.api.v1.models import (
     Detour,
+    DetourList,
     Direction,
+    DirectionList,
     Disruption,
+    DisruptionList,
     GeoCoordinate,
-    Passage,
-    PassageNote,
-    RealTimePassage,
     RealTimeTimetable,
-    RideNote,
     Stop,
     StopInVicinity,
+    StopInVicinityList,
     Timetable,
 )
 
@@ -33,17 +29,11 @@ def get_stops_in_vicinity(
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(
-        f"/haltes/indebuurt/{geo_coordinate.latitude},{geo_coordinate.longitude}",
-    )
-    try:
-        assert result.data is not None
-        stops_in_vicinity = [StopInVicinity(**stop) for stop in result.data["haltes"]]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return stops_in_vicinity
+    return parse_api_call(
+        f"/haltes/indebuurt/{geo_coordinate.latitude},{geo_coordinate.longitude}",
+        StopInVicinityList,
+    ).stops
 
 
 def get_stop(entity_number: int, stop_number: int) -> Stop:
@@ -59,15 +49,11 @@ def get_stop(entity_number: int, stop_number: int) -> Stop:
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}")
-    try:
-        assert result.data is not None
-        stop = Stop(**result.data)
-    except (AssertionError, ValidationError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return stop
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}",
+        Stop,
+    )
 
 
 def get_timetable(entity_number: int, stop_number: int) -> Timetable:
@@ -79,27 +65,11 @@ def get_timetable(entity_number: int, stop_number: int) -> Timetable:
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(
-        f"/haltes/{entity_number}/{stop_number}/dienstregelingen"
-    )
-    try:
-        assert result.data is not None
-        timetable = Timetable(
-            passages=[
-                Passage(**passage)
-                for passage in result.data["halteDoorkomsten"][0]["doorkomsten"]
-            ],
-            passage_notes=[
-                PassageNote(**note) for note in result.data["doorkomstNotas"]
-            ],
-            ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
-            detours=[Detour(**detour) for detour in result.data["omleidingen"]],
-        )
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return timetable
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}/dienstregelingen",
+        Timetable,
+    )
 
 
 def get_directions(entity_number: int, stop_number: int) -> list[Direction]:
@@ -115,17 +85,11 @@ def get_directions(entity_number: int, stop_number: int) -> list[Direction]:
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/lijnrichtingen")
-    try:
-        assert result.data is not None
-        directions = [
-            Direction(**direction) for direction in result.data["lijnrichtingen"]
-        ]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return directions
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}/lijnrichtingen",
+        DirectionList,
+    ).directions
 
 
 def get_detours(entity_number: int, stop_number: int) -> list[Detour]:
@@ -141,15 +105,11 @@ def get_detours(entity_number: int, stop_number: int) -> list[Detour]:
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/omleidingen")
-    try:
-        assert result.data is not None
-        detours = [Detour(**detour) for detour in result.data["omleidingen"]]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return detours
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}/omleidingen",
+        DetourList,
+    ).detours
 
 
 def get_real_time_timetable(entity_number: int, stop_number: int) -> RealTimeTimetable:
@@ -165,27 +125,11 @@ def get_real_time_timetable(entity_number: int, stop_number: int) -> RealTimeTim
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(
-        f"/haltes/{entity_number}/{stop_number}/real-time-doorkomsten"
-    )
-    try:
-        assert result.data is not None
-        real_time_timetable = RealTimeTimetable(
-            passages=[
-                RealTimePassage(**passage)
-                for passage in result.data["halteDoorkomsten"][0]["doorkomsten"]
-            ],
-            passage_notes=[
-                PassageNote(**note) for note in result.data["doorkomstNotas"]
-            ],
-            ride_notes=[RideNote(**note) for note in result.data["ritNotas"]],
-            detours=[Detour(**detour) for detour in result.data["omleidingen"]],
-        )
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return real_time_timetable
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}/real-time-doorkomsten",
+        RealTimeTimetable,
+    )
 
 
 def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]:
@@ -200,14 +144,8 @@ def get_disruptions(entity_number: int, stop_number: int) -> list[Disruption]:
     Raises:
         DeLijnAPIException: If the API request fails
     """
-    result = _rest_adapter.get(f"/haltes/{entity_number}/{stop_number}/storingen")
-    try:
-        assert result.data is not None
-        disruptions = [
-            Disruption(**disruption) for disruption in result.data["storingen"]
-        ]
-    except (AssertionError, ValidationError, KeyError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
 
-    return disruptions
+    return parse_api_call(
+        f"/haltes/{entity_number}/{stop_number}/storingen",
+        DisruptionList,
+    ).disruptions

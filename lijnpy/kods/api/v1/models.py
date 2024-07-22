@@ -6,6 +6,8 @@ from pydantic import BaseModel, Field
 from pydantic_extra_types.color import Color
 from pydantic_extra_types.coordinate import Coordinate, Latitude, Longitude
 
+from lijnpy import _logger
+from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.kods.api.v1.enums import (
     Accessibility,
     Language,
@@ -39,6 +41,16 @@ class DetourPeriod(BaseModel):
     end_date: datetime | None = Field(default=None, validation_alias="eindDatum")
 
 
+class StopList(BaseModel):
+    """A list of bus stops
+
+    Attributes:
+        stops (list[Stop]): A list of bus stops
+    """
+
+    stops: list[Stop] = Field(validation_alias="haltes")
+
+
 class Stop(BaseModel):
     """A bus stop
 
@@ -69,6 +81,16 @@ class Stop(BaseModel):
     language: Language = Field(validation_alias="taal")
 
 
+class LineList(BaseModel):
+    """A list of bus lines
+
+    Attributes:
+        lines (list[Line]): A list of bus lines
+    """
+
+    lines: list[Line] = Field(validation_alias="lijnen")
+
+
 class Line(BaseModel):
     """A bus line
 
@@ -97,6 +119,16 @@ class Line(BaseModel):
     valid_to: date = Field(validation_alias="lijnGeldigTot")
 
 
+class EntityList(BaseModel):
+    """List of entities
+
+    Attributes:
+        entities (Entity): List of entities
+    """
+
+    entities: list[Entity] = Field(validation_alias="entiteiten")
+
+
 class Entity(BaseModel):
     """An entity
 
@@ -109,6 +141,16 @@ class Entity(BaseModel):
     number: int = Field(validation_alias="entiteitnummer")
     code: str = Field(validation_alias="entiteitcode")
     description: str = Field(validation_alias="omschrijving")
+
+
+class LineColorList(BaseModel):
+    """A list of bus line colors
+
+    Attributes:
+        colors (list[LineColor]): The list of bus line colors
+    """
+
+    colors: list[LineColor] = Field(validation_alias="kleuren")
 
 
 class LineColor(BaseModel):
@@ -125,6 +167,16 @@ class LineColor(BaseModel):
     color: Color = Field(validation_alias="hex")
 
 
+class MunicipalityList(BaseModel):
+    """A list of Belgian municipalities
+
+    Attributes:
+        municipalities (list[Municipality]): A list of Belgian municipalities
+    """
+
+    municipalities: list[Municipality] = Field(validation_alias="gemeenten")
+
+
 class Municipality(BaseModel):
     """A municipality in Belgium
 
@@ -139,6 +191,16 @@ class Municipality(BaseModel):
     main_municipality: Municipality | None = Field(
         default=None, validation_alias="hoofdGemeente"
     )
+
+
+class StopInVicinityList(BaseModel):
+    """A list of stops in the vicinity
+
+    Attributes:
+        stops (list[StopInVicinity]): The list of stops in the vicinity
+    """
+
+    stops: list[StopInVicinity] = Field(validation_alias="haltes")
 
 
 class StopInVicinity(BaseModel):
@@ -182,6 +244,16 @@ class Passage(BaseModel):
     destination_place: str = Field(validation_alias="plaatsBestemming")
     vias: list[str] | None = None
     timetable_timestamp: datetime = Field(validation_alias="dienstregelingTijdstip")
+
+
+class TransportRegionList(BaseModel):
+    """A list of transports region in Belgium
+
+    Attributes:
+        transport_regions (list[TransportRegion]): The list of transports region in Belgium
+    """
+
+    transport_regions: list[TransportRegion] = Field(validation_alias="vervoerRegios")
 
 
 class TransportRegion(BaseModel):
@@ -257,9 +329,27 @@ class Timetable(BaseModel):
     """
 
     passages: list[Passage]
-    passage_notes: list[PassageNote]
-    ride_notes: list[RideNote]
-    detours: list[Detour]
+    passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
+    ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
+    detours: list[Detour] = Field(validation_alias="omleidingen")
+
+    def __init__(self, **kwargs):
+        try:
+            kwargs["passages"] = kwargs["halteDoorkomsten"][0]["doorkomsten"]
+        except KeyError as e:
+            _logger.error(f"Failed to parse the response from the API: {e}")
+            raise DeLijnAPIException from e
+        super().__init__(**kwargs)
+
+
+class DirectionList(BaseModel):
+    """A list of directions
+
+    Attributes:
+        directions (list[Direction]): The list of directions
+    """
+
+    directions: list[Direction] = Field(validation_alias="lijnrichtingen")
 
 
 class Direction(BaseModel):
@@ -276,6 +366,16 @@ class Direction(BaseModel):
     line_number: int = Field(validation_alias="lijnnummer")
     direction: LineDirection = Field(validation_alias="richting")
     description: str = Field(validation_alias="omschrijving")
+
+
+class DetourList(BaseModel):
+    """A list of detours
+
+    Attributes:
+        detours (list[Detour]): The list of detours
+    """
+
+    detours: list[Detour] = Field(validation_alias="omleidingen")
 
 
 class Detour(BaseModel):
@@ -326,6 +426,16 @@ class RealTimePassage(BaseModel):
     prediction_statuses: list[str] = Field(validation_alias="predictionStatussen")
 
 
+class RealTimeStopPassage(BaseModel):
+    """All real-time passages of a bus stop
+
+    Attributes:
+        passages (list[RealTimePassage]): The real-time passages of a bus stop
+    """
+
+    passages: list[RealTimePassage] = Field(validation_alias="doorkomsten")
+
+
 class RealTimeTimetable(BaseModel):
     """A real-time timetable of a stop
 
@@ -337,9 +447,27 @@ class RealTimeTimetable(BaseModel):
     """
 
     passages: list[RealTimePassage]
-    passage_notes: list[PassageNote]
-    ride_notes: list[RideNote]
-    detours: list[Detour]
+    passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
+    ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
+    detours: list[Detour] = Field(validation_alias="omleidingen")
+
+    def __init__(self, **kwargs):
+        try:
+            kwargs["passages"] = kwargs["halteDoorkomsten"][0]["doorkomsten"]
+        except KeyError as e:
+            _logger.error(f"Failed to parse the response from the API: {e}")
+            raise DeLijnAPIException from e
+        super().__init__(**kwargs)
+
+
+class DisruptionList(BaseModel):
+    """A list of line disruptions
+
+    Attributes:
+        disruptions (list[Disruption]): The list of line disruptions
+    """
+
+    disruptions: list[Disruption] = Field(validation_alias="storingen")
 
 
 class Disruption(BaseModel):

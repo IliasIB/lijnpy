@@ -3,7 +3,9 @@ from logging import Logger, getLogger
 from typing import Any
 
 import requests
-from pydantic import BaseModel
+from pydantic import BaseModel, TypeAdapter, ValidationError
+
+from lijnpy import API_KEY, _logger
 
 
 class Result(BaseModel):
@@ -157,3 +159,32 @@ class RestAdapter:
         return self._do(
             http_method="DELETE", endpoint=endpoint, ep_params=ep_params, data=data
         )
+
+
+_rest_adapter = RestAdapter(
+    "api.delijn.be/DLKernOpenData/api",
+    API_KEY,
+    "v1",
+    True,
+    _logger,
+)
+
+
+def parse_api_call[T](path: str, cls: type[T]) -> T:
+    """Parses result of API path and returns a model
+
+    Args:
+        path (str): The path to call on the API
+        cls (type[T]): Class to validate the result of the API to
+
+    Returns:
+        T: A model validated from the result of the given path on the API
+    """
+    try:
+        result = _rest_adapter.get(path)
+        assert result.data is not None
+        type_adapter = TypeAdapter(cls)
+        return type_adapter.validate_python(result.data)
+    except (AssertionError, ValidationError) as e:
+        _logger.error(f"Failed to parse the response from the API: {e}")
+        raise DeLijnAPIException from e
