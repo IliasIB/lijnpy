@@ -5,17 +5,17 @@
 | Name                                          |    Stmts |     Miss |   Cover |   Missing |
 |---------------------------------------------- | -------: | -------: | ------: | --------: |
 | lijnpy/\_\_init\_\_.py                        |        4 |        0 |    100% |           |
-| lijnpy/\_rest\_adapter.py                     |       45 |        7 |     84% |89-91, 112-113, 140, 157 |
+| lijnpy/\_rest\_adapter.py                     |       56 |        7 |     88% |91-93, 114-115, 142, 159 |
 | lijnpy/kods/\_\_init\_\_.py                   |        0 |        0 |    100% |           |
 | lijnpy/kods/api/\_\_init\_\_.py               |        0 |        0 |    100% |           |
 | lijnpy/kods/api/v1/\_\_init\_\_.py            |        3 |        0 |    100% |           |
-| lijnpy/kods/api/v1/colors.py                  |       23 |        0 |    100% |           |
-| lijnpy/kods/api/v1/entities.py                |       50 |        0 |    100% |           |
+| lijnpy/kods/api/v1/colors.py                  |        6 |        0 |    100% |           |
+| lijnpy/kods/api/v1/entities.py                |       12 |        0 |    100% |           |
 | lijnpy/kods/api/v1/enums.py                   |       23 |        0 |    100% |           |
-| lijnpy/kods/api/v1/models.py                  |      119 |        0 |    100% |           |
-| lijnpy/kods/api/v1/municipalities.py          |       41 |        0 |    100% |           |
-| lijnpy/kods/api/v1/stops.py                   |       68 |        0 |    100% |           |
-| lijnpy/kods/api/v1/transport\_regions.py      |       32 |        0 |    100% |           |
+| lijnpy/kods/api/v1/models.py                  |      157 |        0 |    100% |           |
+| lijnpy/kods/api/v1/municipalities.py          |       10 |        0 |    100% |           |
+| lijnpy/kods/api/v1/stops.py                   |       16 |        0 |    100% |           |
+| lijnpy/kods/api/v1/transport\_regions.py      |        8 |        0 |    100% |           |
 | tests/\_\_init\_\_.py                         |        0 |        0 |    100% |           |
 | tests/kods/api/v1/test\_colors.py             |       23 |        0 |    100% |           |
 | tests/kods/api/v1/test\_entities.py           |       47 |        0 |    100% |           |
@@ -24,7 +24,7 @@
 | tests/kods/api/v1/test\_transport\_regions.py |       31 |        0 |    100% |           |
 | tests/test\_rest\_adapter.py                  |       19 |        0 |    100% |           |
 | tests/utils.py                                |       13 |        0 |    100% |           |
-|                                     **TOTAL** |  **663** |    **7** | **99%** |           |
+|                                     **TOTAL** |  **550** |    **7** | **99%** |           |
 
 
 ## Setup coverage badge
