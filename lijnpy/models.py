@@ -8,7 +8,7 @@ from pydantic_extra_types.coordinate import Coordinate, Latitude, Longitude
 
 from lijnpy import _logger
 from lijnpy._rest_adapter import DeLijnAPIException
-from lijnpy.kods.api.v1.enums import (
+from lijnpy.enums import (
     Accessibility,
     Language,
     LineDirection,

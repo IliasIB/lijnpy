@@ -1,11 +1,11 @@
+from __future__ import annotations
+
 from json import JSONDecodeError
 from logging import Logger, getLogger
 from typing import Any
 
-import requests
-from pydantic import BaseModel, TypeAdapter, ValidationError
-
-from lijnpy import API_KEY, _logger
+import aiohttp
+from pydantic import BaseModel
 
 
 class Result(BaseModel):
@@ -49,7 +49,7 @@ class RestAdapter:
         self._ssl_verify = ssl_verify
         self._logger = logger or getLogger(__name__)
 
-    def _do(
+    async def _do(
         self,
         http_method: str,
         endpoint: str,
@@ -78,43 +78,40 @@ class RestAdapter:
             (log_line_pre, "success={}, status_code={}, message={}")
         )
         # Log HTTP params and perform an HTTP request, catching and re-raising any exceptions
-        try:
-            self._logger.debug(msg=log_line_pre)
-            response = requests.request(
-                method=http_method,
-                url=full_url,
-                verify=self._ssl_verify,
-                headers=headers,
-                params=ep_params,
-                json=data,
-            )
-        except requests.exceptions.RequestException as e:
-            self._logger.error(msg=(str(e)))
-            raise DeLijnAPIException("Request failed") from e
-
         # Deserialize JSON output to Python object, or return failed Result on exception
         try:
-            data_out = response.json()
+            self._logger.debug(msg=log_line_pre)
+            async with aiohttp.ClientSession() as session:
+                async with session.request(
+                    method=http_method,
+                    url=full_url,
+                    headers=headers,
+                    params=ep_params,
+                    json=data,
+                ) as result:
+                    response = result
+                    data_out = await response.json()
         except (ValueError, JSONDecodeError) as e:
             self._logger.error(msg=log_line_post.format(False, None, e))
             raise DeLijnAPIException("Bad JSON in response") from e
+        except Exception as e:
+            self._logger.error(msg=(str(e)))
+            raise DeLijnAPIException("Request failed") from e
 
         # If status_code in 200-299 range, return success Result with data, otherwise raise exception
-        is_success = 299 >= response.status_code >= 200
-        log_line = log_line_post.format(
-            is_success, response.status_code, response.reason
-        )
+        is_success = 299 >= response.status >= 200
+        log_line = log_line_post.format(is_success, response.status, response.reason)
         if is_success:
             self._logger.debug(msg=log_line)
             return Result(
-                status_code=response.status_code,
-                message=response.reason,
+                status_code=response.status,
+                message=response.reason or "No reason given",
                 data=data_out,
             )
         self._logger.error(msg=log_line)
-        raise DeLijnAPIException(f"{response.status_code}: {response.reason}")
+        raise DeLijnAPIException(f"{response.status}: {response.reason}")
 
-    def get(self, endpoint: str, ep_params: dict | None = None) -> Result:
+    async def get(self, endpoint: str, ep_params: dict | None = None) -> Result:
         """Perform a GET request to the API
 
         Args:
@@ -124,9 +121,9 @@ class RestAdapter:
         Returns:
             Result: The result of the GET request
         """
-        return self._do(http_method="GET", endpoint=endpoint, ep_params=ep_params)
+        return await self._do(http_method="GET", endpoint=endpoint, ep_params=ep_params)
 
-    def post(
+    async def post(
         self, endpoint: str, ep_params: dict | None = None, data: dict | None = None
     ) -> Result:
         """Perform a POST request to the API
@@ -139,11 +136,11 @@ class RestAdapter:
         Returns:
             Result: The result of the POST request
         """
-        return self._do(
+        return await self._do(
             http_method="POST", endpoint=endpoint, ep_params=ep_params, data=data
         )
 
-    def delete(
+    async def delete(
         self, endpoint: str, ep_params: dict | None = None, data: dict | None = None
     ) -> Result:
         """Perform a DELETE request to the API
@@ -156,35 +153,6 @@ class RestAdapter:
         Returns:
             Result: The result of the DELETE request
         """
-        return self._do(
+        return await self._do(
             http_method="DELETE", endpoint=endpoint, ep_params=ep_params, data=data
         )
-
-
-_rest_adapter = RestAdapter(
-    "api.delijn.be/DLKernOpenData/api",
-    API_KEY,
-    "v1",
-    True,
-    _logger,
-)
-
-
-def parse_api_call[T](path: str, cls: type[T]) -> T:
-    """Parses result of API path and returns a model
-
-    Args:
-        path (str): The path to call on the API
-        cls (type[T]): Class to validate the result of the API to
-
-    Returns:
-        T: A model validated from the result of the given path on the API
-    """
-    try:
-        result = _rest_adapter.get(path)
-        assert result.data is not None
-        type_adapter = TypeAdapter(cls)
-        return type_adapter.validate_python(result.data)
-    except (AssertionError, ValidationError) as e:
-        _logger.error(f"Failed to parse the response from the API: {e}")
-        raise DeLijnAPIException from e
