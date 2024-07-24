@@ -31,5 +31,6 @@
         "**/.venv": true,
     },
     "python.analysis.autoImportCompletions": true,
-    "editor.wordWrap": "on"
+    "editor.rulers": [88],
+    "editor.wordWrap": "on",
 }
