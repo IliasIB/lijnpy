@@ -2,29 +2,15 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/IliasIB/lijnpy/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                                          |    Stmts |     Miss |   Cover |   Missing |
-|---------------------------------------------- | -------: | -------: | ------: | --------: |
-| lijnpy/\_\_init\_\_.py                        |        4 |        0 |    100% |           |
-| lijnpy/\_rest\_adapter.py                     |       56 |        7 |     88% |91-93, 114-115, 142, 159 |
-| lijnpy/kods/\_\_init\_\_.py                   |        0 |        0 |    100% |           |
-| lijnpy/kods/api/\_\_init\_\_.py               |        0 |        0 |    100% |           |
-| lijnpy/kods/api/v1/\_\_init\_\_.py            |        3 |        0 |    100% |           |
-| lijnpy/kods/api/v1/colors.py                  |        6 |        0 |    100% |           |
-| lijnpy/kods/api/v1/entities.py                |       12 |        0 |    100% |           |
-| lijnpy/kods/api/v1/enums.py                   |       23 |        0 |    100% |           |
-| lijnpy/kods/api/v1/models.py                  |      157 |        0 |    100% |           |
-| lijnpy/kods/api/v1/municipalities.py          |       10 |        0 |    100% |           |
-| lijnpy/kods/api/v1/stops.py                   |       16 |        0 |    100% |           |
-| lijnpy/kods/api/v1/transport\_regions.py      |        8 |        0 |    100% |           |
-| tests/\_\_init\_\_.py                         |        0 |        0 |    100% |           |
-| tests/kods/api/v1/test\_colors.py             |       23 |        0 |    100% |           |
-| tests/kods/api/v1/test\_entities.py           |       47 |        0 |    100% |           |
-| tests/kods/api/v1/test\_municipalities.py     |       41 |        0 |    100% |           |
-| tests/kods/api/v1/test\_stops.py              |       81 |        0 |    100% |           |
-| tests/kods/api/v1/test\_transport\_regions.py |       31 |        0 |    100% |           |
-| tests/test\_rest\_adapter.py                  |       19 |        0 |    100% |           |
-| tests/utils.py                                |       13 |        0 |    100% |           |
-|                                     **TOTAL** |  **550** |    **7** | **99%** |           |
+| Name                            |    Stmts |     Miss |   Cover |   Missing |
+|-------------------------------- | -------: | -------: | ------: | --------: |
+| lijnpy/\_\_init\_\_.py          |        4 |        0 |    100% |           |
+| lijnpy/\_rest\_adapter.py       |       47 |       30 |     36% |47-50, 73-112, 124, 139, 156 |
+| lijnpy/enums.py                 |       23 |        0 |    100% |           |
+| lijnpy/kods\_client\_v1.py      |       61 |        2 |     97% |  138, 154 |
+| lijnpy/models.py                |      137 |        6 |     96% |269-271, 367-369 |
+| tests/test\_kods\_client\_v1.py |      111 |        0 |    100% |           |
+|                       **TOTAL** |  **383** |   **38** | **90%** |           |
 
 
 ## Setup coverage badge
