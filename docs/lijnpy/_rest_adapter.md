@@ -2,7 +2,7 @@
 
 [Lijnpy Index](../README.md#lijnpy-index) / [Lijnpy](./index.md#lijnpy) / RestAdapter
 
-> Auto-generated documentation for [lijnpy._rest_adapter](../../lijnpy/_rest_adapter.py) module.
+> Auto-generated documentation for [lijnpy._rest_adapter](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py) module.
 
 - [RestAdapter](#restadapter)
   - [DeLijnAPIException](#delijnapiexception)
@@ -15,7 +15,7 @@
 
 ## DeLijnAPIException
 
-[Show source in _rest_adapter.py:23](../../lijnpy/_rest_adapter.py#L23)
+[Show source in _rest_adapter.py:25](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L25)
 
 #### Signature
 
@@ -27,7 +27,7 @@ class DeLijnAPIException(Exception): ...
 
 ## RestAdapter
 
-[Show source in _rest_adapter.py:26](../../lijnpy/_rest_adapter.py#L26)
+[Show source in _rest_adapter.py:28](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L28)
 
 #### Signature
 
@@ -45,7 +45,7 @@ class RestAdapter:
 
 ### RestAdapter()._do
 
-[Show source in _rest_adapter.py:50](../../lijnpy/_rest_adapter.py#L50)
+[Show source in _rest_adapter.py:52](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L52)
 
 Perform an HTTP request to the API and return a Result object
 
@@ -67,7 +67,7 @@ data (dict | None, optional): Data to pass through to the endpoint. Defaults to 
 #### Signature
 
 ```python
-def _do(
+async def _do(
     self,
     http_method: str,
     endpoint: str,
@@ -82,7 +82,7 @@ def _do(
 
 ### RestAdapter().delete
 
-[Show source in _rest_adapter.py:144](../../lijnpy/_rest_adapter.py#L144)
+[Show source in _rest_adapter.py:143](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L143)
 
 Perform a DELETE request to the API
 
@@ -99,7 +99,7 @@ data (dict | None, optional): Data to pass through to the endpoint. Defaults to 
 #### Signature
 
 ```python
-def delete(
+async def delete(
     self, endpoint: str, ep_params: dict | None = None, data: dict | None = None
 ) -> Result: ...
 ```
@@ -110,7 +110,7 @@ def delete(
 
 ### RestAdapter().get
 
-[Show source in _rest_adapter.py:115](../../lijnpy/_rest_adapter.py#L115)
+[Show source in _rest_adapter.py:114](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L114)
 
 Perform a GET request to the API
 
@@ -126,7 +126,7 @@ ep_params (dict | None, optional): Parameters to give to the endpoint. Defaults 
 #### Signature
 
 ```python
-def get(self, endpoint: str, ep_params: dict | None = None) -> Result: ...
+async def get(self, endpoint: str, ep_params: dict | None = None) -> Result: ...
 ```
 
 #### See also
@@ -135,7 +135,7 @@ def get(self, endpoint: str, ep_params: dict | None = None) -> Result: ...
 
 ### RestAdapter().post
 
-[Show source in _rest_adapter.py:127](../../lijnpy/_rest_adapter.py#L127)
+[Show source in _rest_adapter.py:126](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L126)
 
 Perform a POST request to the API
 
@@ -152,7 +152,7 @@ data (dict | None, optional): Data to pass through to the endpoint. Defaults to 
 #### Signature
 
 ```python
-def post(
+async def post(
     self, endpoint: str, ep_params: dict | None = None, data: dict | None = None
 ) -> Result: ...
 ```
@@ -165,7 +165,7 @@ def post(
 
 ## Result
 
-[Show source in _rest_adapter.py:9](../../lijnpy/_rest_adapter.py#L9)
+[Show source in _rest_adapter.py:11](https://github.com/IliasIB/lijnpy/blob/main/lijnpy/_rest_adapter.py#L11)
 
 The result of a request to the De Lijn API
 
