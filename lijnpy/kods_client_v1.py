@@ -1,32 +1,23 @@
 from logging import Logger
+from typing import Callable
 
 from pydantic import TypeAdapter, ValidationError
 
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter
 from lijnpy.models import (
     Detour,
-    DetourList,
     Direction,
-    DirectionList,
     Disruption,
-    DisruptionList,
     Entity,
-    EntityList,
     GeoCoordinate,
     Line,
     LineColor,
-    LineColorList,
-    LineList,
     Municipality,
-    MunicipalityList,
     RealTimeTimetable,
     Stop,
     StopInVicinity,
-    StopInVicinityList,
-    StopList,
     Timetable,
     TransportRegion,
-    TransportRegionList,
 )
 
 
@@ -46,12 +37,19 @@ class KODSClientV1:
         )
         self.logger = logger
 
-    async def parse_api_call[T](self, path: str, cls: type[T]) -> T:
+    async def parse_api_call[T](
+        self,
+        path: str,
+        cls: type[T],
+        mapper: Callable[[dict], dict | list[dict]] | None = None,
+    ) -> T:
         """Parses result of API path and returns a model
 
         Args:
             path (str): The path to call on the API
             cls (type[T]): Class to validate the result of the API to
+            mapper (Callable[[dict], dict | list[dict]], optional): Mapper to extract
+            value from the return value
 
         Returns:
             T: A model validated from the result of the given path on the API
@@ -59,9 +57,10 @@ class KODSClientV1:
         try:
             result = await self.http_client.get(path)
             assert result.data is not None
+            data = result.data if mapper is None else mapper(result.data)
             type_adapter = TypeAdapter(cls)
-            return type_adapter.validate_python(result.data)
-        except (AssertionError, ValidationError) as e:
+            return type_adapter.validate_python(data)
+        except (AssertionError, ValidationError, KeyError) as e:
             self.logger.error(f"Failed to parse the response from the API: {e}")
             raise DeLijnAPIException from e
 
@@ -72,7 +71,9 @@ class KODSClientV1:
             list[LineColor]: A list of all colors
         """
 
-        return (await self.parse_api_call("/kleuren", LineColorList)).colors
+        return await self.parse_api_call(
+            "/kleuren", list[LineColor], lambda x: x["kleuren"]
+        )
 
     async def get_color(self, color_code: str) -> LineColor:
         """Get a color by its code
@@ -92,7 +93,9 @@ class KODSClientV1:
         Returns:
             list[Entity]: A list of all entities
         """
-        return (await self.parse_api_call("/entiteiten", EntityList)).entities
+        return await self.parse_api_call(
+            "/entiteiten", list[Entity], lambda x: x["entiteiten"]
+        )
 
     async def get_entity(self, entity_number: int) -> Entity:
         """Get an entity by its number
@@ -116,11 +119,11 @@ class KODSClientV1:
         Returns:
             list[Municipality]: A list of municipalities in Belgium for a given entity
         """
-        return (
-            await self.parse_api_call(
-                f"/entiteiten/{entity_number}/gemeenten", MunicipalityList
-            )
-        ).municipalities
+        return await self.parse_api_call(
+            f"/entiteiten/{entity_number}/gemeenten",
+            list[Municipality],
+            lambda x: x["gemeenten"],
+        )
 
     async def get_stops_by_entity(self, entity_number: int) -> list[Stop]:
         """Get a list of stops in Belgium for a given entity
@@ -132,9 +135,11 @@ class KODSClientV1:
             list[Stop]: A list of stops in Belgium for a given entity
         """
 
-        return (
-            await self.parse_api_call(f"/entiteiten/{entity_number}/haltes", StopList)
-        ).stops
+        return await self.parse_api_call(
+            f"/entiteiten/{entity_number}/haltes",
+            list[Stop],
+            lambda x: x["haltes"],
+        )
 
     async def get_lines_by_entity(self, entity_number: int) -> list[Line]:
         """Get a list of lines in Belgium for a given entity
@@ -146,9 +151,11 @@ class KODSClientV1:
             list[Line]: A list of lines in Belgium for a given entity
         """
 
-        return (
-            await self.parse_api_call(f"/entiteiten/{entity_number}/lijnen", LineList)
-        ).lines
+        return await self.parse_api_call(
+            f"/entiteiten/{entity_number}/lijnen",
+            list[Line],
+            lambda x: x["lijnen"],
+        )
 
     async def get_municipalities(self) -> list[Municipality]:
         """Get a list of all municipalities in Belgium
@@ -157,9 +164,9 @@ class KODSClientV1:
             list[Municipality]: A list of all municipalities in Belgium
         """
 
-        return (
-            await self.parse_api_call("/gemeenten", MunicipalityList)
-        ).municipalities
+        return await self.parse_api_call(
+            "/gemeenten", list[Municipality], lambda x: x["gemeenten"]
+        )
 
     async def get_stops(self, municipality_number: int) -> list[Stop]:
         """Get a list of stops in a municipality
@@ -171,11 +178,11 @@ class KODSClientV1:
             list[Stop]: A list of stops in the municipality
         """
 
-        return (
-            await self.parse_api_call(
-                f"/gemeenten/{municipality_number}/haltes", StopList
-            )
-        ).stops
+        return await self.parse_api_call(
+            f"/gemeenten/{municipality_number}/haltes",
+            list[Stop],
+            lambda x: x["haltes"],
+        )
 
     async def get_lines(self, municipality_number: int) -> list[Line]:
         """Get a list of lines in a municipality
@@ -187,11 +194,11 @@ class KODSClientV1:
             list[Line]: A list of lines in the municipality
         """
 
-        return (
-            await self.parse_api_call(
-                f"/gemeenten/{municipality_number}/lijnen", LineList
-            )
-        ).lines
+        return await self.parse_api_call(
+            f"/gemeenten/{municipality_number}/lijnen",
+            list[Line],
+            lambda x: x["lijnen"],
+        )
 
     async def get_municipality(self, municipality_number: int) -> Municipality:
         """Get a municipality by its number
@@ -223,12 +230,11 @@ class KODSClientV1:
             DeLijnAPIException: If the API request fails
         """
 
-        return (
-            await self.parse_api_call(
-                f"/haltes/indebuurt/{geo_coordinate.latitude},{geo_coordinate.longitude}",
-                StopInVicinityList,
-            )
-        ).stops
+        return await self.parse_api_call(
+            f"/haltes/indebuurt/{geo_coordinate.latitude},{geo_coordinate.longitude}",
+            list[StopInVicinity],
+            lambda x: x["haltes"],
+        )
 
     async def get_stop(self, entity_number: int, stop_number: int) -> Stop:
         """Get the stop with the given entity and stop number
@@ -280,12 +286,11 @@ class KODSClientV1:
             DeLijnAPIException: If the API request fails
         """
 
-        return (
-            await self.parse_api_call(
-                f"/haltes/{entity_number}/{stop_number}/lijnrichtingen",
-                DirectionList,
-            )
-        ).directions
+        return await self.parse_api_call(
+            f"/haltes/{entity_number}/{stop_number}/lijnrichtingen",
+            list[Direction],
+            lambda x: x["lijnrichtingen"],
+        )
 
     async def get_detours(self, entity_number: int, stop_number: int) -> list[Detour]:
         """Get the detours of the stop with the given entity and stop number
@@ -301,12 +306,11 @@ class KODSClientV1:
             DeLijnAPIException: If the API request fails
         """
 
-        return (
-            await self.parse_api_call(
-                f"/haltes/{entity_number}/{stop_number}/omleidingen",
-                DetourList,
-            )
-        ).detours
+        return await self.parse_api_call(
+            f"/haltes/{entity_number}/{stop_number}/omleidingen",
+            list[Detour],
+            lambda x: x["omleidingen"],
+        )
 
     async def get_real_time_timetable(
         self, entity_number: int, stop_number: int
@@ -344,12 +348,11 @@ class KODSClientV1:
             DeLijnAPIException: If the API request fails
         """
 
-        return (
-            await self.parse_api_call(
-                f"/haltes/{entity_number}/{stop_number}/storingen",
-                DisruptionList,
-            )
-        ).disruptions
+        return await self.parse_api_call(
+            f"/haltes/{entity_number}/{stop_number}/storingen",
+            list[Disruption],
+            lambda x: x["storingen"],
+        )
 
     async def get_transport_regions(self) -> list[TransportRegion]:
         """Get a list of all transport regions
@@ -358,12 +361,9 @@ class KODSClientV1:
             list[TransportRegion]: A list of all transport regions
         """
 
-        return (
-            await self.parse_api_call(
-                "/vervoerregios",
-                TransportRegionList,
-            )
-        ).transport_regions
+        return await self.parse_api_call(
+            "/vervoerregios", list[TransportRegion], lambda x: x["vervoerRegios"]
+        )
 
     async def get_transport_region(self, transport_region_code: str) -> TransportRegion:
         """Get a transport region by code
@@ -392,9 +392,8 @@ class KODSClientV1:
             list[Line]: A list of lines
         """
 
-        return (
-            await self.parse_api_call(
-                f"/vervoerregios/{transport_region_code}/lijnen",
-                LineList,
-            )
-        ).lines
+        return await self.parse_api_call(
+            f"/vervoerregios/{transport_region_code}/lijnen",
+            list[Line],
+            lambda x: x["lijnen"],
+        )
