@@ -21,10 +21,9 @@ class TransportType(Enum):
 
 
 class Language(Enum):
-    NL = "NL"
-    FR = "FR"
-    EN = "EN"
-    DE = "DE"
+    DUTCH = "NEDERLANDS"
+    FRENCH = "FRANS"
+    BILINGUAL = "TWEETALIG"
     UNKNOWN = "?"
 
 
