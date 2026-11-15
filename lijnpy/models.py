@@ -79,10 +79,10 @@ class Line(BaseModel):
         line_number (int): The number of the line
         line_number_public (str): The public number of the line
         description (str): The description of the line
-        transport_region_code (str): The code of the transport region
+        transport_region_code (str, optional): The code of the transport region. Defaults to None.
         is_public (bool): Whether the line is public
-        transport_type (str): The type of the transport
-        operation_type (str): The type of the operation
+        transport_type (TransportType): The type of the transport
+        operation_type (OperationType): The type of the operation
         valid_from (str): The valid from date of the line
         valid_to (str, optional): The valid to date of the line. Defaults to None.
     """
@@ -91,7 +91,9 @@ class Line(BaseModel):
     line_number: int = Field(validation_alias="lijnnummer")
     line_number_public: str = Field(validation_alias="lijnnummerPubliek")
     description: str = Field(validation_alias="omschrijving")
-    transport_region_code: str = Field(validation_alias="vervoerRegioCode")
+    transport_region_code: str | None = Field(
+        default=None, validation_alias="vervoerRegioCode"
+    )
     is_public: bool = Field(validation_alias="publiek")
     transport_type: TransportType = Field(validation_alias="vervoertype")
     operation_type: OperationType = Field(validation_alias="bedieningtype")

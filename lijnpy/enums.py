@@ -13,11 +13,17 @@ class OperationType(Enum):
     NORMAL = "NORMAAL"
     EXPRESS = "SNELDIENST"
     SCHOOL = "SCHOOLBUS"
+    TECHNICAL = "TECHNISCHE_LIJN"
+    CALL_BUS = "BELBUS"
+    FLEX = "FLEX"
 
 
 class TransportType(Enum):
     TRAM = "TRAM"
     BUS = "BUS"
+    METRO = "METRO"
+    TRAIN = "TREIN"
+    ALL = "ALLE"
 
 
 class Language(Enum):
