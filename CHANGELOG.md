@@ -20,6 +20,8 @@
 - Stops no longer fail validation on `taal` values returned by the live API
 - Lines no longer fail validation on the `FLEX` and `TECHNISCHE_LIJN` operation
   types, or when `vervoerRegioCode` is missing
+- `get_real_time_timetable` calls `/real-time` instead of the removed
+  `/real-time-doorkomsten` path, which returned 404
 
 ## [0.2.1] - 2024-03-14
 

@@ -329,7 +329,7 @@ class KODSClientV1:
         """
 
         return await self.parse_api_call(
-            f"/haltes/{entity_number}/{stop_number}/real-time-doorkomsten",
+            f"/haltes/{entity_number}/{stop_number}/real-time",
             RealTimeTimetable,
         )
 
