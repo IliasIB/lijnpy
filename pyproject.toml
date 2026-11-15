@@ -23,7 +23,7 @@ github-actions = [
     "pytest-github-actions-annotate-failures>=0.1.7",
 ]
 docs = [
-    "handsdown>=2.1.0",
+    "pdoc>=16.0.0",
 ]
 
 [tool.coverage.run]

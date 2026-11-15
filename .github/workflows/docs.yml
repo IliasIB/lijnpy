@@ -6,24 +6,22 @@ on:
       - main
   workflow_dispatch: {}
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time, but let a running one finish
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  update-docs:
-    name: Update docs
+  build:
+    name: Build docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: docs
-      - name: Setup git
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-
-      - name: Reset branch to main
-        run: |
-          git fetch origin main:main
-          git reset --hard main
-          git rebase main
 
       - name: Install uv
         uses: astral-sh/setup-uv@v10.3.3
@@ -38,15 +36,24 @@ jobs:
         run: uv sync --group docs
 
       - name: Build docs
-        run: |
-          uv run handsdown --external `git config --get remote.origin.url` --create-configs
+        run: uv run pdoc lijnpy '!lijnpy._rest_adapter' --docformat google --output-directory site
 
-      - name: Commit docs
-        run: |
-          git add docs
-          if git diff --cached --quiet; then
-            echo "No documentation changes"
-          else
-            git commit -m "Update docs"
-          fi
-          git push -f
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
