@@ -8,7 +8,7 @@ import pytest
 from pydantic_extra_types.coordinate import Latitude, Longitude
 
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter, Result
-from lijnpy.enums import Accessibility, Language
+from lijnpy.enums import Accessibility, Language, OperationType, TransportType
 from lijnpy.kods_client_v1 import KODSClientV1
 from lijnpy.models import GeoCoordinate
 
@@ -91,6 +91,69 @@ def test_lines_by_entity():
         ).get_lines(1)
     )
     assert len(lines) == 286
+
+
+def get_client_for_line(**changes):
+    """Client that returns one line from the fixture, with fields overridden.
+
+    A value of None removes the field from the line.
+    """
+    with Path("tests/inputs/kods_client/v1/lines_by_entity.json").open() as file:
+        line = json.load(file)["lijnen"][0]
+    for key, value in changes.items():
+        if value is None:
+            line.pop(key, None)
+        else:
+            line[key] = value
+    return KODSClientV1(http_client=get_async_http_mock(data={"lijnen": [line]}))
+
+
+@pytest.mark.parametrize(
+    "bedieningtype, expected",
+    [
+        ("NORMAAL", OperationType.NORMAL),
+        ("SNELDIENST", OperationType.EXPRESS),
+        ("SCHOOLBUS", OperationType.SCHOOL),
+        ("FABRIEKSLIJN", OperationType.FACTORY),
+        ("NACHTLIJN", OperationType.NIGHT),
+        ("TECHNISCHE_LIJN", OperationType.TECHNICAL),
+        ("BELBUS", OperationType.CALL_BUS),
+        ("FLEX", OperationType.FLEX),
+    ],
+)
+def test_line_operation_type(bedieningtype: str, expected: OperationType):
+    line = asyncio.run(get_client_for_line(bedieningtype=bedieningtype).get_lines(1))[0]
+    assert line.operation_type == expected
+
+
+@pytest.mark.parametrize(
+    "vervoertype, expected",
+    [
+        ("BUS", TransportType.BUS),
+        ("TRAM", TransportType.TRAM),
+        ("METRO", TransportType.METRO),
+        ("TREIN", TransportType.TRAIN),
+        ("ALLE", TransportType.ALL),
+    ],
+)
+def test_line_transport_type(vervoertype: str, expected: TransportType):
+    line = asyncio.run(get_client_for_line(vervoertype=vervoertype).get_lines(1))[0]
+    assert line.transport_type == expected
+
+
+def test_line_without_transport_region_code():
+    line = asyncio.run(get_client_for_line(vervoerRegioCode=None).get_lines(1))[0]
+    assert line.transport_region_code is None
+
+
+def test_line_with_transport_region_code():
+    line = asyncio.run(get_client_for_line(vervoerRegioCode="AN").get_lines(1))[0]
+    assert line.transport_region_code == "AN"
+
+
+def test_line_unknown_operation_type_is_rejected():
+    with pytest.raises(DeLijnAPIException):
+        asyncio.run(get_client_for_line(bedieningtype="HOVERCRAFT").get_lines(1))
 
 
 def test_municipalities():

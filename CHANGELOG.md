@@ -7,10 +7,19 @@
 - **Breaking:** `Language` now matches the values the De Lijn API returns
   (`NEDERLANDS`, `FRANS`, `TWEETALIG`). The members `NL`, `FR`, `EN` and `DE`
   are replaced by `DUTCH`, `FRENCH` and `BILINGUAL`.
+- `Line.transport_region_code` is now optional (`None` when the API does not
+  return a region for a line).
+
+### Added
+
+- `OperationType.TECHNICAL`, `OperationType.CALL_BUS` and `OperationType.FLEX`
+- `TransportType.METRO`, `TransportType.TRAIN` and `TransportType.ALL`
 
 ### Fixed
 
 - Stops no longer fail validation on `taal` values returned by the live API
+- Lines no longer fail validation on the `FLEX` and `TECHNISCHE_LIJN` operation
+  types, or when `vervoerRegioCode` is missing
 
 ## [0.2.1] - 2024-03-14
 
