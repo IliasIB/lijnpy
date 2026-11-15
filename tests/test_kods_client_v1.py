@@ -166,6 +166,33 @@ def test_stop():
     assert stop.language == Language.UNKNOWN
 
 
+@pytest.mark.parametrize(
+    "taal, expected",
+    [
+        ("NEDERLANDS", Language.DUTCH),
+        ("FRANS", Language.FRENCH),
+        ("TWEETALIG", Language.BILINGUAL),
+        ("?", Language.UNKNOWN),
+    ],
+)
+def test_stop_language(taal: str, expected: Language):
+    with Path("tests/inputs/kods_client/v1/stop.json").open() as file:
+        data = json.load(file)
+    data["taal"] = taal
+    client = KODSClientV1(http_client=get_async_http_mock(data=data))
+    stop = asyncio.run(client.get_stop(4, 408581))
+    assert stop.language == expected
+
+
+def test_stop_unknown_language_is_rejected():
+    with Path("tests/inputs/kods_client/v1/stop.json").open() as file:
+        data = json.load(file)
+    data["taal"] = "KLINGON"
+    client = KODSClientV1(http_client=get_async_http_mock(data=data))
+    with pytest.raises(DeLijnAPIException):
+        asyncio.run(client.get_stop(4, 408581))
+
+
 def test_timetable():
     timetable = asyncio.run(
         get_client_for_json("tests/inputs/kods_client/v1/timetable.json").get_timetable(

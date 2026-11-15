@@ -1,5 +1,17 @@
 # Change Log
 
+## [Unreleased]
+
+### Changed
+
+- **Breaking:** `Language` now matches the values the De Lijn API returns
+  (`NEDERLANDS`, `FRANS`, `TWEETALIG`). The members `NL`, `FR`, `EN` and `DE`
+  are replaced by `DUTCH`, `FRENCH` and `BILINGUAL`.
+
+### Fixed
+
+- Stops no longer fail validation on `taal` values returned by the live API
+
 ## [0.2.1] - 2024-03-14
 
 ### Added
