@@ -4,6 +4,10 @@
 
 ### Changed
 
+- `RestAdapter` and `KODSClientV1` keep one `aiohttp` session for all requests
+  instead of opening one per request. Close it with `await client.close()` or
+  use the client as an async context manager (`async with KODSClientV1(...) as client`).
+  Not closing it still works, but aiohttp warns about an unclosed session on exit.
 - **Breaking:** `Language` now matches the values the De Lijn API returns
   (`NEDERLANDS`, `FRANS`, `TWEETALIG`). The members `NL`, `FR`, `EN` and `DE`
   are replaced by `DUTCH`, `FRENCH` and `BILINGUAL`.
@@ -23,6 +27,9 @@
 
 ### Fixed
 
+- API errors report the HTTP status first (`404: Not Found`), also when the
+  error body is not JSON, instead of a generic "Request failed"
+- Requests with query parameters no longer crash the request logging
 - `KODSClientV1` uses `logging.getLogger("lijnpy.kods_client_v1")` by default, so
   it follows your logging configuration, instead of an unattached `Logger`
 - A response without data raises `DeLijnAPIException` explicitly instead of
