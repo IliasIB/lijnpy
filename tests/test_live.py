@@ -20,13 +20,16 @@ pytestmark = [
     pytest.mark.skipif(get_api_key() is None, reason=f"{API_KEY_VARIABLE} is not set"),
 ]
 
-client = KODSClientV1(
-    api_key=get_api_key() or "", logger=logging.getLogger("live-test")
-)
-calls = get_calls(client)
 
 
-@pytest.mark.parametrize("method", calls)
+@pytest.mark.parametrize("method", get_calls(KODSClientV1()))
 def test_endpoint(method: str):
-    _, call = calls[method]
+    async def call():
+        # A client (and its session) belongs to one event loop, so make one per test
+        async with KODSClientV1(
+            api_key=get_api_key() or "", logger=logging.getLogger("live-test")
+        ) as client:
+            _, make_call = get_calls(client)[method]
+            return await make_call()
+
     assert asyncio.run(call()) is not None
