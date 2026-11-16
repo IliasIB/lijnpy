@@ -1,6 +1,7 @@
 import asyncio
 import inspect
 import json
+import logging
 from pathlib import Path
 from typing import cast
 from unittest.mock import Mock
@@ -337,3 +338,27 @@ def test_live_calls_cover_every_client_method():
         if name.startswith("get_")
     }
     assert methods == get_calls(KODSClientV1()).keys()
+
+
+def test_missing_data_raises():
+    client = KODSClientV1(http_client=get_async_http_mock(data=None))
+    with pytest.raises(DeLijnAPIException, match="no data"):
+        asyncio.run(client.get_colors())
+
+
+def test_default_logger_is_in_the_logging_hierarchy():
+    assert KODSClientV1(http_client=get_async_http_mock()).logger is logging.getLogger(
+        "lijnpy.kods_client_v1"
+    )
+
+
+def test_validation_errors_are_logged_as_one_summary(caplog: pytest.LogCaptureFixture):
+    with Path("tests/inputs/kods_client/v1/lines_by_entity.json").open() as file:
+        data = json.load(file)
+    for line in data["lijnen"]:
+        line["bedieningtype"] = "HOVERCRAFT"
+    client = KODSClientV1(http_client=get_async_http_mock(data=data))
+    with caplog.at_level(logging.ERROR), pytest.raises(DeLijnAPIException):
+        asyncio.run(client.get_lines_by_entity(1))
+    assert len(caplog.records) == 1
+    assert "5 validation errors" in caplog.records[0].message
