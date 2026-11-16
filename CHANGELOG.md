@@ -23,6 +23,9 @@
 
 ### Fixed
 
+- Test fixtures are re-recorded from the live API and are about 70 times smaller.
+  `tests/record_fixtures.py` refreshes them, and `pytest -m live` runs a smoke
+  test against the real API (see `tests/README.md`)
 - Stops no longer fail validation on `taal` values returned by the live API
 - Lines no longer fail validation on the `FLEX` and `TECHNISCHE_LIJN` operation
   types, or when `vervoerRegioCode` is missing

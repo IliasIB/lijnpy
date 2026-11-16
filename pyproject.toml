@@ -26,6 +26,11 @@ docs = [
     "pdoc>=16.0.0",
 ]
 
+[tool.pytest.ini_options]
+# Tests marked "live" call the real API; run them with `pytest -m live`.
+addopts = "-m 'not live'"
+markers = ["live: calls the real De Lijn API (needs DELIJN_API_KEY)"]
+
 [tool.coverage.run]
 relative_files = true
 

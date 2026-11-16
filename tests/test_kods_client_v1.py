@@ -1,4 +1,5 @@
 import asyncio
+import inspect
 import json
 from pathlib import Path
 from typing import cast
@@ -7,8 +8,10 @@ from unittest.mock import Mock
 import pytest
 from pydantic_extra_types.coordinate import Latitude, Longitude
 
+from live_calls import get_calls
+
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter, Result
-from lijnpy.enums import Accessibility, Language, OperationType, TransportType
+from lijnpy.enums import Language, OperationType, TransportType
 from lijnpy.kods_client_v1 import KODSClientV1
 from lijnpy.models import GeoCoordinate
 
@@ -33,7 +36,7 @@ def test_colors():
     colors = asyncio.run(
         get_client_for_json("tests/inputs/kods_client/v1/colors.json").get_colors()
     )
-    assert len(colors) == 24
+    assert len(colors) == 5
 
 
 def test_colors_empty():
@@ -72,7 +75,7 @@ def test_municipalities_by_entity():
             "tests/inputs/kods_client/v1/municipalities_by_entity.json"
         ).get_municipalities_by_entity(1)
     )
-    assert len(municipalities) == 341
+    assert len(municipalities) == 5
 
 
 def test_stops_by_entity():
@@ -81,7 +84,7 @@ def test_stops_by_entity():
             "tests/inputs/kods_client/v1/stops_by_entity.json"
         ).get_stops(1)
     )
-    assert len(stops) == 6801
+    assert len(stops) == 5
 
 
 def test_lines_by_entity():
@@ -90,7 +93,7 @@ def test_lines_by_entity():
             "tests/inputs/kods_client/v1/lines_by_entity.json"
         ).get_lines(1)
     )
-    assert len(lines) == 286
+    assert len(lines) == 5
 
 
 def get_client_for_line(**changes):
@@ -162,7 +165,7 @@ def test_municipalities():
             "tests/inputs/kods_client/v1/municipalities.json"
         ).get_municipalities()
     )
-    assert len(municipalities) == 1913
+    assert len(municipalities) == 5
 
 
 def test_stops():
@@ -171,7 +174,7 @@ def test_stops():
             "tests/inputs/kods_client/v1/stops_by_municipality.json"
         ).get_stops(1866)
     )
-    assert len(stops) == 417
+    assert len(stops) == 1
 
 
 def test_lines():
@@ -180,20 +183,20 @@ def test_lines():
             "tests/inputs/kods_client/v1/lines_by_municipality.json"
         ).get_lines(1866)
     )
-    assert len(lines_response) == 74
+    assert len(lines_response) == 3
 
 
 def test_municipality():
-    gemeente = asyncio.run(
+    municipality = asyncio.run(
         get_client_for_json(
             "tests/inputs/kods_client/v1/municipality.json"
-        ).get_municipality(1)
+        ).get_municipality(482)
     )
-    assert gemeente.number == 1491
-    assert gemeente.description == "HOUTHALEN"
-    assert gemeente.main_municipality is not None
-    assert gemeente.main_municipality.number == 1422
-    assert gemeente.main_municipality.description == "HOUTHALEN-HELCHTEREN"
+    assert municipality.number == 482
+    assert municipality.description == "HILVARENBEEK"
+    assert municipality.main_municipality is not None
+    assert municipality.main_municipality.number == 483
+    assert municipality.main_municipality.description == "HILVARENBEEK"
 
 
 def test_stops_in_vicinity():
@@ -206,27 +209,26 @@ def test_stops_in_vicinity():
             )
         )
     )
-    assert len(stops_in_vicinity) == 7
+    assert len(stops_in_vicinity) == 5
 
 
 def test_stop():
     stop = asyncio.run(
-        get_client_for_json("tests/inputs/kods_client/v1/stop.json").get_stop(4, 408581)
+        get_client_for_json("tests/inputs/kods_client/v1/stop.json").get_stop(
+            1, 102675
+        )
     )
-    assert stop.entity_number == 4
-    assert stop.number == 408581
-    assert stop.description == "Koning Boudewijnlaan"
-    assert stop.description_long == "Heverlee Koning Boudewijnlaan"
-    assert stop.municipality_number == 1866
-    assert stop.municipality_description == "Leuven"
-    assert stop.geo_coordinate.latitude == 50.868276
-    assert stop.geo_coordinate.longitude == 4.68115
-    assert stop.accessibilities == [
-        Accessibility.MOTOR_WITH_ASSIST,
-        Accessibility.MOTOR_DISABILITY,
-    ]
+    assert stop.entity_number == 1
+    assert stop.number == 102675
+    assert stop.description == "Groenplaats"
+    assert stop.description_long == "Antwerpen Groenplaats"
+    assert stop.municipality_number == 4390
+    assert stop.municipality_description == "Antwerpen"
+    assert stop.geo_coordinate.latitude == 51.2187
+    assert stop.geo_coordinate.longitude == 4.40158
+    assert stop.accessibilities == []
     assert stop.is_main is None
-    assert stop.language == Language.UNKNOWN
+    assert stop.language == Language.DUTCH
 
 
 @pytest.mark.parametrize(
@@ -243,7 +245,7 @@ def test_stop_language(taal: str, expected: Language):
         data = json.load(file)
     data["taal"] = taal
     client = KODSClientV1(http_client=get_async_http_mock(data=data))
-    stop = asyncio.run(client.get_stop(4, 408581))
+    stop = asyncio.run(client.get_stop(1, 102675))
     assert stop.language == expected
 
 
@@ -253,7 +255,7 @@ def test_stop_unknown_language_is_rejected():
     data["taal"] = "KLINGON"
     client = KODSClientV1(http_client=get_async_http_mock(data=data))
     with pytest.raises(DeLijnAPIException):
-        asyncio.run(client.get_stop(4, 408581))
+        asyncio.run(client.get_stop(1, 102675))
 
 
 def test_timetable():
@@ -262,7 +264,7 @@ def test_timetable():
             4, 408581
         )
     )
-    assert len(timetable.passages) == 2
+    assert len(timetable.passages) == 5
     assert len(timetable.ride_notes) == 0
     assert len(timetable.passage_notes) == 0
     assert len(timetable.detours) == 0
@@ -274,7 +276,7 @@ def test_directions():
             "tests/inputs/kods_client/v1/directions.json"
         ).get_directions(4, 408581)
     )
-    assert len(directions) == 2
+    assert len(directions) == 5
 
 
 def test_detours():
@@ -283,7 +285,7 @@ def test_detours():
             3, 308530
         )
     )
-    assert len(detours) == 1
+    assert len(detours) == 0
 
 
 def test_real_time_timetable():
@@ -292,7 +294,7 @@ def test_real_time_timetable():
             "tests/inputs/kods_client/v1/real_time_timetable.json"
         ).get_real_time_timetable(4, 403022)
     )
-    assert len(real_time_timetable.passages) == 1
+    assert len(real_time_timetable.passages) == 5
     assert len(real_time_timetable.ride_notes) == 0
     assert len(real_time_timetable.passage_notes) == 0
     assert len(real_time_timetable.detours) == 0
@@ -304,7 +306,7 @@ def test_disruption():
             "tests/inputs/kods_client/v1/disruptions.json"
         ).get_disruptions(4, 403022)
     )
-    assert len(disruptions_response) == 1
+    assert len(disruptions_response) == 0
 
 
 def test_transport_regions():
@@ -313,7 +315,7 @@ def test_transport_regions():
             "tests/inputs/kods_client/v1/transport_regions.json"
         ).get_transport_regions()
     )
-    assert len(transport_regions) == 15
+    assert len(transport_regions) == 5
 
 
 def test_transport_region():
@@ -322,6 +324,16 @@ def test_transport_region():
             "tests/inputs/kods_client/v1/transport_region.json"
         ).get_transport_region("AA")
     )
-    assert vervoerregio.code == "AA"
-    assert vervoerregio.name == "Aalst"
-    assert vervoerregio.number == 1
+    assert vervoerregio.code == "AN"
+    assert vervoerregio.name == "Antwerpen"
+    assert vervoerregio.number == 2
+
+
+def test_live_calls_cover_every_client_method():
+    """Adding a client method without a live call (and fixture) fails here."""
+    methods = {
+        name
+        for name, _ in inspect.getmembers(KODSClientV1, inspect.iscoroutinefunction)
+        if name.startswith("get_")
+    }
+    assert methods == get_calls(KODSClientV1()).keys()

@@ -1,26 +1,62 @@
 {
     "lijnrichtingen": [
         {
-            "entiteitnummer": "4",
-            "lijnnummer": "178",
+            "entiteitnummer": "1",
+            "lijnnummer": "180",
             "richting": "HEEN",
-            "omschrijving": "Maaseik - Brussel",
+            "omschrijving": "Antwerpen Groenplaats - Aartselaar",
             "links": [
                 {
                     "rel": "detail",
-                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/178/lijnrichtingen/HEEN"
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/HEEN"
                 }
             ]
         },
         {
-            "entiteitnummer": "4",
-            "lijnnummer": "179",
+            "entiteitnummer": "1",
+            "lijnnummer": "180",
             "richting": "TERUG",
-            "omschrijving": "Bocholt - Brussel",
+            "omschrijving": "Aartselaar - Antwerpen Groenplaats",
             "links": [
                 {
                     "rel": "detail",
-                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/179/lijnrichtingen/TERUG"
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/TERUG"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "182",
+            "richting": "HEEN",
+            "omschrijving": "Antwerpen Groenplaats - Aartselaar - Boom",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/HEEN"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "182",
+            "richting": "TERUG",
+            "omschrijving": "Boom - Aartselaar - Antwerpen Groenplaats",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/TERUG"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "181",
+            "richting": "HEEN",
+            "omschrijving": "Antwerpen Groenplaats - Aartselaar - Terhagen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/181/lijnrichtingen/HEEN"
                 }
             ]
         }
@@ -28,7 +64,7 @@
     "links": [
         {
             "rel": "self",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581/lijnrichtingen?dateFormatted=string"
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/lijnrichtingen"
         }
     ]
 }

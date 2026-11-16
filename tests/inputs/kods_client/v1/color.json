@@ -9,7 +9,7 @@
     "hex": "0099AA",
     "links": [
         {
-            "rel": "detail",
+            "rel": "self",
             "url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/TU"
         }
     ]

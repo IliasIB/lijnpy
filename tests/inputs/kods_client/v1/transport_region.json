@@ -1,15 +1,15 @@
 {
-    "code": "AA",
-    "naam": "Aalst",
-    "nr": "01",
+    "code": "AN",
+    "naam": "Antwerpen",
+    "nr": "02",
     "links": [
         {
             "rel": "self",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA"
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AN"
         },
         {
             "rel": "lijnen",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AA/lijnen"
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/vervoerregios/AN/lijnen"
         }
     ]
 }

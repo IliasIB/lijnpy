@@ -1,14 +1,14 @@
 {
-    "gemeentenummer": 1491,
-    "omschrijving": "HOUTHALEN",
+    "gemeentenummer": 482,
+    "omschrijving": "HILVARENBEEK",
     "hoofdGemeente": {
-        "gemeentenummer": 1422,
-        "omschrijving": "HOUTHALEN-HELCHTEREN"
+        "gemeentenummer": 483,
+        "omschrijving": "HILVARENBEEK"
     },
     "links": [
         {
             "rel": "self",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/1491"
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/482"
         }
     ]
 }

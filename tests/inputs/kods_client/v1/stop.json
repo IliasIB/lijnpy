@@ -1,24 +1,49 @@
 {
-    "entiteitnummer": "4",
-    "haltenummer": "408581",
-    "omschrijving": "Koning Boudewijnlaan",
-    "omschrijvingLang": "Heverlee Koning Boudewijnlaan",
-    "gemeentenummer": 1866,
-    "omschrijvingGemeente": "Leuven",
+    "entiteitnummer": "1",
+    "haltenummer": "102675",
+    "omschrijving": "Groenplaats",
+    "omschrijvingLang": "Antwerpen Groenplaats",
+    "gemeentenummer": 4390,
+    "omschrijvingGemeente": "Antwerpen",
     "geoCoordinaat": {
-        "latitude": 50.868276,
-        "longitude": 4.68115
+        "latitude": 51.2187,
+        "longitude": 4.40158
     },
-    "halteToegankelijkheden": [
-        "MOTORISCH_MET_ASSIST",
-        "MOTORISCHE_BEPERKING"
-    ],
+    "halteToegankelijkheden": [],
     "hoofdHalte": null,
-    "taal": "?",
+    "taal": "NEDERLANDS",
+    "classificatie": "REGULIER",
+    "bedieningsTypes": [
+        "BUS"
+    ],
+    "plaats": {
+        "plaatsNaam": "Antwerpen Groenplaats",
+        "verkortePlaatsNaam": "Groenplaats",
+        "geoCoordinaat": {
+            "latitude": 51.218501,
+            "longitude": 4.402034
+        }
+    },
     "links": [
         {
-            "rel": "detail",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/408581"
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+        },
+        {
+            "rel": "lijnrichtingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/lijnrichtingen"
+        },
+        {
+            "rel": "real-time",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/real-time"
+        },
+        {
+            "rel": "dienstregelingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/dienstregelingen"
+        },
+        {
+            "rel": "omleidingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/omleidingen"
         }
     ]
 }
