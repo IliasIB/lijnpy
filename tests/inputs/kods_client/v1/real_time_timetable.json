@@ -1,29 +1,140 @@
 {
     "halteDoorkomsten": [
         {
-            "haltenummer": "403022",
+            "haltenummer": "102675",
             "doorkomsten": [
                 {
-                    "entiteitnummer": "4",
-                    "lijnnummer": 465,
-                    "richting": "TERUG",
-                    "ritnummer": "16",
-                    "bestemming": "Houthalen",
+                    "doorkomstId": "2026-11-16_1022_71_1_102675",
+                    "entiteitnummer": "1",
+                    "lijnnummer": 22,
+                    "richting": "HEEN",
+                    "ritnummer": "71",
+                    "bestemming": "Edegem UZA",
+                    "plaatsBestemming": "Edegem UZA",
                     "vias": [],
-                    "dienstregelingTijdstip": "2024-03-07T17:05:00",
-                    "real-timeTijdstip": "2024-03-07T17:05:20",
-                    "vrtnum": "442079",
+                    "bestemmingKort": "Edegem UZA",
+                    "dienstregelingTijdstip": "2026-11-16T12:55:00",
+                    "real-timeTijdstip": "2026-11-16T12:55:00",
+                    "vrtnum": "2250",
                     "predictionStatussen": [
                         "REALTIME"
                     ],
                     "links": [
                         {
                             "rel": "halte",
-                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022"
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
                         },
                         {
                             "rel": "lijnrichting",
-                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/465/lijnrichtingen/TERUG"
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-16_1180_125_1_102675",
+                    "entiteitnummer": "1",
+                    "lijnnummer": 180,
+                    "richting": "HEEN",
+                    "ritnummer": "125",
+                    "bestemming": "Aartselaar De Bonte Koe",
+                    "plaatsBestemming": "Aartselaar De Bonte Koe",
+                    "vias": [],
+                    "bestemmingKort": "Arts Bonte Koe",
+                    "dienstregelingTijdstip": "2026-11-16T13:00:00",
+                    "real-timeTijdstip": "2026-11-16T13:07:31",
+                    "vrtnum": "678168",
+                    "predictionStatussen": [
+                        "REALTIME"
+                    ],
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-16_1022_73_1_102675",
+                    "entiteitnummer": "1",
+                    "lijnnummer": 22,
+                    "richting": "HEEN",
+                    "ritnummer": "73",
+                    "bestemming": "Edegem UZA",
+                    "plaatsBestemming": "Edegem UZA",
+                    "vias": [],
+                    "bestemmingKort": "Edegem UZA",
+                    "dienstregelingTijdstip": "2026-11-16T13:10:00",
+                    "real-timeTijdstip": "2026-11-16T13:10:00",
+                    "vrtnum": "3112",
+                    "predictionStatussen": [
+                        "REALTIME"
+                    ],
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-16_1183_129_1_102675",
+                    "entiteitnummer": "1",
+                    "lijnnummer": 183,
+                    "richting": "HEEN",
+                    "ritnummer": "129",
+                    "bestemming": "Niel Station",
+                    "plaatsBestemming": "Niel Station",
+                    "vias": [],
+                    "bestemmingKort": "Niel Station",
+                    "dienstregelingTijdstip": "2026-11-16T13:15:00",
+                    "real-timeTijdstip": "2026-11-16T13:15:00",
+                    "vrtnum": "678183",
+                    "predictionStatussen": [
+                        "REALTIME"
+                    ],
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/183/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-16_1022_75_1_102675",
+                    "entiteitnummer": "1",
+                    "lijnnummer": 22,
+                    "richting": "HEEN",
+                    "ritnummer": "75",
+                    "bestemming": "Edegem UZA",
+                    "plaatsBestemming": "Edegem UZA",
+                    "vias": [],
+                    "bestemmingKort": "Edegem UZA",
+                    "dienstregelingTijdstip": "2026-11-16T13:25:00",
+                    "real-timeTijdstip": "2026-11-16T13:25:00",
+                    "vrtnum": "2252",
+                    "predictionStatussen": [
+                        "REALTIME"
+                    ],
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
                         }
                     ]
                 }
@@ -33,7 +144,7 @@
     "links": [
         {
             "rel": "self",
-            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/4/403022/real-time?maxAantalDoorkomsten=1"
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/real-time"
         }
     ],
     "doorkomstNotas": [],
