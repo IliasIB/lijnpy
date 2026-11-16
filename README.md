@@ -1,22 +1,73 @@
 # lijnpy
 
-[![Python Versie](https://img.shields.io/badge/python-3.12%20-blue)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
 [![Tests](https://github.com/IliasIB/lijnpy/actions/workflows/main.yml/badge.svg)](https://github.com/IliasIB/lijnpy/actions/workflows/main.yml)
 [![Documentation](https://github.com/IliasIB/lijnpy/actions/workflows/docs.yml/badge.svg)](https://iliasib.github.io/lijnpy/)
 [![Coverage](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2FIliasIB%2Flijnpy%2Fpython-coverage-comment-action-data%2Fendpoint.json)]( https://htmlpreview.github.io/?https://github.com/IliasIB/lijnpy/blob/python-coverage-comment-action-data/htmlcov/index.html )
 [![PyPI - Version](https://img.shields.io/pypi/v/lijnpy)](https://pypi.org/project/lijnpy/)
 
-lijnpy is een Python-wrapper voor de De Lijn API, waarmee ontwikkelaars gemakkelijk kunnen communiceren met API's van de De Lijn in hun Python applicaties.
+lijnpy is een asynchrone Python-wrapper voor de [open data API van De Lijn](https://data.delijn.be). Alle aanroepen zijn coroutines en geven gevalideerde [pydantic](https://docs.pydantic.dev)-modellen terug.
 
 ## Functies
 
-- Haal real-time informatie op over De Lijn routes, haltes en vertrekken.
-- Zoek naar routes en haltes op basis van verschillende criteria.
-- Krijg gedetailleerde informatie over specifieke routes en haltes.
-- Bereken de geschatte reistijd tussen twee haltes.
+- Entiteiten, gemeenten, vervoerregio's en lijnkleuren opvragen.
+- Haltes en lijnen opvragen per entiteit of per gemeente, en haltes in de buurt van een coördinaat zoeken.
+- Per halte de details, richtingen, dienstregeling, real-time doorkomsten, omleidingen en storingen opvragen.
+
+Niet alle endpoints van de API worden al ondersteund (bijvoorbeeld `lijnen`, `omleidingen` en `storingen` als zelfstandige lijsten). Zie de [issues](https://github.com/IliasIB/lijnpy/issues) voor wat nog ontbreekt.
 
 ## Installatie
 
 ```sh
 pip install lijnpy
 ```
+
+Vereist Python 3.12 of hoger.
+
+## API-sleutel
+
+De API heeft een sleutel nodig. Maak een account aan op het [open data-portaal van De Lijn](https://data.delijn.be), abonneer je op de Kern Open Data Services en kopieer je sleutel. Zet hem niet in je code of in git, maar bijvoorbeeld in een omgevingsvariabele:
+
+```sh
+export DELIJN_API_KEY="<jouw sleutel>"
+```
+
+De bibliotheek leest die variabele niet zelf; je geeft de sleutel mee aan de client (zie hieronder).
+
+## Gebruik
+
+```python
+import asyncio
+import os
+
+from lijnpy.kods_client_v1 import KODSClientV1
+
+
+async def main():
+    async with KODSClientV1(api_key=os.environ["DELIJN_API_KEY"]) as client:
+        # Antwerpen Groenplaats: entiteit 1, halte 102675
+        stop = await client.get_stop(1, 102675)
+        print(stop.description_long)
+
+        timetable = await client.get_real_time_timetable(1, 102675)
+        print(f"{len(timetable.passages)} komende doorkomsten")
+
+
+asyncio.run(main())
+```
+
+- De client houdt één HTTP-sessie open. Gebruik `async with` of roep `await client.close()` aan als je klaar bent.
+- Een client hoort bij één event loop: gebruik hem niet over meerdere `asyncio.run`-aanroepen heen.
+- Fouten van de API (een statuscode buiten 200-299, ongeldige JSON, een verbindingsfout of een antwoord dat niet bij de modellen past) geven een `DeLijnAPIException`.
+
+## Documentatie
+
+De volledige API-documentatie staat op <https://iliasib.github.io/lijnpy/lijnpy.html>. Wijzigingen per versie staan in de [CHANGELOG](CHANGELOG.md).
+
+## Bijdragen
+
+Hoe je de tests draait en de testdata vernieuwt staat in [tests/README.md](tests/README.md), en hoe een release werkt in [RELEASING.md](RELEASING.md).
+
+## Licentie
+
+MIT
