@@ -37,6 +37,17 @@ class KODSClientV1:
             self.logger,
         )
 
+    async def close(self) -> None:
+        """Close the HTTP session. Call this when you are done with the client,
+        or use the client as an async context manager."""
+        await self.http_client.close()
+
+    async def __aenter__(self) -> "KODSClientV1":
+        return self
+
+    async def __aexit__(self, *_: object) -> None:
+        await self.close()
+
     async def parse_api_call[T](
         self,
         path: str,

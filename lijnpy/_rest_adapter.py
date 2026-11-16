@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from json import JSONDecodeError
 from logging import Logger, getLogger
 from typing import Any
 
@@ -48,6 +47,25 @@ class RestAdapter:
         self._api_key = api_key
         self._ssl_verify = ssl_verify
         self._logger = logger or getLogger(__name__)
+        self._session: aiohttp.ClientSession | None = None
+
+    def _get_session(self) -> aiohttp.ClientSession:
+        """Return the shared session, creating it on first use (or after close)"""
+        if self._session is None or self._session.closed:
+            self._session = aiohttp.ClientSession()
+        return self._session
+
+    async def close(self) -> None:
+        """Close the underlying HTTP session. Safe to call more than once."""
+        if self._session is not None:
+            await self._session.close()
+            self._session = None
+
+    async def __aenter__(self) -> RestAdapter:
+        return self
+
+    async def __aexit__(self, *_: object) -> None:
+        await self.close()
 
     async def _do(
         self,
@@ -74,42 +92,45 @@ class RestAdapter:
         headers = {"Ocp-Apim-Subscription-Key": self._api_key}
 
         log_line_pre = f"method={http_method}, url={full_url}, params={ep_params}"
-        log_line_post = ", ".join(
-            (log_line_pre, "success={}, status_code={}, message={}")
-        )
-        # Log HTTP params and perform an HTTP request, catching and re-raising any exceptions
-        # Deserialize JSON output to Python object, or return failed Result on exception
-        try:
-            self._logger.debug(msg=log_line_pre)
-            async with aiohttp.ClientSession() as session:
-                async with session.request(
-                    method=http_method,
-                    url=full_url,
-                    headers=headers,
-                    params=ep_params,
-                    json=data,
-                ) as result:
-                    response = result
-                    data_out = await response.json()
-        except (ValueError, JSONDecodeError) as e:
-            self._logger.error(msg=log_line_post.format(False, None, e))
-            raise DeLijnAPIException("Bad JSON in response") from e
-        except Exception as e:
-            self._logger.error(msg=(str(e)))
-            raise DeLijnAPIException("Request failed") from e
 
-        # If status_code in 200-299 range, return success Result with data, otherwise raise exception
-        is_success = 299 >= response.status >= 200
-        log_line = log_line_post.format(is_success, response.status, response.reason)
-        if is_success:
-            self._logger.debug(msg=log_line)
-            return Result(
-                status_code=response.status,
-                message=response.reason or "No reason given",
-                data=data_out,
+        def log_line_post(success: bool, status: int | None, message: object) -> str:
+            return (
+                f"{log_line_pre}, success={success}, "
+                f"status_code={status}, message={message}"
             )
-        self._logger.error(msg=log_line)
-        raise DeLijnAPIException(f"{response.status}: {response.reason}")
+
+        self._logger.debug(msg=log_line_pre)
+        try:
+            async with self._get_session().request(
+                method=http_method,
+                url=full_url,
+                headers=headers,
+                params=ep_params,
+                json=data,
+            ) as response:
+                status = response.status
+                reason = response.reason
+                # Check the status before the body: error responses are often not JSON
+                if not 200 <= status <= 299:
+                    self._logger.error(msg=log_line_post(False, status, reason))
+                    raise DeLijnAPIException(f"{status}: {reason}")
+                try:
+                    data_out = await response.json(content_type=None)
+                except ValueError as e:  # includes JSONDecodeError
+                    self._logger.error(msg=log_line_post(False, status, e))
+                    raise DeLijnAPIException(
+                        f"Bad JSON in response ({status}: {reason})"
+                    ) from e
+        except DeLijnAPIException:
+            raise
+        except (aiohttp.ClientError, TimeoutError) as e:
+            self._logger.error(msg=f"{log_line_pre}, error={e!r}")
+            raise DeLijnAPIException(f"Request failed: {e!r}") from e
+
+        self._logger.debug(msg=log_line_post(True, status, reason))
+        return Result(
+            status_code=status, message=reason or "No reason given", data=data_out
+        )
 
     async def get(self, endpoint: str, ep_params: dict | None = None) -> Result:
         """Perform a GET request to the API
