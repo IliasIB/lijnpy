@@ -2,8 +2,13 @@
 
 A release is a git tag `X.Y.Z` on `main`. Pushing the tag runs
 `.github/workflows/release.yml`, which builds the package, creates the GitHub
-release and publishes to PyPI. The tag, the `pyproject.toml` version and the
-CHANGELOG must all name the same version, and nothing checks this for you.
+release and publishes to PyPI. The GitHub release body is the CHANGELOG section
+of that version (`.github/scripts/release_notes.sh`); the workflow fails before
+publishing anything if the section is missing or empty. PyPI has no per-release
+notes, so its project page links to the CHANGELOG instead.
+
+The tag, the `pyproject.toml` version and the CHANGELOG must all name the same
+version, and nothing checks this for you.
 
 Versions follow [semantic versioning](https://semver.org/): a breaking change
 (see the **Breaking** entries in the CHANGELOG) needs a new major version.
