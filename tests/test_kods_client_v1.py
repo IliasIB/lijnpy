@@ -362,3 +362,11 @@ def test_validation_errors_are_logged_as_one_summary(caplog: pytest.LogCaptureFi
         asyncio.run(client.get_lines_by_entity(1))
     assert len(caplog.records) == 1
     assert "5 validation errors" in caplog.records[0].message
+
+
+def test_public_api_is_exported_from_the_package():
+    import lijnpy
+
+    assert lijnpy.__all__ == ["DeLijnAPIException", "KODSClientV1"]
+    assert lijnpy.KODSClientV1 is KODSClientV1
+    assert lijnpy.DeLijnAPIException is DeLijnAPIException

@@ -32,7 +32,7 @@ De API heeft een sleutel nodig. Maak een account aan op het [open data-portaal v
 export DELIJN_API_KEY="<jouw sleutel>"
 ```
 
-De bibliotheek leest die variabele niet zelf; je geeft de sleutel mee aan de client (zie hieronder).
+De bibliotheek leest die variabele niet zelf: je geeft de sleutel altijd expliciet mee aan de client via `api_key` (zie hieronder). `DELIJN_API_KEY` is de naam die ook de tests en de scripts in deze repository gebruiken.
 
 ## Gebruik
 
@@ -40,7 +40,7 @@ De bibliotheek leest die variabele niet zelf; je geeft de sleutel mee aan de cli
 import asyncio
 import os
 
-from lijnpy.kods_client_v1 import KODSClientV1
+from lijnpy import KODSClientV1
 
 
 async def main():
@@ -56,6 +56,7 @@ async def main():
 asyncio.run(main())
 ```
 
+- `KODSClientV1` en `DeLijnAPIException` importeer je rechtstreeks uit `lijnpy`. Modellen en enums staan in `lijnpy.models` en `lijnpy.enums`.
 - De client houdt één HTTP-sessie open. Gebruik `async with` of roep `await client.close()` aan als je klaar bent.
 - Een client hoort bij één event loop: gebruik hem niet over meerdere `asyncio.run`-aanroepen heen.
 - Fouten van de API (een statuscode buiten 200-299, ongeldige JSON, een verbindingsfout of een antwoord dat niet bij de modellen past) geven een `DeLijnAPIException`.
