@@ -1,4 +1,4 @@
-from logging import Logger
+from logging import Logger, getLogger
 from typing import Callable
 
 from pydantic import TypeAdapter, ValidationError
@@ -25,17 +25,17 @@ class KODSClientV1:
     def __init__(
         self,
         api_key: str = "",
-        logger: Logger = Logger(__name__),
+        logger: Logger | None = None,
         http_client: RestAdapter | None = None,
     ):
+        self.logger = logger or getLogger(__name__)
         self.http_client = http_client or RestAdapter(
             "api.delijn.be/DLKernOpenData/api",
             api_key,
             "v1",
             True,
-            logger,
+            self.logger,
         )
-        self.logger = logger
 
     async def parse_api_call[T](
         self,
@@ -54,14 +54,22 @@ class KODSClientV1:
         Returns:
             T: A model validated from the result of the given path on the API
         """
+        result = await self.http_client.get(path)
+        if result.data is None:
+            self.logger.error(f"The API returned no data for {path}")
+            raise DeLijnAPIException(f"The API returned no data for {path}")
         try:
-            result = await self.http_client.get(path)
-            assert result.data is not None
             data = result.data if mapper is None else mapper(result.data)
-            type_adapter = TypeAdapter(cls)
-            return type_adapter.validate_python(data)
-        except (AssertionError, ValidationError, KeyError) as e:
-            self.logger.error(f"Failed to parse the response from the API: {e}")
+            return TypeAdapter(cls).validate_python(data)
+        except ValidationError as e:
+            first = e.errors()[0]
+            self.logger.error(
+                f"Failed to parse the response from {path}: {e.error_count()} "
+                f"validation errors, first at {first['loc']}: {first['msg']}"
+            )
+            raise DeLijnAPIException from e
+        except KeyError as e:
+            self.logger.error(f"Failed to parse the response from {path}: missing key {e}")
             raise DeLijnAPIException from e
 
     async def get_colors(self) -> list[LineColor]:

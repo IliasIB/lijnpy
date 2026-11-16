@@ -23,6 +23,12 @@
 
 ### Fixed
 
+- `KODSClientV1` uses `logging.getLogger("lijnpy.kods_client_v1")` by default, so
+  it follows your logging configuration, instead of an unattached `Logger`
+- A response without data raises `DeLijnAPIException` explicitly instead of
+  relying on an `assert` (removed under `python -O`)
+- Validation failures log one summary line (path, error count, first error)
+  instead of one line per item
 - Test fixtures are re-recorded from the live API and are about 70 times smaller.
   `tests/record_fixtures.py` refreshes them, and `pytest -m live` runs a smoke
   test against the real API (see `tests/README.md`)
