@@ -45,6 +45,24 @@
 - `get_real_time_timetable` calls `/real-time` instead of the removed
   `/real-time-doorkomsten` path, which returned 404
 
+## [1.0.0] - 2024-07-24
+
+### Changed
+
+- **Breaking:** the whole API is asynchronous. The per-resource modules under
+  `lijnpy.kods.api.v1` (`colors`, `entities`, `municipalities`, `stops`,
+  `transport_regions`) are replaced by a single `KODSClientV1` class in
+  `lijnpy.kods_client_v1` whose `get_*` methods are coroutines.
+- **Breaking:** the separate list wrapper classes are removed; methods return
+  plain lists of models.
+- Models and enums moved to `lijnpy.models` and `lijnpy.enums`.
+
+### Added
+
+- `aiohttp` as a dependency
+- `KODSClientV1.get_lines_by_transport_region` (removed again in the next
+  release, as the endpoint does not exist)
+
 ## [0.2.1] - 2024-03-14
 
 ### Added
@@ -53,9 +71,18 @@
 
 ## [0.2.0] - 2024-03-14
 
-Initial release
+Refactored the models into one module, with clearer types.
 
-[Unreleased]: https://github.com/iliasib/lijnpy/compare/0.2.1...main
+## [0.1.0a1] - 2024-03-06
+
+Added the municipalities, colors and transport regions endpoints.
+
+## [0.1.0a0] - 2024-03-06
+
+First pre-release.
+
+[Unreleased]: https://github.com/iliasib/lijnpy/compare/1.0.0...main
+[1.0.0]: https://github.com/iliasib/lijnpy/releases/tag/1.0.0
 [0.2.1]: https://github.com/iliasib/lijnpy/releases/tag/0.2.1
 [0.2.0]: https://github.com/iliasib/lijnpy/releases/tag/0.2.0
 [0.1.0a1]: https://github.com/iliasib/lijnpy/releases/tag/0.1.0a1
