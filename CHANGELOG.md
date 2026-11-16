@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- `from lijnpy import KODSClientV1, DeLijnAPIException` now works
+  (`lijnpy.__all__` is defined)
+
+### Removed
+
+- **Breaking:** `lijnpy.API_KEY`, which was never used by the library. Pass the
+  key to `KODSClientV1(api_key=...)`; the README documents reading it from
+  `DELIJN_API_KEY`.
+
 ## [2.0.0] - 2026-11-16
 
 ### Changed

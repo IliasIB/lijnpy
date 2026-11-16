@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 from datetime import date, datetime
+from logging import getLogger
 
 from pydantic import BaseModel, Field
 from pydantic_extra_types.color import Color
 from pydantic_extra_types.coordinate import Coordinate, Latitude, Longitude
 
-from lijnpy import _logger
 from lijnpy._rest_adapter import DeLijnAPIException
 from lijnpy.enums import (
     Accessibility,
@@ -15,6 +15,9 @@ from lijnpy.enums import (
     OperationType,
     TransportType,
 )
+
+
+_logger = getLogger(__name__)
 
 
 class GeoCoordinate(Coordinate):
