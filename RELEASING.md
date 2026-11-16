@@ -8,7 +8,8 @@ publishing anything if the section is missing or empty. PyPI has no per-release
 notes, so its project page links to the CHANGELOG instead.
 
 The tag, the `pyproject.toml` version and the CHANGELOG must all name the same
-version, and nothing checks this for you.
+version. The workflow fails before building if the tag differs from the
+`pyproject.toml` version, or if the CHANGELOG has no notes for it.
 
 Versions follow [semantic versioning](https://semver.org/): a breaking change
 (see the **Breaking** entries in the CHANGELOG) needs a new major version.

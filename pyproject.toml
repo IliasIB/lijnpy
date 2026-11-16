@@ -1,11 +1,20 @@
 [project]
 name = "lijnpy"
 version = "2.0.0"
-description = ""
+description = "Asynchronous Python wrapper for the De Lijn open data API"
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Ilias Bachiri", email = "ilias.bachiri@gmail.com" }]
 requires-python = ">=3.12"
+keywords = ["de lijn", "delijn", "belgium", "flanders", "public transport", "api", "asyncio"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
 dependencies = [
     "requests>=2.31.0,<3",
     "pydantic>=2.6.3,<3",
@@ -14,6 +23,9 @@ dependencies = [
 ]
 
 [project.urls]
+Documentation = "https://iliasib.github.io/lijnpy/lijnpy.html"
+Source = "https://github.com/IliasIB/lijnpy"
+Issues = "https://github.com/IliasIB/lijnpy/issues"
 Changelog = "https://github.com/IliasIB/lijnpy/blob/main/CHANGELOG.md"
 
 [dependency-groups]

@@ -159,7 +159,8 @@ class StopInVicinity(BaseModel):
         geo_coordinate (GeoCoordinate): The geographical coordinate of the stop
     """
 
-    # TODO: enum for type
+    # The API only returns "DELIJN" so far (148 stops sampled in 2026-11); kept
+    # as a str so an unknown value does not fail validation.
     type: str
     id: int
     name: str = Field(validation_alias="naam")
