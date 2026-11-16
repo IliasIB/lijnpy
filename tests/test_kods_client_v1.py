@@ -325,12 +325,3 @@ def test_transport_region():
     assert vervoerregio.code == "AA"
     assert vervoerregio.name == "Aalst"
     assert vervoerregio.number == 1
-
-
-def test_lines_by_transport_region():
-    lines = asyncio.run(
-        get_client_for_json(
-            "tests/inputs/kods_client/v1/lines_by_transport_region.json"
-        ).get_lines_by_transport_region("AN")
-    )
-    assert len(lines) == 34

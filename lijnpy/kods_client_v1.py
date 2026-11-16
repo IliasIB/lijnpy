@@ -379,21 +379,3 @@ class KODSClientV1:
             f"/vervoerregios/{transport_region_code}",
             TransportRegion,
         )
-
-    async def get_lines_by_transport_region(
-        self, transport_region_code: str
-    ) -> list[Line]:
-        """Get a list of lines by transport region code
-
-        Args:
-            transport_region_code (str): The code of the transport region
-
-        Returns:
-            list[Line]: A list of lines
-        """
-
-        return await self.parse_api_call(
-            f"/vervoerregios/{transport_region_code}/lijnen",
-            list[Line],
-            lambda x: x["lijnen"],
-        )

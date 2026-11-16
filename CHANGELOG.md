@@ -10,6 +10,12 @@
 - `Line.transport_region_code` is now optional (`None` when the API does not
   return a region for a line).
 
+### Removed
+
+- **Breaking:** `KODSClientV1.get_lines_by_transport_region`. The
+  `/vervoerregios/{code}/lijnen` endpoint does not exist in the API and always
+  returned 404.
+
 ### Added
 
 - `OperationType.TECHNICAL`, `OperationType.CALL_BUS` and `OperationType.FLEX`
