@@ -5,6 +5,15 @@ uv run pytest                       # offline tests, the same as CI
 DELIJN_API_KEY=... uv run pytest -m live   # smoke test against the real API
 ```
 
+Coverage of the `lijnpy` package must stay at or above 95% (`fail_under` in
+`pyproject.toml`). Check it locally with:
+
+```sh
+uv run coverage run -m pytest && uv run coverage report
+```
+
+CI shows the same table in the job summary of each run.
+
 The offline tests read the recorded responses in `inputs/kods_client/v1/`.
 The live tests (`test_live.py`) call every client method once and are
 deselected by default and skipped when `DELIJN_API_KEY` is not set.

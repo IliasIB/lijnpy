@@ -47,7 +47,12 @@ addopts = "-m 'not live'"
 markers = ["live: calls the real De Lijn API (needs DELIJN_API_KEY)"]
 
 [tool.coverage.run]
-relative_files = true
+source = ["lijnpy"]
+
+[tool.coverage.report]
+# `coverage report` exits non-zero below this, which fails CI
+fail_under = 95
+show_missing = true
 
 [build-system]
 requires = ["hatchling"]
