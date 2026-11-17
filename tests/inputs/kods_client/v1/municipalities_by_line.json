@@ -1,0 +1,82 @@
+{
+    "gemeenten": [
+        {
+            "gemeentenummer": 4385,
+            "omschrijving": "Antwerpen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4385"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4385/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4385/lijnen"
+                }
+            ]
+        },
+        {
+            "gemeentenummer": 4390,
+            "omschrijving": "Antwerpen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4390"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4390/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4390/lijnen"
+                }
+            ]
+        },
+        {
+            "gemeentenummer": 4427,
+            "omschrijving": "Antwerpen",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4427"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4427/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4427/lijnen"
+                }
+            ]
+        },
+        {
+            "gemeentenummer": 4428,
+            "omschrijving": "Edegem",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4428"
+                },
+                {
+                    "rel": "haltes",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4428/haltes"
+                },
+                {
+                    "rel": "lijnen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/4428/lijnen"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/gemeenten"
+        }
+    ]
+}

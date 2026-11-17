@@ -12,6 +12,7 @@ from lijnpy._query import (
     format_int,
 )
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter
+from lijnpy.enums import LineDirection
 from lijnpy.models import (
     Detour,
     Direction,
@@ -20,6 +21,7 @@ from lijnpy.models import (
     GeoCoordinate,
     Line,
     LineColor,
+    LineColorCodes,
     Municipality,
     RealTimeTimetable,
     Stop,
@@ -255,6 +257,181 @@ class KODSClientV1:
             list[Line],
             lambda x: x["lijnen"],
             {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_all_lines(
+        self, *, valid_on: datetime | date | None = None
+    ) -> list[Line]:
+        """Get a list of all lines in Belgium
+
+        Args:
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Line]: A list of all lines
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            "/lijnen",
+            list[Line],
+            lambda x: x["lijnen"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line(
+        self,
+        entity_number: int,
+        line_number: int,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> Line:
+        """Get the line with the given entity and line number
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            Line: The line with the given entity and line number
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}",
+            Line,
+            params={"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_municipalities_by_line(
+        self,
+        entity_number: int,
+        line_number: int,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[Municipality]:
+        """Get the municipalities a line passes through
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Municipality]: The municipalities the line passes through
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/gemeenten",
+            list[Municipality],
+            lambda x: x["gemeenten"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line_colors(
+        self,
+        entity_number: int,
+        line_number: int,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> LineColorCodes:
+        """Get the color codes of a line
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            LineColorCodes: The color codes of the line; use `get_color` to look
+                up a code
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnkleuren",
+            LineColorCodes,
+            params={"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line_directions(
+        self,
+        entity_number: int,
+        line_number: int,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[Direction]:
+        """Get the directions of a line
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Direction]: The directions of the line. Most lines have two, some
+                only run in one direction.
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen",
+            list[Direction],
+            lambda x: x["lijnrichtingen"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line_direction(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> Direction:
+        """Get one direction of a line
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            Direction: The direction of the line
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}",
+            Direction,
+            params={"geldigOp": format_datetime(valid_on)},
         )
 
     async def get_municipality(self, municipality_number: int) -> Municipality:

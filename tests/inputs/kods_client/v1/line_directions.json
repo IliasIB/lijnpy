@@ -1,0 +1,34 @@
+{
+    "lijnrichtingen": [
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "22",
+            "richting": "HEEN",
+            "omschrijving": "Groenplaats - Valaar - UZA",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "lijnnummer": "22",
+            "richting": "TERUG",
+            "omschrijving": "UZA - Valaar - Groenplaats",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/TERUG"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen"
+        }
+    ]
+}

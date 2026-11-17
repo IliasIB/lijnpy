@@ -28,7 +28,8 @@ DELIJN_API_KEY=... uv run python tests/record_fixtures.py
 
 The script calls every method listed in `live_calls.py`, validates each
 response against the models, and writes the raw JSON to `inputs/`, with every
-list cut down to 5 entries. The key is read from the environment only; API
+list cut down to 5 entries. Pass method names (for example `get_line`) to
+record only those, which keeps the diff small when you add an endpoint. The key is read from the environment only; API
 responses do not contain it. Review the diff before committing: recordings of
 `detours` and `disruptions` depend on what is happening on the network that
 day and may be empty.

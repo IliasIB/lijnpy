@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime
 from logging import getLogger
 
-from pydantic import BaseModel, Field
+from pydantic import AliasPath, BaseModel, Field
 from pydantic_extra_types.color import Color
 from pydantic_extra_types.coordinate import Coordinate, Latitude, Longitude
 
@@ -15,7 +15,6 @@ from lijnpy.enums import (
     OperationType,
     TransportType,
 )
-
 
 _logger = getLogger(__name__)
 
@@ -86,6 +85,8 @@ class Line(BaseModel):
         is_public (bool): Whether the line is public
         transport_type (TransportType): The type of the transport
         operation_type (OperationType): The type of the operation
+        transport_layer (str, optional): The transport layer of the line, such as
+            "Kernnet" or "Vervoer op Maat". Not every line has one. Defaults to None.
         valid_from (str): The valid from date of the line
         valid_to (str, optional): The valid to date of the line. Defaults to None.
     """
@@ -100,6 +101,7 @@ class Line(BaseModel):
     is_public: bool = Field(validation_alias="publiek")
     transport_type: TransportType = Field(validation_alias="vervoertype")
     operation_type: OperationType = Field(validation_alias="bedieningtype")
+    transport_layer: str | None = Field(default=None, validation_alias="vervoerslaag")
     valid_from: date = Field(validation_alias="lijnGeldigVan")
     valid_to: date = Field(validation_alias="lijnGeldigTot")
 
@@ -130,6 +132,26 @@ class LineColor(BaseModel):
     code: str
     description: str = Field(validation_alias="omschrijving")
     color: Color = Field(validation_alias="hex")
+
+
+class LineColorCodes(BaseModel):
+    """The colors a line is drawn with, as color codes
+
+    Look up a code with `KODSClientV1.get_color` to get the actual color.
+
+    Attributes:
+        foreground (str): The code of the text color
+        background (str): The code of the background color
+        foreground_border (str): The code of the text border color
+        background_border (str): The code of the background border color
+    """
+
+    foreground: str = Field(validation_alias=AliasPath("voorgrond", "code"))
+    background: str = Field(validation_alias=AliasPath("achtergrond", "code"))
+    foreground_border: str = Field(validation_alias=AliasPath("voorgrondRand", "code"))
+    background_border: str = Field(
+        validation_alias=AliasPath("achtergrondRand", "code")
+    )
 
 
 class Municipality(BaseModel):

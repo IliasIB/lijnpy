@@ -1,0 +1,102 @@
+{
+    "lijnen": [
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "416",
+            "lijnnummerPubliek": "F45",
+            "omschrijving": "Maastricht - Lanaken - Zutendaal - Genk",
+            "vervoerRegioCode": "LI",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2026-07-01",
+            "lijnGeldigTot": "2026-12-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/416"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "414",
+            "lijnnummerPubliek": "F15",
+            "omschrijving": "Tessenderlo - Ham - Hasselt",
+            "vervoerRegioCode": "LI",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2026-07-01",
+            "lijnGeldigTot": "2026-12-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/414"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "4",
+            "lijnnummer": "418",
+            "lijnnummerPubliek": "F51",
+            "omschrijving": "Heusden-Zolder - Hasselt",
+            "vervoerRegioCode": "LI",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "NORMAAL",
+            "lijnGeldigVan": "2026-07-01",
+            "lijnGeldigTot": "2026-12-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/4/418"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "960",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Regio Dender",
+            "vervoerRegioCode": "AA",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FLEX",
+            "vervoerslaag": "Vervoer op Maat",
+            "lijnGeldigVan": "2026-11-09",
+            "lijnGeldigTot": "2026-12-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/960"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "2",
+            "lijnnummer": "961",
+            "lijnnummerPubliek": "Flex",
+            "omschrijving": "Regio Gent (Oost)",
+            "vervoerRegioCode": "GE",
+            "publiek": true,
+            "vervoertype": "BUS",
+            "bedieningtype": "FLEX",
+            "vervoerslaag": "Vervoer op Maat",
+            "lijnGeldigVan": "2026-11-09",
+            "lijnGeldigTot": "2026-12-31",
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/961"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen"
+        }
+    ]
+}

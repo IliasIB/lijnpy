@@ -11,6 +11,10 @@
 
 ### Added
 
+- Line endpoints: `get_all_lines`, `get_line`, `get_municipalities_by_line`,
+  `get_line_colors`, `get_line_directions` and `get_line_direction`, all with
+  the optional `valid_on` argument. New model `LineColorCodes`, and
+  `Line.transport_layer` (`vervoerslaag`, `None` when the API has none).
 - Optional keyword-only arguments for the query parameters of the API; leaving
   them out changes nothing:
   - `valid_on` (`geldigOp`, a `datetime` or `date`): `get_stop`, `get_stops`,

@@ -14,7 +14,9 @@ from datetime import date, datetime, timedelta
 import pytest
 from live_calls import (
     API_KEY_VARIABLE,
+    DIRECTION,
     ENTITY,
+    LINE,
     LOCATION,
     MUNICIPALITY,
     STOP,
@@ -67,6 +69,20 @@ PARAMETER_CALLS = {
         ENTITY, STOP, max_passages=2
     ),
     "get_disruptions": lambda c: c.get_disruptions(ENTITY, STOP, day=date.today()),
+    "get_all_lines": lambda c: c.get_all_lines(valid_on=datetime.now()),
+    "get_line": lambda c: c.get_line(ENTITY, LINE, valid_on=datetime.now()),
+    "get_municipalities_by_line": lambda c: c.get_municipalities_by_line(
+        ENTITY, LINE, valid_on=datetime.now()
+    ),
+    "get_line_colors": lambda c: c.get_line_colors(
+        ENTITY, LINE, valid_on=datetime.now()
+    ),
+    "get_line_directions": lambda c: c.get_line_directions(
+        ENTITY, LINE, valid_on=datetime.now()
+    ),
+    "get_line_direction": lambda c: c.get_line_direction(
+        ENTITY, LINE, DIRECTION, valid_on=datetime.now()
+    ),
 }
 
 

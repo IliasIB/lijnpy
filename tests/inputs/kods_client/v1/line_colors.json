@@ -1,0 +1,44 @@
+{
+    "voorgrond": {
+        "code": "WI",
+        "links": [
+            {
+                "rel": "detail",
+                "url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/WI"
+            }
+        ]
+    },
+    "achtergrond": {
+        "code": "RO",
+        "links": [
+            {
+                "rel": "detail",
+                "url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/RO"
+            }
+        ]
+    },
+    "voorgrondRand": {
+        "code": "ZW",
+        "links": [
+            {
+                "rel": "detail",
+                "url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/ZW"
+            }
+        ]
+    },
+    "achtergrondRand": {
+        "code": "RO",
+        "links": [
+            {
+                "rel": "detail",
+                "url": "https://api.delijn.be/DLKernOpenData/api/v1/kleuren/RO"
+            }
+        ]
+    },
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnkleuren"
+        }
+    ]
+}

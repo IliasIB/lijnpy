@@ -9,6 +9,7 @@ from collections.abc import Awaitable, Callable
 
 from pydantic_extra_types.coordinate import Latitude, Longitude
 
+from lijnpy.enums import LineDirection
 from lijnpy.kods_client_v1 import KODSClientV1
 from lijnpy.models import GeoCoordinate
 
@@ -19,6 +20,8 @@ STOP = 102675  # Antwerpen Groenplaats
 MUNICIPALITY = 482  # Aalter (has stops and lines; municipality 1 has none)
 REGION = "AN"  # Antwerpen transport region
 COLOR = "TU"
+LINE = 22  # Groenplaats - UZA, in entity 1
+DIRECTION = LineDirection.TO
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
 
@@ -46,6 +49,24 @@ def get_calls(
         "get_lines_by_entity": (
             "lines_by_entity",
             lambda: client.get_lines_by_entity(ENTITY),
+        ),
+        "get_all_lines": ("lines", lambda: client.get_all_lines()),
+        "get_line": ("line", lambda: client.get_line(ENTITY, LINE)),
+        "get_municipalities_by_line": (
+            "municipalities_by_line",
+            lambda: client.get_municipalities_by_line(ENTITY, LINE),
+        ),
+        "get_line_colors": (
+            "line_colors",
+            lambda: client.get_line_colors(ENTITY, LINE),
+        ),
+        "get_line_directions": (
+            "line_directions",
+            lambda: client.get_line_directions(ENTITY, LINE),
+        ),
+        "get_line_direction": (
+            "line_direction",
+            lambda: client.get_line_direction(ENTITY, LINE, DIRECTION),
         ),
         "get_municipalities": ("municipalities", lambda: client.get_municipalities()),
         "get_municipality": (
