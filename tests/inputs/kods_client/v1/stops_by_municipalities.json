@@ -1,0 +1,93 @@
+{
+    "gemeenteHaltes": [
+        {
+            "gemeente": {
+                "gemeentenummer": 482,
+                "omschrijving": "HILVARENBEEK",
+                "hoofdGemeente": {
+                    "gemeentenummer": 483,
+                    "omschrijving": "HILVARENBEEK"
+                },
+                "links": [
+                    {
+                        "rel": "detail",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/482"
+                    },
+                    {
+                        "rel": "haltes",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/482/haltes"
+                    },
+                    {
+                        "rel": "lijnen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/482/lijnen"
+                    }
+                ]
+            },
+            "haltes": [
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "103133",
+                    "omschrijving": "Natuurpoort Roovertsche Leij",
+                    "omschrijvingLang": "Goirle Natuurpoort Roovertsche Leij",
+                    "gemeentenummer": 482,
+                    "omschrijvingGemeente": "Hilvarenbeek",
+                    "geoCoordinaat": {
+                        "latitude": 51.48649,
+                        "longitude": 5.05121
+                    },
+                    "halteToegankelijkheden": [
+                        "MOTORISCHE_BEPERKING",
+                        "VISUELE_BEPERKING"
+                    ],
+                    "hoofdHalte": null,
+                    "taal": "NEDERLANDS",
+                    "classificatie": "REGULIER",
+                    "bedieningsTypes": [
+                        "BUS"
+                    ],
+                    "plaats": {
+                        "plaatsNaam": "Goirle Roovertsche Leij",
+                        "verkortePlaatsNaam": "Roovertsche Leij",
+                        "geoCoordinaat": {
+                            "latitude": 51.48636,
+                            "longitude": 5.051171
+                        }
+                    },
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103133"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "gemeente": {
+                "gemeentenummer": 483,
+                "omschrijving": "HILVARENBEEK",
+                "links": [
+                    {
+                        "rel": "detail",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/483"
+                    },
+                    {
+                        "rel": "haltes",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/483/haltes"
+                    },
+                    {
+                        "rel": "lijnen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/483/lijnen"
+                    }
+                ]
+            },
+            "haltes": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/gemeenten/lijst/482,483/haltes"
+        }
+    ]
+}

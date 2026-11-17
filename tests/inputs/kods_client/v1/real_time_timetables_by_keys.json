@@ -1,0 +1,159 @@
+{
+    "halteDoorkomstenLijst": [
+        {
+            "halteDoorkomsten": [
+                {
+                    "haltenummer": "102675",
+                    "doorkomsten": [
+                        {
+                            "doorkomstId": "2026-11-17_1022_131_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 22,
+                            "richting": "HEEN",
+                            "ritnummer": "131",
+                            "bestemming": "Deurne Luchthaven",
+                            "plaatsBestemming": "Deurne Luchthaven",
+                            "vias": [
+                                "via Lokkaardstraat"
+                            ],
+                            "bestemmingKort": "Deurne Luchthaven",
+                            "dienstregelingTijdstip": "2026-11-17T20:09:00",
+                            "real-timeTijdstip": "2026-11-17T20:11:01",
+                            "vrtnum": "5901",
+                            "predictionStatussen": [
+                                "REALTIME"
+                            ],
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1181_233_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 181,
+                            "richting": "HEEN",
+                            "ritnummer": "233",
+                            "bestemming": "Terhagen Kerk",
+                            "plaatsBestemming": "Terhagen Kerk",
+                            "vias": [],
+                            "bestemmingKort": "Terhagen Kerk",
+                            "dienstregelingTijdstip": "2026-11-17T20:10:00",
+                            "real-timeTijdstip": "2026-11-17T20:19:14",
+                            "vrtnum": "678153",
+                            "predictionStatussen": [
+                                "REALTIME"
+                            ],
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/181/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1022_133_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 22,
+                            "richting": "HEEN",
+                            "ritnummer": "133",
+                            "bestemming": "Edegem UZA",
+                            "plaatsBestemming": "Edegem UZA",
+                            "vias": [],
+                            "bestemmingKort": "Edegem UZA",
+                            "dienstregelingTijdstip": "2026-11-17T20:30:00",
+                            "real-timeTijdstip": "2026-11-17T20:30:00",
+                            "vrtnum": "2235",
+                            "predictionStatussen": [
+                                "REALTIME"
+                            ],
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1022_135_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 22,
+                            "richting": "HEEN",
+                            "ritnummer": "135",
+                            "bestemming": "Deurne Luchthaven",
+                            "plaatsBestemming": "Deurne Luchthaven",
+                            "vias": [
+                                "via Lokkaardstraat"
+                            ],
+                            "bestemmingKort": "Deurne Luchthaven",
+                            "dienstregelingTijdstip": "2026-11-17T20:35:00",
+                            "predictionStatussen": [
+                                "GEENREALTIME"
+                            ],
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1182_237_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 182,
+                            "richting": "HEEN",
+                            "ritnummer": "237",
+                            "bestemming": "Boom Station",
+                            "plaatsBestemming": "Boom Station",
+                            "vias": [],
+                            "bestemmingKort": "Boom Station",
+                            "dienstregelingTijdstip": "2026-11-17T20:40:00",
+                            "real-timeTijdstip": "2026-11-17T20:41:17",
+                            "vrtnum": "678145",
+                            "predictionStatussen": [
+                                "REALTIME"
+                            ],
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "doorkomstNotas": [],
+            "ritNotas": [],
+            "omleidingen": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/lijst/1_102675_1_101130/real-time"
+        }
+    ]
+}

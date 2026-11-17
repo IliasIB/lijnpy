@@ -24,6 +24,8 @@ COLOR = "TU"
 LINE = 22  # Groenplaats - UZA, in entity 1
 DIRECTION = LineDirection.TO
 RIDE = 3  # a ride of line 22 in direction HEEN; the API needs the day for it
+STOPS = [(ENTITY, STOP), (ENTITY, 101130)]
+DETOUR_STOPS = [(1, 101130), (1, 104539)]  # stops of a long-running detour of line 22
 LINE_DIRECTIONS = [(ENTITY, LINE, LineDirection.TO), (ENTITY, LINE, LineDirection.FROM)]
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
@@ -110,6 +112,35 @@ def get_calls(
         "get_disruptions_by_line_directions": (
             "disruptions_by_line_directions",
             lambda: client.get_disruptions_by_line_directions(LINE_DIRECTIONS),
+        ),
+        "get_all_stops": ("all_stops", lambda: client.get_all_stops()),
+        "get_stops_by_keys": (
+            "stops_by_keys",
+            lambda: client.get_stops_by_keys(STOPS),
+        ),
+        "get_timetables_by_keys": (
+            "timetables_by_keys",
+            lambda: client.get_timetables_by_keys(STOPS),
+        ),
+        "get_directions_by_keys": (
+            "directions_by_keys",
+            lambda: client.get_directions_by_keys(STOPS),
+        ),
+        "get_detours_by_keys": (
+            "detours_by_keys",
+            lambda: client.get_detours_by_keys(DETOUR_STOPS),
+        ),
+        "get_disruptions_by_keys": (
+            "disruptions_by_keys",
+            lambda: client.get_disruptions_by_keys(STOPS),
+        ),
+        "get_real_time_timetables_by_keys": (
+            "real_time_timetables_by_keys",
+            lambda: client.get_real_time_timetables_by_keys(STOPS),
+        ),
+        "get_stops_by_municipalities": (
+            "stops_by_municipalities",
+            lambda: client.get_stops_by_municipalities([MUNICIPALITY, 483]),
         ),
         "get_municipalities": ("municipalities", lambda: client.get_municipalities()),
         "get_municipality": (

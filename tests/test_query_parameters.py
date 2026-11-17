@@ -17,6 +17,7 @@ from lijnpy.models import GeoCoordinate
 
 FIXTURES = Path("tests/inputs/kods_client/v1")
 MOMENT = datetime(2026, 11, 20, 8, 5, 9)
+STOPS = [(1, 102675), (1, 101130)]
 LINE_DIRECTIONS = [(1, 22, LineDirection.TO), (1, 22, LineDirection.FROM)]
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
@@ -220,6 +221,54 @@ CASES = [
         {"datum": "2026-11-20"},
     ),
     (
+        "all_stops",
+        lambda c: c.get_all_stops(valid_on=MOMENT),
+        "/haltes",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "stops_by_keys",
+        lambda c: c.get_stops_by_keys(STOPS, valid_on=date(2026, 11, 20)),
+        "/haltes/lijst/1_102675_1_101130",
+        {"geldigOp": "2026-11-20T00:00:00"},
+    ),
+    (
+        "timetables_by_keys",
+        lambda c: c.get_timetables_by_keys(STOPS, day=date(2026, 11, 20)),
+        "/haltes/lijst/1_102675_1_101130/dienstregelingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "directions_by_keys",
+        lambda c: c.get_directions_by_keys(STOPS, valid_on=MOMENT),
+        "/haltes/lijst/1_102675_1_101130/lijnrichtingen",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "detours_by_keys",
+        lambda c: c.get_detours_by_keys(STOPS, day=date(2026, 11, 20)),
+        "/haltes/lijst/1_102675_1_101130/omleidingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "disruptions_by_keys",
+        lambda c: c.get_disruptions_by_keys(STOPS, day=date(2026, 11, 20)),
+        "/haltes/lijst/1_102675_1_101130/storingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "real_time_timetables_by_keys",
+        lambda c: c.get_real_time_timetables_by_keys(STOPS, max_passages=2),
+        "/haltes/lijst/1_102675_1_101130/real-time",
+        {"maxAantalDoorkomsten": "2"},
+    ),
+    (
+        "stops_by_municipalities",
+        lambda c: c.get_stops_by_municipalities([482, 483], valid_on=MOMENT),
+        "/gemeenten/lijst/482,483/haltes",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
         "line_direction_disruptions",
         lambda c: c.get_line_direction_disruptions(
             1, 22, LineDirection.TO, day=date(2026, 11, 20)
@@ -275,6 +324,16 @@ def test_nothing_is_sent_without_parameters(fixture, call, path, params):
         "line_direction_disruptions": lambda c: c.get_line_direction_disruptions(
             1, 22, LineDirection.TO
         ),
+        "all_stops": lambda c: c.get_all_stops(),
+        "stops_by_keys": lambda c: c.get_stops_by_keys(STOPS),
+        "timetables_by_keys": lambda c: c.get_timetables_by_keys(STOPS),
+        "directions_by_keys": lambda c: c.get_directions_by_keys(STOPS),
+        "detours_by_keys": lambda c: c.get_detours_by_keys(STOPS),
+        "disruptions_by_keys": lambda c: c.get_disruptions_by_keys(STOPS),
+        "real_time_timetables_by_keys": lambda c: c.get_real_time_timetables_by_keys(
+            STOPS
+        ),
+        "stops_by_municipalities": lambda c: c.get_stops_by_municipalities([482, 483]),
         "all_detours": lambda c: c.get_all_detours(),
         "detours_by_line_directions": lambda c: c.get_detours_by_line_directions(
             LINE_DIRECTIONS
@@ -332,4 +391,26 @@ def test_line_direction_lists_need_at_least_one_line_direction():
     client, calls = recording_client("detours_by_line_directions")
     with pytest.raises(ValueError, match="at least one"):
         asyncio.run(client.get_detours_by_line_directions([]))
+    assert calls == []
+
+
+@pytest.mark.parametrize(
+    "call, fixture",
+    [
+        (lambda c: c.get_stops_by_keys([]), "stops_by_keys"),
+        (lambda c: c.get_timetables_by_keys([]), "timetables_by_keys"),
+        (lambda c: c.get_directions_by_keys([]), "directions_by_keys"),
+        (lambda c: c.get_detours_by_keys([]), "detours_by_keys"),
+        (lambda c: c.get_disruptions_by_keys([]), "disruptions_by_keys"),
+        (
+            lambda c: c.get_real_time_timetables_by_keys([]),
+            "real_time_timetables_by_keys",
+        ),
+        (lambda c: c.get_stops_by_municipalities([]), "stops_by_municipalities"),
+    ],
+)
+def test_batch_lists_need_at_least_one_item(call, fixture):
+    client, calls = recording_client(fixture)
+    with pytest.raises(ValueError, match="at least one"):
+        asyncio.run(call(client))
     assert calls == []

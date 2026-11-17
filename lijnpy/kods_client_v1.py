@@ -24,9 +24,12 @@ from lijnpy.models import (
     LineColorCodes,
     LineTimetable,
     Municipality,
+    MunicipalityStops,
     RealTimeLineTimetable,
     RealTimeTimetable,
     Stop,
+    StopDetours,
+    StopDirections,
     StopInVicinity,
     Timetable,
     TransportRegion,
@@ -43,6 +46,13 @@ def _line_direction_keys(
         f"{entity}_{line}_{direction.value}"
         for entity, line, direction in line_directions
     )
+
+
+def _stop_keys(stops: Sequence[tuple[int, int]]) -> str:
+    """The `haltesleutels` path segment, for example `1_102675_1_101130`."""
+    if not stops:
+        raise ValueError("Pass at least one stop")
+    return "_".join(f"{entity}_{stop}" for entity, stop in stops)
 
 
 class KODSClientV1:
@@ -718,6 +728,240 @@ class KODSClientV1:
             list[Detour],
             lambda x: x["omleidingen"],
             {"datum": format_date(day)},
+        )
+
+    async def get_all_stops(
+        self, *, valid_on: datetime | date | None = None
+    ) -> list[Stop]:
+        """Get every stop in Flanders
+
+        The response is large (about 17 MB, over 35,000 stops) and takes a few
+        seconds. Prefer `get_stops` or `get_stops_by_entity` when you only need
+        part of it.
+
+        Args:
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Stop]: Every stop
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            "/haltes",
+            list[Stop],
+            lambda x: x["haltes"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_stops_by_keys(
+        self,
+        stops: Sequence[tuple[int, int]],
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[Stop]:
+        """Get several stops in one call
+
+        The API identifies each stop by a key made of its entity number and stop
+        number, `{entity}_{stop}`, and takes several keys joined by `_` (for
+        example `1_102675_1_101130`). This client builds the key from the
+        `(entity, stop)` tuples you pass. The API answers in the order of the stop
+        numbers and silently leaves out stops that do not exist.
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Stop]: The stops
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}",
+            list[Stop],
+            lambda x: x["haltes"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_timetables_by_keys(
+        self, stops: Sequence[tuple[int, int]], *, day: date | None = None
+    ) -> list[Timetable]:
+        """Get the timetables of several stops in one call
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[Timetable]: One timetable per stop, with `stop_number` set
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}/dienstregelingen",
+            list[Timetable],
+            lambda x: x["halteDoorkomstenLijst"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_directions_by_keys(
+        self,
+        stops: Sequence[tuple[int, int]],
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[StopDirections]:
+        """Get the line directions of several stops in one call
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[StopDirections]: The line directions of each stop
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}/lijnrichtingen",
+            list[StopDirections],
+            lambda x: x["halteLijnrichtingen"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_detours_by_keys(
+        self, stops: Sequence[tuple[int, int]], *, day: date | None = None
+    ) -> list[StopDetours]:
+        """Get the detours of several stops in one call
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[StopDetours]: The detours of each stop
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}/omleidingen",
+            list[StopDetours],
+            lambda x: x["halteOmleidingen"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_disruptions_by_keys(
+        self, stops: Sequence[tuple[int, int]], *, day: date | None = None
+    ) -> list[StopDetours]:
+        """Get the disruptions of several stops in one call
+
+        The API describes these with the same fields as detours, so they are
+        returned as `StopDetours`.
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[StopDetours]: The disruptions of each stop
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}/storingen",
+            list[StopDetours],
+            lambda x: x["halteOmleidingen"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_real_time_timetables_by_keys(
+        self, stops: Sequence[tuple[int, int]], *, max_passages: int | None = None
+    ) -> list[RealTimeTimetable]:
+        """Get the real-time timetables of several stops in one call
+
+        Args:
+            stops (Sequence[tuple[int, int]]): The stops as (entity number, stop
+                number)
+            max_passages (int, optional): The maximum number of passages per
+                stop. Defaults to the API's default.
+
+        Returns:
+            list[RealTimeTimetable]: One timetable per stop, with `stop_number`
+                set. Stops without upcoming passages may be left out by the API.
+
+        Raises:
+            ValueError: If no stops are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/haltes/lijst/{_stop_keys(stops)}/real-time",
+            list[RealTimeTimetable],
+            lambda x: x["halteDoorkomstenLijst"],
+            {"maxAantalDoorkomsten": format_int(max_passages)},
+        )
+
+    async def get_stops_by_municipalities(
+        self,
+        municipality_numbers: Sequence[int],
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[MunicipalityStops]:
+        """Get the stops of several municipalities in one call
+
+        Args:
+            municipality_numbers (Sequence[int]): The municipality numbers
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[MunicipalityStops]: The stops of each municipality
+
+        Raises:
+            ValueError: If no municipalities are given
+            DeLijnAPIException: If the API request fails
+        """
+        if not municipality_numbers:
+            raise ValueError("Pass at least one municipality")
+
+        numbers = ",".join(str(number) for number in municipality_numbers)
+        return await self.parse_api_call(
+            f"/gemeenten/lijst/{numbers}/haltes",
+            list[MunicipalityStops],
+            lambda x: x["gemeenteHaltes"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
     async def get_municipality(self, municipality_number: int) -> Municipality:

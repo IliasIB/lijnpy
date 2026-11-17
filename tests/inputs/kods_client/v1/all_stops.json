@@ -1,0 +1,175 @@
+{
+    "haltes": [
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "100400",
+            "omschrijving": "Kerk Feestbus Oudjaar",
+            "omschrijvingLang": "Noorderwijk Kerk Feestbus Oudjaar",
+            "gemeentenummer": 1227,
+            "omschrijvingGemeente": "Herentals",
+            "geoCoordinaat": {
+                "latitude": 51.14091,
+                "longitude": 4.83989
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Noorderwijk Gemeentehuis",
+                "verkortePlaatsNaam": "Gemeentehuis",
+                "geoCoordinaat": {
+                    "latitude": 51.139403,
+                    "longitude": 4.838702
+                }
+            },
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100400"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "100401",
+            "omschrijving": "Kerk Feestbus Oudjaar",
+            "omschrijvingLang": "Noorderwijk Kerk Feestbus Oudjaar",
+            "gemeentenummer": 1227,
+            "omschrijvingGemeente": "Herentals",
+            "geoCoordinaat": {
+                "latitude": 51.14087,
+                "longitude": 4.84005
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Noorderwijk Gemeentehuis",
+                "verkortePlaatsNaam": "Gemeentehuis",
+                "geoCoordinaat": {
+                    "latitude": 51.139403,
+                    "longitude": 4.838702
+                }
+            },
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100401"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "100487",
+            "omschrijving": "Dorp Feestbus Oudjaar",
+            "omschrijvingLang": "Merksplas Dorp Feestbus Oudjaar",
+            "gemeentenummer": 960,
+            "omschrijvingGemeente": "Merksplas",
+            "geoCoordinaat": {
+                "latitude": 51.35824,
+                "longitude": 4.86276
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Merksplas Dorp",
+                "verkortePlaatsNaam": "Dorp",
+                "geoCoordinaat": {
+                    "latitude": 51.358073,
+                    "longitude": 4.863454
+                }
+            },
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100487"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "100488",
+            "omschrijving": "Dorp Feestbus Oudjaar",
+            "omschrijvingLang": "Merksplas Dorp Feestbus Oudjaar",
+            "gemeentenummer": 960,
+            "omschrijvingGemeente": "Merksplas",
+            "geoCoordinaat": {
+                "latitude": 51.35811,
+                "longitude": 4.86281
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Merksplas Dorp",
+                "verkortePlaatsNaam": "Dorp",
+                "geoCoordinaat": {
+                    "latitude": 51.358073,
+                    "longitude": 4.863454
+                }
+            },
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/100488"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "101000",
+            "omschrijving": "A. Chantrainestraat",
+            "omschrijvingLang": "Wilrijk A. Chantrainestraat",
+            "gemeentenummer": 4427,
+            "omschrijvingGemeente": "Antwerpen",
+            "geoCoordinaat": {
+                "latitude": 51.16397,
+                "longitude": 4.392
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "COMBI",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Wilrijk A. Chantrainestraat",
+                "verkortePlaatsNaam": "A. Chantrainestraat",
+                "geoCoordinaat": {
+                    "latitude": 0.0,
+                    "longitude": 0.0
+                }
+            },
+            "links": [
+                {
+                    "rel": "detail",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101000"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes"
+        }
+    ]
+}

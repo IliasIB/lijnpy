@@ -37,7 +37,8 @@ day and may be empty.
 `inputs/kods_client/v1/line_direction_disruptions_example.json` is not recorded by
 the script: it is a real disruption of line 33 (2026-11-17), saved by hand because
 the recorded line has none. It only needs replacing if the models change.
-`disruptions_by_line_directions_example.json` is the same for the list endpoint.
+`disruptions_by_line_directions_example.json` and `disruptions_by_keys_example.json`
+(a stop of line 33) are the same for the list endpoints.
 
 Adding a client method makes `test_live_calls_cover_every_client_method` fail
 until it has an entry in `live_calls.py`.

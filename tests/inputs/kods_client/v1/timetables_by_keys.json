@@ -1,0 +1,143 @@
+{
+    "halteDoorkomstenLijst": [
+        {
+            "halteDoorkomsten": [
+                {
+                    "haltenummer": "102675",
+                    "doorkomsten": [
+                        {
+                            "doorkomstId": "2026-11-17_1022_7_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 22,
+                            "richting": "HEEN",
+                            "ritnummer": "7",
+                            "bestemming": "Edegem UZA",
+                            "plaatsBestemming": "Edegem UZA",
+                            "vias": [],
+                            "bestemmingKort": "Edegem UZA",
+                            "dienstregelingTijdstip": "2026-11-17T05:15:00",
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1182_5_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 182,
+                            "richting": "HEEN",
+                            "ritnummer": "5",
+                            "bestemming": "Boom Station",
+                            "plaatsBestemming": "Boom Station",
+                            "vias": [],
+                            "bestemmingKort": "Boom Station",
+                            "dienstregelingTijdstip": "2026-11-17T05:30:00",
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1180_9_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 180,
+                            "richting": "HEEN",
+                            "ritnummer": "9",
+                            "bestemming": "Aartselaar De Bonte Koe",
+                            "plaatsBestemming": "Aartselaar De Bonte Koe",
+                            "vias": [],
+                            "bestemmingKort": "Arts Bonte Koe",
+                            "dienstregelingTijdstip": "2026-11-17T05:45:00",
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1022_11_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 22,
+                            "richting": "HEEN",
+                            "ritnummer": "11",
+                            "bestemming": "Edegem UZA",
+                            "plaatsBestemming": "Edegem UZA",
+                            "vias": [],
+                            "bestemmingKort": "Edegem UZA",
+                            "dienstregelingTijdstip": "2026-11-17T05:45:00",
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        },
+                        {
+                            "doorkomstId": "2026-11-17_1181_13_1_102675",
+                            "entiteitnummer": "1",
+                            "lijnnummer": 181,
+                            "richting": "HEEN",
+                            "ritnummer": "13",
+                            "bestemming": "Terhagen Kerk",
+                            "plaatsBestemming": "Terhagen Kerk",
+                            "vias": [],
+                            "bestemmingKort": "Terhagen Kerk",
+                            "dienstregelingTijdstip": "2026-11-17T06:00:00",
+                            "links": [
+                                {
+                                    "rel": "halte",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                                },
+                                {
+                                    "rel": "lijnrichting",
+                                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/181/lijnrichtingen/HEEN"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "doorkomstNotas": [],
+            "ritNotas": [],
+            "omleidingen": []
+        },
+        {
+            "halteDoorkomsten": [
+                {
+                    "haltenummer": "101130",
+                    "doorkomsten": []
+                }
+            ],
+            "doorkomstNotas": [],
+            "ritNotas": [],
+            "omleidingen": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/lijst/1_102675_1_101130/dienstregelingen"
+        }
+    ]
+}

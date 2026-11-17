@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- `get_real_time_timetable` failed when a passage had no real-time data (status
+  `GEENREALTIME`): `RealTimePassage.real_time_timestamp` and `vrtnum` are now
+  optional, as the API leaves them out for those passages
+- `Timetable` and `RealTimeTimetable` accept a response without any stop
+
 ### Changed
 
 - The `requests` dependency is removed; it was never imported (the client uses
@@ -11,6 +18,12 @@
 
 ### Added
 
+- Stop batch endpoints: `get_all_stops` (every stop, about 17 MB), and the
+  `lijst` endpoints `get_stops_by_keys`, `get_timetables_by_keys`,
+  `get_directions_by_keys`, `get_detours_by_keys`, `get_disruptions_by_keys`,
+  `get_real_time_timetables_by_keys` (stops as `(entity, stop)` tuples) and
+  `get_stops_by_municipalities`. New models `StopDirections`, `StopDetours` and
+  `MunicipalityStops`; `Timetable` and `RealTimeTimetable` have a `stop_number`.
 - Detour and disruption listings: `get_all_detours` (`/omleidingen`, with
   optional `start` and `end`, at most 30 days apart),
   `get_detours_by_line_directions` and `get_disruptions_by_line_directions`

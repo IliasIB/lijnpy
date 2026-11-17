@@ -1,0 +1,110 @@
+{
+    "haltes": [
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "101130",
+            "omschrijving": "Begijnenvest",
+            "omschrijvingLang": "Antwerpen Begijnenvest",
+            "gemeentenummer": 4390,
+            "omschrijvingGemeente": "Antwerpen",
+            "geoCoordinaat": {
+                "latitude": 51.20991,
+                "longitude": 4.40194
+            },
+            "halteToegankelijkheden": [
+                "MOTORISCHE_BEPERKING"
+            ],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Antwerpen Begijnenvest",
+                "verkortePlaatsNaam": "Begijnenvest",
+                "geoCoordinaat": {
+                    "latitude": 0.0,
+                    "longitude": 0.0
+                }
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/dienstregelingen"
+                },
+                {
+                    "rel": "omleidingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/omleidingen"
+                },
+                {
+                    "rel": "storingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/storingen"
+                }
+            ]
+        },
+        {
+            "entiteitnummer": "1",
+            "haltenummer": "102675",
+            "omschrijving": "Groenplaats",
+            "omschrijvingLang": "Antwerpen Groenplaats",
+            "gemeentenummer": 4390,
+            "omschrijvingGemeente": "Antwerpen",
+            "geoCoordinaat": {
+                "latitude": 51.2187,
+                "longitude": 4.40158
+            },
+            "halteToegankelijkheden": [],
+            "hoofdHalte": null,
+            "taal": "NEDERLANDS",
+            "classificatie": "REGULIER",
+            "bedieningsTypes": [
+                "BUS"
+            ],
+            "plaats": {
+                "plaatsNaam": "Antwerpen Groenplaats",
+                "verkortePlaatsNaam": "Groenplaats",
+                "geoCoordinaat": {
+                    "latitude": 51.218501,
+                    "longitude": 4.402034
+                }
+            },
+            "links": [
+                {
+                    "rel": "lijnrichtingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/lijnrichtingen"
+                },
+                {
+                    "rel": "real-time",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/real-time"
+                },
+                {
+                    "rel": "dienstregelingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/dienstregelingen"
+                },
+                {
+                    "rel": "omleidingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/omleidingen"
+                },
+                {
+                    "rel": "storingen",
+                    "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/storingen"
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/lijst/1_102675_1_101130"
+        }
+    ]
+}
