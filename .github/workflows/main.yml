@@ -10,8 +10,21 @@ on:
 
 jobs:
   ci:
-    name: Tests
+    name: Tests (Python ${{ matrix.python }}, ${{ matrix.resolution }} dependencies)
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13", "3.14", "3.15"]
+        resolution: [highest]
+        include:
+          # The oldest versions the dependency ranges in pyproject.toml allow.
+          # Python 3.12 is the only version they all have wheels for.
+          - python: "3.12"
+            resolution: lowest-direct
+            sync-args: --resolution lowest-direct
+    env:
+      UV_PYTHON: ${{ matrix.python }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,13 +39,14 @@ jobs:
         run: uv lock --check
 
       - name: Install dependencies
-        run: uv sync --group github-actions
+        # sync-args is empty (use the lock file) except for the lowest-versions job
+        run: uv sync --group github-actions ${{ matrix.sync-args }}
 
       - name: Run tests with coverage
-        run: uv run coverage run -m pytest
+        run: uv run --no-sync coverage run -m pytest
 
       - name: Show coverage in the job summary
-        run: uv run coverage report --fail-under=0 --format=markdown >> "$GITHUB_STEP_SUMMARY"
+        run: uv run --no-sync coverage report --fail-under=0 --format=markdown >> "$GITHUB_STEP_SUMMARY"
 
       - name: Check the coverage threshold
-        run: uv run coverage report
+        run: uv run --no-sync coverage report
