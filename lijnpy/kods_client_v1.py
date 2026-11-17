@@ -1,8 +1,16 @@
+from collections.abc import Mapping
+from datetime import date, datetime
 from logging import Logger, getLogger
 from typing import Callable
 
 from pydantic import TypeAdapter, ValidationError
 
+from lijnpy._query import (
+    format_bool,
+    format_date,
+    format_datetime,
+    format_int,
+)
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter
 from lijnpy.models import (
     Detour,
@@ -53,6 +61,7 @@ class KODSClientV1:
         path: str,
         cls: type[T],
         mapper: Callable[[dict], dict | list[dict]] | None = None,
+        params: Mapping[str, str | None] | None = None,
     ) -> T:
         """Parses result of API path and returns a model
 
@@ -61,11 +70,14 @@ class KODSClientV1:
             cls (type[T]): Class to validate the result of the API to
             mapper (Callable[[dict], dict | list[dict]], optional): Mapper to extract
             value from the return value
+            params (Mapping[str, str | None], optional): Query parameters, already
+            formatted as strings. Parameters that are None are not sent.
 
         Returns:
             T: A model validated from the result of the given path on the API
         """
-        result = await self.http_client.get(path)
+        query = {k: v for k, v in (params or {}).items() if v is not None}
+        result = await self.http_client.get(path, query or None)
         if result.data is None:
             self.logger.error(f"The API returned no data for {path}")
             raise DeLijnAPIException(f"The API returned no data for {path}")
@@ -80,7 +92,9 @@ class KODSClientV1:
             )
             raise DeLijnAPIException from e
         except KeyError as e:
-            self.logger.error(f"Failed to parse the response from {path}: missing key {e}")
+            self.logger.error(
+                f"Failed to parse the response from {path}: missing key {e}"
+            )
             raise DeLijnAPIException from e
 
     async def get_colors(self) -> list[LineColor]:
@@ -144,11 +158,16 @@ class KODSClientV1:
             lambda x: x["gemeenten"],
         )
 
-    async def get_stops_by_entity(self, entity_number: int) -> list[Stop]:
+    async def get_stops_by_entity(
+        self, entity_number: int, *, valid_on: datetime | date | None = None
+    ) -> list[Stop]:
         """Get a list of stops in Belgium for a given entity
 
         Args:
-            entity_number (str): The number of the entity
+            entity_number (int): The number of the entity
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             list[Stop]: A list of stops in Belgium for a given entity
@@ -158,13 +177,19 @@ class KODSClientV1:
             f"/entiteiten/{entity_number}/haltes",
             list[Stop],
             lambda x: x["haltes"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
-    async def get_lines_by_entity(self, entity_number: int) -> list[Line]:
+    async def get_lines_by_entity(
+        self, entity_number: int, *, valid_on: datetime | date | None = None
+    ) -> list[Line]:
         """Get a list of lines in Belgium for a given entity
 
         Args:
-            entity_number (str): The number of the entity
+            entity_number (int): The number of the entity
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             list[Line]: A list of lines in Belgium for a given entity
@@ -174,6 +199,7 @@ class KODSClientV1:
             f"/entiteiten/{entity_number}/lijnen",
             list[Line],
             lambda x: x["lijnen"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
     async def get_municipalities(self) -> list[Municipality]:
@@ -187,11 +213,16 @@ class KODSClientV1:
             "/gemeenten", list[Municipality], lambda x: x["gemeenten"]
         )
 
-    async def get_stops(self, municipality_number: int) -> list[Stop]:
+    async def get_stops(
+        self, municipality_number: int, *, valid_on: datetime | date | None = None
+    ) -> list[Stop]:
         """Get a list of stops in a municipality
 
         Args:
             municipality_number (int): The municipality number
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             list[Stop]: A list of stops in the municipality
@@ -201,13 +232,19 @@ class KODSClientV1:
             f"/gemeenten/{municipality_number}/haltes",
             list[Stop],
             lambda x: x["haltes"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
-    async def get_lines(self, municipality_number: int) -> list[Line]:
+    async def get_lines(
+        self, municipality_number: int, *, valid_on: datetime | date | None = None
+    ) -> list[Line]:
         """Get a list of lines in a municipality
 
         Args:
             municipality_number (int): The municipality number
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             list[Line]: A list of lines in the municipality
@@ -217,6 +254,7 @@ class KODSClientV1:
             f"/gemeenten/{municipality_number}/lijnen",
             list[Line],
             lambda x: x["lijnen"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
     async def get_municipality(self, municipality_number: int) -> Municipality:
@@ -236,11 +274,19 @@ class KODSClientV1:
     async def get_stops_in_vicinity(
         self,
         geo_coordinate: GeoCoordinate,
+        *,
+        radius: int | None = None,
+        max_stops: int | None = None,
     ) -> list[StopInVicinity]:
         """Get a list of all available stops in the neighbourhood of the given geo-coordinates
 
         Args:
             geo_coordinate (GeoCoordinate): The geo-coordinates to search around
+            radius (int, optional): The search radius in meters. Defaults to 750
+                (decided by the API).
+            max_stops (int, optional): The maximum number of stops to return, at
+                most 50. Defaults to 50 (decided by the API, which answers a larger
+                value with a 400 error).
 
         Returns:
             list[StopInVicinity]: A list of all available stops in the neighbourhood of the given geo-coordinates
@@ -253,14 +299,27 @@ class KODSClientV1:
             f"/haltes/indebuurt/{geo_coordinate.latitude},{geo_coordinate.longitude}",
             list[StopInVicinity],
             lambda x: x["haltes"],
+            {
+                "radius": format_int(radius),
+                "maxAantalHaltes": format_int(max_stops),
+            },
         )
 
-    async def get_stop(self, entity_number: int, stop_number: int) -> Stop:
+    async def get_stop(
+        self,
+        entity_number: int,
+        stop_number: int,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> Stop:
         """Get the stop with the given entity and stop number
 
         Args:
             entity_number (int): The number of the entity
             stop_number (int): The number of the stop
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             Stop: The stop with the given entity and stop number
@@ -272,10 +331,26 @@ class KODSClientV1:
         return await self.parse_api_call(
             f"/haltes/{entity_number}/{stop_number}",
             Stop,
+            params={"geldigOp": format_datetime(valid_on)},
         )
 
-    async def get_timetable(self, entity_number: int, stop_number: int) -> Timetable:
+    async def get_timetable(
+        self,
+        entity_number: int,
+        stop_number: int,
+        *,
+        day: date | None = None,
+        include_last_passage: bool | None = None,
+    ) -> Timetable:
         """Get the schedule of the stop with the given entity and stop number
+
+        Args:
+            entity_number (int): The number of the entity
+            stop_number (int): The number of the stop
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+            include_last_passage (bool, optional): Whether to include the last
+                passage of the previous day. Defaults to False (decided by the API).
 
         Returns:
             Timetable: The schedule of the stop with the given entity and stop number
@@ -287,16 +362,27 @@ class KODSClientV1:
         return await self.parse_api_call(
             f"/haltes/{entity_number}/{stop_number}/dienstregelingen",
             Timetable,
+            params={
+                "datum": format_date(day),
+                "inclusiefLaatsteDoorkomst": format_bool(include_last_passage),
+            },
         )
 
     async def get_directions(
-        self, entity_number: int, stop_number: int
+        self,
+        entity_number: int,
+        stop_number: int,
+        *,
+        valid_on: datetime | date | None = None,
     ) -> list[Direction]:
         """Get the directions of the stop with the given entity and stop number
 
         Args:
             entity_number (int): The number of the entity
             stop_number (int): The number of the stop
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
 
         Returns:
             list[Direction]: The directions of the stop with the given entity and stop number
@@ -309,14 +395,19 @@ class KODSClientV1:
             f"/haltes/{entity_number}/{stop_number}/lijnrichtingen",
             list[Direction],
             lambda x: x["lijnrichtingen"],
+            {"geldigOp": format_datetime(valid_on)},
         )
 
-    async def get_detours(self, entity_number: int, stop_number: int) -> list[Detour]:
+    async def get_detours(
+        self, entity_number: int, stop_number: int, *, day: date | None = None
+    ) -> list[Detour]:
         """Get the detours of the stop with the given entity and stop number
 
         Args:
             entity_number (int): The number of the entity
             stop_number (int): The number of the stop
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
 
         Returns:
             list[Detour]: The detours of the stop with the given entity and stop number
@@ -329,16 +420,23 @@ class KODSClientV1:
             f"/haltes/{entity_number}/{stop_number}/omleidingen",
             list[Detour],
             lambda x: x["omleidingen"],
+            {"datum": format_date(day)},
         )
 
     async def get_real_time_timetable(
-        self, entity_number: int, stop_number: int
+        self,
+        entity_number: int,
+        stop_number: int,
+        *,
+        max_passages: int | None = None,
     ) -> RealTimeTimetable:
         """Get the real-time arrivals of the stop with the given entity and stop number
 
         Args:
             entity_number (int): The number of the entity
             stop_number (int): The number of the stop
+            max_passages (int, optional): The maximum number of passages to return.
+                Defaults to 10 (decided by the API).
 
         Returns:
             RealTimeTimetable: The real-time arrivals of the stop with the given entity and stop number
@@ -350,19 +448,23 @@ class KODSClientV1:
         return await self.parse_api_call(
             f"/haltes/{entity_number}/{stop_number}/real-time",
             RealTimeTimetable,
+            params={"maxAantalDoorkomsten": format_int(max_passages)},
         )
 
     async def get_disruptions(
-        self, entity_number: int, stop_number: int
+        self, entity_number: int, stop_number: int, *, day: date | None = None
     ) -> list[Disruption]:
-        """Get the directions of the stop with the given entity and stop number
+        """Get the disruptions of the stop with the given entity and stop number
 
         Args:
             entity_number (int): The number of the entity
             stop_number (int): The number of the stop
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
 
         Returns:
             list[Disruption]: The disruptions of the stop with the given entity and stop number
+
         Raises:
             DeLijnAPIException: If the API request fails
         """
@@ -371,6 +473,7 @@ class KODSClientV1:
             f"/haltes/{entity_number}/{stop_number}/storingen",
             list[Disruption],
             lambda x: x["storingen"],
+            {"datum": format_date(day)},
         )
 
     async def get_transport_regions(self) -> list[TransportRegion]:

@@ -55,6 +55,7 @@ async def main():
 asyncio.run(main())
 ```
 
+- Veel methodes hebben optionele argumenten voor de query-parameters van de API, bijvoorbeeld `get_timetable(1, 102675, day=date(2026, 11, 20))` of `get_stops_in_vicinity(locatie, radius=500, max_stops=10)`. Een `datetime` moet zonder tijdzone zijn, in Belgische lokale tijd.
 - `KODSClientV1` en `DeLijnAPIException` importeer je rechtstreeks uit `lijnpy`. Modellen en enums staan in `lijnpy.models` en `lijnpy.enums`.
 - De client houdt één HTTP-sessie open. Gebruik `async with` of roep `await client.close()` aan als je klaar bent.
 - Een client hoort bij één event loop: gebruik hem niet over meerdere `asyncio.run`-aanroepen heen.

@@ -20,7 +20,7 @@ from lijnpy.models import GeoCoordinate
 def get_async_http_mock(
     status_code: int = 200, message: str = "Success", data: dict = {}
 ):
-    async def async_http_get_mock(_: str):
+    async def async_http_get_mock(_: str, ep_params: dict | None = None):
         return Result(status_code=status_code, message=message, data=data)
 
     return Mock(spec_set=RestAdapter, get=async_http_get_mock)
