@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-11-17
+
 ### Fixed
 
 - `get_real_time_timetable` failed when a passage had no real-time data (status
@@ -141,7 +143,8 @@ Added the municipalities, colors and transport regions endpoints.
 
 First pre-release.
 
-[Unreleased]: https://github.com/iliasib/lijnpy/compare/2.0.0...main
+[Unreleased]: https://github.com/iliasib/lijnpy/compare/3.0.0...main
+[3.0.0]: https://github.com/iliasib/lijnpy/releases/tag/3.0.0
 [2.0.0]: https://github.com/iliasib/lijnpy/releases/tag/2.0.0
 [1.0.0]: https://github.com/iliasib/lijnpy/releases/tag/1.0.0
 [0.2.1]: https://github.com/iliasib/lijnpy/releases/tag/0.2.1
