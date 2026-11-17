@@ -9,6 +9,7 @@ from aiohttp import web
 from aiohttp.test_utils import TestServer
 from pydantic_extra_types.coordinate import Latitude, Longitude
 
+from lijnpy.enums import LineDirection
 from lijnpy._query import format_bool, format_date, format_datetime, format_int
 from lijnpy._rest_adapter import RestAdapter, Result
 from lijnpy.kods_client_v1 import KODSClientV1
@@ -129,6 +130,42 @@ CASES = [
         "/haltes/1/102675/storingen",
         {"datum": "2026-11-20"},
     ),
+    (
+        "lines",
+        lambda c: c.get_all_lines(valid_on=MOMENT),
+        "/lijnen",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "line",
+        lambda c: c.get_line(1, 22, valid_on=MOMENT),
+        "/lijnen/1/22",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "municipalities_by_line",
+        lambda c: c.get_municipalities_by_line(1, 22, valid_on=MOMENT),
+        "/lijnen/1/22/gemeenten",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "line_colors",
+        lambda c: c.get_line_colors(1, 22, valid_on=MOMENT),
+        "/lijnen/1/22/lijnkleuren",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "line_directions",
+        lambda c: c.get_line_directions(1, 22, valid_on=MOMENT),
+        "/lijnen/1/22/lijnrichtingen",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "line_direction",
+        lambda c: c.get_line_direction(1, 22, LineDirection.FROM, valid_on=MOMENT),
+        "/lijnen/1/22/lijnrichtingen/TERUG",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
 ]
 
 
@@ -156,6 +193,12 @@ def test_nothing_is_sent_without_parameters(fixture, call, path, params):
         "detours": lambda c: c.get_detours(1, 102675),
         "real_time_timetable": lambda c: c.get_real_time_timetable(1, 102675),
         "disruptions": lambda c: c.get_disruptions(1, 102675),
+        "lines": lambda c: c.get_all_lines(),
+        "line": lambda c: c.get_line(1, 22),
+        "municipalities_by_line": lambda c: c.get_municipalities_by_line(1, 22),
+        "line_colors": lambda c: c.get_line_colors(1, 22),
+        "line_directions": lambda c: c.get_line_directions(1, 22),
+        "line_direction": lambda c: c.get_line_direction(1, 22, LineDirection.FROM),
     }[fixture]
     asyncio.run(bare(client))
     assert calls == [(path, None)]

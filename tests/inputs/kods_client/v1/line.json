@@ -1,0 +1,31 @@
+{
+    "entiteitnummer": "1",
+    "lijnnummer": "22",
+    "lijnnummerPubliek": "22",
+    "omschrijving": "Groenplaats - Valaar - UZA",
+    "vervoerRegioCode": "AN",
+    "publiek": true,
+    "vervoertype": "BUS",
+    "bedieningtype": "NORMAAL",
+    "vervoerslaag": "Kernnet",
+    "lijnGeldigVan": "2026-09-01",
+    "lijnGeldigTot": "2027-01-03",
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22"
+        },
+        {
+            "rel": "lijnkleuren",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnkleuren"
+        },
+        {
+            "rel": "lijnrichtingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen"
+        },
+        {
+            "rel": "gemeenten",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/gemeenten"
+        }
+    ]
+}

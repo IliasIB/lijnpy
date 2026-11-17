@@ -12,7 +12,7 @@ from pydantic_extra_types.coordinate import Latitude, Longitude
 from live_calls import get_calls
 
 from lijnpy._rest_adapter import DeLijnAPIException, RestAdapter, Result
-from lijnpy.enums import Language, OperationType, TransportType
+from lijnpy.enums import Language, LineDirection, OperationType, TransportType
 from lijnpy.kods_client_v1 import KODSClientV1
 from lijnpy.models import GeoCoordinate
 
@@ -215,9 +215,7 @@ def test_stops_in_vicinity():
 
 def test_stop():
     stop = asyncio.run(
-        get_client_for_json("tests/inputs/kods_client/v1/stop.json").get_stop(
-            1, 102675
-        )
+        get_client_for_json("tests/inputs/kods_client/v1/stop.json").get_stop(1, 102675)
     )
     assert stop.entity_number == 1
     assert stop.number == 102675
@@ -370,3 +368,81 @@ def test_public_api_is_exported_from_the_package():
     assert lijnpy.__all__ == ["DeLijnAPIException", "KODSClientV1"]
     assert lijnpy.KODSClientV1 is KODSClientV1
     assert lijnpy.DeLijnAPIException is DeLijnAPIException
+
+
+def test_all_lines():
+    lines = asyncio.run(
+        get_client_for_json("tests/inputs/kods_client/v1/lines.json").get_all_lines()
+    )
+    assert len(lines) == 5
+    assert [line.transport_layer for line in lines] == [None] * 3 + [
+        "Vervoer op Maat"
+    ] * 2
+
+
+def test_line():
+    line = asyncio.run(
+        get_client_for_json("tests/inputs/kods_client/v1/line.json").get_line(1, 22)
+    )
+    assert line.entity_number == 1
+    assert line.line_number == 22
+    assert line.line_number_public == "22"
+    assert line.description == "Groenplaats - Valaar - UZA"
+    assert line.transport_region_code == "AN"
+    assert line.transport_type == TransportType.BUS
+    assert line.operation_type == OperationType.NORMAL
+    assert line.transport_layer == "Kernnet"
+
+
+def test_municipalities_by_line():
+    municipalities = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/municipalities_by_line.json"
+        ).get_municipalities_by_line(1, 22)
+    )
+    assert len(municipalities) == 4
+    assert municipalities[0].number == 4385
+    assert municipalities[0].description == "Antwerpen"
+
+
+def test_line_colors():
+    colors = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_colors.json"
+        ).get_line_colors(1, 22)
+    )
+    assert colors.foreground == "WI"
+    assert colors.background == "RO"
+    assert colors.foreground_border == "ZW"
+    assert colors.background_border == "RO"
+
+
+def test_line_directions():
+    directions = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_directions.json"
+        ).get_line_directions(1, 22)
+    )
+    assert [d.direction for d in directions] == [LineDirection.TO, LineDirection.FROM]
+    assert directions[0].description == "Groenplaats - Valaar - UZA"
+    assert directions[1].description == "UZA - Valaar - Groenplaats"
+
+
+def test_line_direction():
+    direction = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction.json"
+        ).get_line_direction(1, 22, LineDirection.TO)
+    )
+    assert direction.entity_number == 1
+    assert direction.line_number == 22
+    assert direction.direction == LineDirection.TO
+
+
+def test_line_colors_with_a_missing_color_is_rejected():
+    with Path("tests/inputs/kods_client/v1/line_colors.json").open() as file:
+        data = json.load(file)
+    del data["voorgrond"]
+    client = KODSClientV1(http_client=get_async_http_mock(data=data))
+    with pytest.raises(DeLijnAPIException):
+        asyncio.run(client.get_line_colors(1, 22))

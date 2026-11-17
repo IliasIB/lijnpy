@@ -1,0 +1,28 @@
+{
+    "entiteitnummer": "1",
+    "lijnnummer": "22",
+    "richting": "HEEN",
+    "omschrijving": "Groenplaats - Valaar - UZA",
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+        },
+        {
+            "rel": "real-time",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/real-time"
+        },
+        {
+            "rel": "dienstregelingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/dienstregelingen"
+        },
+        {
+            "rel": "haltes",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/haltes"
+        },
+        {
+            "rel": "omleidingen",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/omleidingen"
+        }
+    ]
+}

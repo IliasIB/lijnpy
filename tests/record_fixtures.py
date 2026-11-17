@@ -1,7 +1,11 @@
 """Record live API responses into tests/inputs/kods_client/v1/.
 
 Usage (from the repo root):
-    DELIJN_API_KEY=... uv run python tests/record_fixtures.py
+    DELIJN_API_KEY=... uv run python tests/record_fixtures.py [METHOD ...]
+
+Without arguments every method is recorded; name methods (for example
+`get_line`) to record only those, which keeps the diff small when you add an
+endpoint.
 
 Every KODSClientV1 method is called once. The raw JSON the API returns is
 written to a fixture file, with every list cut down to MAX_ITEMS entries so the
@@ -38,7 +42,12 @@ async def main() -> int:
     if api_key is None:
         sys.exit(f"Set {API_KEY_VARIABLE} to record fixtures.")
 
+    selected = sys.argv[1:]
     client = KODSClientV1(api_key=api_key, logger=logging.getLogger("record"))
+    calls = get_calls(client)
+    unknown = [name for name in selected if name not in calls]
+    if unknown:
+        sys.exit(f"Unknown method(s): {', '.join(unknown)}")
 
     # Keep the raw response of each call, so it is stored exactly as the API sent it.
     responses: list[dict] = []
@@ -54,17 +63,22 @@ async def main() -> int:
 
     FIXTURE_DIRECTORY.mkdir(parents=True, exist_ok=True)
     failed = 0
-    for method, (fixture, call) in get_calls(client).items():
-        responses.clear()
-        try:
-            await call()  # also validates the response against the models
-        except Exception as error:
-            failed += 1
-            print(f"FAIL {method}: {error!r}"[:200])
-            continue
-        path = FIXTURE_DIRECTORY / f"{fixture}.json"
-        path.write_text(json.dumps(truncate(responses[-1]), indent=4) + "\n")
-        print(f"OK   {method:32} -> {path.name}")
+    try:
+        for method, (fixture, call) in calls.items():
+            if selected and method not in selected:
+                continue
+            responses.clear()
+            try:
+                await call()  # also validates the response against the models
+            except Exception as error:
+                failed += 1
+                print(f"FAIL {method}: {error!r}"[:200])
+                continue
+            path = FIXTURE_DIRECTORY / f"{fixture}.json"
+            path.write_text(json.dumps(truncate(responses[-1]), indent=4) + "\n")
+            print(f"OK   {method:32} -> {path.name}")
+    finally:
+        await client.close()
     return 1 if failed else 0
 
 
