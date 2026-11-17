@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Changed
+
+- The `requests` dependency is removed; it was never imported (the client uses
+  `aiohttp`)
+- Python 3.13, 3.14 and 3.15 are tested in CI (3.12 stays the minimum), and the
+  oldest dependency versions the declared ranges allow are tested too
+
 ### Added
 
 - `from lijnpy import KODSClientV1, DeLijnAPIException` now works
