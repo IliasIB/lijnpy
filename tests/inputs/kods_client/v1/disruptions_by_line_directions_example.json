@@ -1,0 +1,119 @@
+{
+    "omleidingen": [
+        {
+            "titel": "Onverwachte hinder",
+            "titelMeertalig": {
+                "nederlands": "Onverwachte hinder",
+                "frans": "Perturbation inattendue",
+                "engels": "Unexpected disruption",
+                "duits": "Unerwartete Störung"
+            },
+            "omschrijving": "Lijn 33: Wegens een eerdere verstoring zijn er gevolgvertragingen",
+            "omschrijvingMeertalig": {
+                "nederlands": "Lijn 33: Wegens een eerdere verstoring zijn er gevolgvertragingen",
+                "frans": "Ligne 33 : En raison d'une perturbation antérieure, il y a des retards",
+                "engels": "Line 33: Due to an earlier disruption, there are delays",
+                "duits": "Linie 33: Aufgrund einer früheren Störung kommt es zu Verspätungen"
+            },
+            "omschrijvingMeertaligKort": {
+                "nederlands": "Lijn 33: Wegens een eerdere verstoring zijn er gevolgvertragingen",
+                "frans": "Ligne 33 : En raison d'une perturbation antérieure, il y a des retards",
+                "engels": "Line 33: Due to an earlier disruption, there are delays",
+                "duits": "Linie 33: Aufgrund einer früheren Störung kommt es zu Verspätungen"
+            },
+            "periode": {
+                "startDatum": "2026-11-17T17:19:03",
+                "eindDatum": "2026-11-18T00:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "33",
+                    "richting": "HEEN",
+                    "omschrijving": "P+R Luchtbal - Merksem - Wilrijk - Hoboken",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/33/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "151172",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/151172"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "103492",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103492"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "105351",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/105351"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "103012",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103012"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "101350",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101350"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/lijst/1_33_HEEN_1_33_TERUG/storingen"
+        }
+    ]
+}

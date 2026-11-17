@@ -1,4 +1,4 @@
-from collections.abc import Mapping
+from collections.abc import Mapping, Sequence
 from datetime import date, datetime
 from logging import Logger, getLogger
 from typing import Callable
@@ -31,6 +31,18 @@ from lijnpy.models import (
     Timetable,
     TransportRegion,
 )
+
+
+def _line_direction_keys(
+    line_directions: Sequence[tuple[int, int, LineDirection]],
+) -> str:
+    """The `lijnrichtingsleutels` path segment, for example `1_22_HEEN_1_22_TERUG`."""
+    if not line_directions:
+        raise ValueError("Pass at least one line direction")
+    return "_".join(
+        f"{entity}_{line}_{direction.value}"
+        for entity, line, direction in line_directions
+    )
 
 
 class KODSClientV1:
@@ -615,6 +627,96 @@ class KODSClientV1:
             f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/storingen",
             list[Disruption],
             lambda x: x["storingen"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_all_detours(
+        self,
+        *,
+        start: datetime | date | None = None,
+        end: datetime | date | None = None,
+    ) -> list[Detour]:
+        """Get the detours of the whole network
+
+        Args:
+            start (datetime | date, optional): Start of the period to get detours
+                for. Defaults to today (decided by the API).
+            end (datetime | date, optional): End of the period. The period may
+                span at most 30 days; the API answers 400 otherwise.
+
+        Returns:
+            list[Detour]: The detours in the period
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            "/omleidingen",
+            list[Detour],
+            lambda x: x["omleidingen"],
+            {"startDatum": format_datetime(start), "eindDatum": format_datetime(end)},
+        )
+
+    async def get_detours_by_line_directions(
+        self,
+        line_directions: Sequence[tuple[int, int, LineDirection]],
+        *,
+        day: date | None = None,
+    ) -> list[Detour]:
+        """Get the detours of several line directions in one call
+
+        Args:
+            line_directions (Sequence[tuple[int, int, LineDirection]]): The line
+                directions as (entity number, line number, direction)
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[Detour]: The detours of the given line directions
+
+        Raises:
+            ValueError: If no line directions are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/lijst/{_line_direction_keys(line_directions)}/omleidingen",
+            list[Detour],
+            lambda x: x["omleidingen"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_disruptions_by_line_directions(
+        self,
+        line_directions: Sequence[tuple[int, int, LineDirection]],
+        *,
+        day: date | None = None,
+    ) -> list[Detour]:
+        """Get the disruptions of several line directions in one call
+
+        Unlike `get_line_direction_disruptions`, the API describes these with the
+        same fields as a detour (period, line directions and stops), so they are
+        returned as `Detour` objects.
+
+        Args:
+            line_directions (Sequence[tuple[int, int, LineDirection]]): The line
+                directions as (entity number, line number, direction)
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[Detour]: The disruptions of the given line directions
+
+        Raises:
+            ValueError: If no line directions are given
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/lijst/{_line_direction_keys(line_directions)}/storingen",
+            list[Detour],
+            lambda x: x["omleidingen"],
             {"datum": format_date(day)},
         )
 

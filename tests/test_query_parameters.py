@@ -17,6 +17,7 @@ from lijnpy.models import GeoCoordinate
 
 FIXTURES = Path("tests/inputs/kods_client/v1")
 MOMENT = datetime(2026, 11, 20, 8, 5, 9)
+LINE_DIRECTIONS = [(1, 22, LineDirection.TO), (1, 22, LineDirection.FROM)]
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
 
@@ -197,6 +198,28 @@ CASES = [
         {"datum": "2026-11-20"},
     ),
     (
+        "all_detours",
+        lambda c: c.get_all_detours(start=MOMENT, end=date(2026, 11, 27)),
+        "/omleidingen",
+        {"startDatum": "2026-11-20T08:05:09", "eindDatum": "2026-11-27T00:00:00"},
+    ),
+    (
+        "detours_by_line_directions",
+        lambda c: c.get_detours_by_line_directions(
+            LINE_DIRECTIONS, day=date(2026, 11, 20)
+        ),
+        "/lijnen/lijst/1_22_HEEN_1_22_TERUG/omleidingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "disruptions_by_line_directions",
+        lambda c: c.get_disruptions_by_line_directions(
+            LINE_DIRECTIONS, day=date(2026, 11, 20)
+        ),
+        "/lijnen/lijst/1_22_HEEN_1_22_TERUG/storingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
         "line_direction_disruptions",
         lambda c: c.get_line_direction_disruptions(
             1, 22, LineDirection.TO, day=date(2026, 11, 20)
@@ -252,6 +275,13 @@ def test_nothing_is_sent_without_parameters(fixture, call, path, params):
         "line_direction_disruptions": lambda c: c.get_line_direction_disruptions(
             1, 22, LineDirection.TO
         ),
+        "all_detours": lambda c: c.get_all_detours(),
+        "detours_by_line_directions": lambda c: c.get_detours_by_line_directions(
+            LINE_DIRECTIONS
+        ),
+        "disruptions_by_line_directions": (
+            lambda c: c.get_disruptions_by_line_directions(LINE_DIRECTIONS)
+        ),
     }[fixture]
     asyncio.run(bare(client))
     assert calls == [(path, None)]
@@ -296,3 +326,10 @@ def test_line_direction_real_time_has_no_query_parameters():
     client, calls = recording_client("line_direction_real_time_timetable")
     asyncio.run(client.get_line_direction_real_time_timetable(1, 22, LineDirection.TO))
     assert calls == [("/lijnen/1/22/lijnrichtingen/HEEN/real-time", None)]
+
+
+def test_line_direction_lists_need_at_least_one_line_direction():
+    client, calls = recording_client("detours_by_line_directions")
+    with pytest.raises(ValueError, match="at least one"):
+        asyncio.run(client.get_detours_by_line_directions([]))
+    assert calls == []

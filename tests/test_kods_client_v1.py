@@ -288,6 +288,47 @@ def test_detours():
     assert len(detours) == 0
 
 
+def test_all_detours():
+    detours = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/all_detours.json"
+        ).get_all_detours()
+    )
+    assert len(detours) == 5
+    assert detours[0].title
+    assert detours[0].directions
+
+
+def test_detours_by_line_directions():
+    detours = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/detours_by_line_directions.json"
+        ).get_detours_by_line_directions([(1, 22, LineDirection.TO)])
+    )
+    assert len(detours) == 2
+    assert detours[0].directions[0].line_number == 22
+
+
+def test_disruptions_by_line_directions():
+    client = get_client_for_json(
+        "tests/inputs/kods_client/v1/disruptions_by_line_directions.json"
+    )
+    assert asyncio.run(
+        client.get_disruptions_by_line_directions([(1, 22, LineDirection.TO)])
+    ) == []
+
+
+def test_disruptions_by_line_directions_example():
+    """A real disruption of line 33 (2026-11-17), as the list endpoint returns it."""
+    disruptions = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/disruptions_by_line_directions_example.json"
+        ).get_disruptions_by_line_directions([(1, 33, LineDirection.TO)])
+    )
+    assert disruptions
+    assert disruptions[0].directions[0].line_number == 33
+
+
 def test_real_time_timetable():
     real_time_timetable = asyncio.run(
         get_client_for_json(

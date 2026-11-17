@@ -24,6 +24,7 @@ COLOR = "TU"
 LINE = 22  # Groenplaats - UZA, in entity 1
 DIRECTION = LineDirection.TO
 RIDE = 3  # a ride of line 22 in direction HEEN; the API needs the day for it
+LINE_DIRECTIONS = [(ENTITY, LINE, LineDirection.TO), (ENTITY, LINE, LineDirection.FROM)]
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
 
@@ -97,6 +98,18 @@ def get_calls(
         "get_line_direction_disruptions": (
             "line_direction_disruptions",
             lambda: client.get_line_direction_disruptions(ENTITY, LINE, DIRECTION),
+        ),
+        "get_all_detours": (
+            "all_detours",
+            lambda: client.get_all_detours(start=date.today()),
+        ),
+        "get_detours_by_line_directions": (
+            "detours_by_line_directions",
+            lambda: client.get_detours_by_line_directions(LINE_DIRECTIONS),
+        ),
+        "get_disruptions_by_line_directions": (
+            "disruptions_by_line_directions",
+            lambda: client.get_disruptions_by_line_directions(LINE_DIRECTIONS),
         ),
         "get_municipalities": ("municipalities", lambda: client.get_municipalities()),
         "get_municipality": (

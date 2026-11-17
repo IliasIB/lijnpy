@@ -1,0 +1,9 @@
+{
+    "omleidingen": [],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/lijst/1_22_HEEN_1_22_TERUG/storingen"
+        }
+    ]
+}
