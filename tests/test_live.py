@@ -19,6 +19,7 @@ from live_calls import (
     LINE,
     LOCATION,
     MUNICIPALITY,
+    RIDE,
     STOP,
     get_api_key,
     get_calls,
@@ -79,6 +80,21 @@ PARAMETER_CALLS = {
     ),
     "get_line_directions": lambda c: c.get_line_directions(
         ENTITY, LINE, valid_on=datetime.now()
+    ),
+    "get_line_direction_timetable": lambda c: c.get_line_direction_timetable(
+        ENTITY, LINE, DIRECTION, day=date.today() + timedelta(days=1)
+    ),
+    "get_line_direction_ride": lambda c: c.get_line_direction_ride(
+        ENTITY, LINE, DIRECTION, RIDE, day=date.today()
+    ),
+    "get_line_direction_stops": lambda c: c.get_line_direction_stops(
+        ENTITY, LINE, DIRECTION, valid_on=datetime.now()
+    ),
+    "get_line_direction_detours": lambda c: c.get_line_direction_detours(
+        ENTITY, LINE, DIRECTION, day=date.today()
+    ),
+    "get_line_direction_disruptions": lambda c: c.get_line_direction_disruptions(
+        ENTITY, LINE, DIRECTION, day=date.today()
     ),
     "get_line_direction": lambda c: c.get_line_direction(
         ENTITY, LINE, DIRECTION, valid_on=datetime.now()

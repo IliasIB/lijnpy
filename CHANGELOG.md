@@ -11,6 +11,12 @@
 
 ### Added
 
+- Line direction endpoints: `get_line_direction_timetable`,
+  `get_line_direction_ride`, `get_line_direction_stops`,
+  `get_line_direction_detours`, `get_line_direction_real_time_timetable` and
+  `get_line_direction_disruptions`. New models `LineTimetable`,
+  `RealTimeLineTimetable`, `LineRide`, `RealTimeLineRide`, `LineRidePassage` and
+  `RealTimeLineRidePassage`.
 - Line endpoints: `get_all_lines`, `get_line`, `get_municipalities_by_line`,
   `get_line_colors`, `get_line_directions` and `get_line_direction`, all with
   the optional `valid_on` argument. New model `LineColorCodes`, and

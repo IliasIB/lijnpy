@@ -398,6 +398,115 @@ class RealTimeTimetable(BaseModel):
         super().__init__(**kwargs)
 
 
+class LineRidePassage(BaseModel):
+    """The passage of a ride at one stop
+
+    Attributes:
+        stop_number (int): The number of the stop
+        passage_id (str, optional): The id of the passage. Defaults to None.
+        timetable_timestamp (datetime, optional): The scheduled time. Not every
+            stop of a ride has one. Defaults to None.
+    """
+
+    stop_number: int = Field(validation_alias="haltenummer")
+    passage_id: str | None = Field(default=None, validation_alias="doorkomstId")
+    timetable_timestamp: datetime | None = Field(
+        default=None, validation_alias="dienstregelingTijdstip"
+    )
+
+
+class RealTimeLineRidePassage(LineRidePassage):
+    """The passage of a ride at one stop, with real-time information
+
+    Attributes:
+        real_time_timestamp (datetime, optional): The predicted time, when there is a
+            real-time prediction. Defaults to None.
+        prediction_statuses (list[str]): The prediction statuses, such as
+            "REALTIME" or "GEENREALTIME"
+    """
+
+    real_time_timestamp: datetime | None = Field(
+        default=None, validation_alias="real-timeTijdstip"
+    )
+    prediction_statuses: list[str] = Field(
+        default_factory=list, validation_alias="predictionStatussen"
+    )
+
+
+class _LineRide(BaseModel):
+    """The fields every ride of a line direction has"""
+
+    ride_number: int = Field(validation_alias="ritnummer")
+    destination: str = Field(validation_alias="bestemming")
+    destination_place: str = Field(validation_alias="plaatsBestemming")
+    destination_short: str | None = Field(
+        default=None, validation_alias="bestemmingKort"
+    )
+    vias: list[str] = Field(default_factory=list)
+
+
+class LineRide(_LineRide):
+    """A ride of a line direction with its scheduled passages
+
+    Attributes:
+        ride_number (int): The number of the ride
+        destination (str): The destination of the ride
+        destination_place (str): The place of the destination
+        destination_short (str, optional): The short destination. Defaults to None.
+        vias (list[str]): The places the ride goes via
+        passages (list[LineRidePassage]): The passages of the ride, one per stop
+    """
+
+    passages: list[LineRidePassage] = Field(validation_alias="doorkomsten")
+
+
+class RealTimeLineRide(_LineRide):
+    """A ride of a line direction with its real-time passages
+
+    Attributes:
+        ride_number (int): The number of the ride
+        destination (str): The destination of the ride
+        destination_place (str): The place of the destination
+        destination_short (str, optional): The short destination. Defaults to None.
+        vias (list[str]): The places the ride goes via
+        passages (list[RealTimeLineRidePassage]): The passages of the ride, one per stop
+    """
+
+    passages: list[RealTimeLineRidePassage] = Field(validation_alias="doorkomsten")
+
+
+class LineTimetable(BaseModel):
+    """The schedule of a line direction, per ride
+
+    Attributes:
+        rides (list[LineRide]): The rides of the line direction
+        passage_notes (list[PassageNote]): The notes of the passages
+        ride_notes (list[RideNote]): The notes of the rides
+        detours (list[Detour]): The detours of the schedule
+    """
+
+    rides: list[LineRide] = Field(validation_alias="ritDoorkomsten")
+    passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
+    ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
+    detours: list[Detour] = Field(validation_alias="omleidingen")
+
+
+class RealTimeLineTimetable(BaseModel):
+    """The real-time schedule of a line direction, per ride
+
+    Attributes:
+        rides (list[RealTimeLineRide]): The rides of the line direction
+        passage_notes (list[PassageNote]): The notes of the passages
+        ride_notes (list[RideNote]): The notes of the rides
+        detours (list[Detour]): The detours of the schedule
+    """
+
+    rides: list[RealTimeLineRide] = Field(validation_alias="ritDoorkomsten")
+    passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
+    ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
+    detours: list[Detour] = Field(validation_alias="omleidingen")
+
+
 class Disruption(BaseModel):
     """A disruption of a line
 

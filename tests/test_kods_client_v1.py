@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime
 import inspect
 import json
 import logging
@@ -446,3 +447,94 @@ def test_line_colors_with_a_missing_color_is_rejected():
     client = KODSClientV1(http_client=get_async_http_mock(data=data))
     with pytest.raises(DeLijnAPIException):
         asyncio.run(client.get_line_colors(1, 22))
+
+
+def test_line_direction_timetable():
+    timetable = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_timetable.json"
+        ).get_line_direction_timetable(1, 22, LineDirection.TO)
+    )
+    assert len(timetable.rides) == 5
+    ride = timetable.rides[0]
+    assert ride.ride_number == 3
+    assert ride.destination == "Edegem UZA"
+    assert ride.vias == ["via Bist"]
+    assert len(ride.passages) == 5
+    assert ride.passages[0].stop_number == 102675
+    # Not every stop of a ride has a scheduled time
+    assert ride.passages[0].timetable_timestamp is None
+    assert len(timetable.detours) == 0
+
+
+def test_line_direction_ride():
+    timetable = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_ride.json"
+        ).get_line_direction_ride(1, 22, LineDirection.TO, 3)
+    )
+    assert len(timetable.rides) == 1
+    ride = timetable.rides[0]
+    assert ride.ride_number == 3
+    # The single-ride endpoint has no short destination
+    assert ride.destination_short is None
+    assert ride.passages[0].timetable_timestamp == datetime(2026, 11, 17, 5, 0)
+
+
+def test_line_direction_stops():
+    stops = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_stops.json"
+        ).get_line_direction_stops(1, 22, LineDirection.TO)
+    )
+    assert len(stops) == 5
+    assert stops[0].number == 102675
+    assert stops[0].description == "Groenplaats"
+
+
+def test_line_direction_detours():
+    detours = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_detours.json"
+        ).get_line_direction_detours(1, 22, LineDirection.TO)
+    )
+    assert len(detours) == 2
+    assert detours[0].title == "Werken in Kasteelpleinstraat - Straat afgesloten"
+    assert detours[0].period.start_date == datetime(2026, 11, 4)
+
+
+def test_line_direction_real_time_timetable():
+    timetable = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_real_time_timetable.json"
+        ).get_line_direction_real_time_timetable(1, 22, LineDirection.TO)
+    )
+    assert len(timetable.rides) == 5
+    passages = [p for ride in timetable.rides for p in ride.passages]
+    assert all(p.prediction_statuses for p in passages)
+    # A passage has a predicted time only when the status says there is one
+    with_prediction = [p for p in passages if p.real_time_timestamp is not None]
+    assert all("REALTIME" in p.prediction_statuses for p in with_prediction)
+    without_prediction = [p for p in passages if p.real_time_timestamp is None]
+    assert all(p.prediction_statuses == ["GEENREALTIME"] for p in without_prediction)
+
+
+def test_line_direction_disruptions_when_there_are_none():
+    disruptions = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_disruptions.json"
+        ).get_line_direction_disruptions(1, 22, LineDirection.TO)
+    )
+    assert disruptions == []
+
+
+def test_line_direction_disruptions():
+    """Recorded by hand from line 33 on 2026-11-17, as disruptions are short-lived."""
+    disruptions = asyncio.run(
+        get_client_for_json(
+            "tests/inputs/kods_client/v1/line_direction_disruptions_example.json"
+        ).get_line_direction_disruptions(1, 33, LineDirection.TO)
+    )
+    assert len(disruptions) == 1
+    assert disruptions[0].description.startswith("Lijn 33:")
+    assert disruptions[0].line_directions[0].line_number == 33

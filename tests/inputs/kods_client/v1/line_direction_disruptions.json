@@ -1,0 +1,9 @@
+{
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/storingen"
+        }
+    ],
+    "storingen": []
+}

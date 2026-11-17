@@ -34,5 +34,9 @@ responses do not contain it. Review the diff before committing: recordings of
 `detours` and `disruptions` depend on what is happening on the network that
 day and may be empty.
 
+`inputs/kods_client/v1/line_direction_disruptions_example.json` is not recorded by
+the script: it is a real disruption of line 33 (2026-11-17), saved by hand because
+the recorded line has none. It only needs replacing if the models change.
+
 Adding a client method makes `test_live_calls_cover_every_client_method` fail
 until it has an entry in `live_calls.py`.

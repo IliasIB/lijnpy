@@ -11,10 +11,10 @@ lijnpy is een asynchrone Python-wrapper voor de [open data API van De Lijn](http
 
 - Entiteiten, gemeenten, vervoerregio's en lijnkleuren opvragen.
 - Haltes en lijnen opvragen per entiteit of per gemeente, en haltes in de buurt van een coördinaat zoeken.
-- Alle lijnen opvragen, en per lijn de details, kleuren, richtingen en gemeenten.
+- Alle lijnen opvragen, en per lijn de details, kleuren, richtingen en gemeenten, en per lijnrichting de dienstregeling (ook real-time, of één rit), haltes, omleidingen en storingen.
 - Per halte de details, richtingen, dienstregeling, real-time doorkomsten, omleidingen en storingen opvragen.
 
-Niet alle endpoints van de API worden al ondersteund (bijvoorbeeld de dienstregeling en haltes per lijnrichting, en `omleidingen` en `storingen` als zelfstandige lijsten). Zie de [issues](https://github.com/IliasIB/lijnpy/issues) voor wat nog ontbreekt.
+Niet alle endpoints van de API worden al ondersteund (bijvoorbeeld `omleidingen` en `storingen` als zelfstandige lijsten). Zie de [issues](https://github.com/IliasIB/lijnpy/issues) voor wat nog ontbreekt.
 
 ## Installatie
 

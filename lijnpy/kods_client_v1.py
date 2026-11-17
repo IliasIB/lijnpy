@@ -22,7 +22,9 @@ from lijnpy.models import (
     Line,
     LineColor,
     LineColorCodes,
+    LineTimetable,
     Municipality,
+    RealTimeLineTimetable,
     RealTimeTimetable,
     Stop,
     StopInVicinity,
@@ -432,6 +434,188 @@ class KODSClientV1:
             f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}",
             Direction,
             params={"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line_direction_timetable(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        *,
+        day: date | None = None,
+    ) -> LineTimetable:
+        """Get the schedule of a line direction, per ride
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            LineTimetable: The rides of the line direction with their passages
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/dienstregelingen",
+            LineTimetable,
+            params={"datum": format_date(day)},
+        )
+
+    async def get_line_direction_ride(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        ride_number: int,
+        *,
+        day: date | None = None,
+    ) -> LineTimetable:
+        """Get a single ride of a line direction
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            ride_number (int): The number of the ride
+            day (date, optional): The day of the ride. Pass it: the API answered
+                404 without it for the rides tried, even for rides that run today.
+
+        Returns:
+            LineTimetable: The ride, in `rides`, with its passages
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/rit/{ride_number}",
+            LineTimetable,
+            params={"datum": format_date(day)},
+        )
+
+    async def get_line_direction_stops(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        *,
+        valid_on: datetime | date | None = None,
+    ) -> list[Stop]:
+        """Get the stops of a line direction
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            valid_on (datetime | date, optional): Only return data valid at this
+                moment, in local Belgian time without a time zone. A date means
+                midnight. Defaults to now (decided by the API).
+
+        Returns:
+            list[Stop]: The stops of the line direction
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/haltes",
+            list[Stop],
+            lambda x: x["haltes"],
+            {"geldigOp": format_datetime(valid_on)},
+        )
+
+    async def get_line_direction_detours(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        *,
+        day: date | None = None,
+    ) -> list[Detour]:
+        """Get the detours of a line direction
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[Detour]: The detours of the line direction
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/omleidingen",
+            list[Detour],
+            lambda x: x["omleidingen"],
+            {"datum": format_date(day)},
+        )
+
+    async def get_line_direction_real_time_timetable(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+    ) -> RealTimeLineTimetable:
+        """Get the real-time schedule of a line direction, per ride
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+
+        Returns:
+            RealTimeLineTimetable: The rides of the line direction with their
+                real-time passages
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/real-time",
+            RealTimeLineTimetable,
+        )
+
+    async def get_line_direction_disruptions(
+        self,
+        entity_number: int,
+        line_number: int,
+        direction: LineDirection,
+        *,
+        day: date | None = None,
+    ) -> list[Disruption]:
+        """Get the disruptions of a line direction
+
+        Args:
+            entity_number (int): The number of the entity
+            line_number (int): The number of the line
+            direction (LineDirection): The direction of the line
+            day (date, optional): The day to get the data for. Defaults to today
+                (decided by the API).
+
+        Returns:
+            list[Disruption]: The disruptions of the line direction
+
+        Raises:
+            DeLijnAPIException: If the API request fails
+        """
+
+        return await self.parse_api_call(
+            f"/lijnen/{entity_number}/{line_number}/lijnrichtingen/{direction.value}/storingen",
+            list[Disruption],
+            lambda x: x["storingen"],
+            {"datum": format_date(day)},
         )
 
     async def get_municipality(self, municipality_number: int) -> Municipality:

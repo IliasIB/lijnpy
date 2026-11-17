@@ -166,6 +166,44 @@ CASES = [
         "/lijnen/1/22/lijnrichtingen/TERUG",
         {"geldigOp": "2026-11-20T08:05:09"},
     ),
+    (
+        "line_direction_timetable",
+        lambda c: c.get_line_direction_timetable(
+            1, 22, LineDirection.TO, day=date(2026, 11, 20)
+        ),
+        "/lijnen/1/22/lijnrichtingen/HEEN/dienstregelingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "line_direction_ride",
+        lambda c: c.get_line_direction_ride(
+            1, 22, LineDirection.TO, 3, day=date(2026, 11, 20)
+        ),
+        "/lijnen/1/22/lijnrichtingen/HEEN/rit/3",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "line_direction_stops",
+        lambda c: c.get_line_direction_stops(1, 22, LineDirection.TO, valid_on=MOMENT),
+        "/lijnen/1/22/lijnrichtingen/HEEN/haltes",
+        {"geldigOp": "2026-11-20T08:05:09"},
+    ),
+    (
+        "line_direction_detours",
+        lambda c: c.get_line_direction_detours(
+            1, 22, LineDirection.TO, day=date(2026, 11, 20)
+        ),
+        "/lijnen/1/22/lijnrichtingen/HEEN/omleidingen",
+        {"datum": "2026-11-20"},
+    ),
+    (
+        "line_direction_disruptions",
+        lambda c: c.get_line_direction_disruptions(
+            1, 22, LineDirection.TO, day=date(2026, 11, 20)
+        ),
+        "/lijnen/1/22/lijnrichtingen/HEEN/storingen",
+        {"datum": "2026-11-20"},
+    ),
 ]
 
 
@@ -199,6 +237,21 @@ def test_nothing_is_sent_without_parameters(fixture, call, path, params):
         "line_colors": lambda c: c.get_line_colors(1, 22),
         "line_directions": lambda c: c.get_line_directions(1, 22),
         "line_direction": lambda c: c.get_line_direction(1, 22, LineDirection.FROM),
+        "line_direction_timetable": lambda c: c.get_line_direction_timetable(
+            1, 22, LineDirection.TO
+        ),
+        "line_direction_ride": lambda c: c.get_line_direction_ride(
+            1, 22, LineDirection.TO, 3
+        ),
+        "line_direction_stops": lambda c: c.get_line_direction_stops(
+            1, 22, LineDirection.TO
+        ),
+        "line_direction_detours": lambda c: c.get_line_direction_detours(
+            1, 22, LineDirection.TO
+        ),
+        "line_direction_disruptions": lambda c: c.get_line_direction_disruptions(
+            1, 22, LineDirection.TO
+        ),
     }[fixture]
     asyncio.run(bare(client))
     assert calls == [(path, None)]
@@ -237,3 +290,9 @@ def test_parameters_reach_the_server_in_the_query_string():
         {"datum": "2026-11-20", "inclusiefLaatsteDoorkomst": "true"},
         {},
     ]
+
+
+def test_line_direction_real_time_has_no_query_parameters():
+    client, calls = recording_client("line_direction_real_time_timetable")
+    asyncio.run(client.get_line_direction_real_time_timetable(1, 22, LineDirection.TO))
+    assert calls == [("/lijnen/1/22/lijnrichtingen/HEEN/real-time", None)]
