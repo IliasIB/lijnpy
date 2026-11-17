@@ -1,0 +1,332 @@
+{
+    "omleidingen": [
+        {
+            "titel": "Wijziging vertrekhalte Lange Steenstraat (T4)",
+            "titelMeertalig": {
+                "engels": "Wijziging vertrekhalte Lange Steenstraat (T4)",
+                "frans": "Wijziging vertrekhalte Lange Steenstraat (T4)",
+                "nederlands": "Wijziging vertrekhalte Lange Steenstraat (T4)",
+                "duits": "Wijziging vertrekhalte Lange Steenstraat (T4)"
+            },
+            "omschrijving": "Periode van vrijdag 16 mei 2025 om 4:00 tot het einde van de werken.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Friday May 16, 2025 at 4:00 until the end of the works.",
+                "frans": "P\u00e9riode allant du vendredi 16 mai 2025 \u00e0 4:00 jusqu'\u00e0 la fin des travaux.",
+                "nederlands": "Periode van vrijdag 16 mei 2025 om 4:00 tot het einde van de werken.",
+                "duits": "Zeitraum von Freitag 16 Mai 2025 von 4:00 bis zum Ende der Bauarbeiten."
+            },
+            "periode": {
+                "startDatum": "2025-05-16T04:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "2",
+                    "lijnnummer": "056",
+                    "richting": "TERUG",
+                    "omschrijving": "Lange Steenstraat - Muide - Rabot - Sint-Pietersstation",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/056/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "2",
+                    "lijnnummer": "045",
+                    "richting": "TERUG",
+                    "omschrijving": "Lange Steenstraat - Muide - Rabot - Sint-Pietersstation - UZ",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/045/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "2",
+                    "lijnnummer": "001",
+                    "richting": "TERUG",
+                    "omschrijving": "Gentbrugge Stelplaats - Korenmarkt - Muidebrug",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/001/lijnrichtingen/TERUG"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "2",
+                    "haltenummer": "200101",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/2/200101"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        },
+        {
+            "titel": "Instortingsgevaar balkon thv halte Dorp",
+            "titelMeertalig": {
+                "engels": "Instortingsgevaar balkon thv halte Dorp",
+                "frans": "Instortingsgevaar balkon thv halte Dorp",
+                "nederlands": "Instortingsgevaar balkon thv halte Dorp",
+                "duits": "Instortingsgevaar balkon thv halte Dorp"
+            },
+            "omschrijving": "Periode van dinsdag 9 juli 2024 tot het einde van de werken.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Tuesday July 9, 2024 until the end of the works.",
+                "frans": "P\u00e9riode allant du mardi 9 juillet 2024 jusqu'\u00e0 la fin des travaux.",
+                "nederlands": "Periode van dinsdag 9 juli 2024 tot het einde van de werken.",
+                "duits": "Zeitraum von Dienstag 9 Juli 2024 bis zum Ende der Bauarbeiten."
+            },
+            "periode": {
+                "startDatum": "2024-07-09T00:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "2",
+                    "lijnnummer": "820",
+                    "richting": "HEEN",
+                    "omschrijving": "Antwerpen L.O. - Beveren - Haasdonk - Sint-Niklaas - Lokeren",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/820/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "2",
+                    "haltenummer": "204308",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/2/204308"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        },
+        {
+            "titel": "Tijdelijke halte Scheldelei",
+            "titelMeertalig": {
+                "engels": "Tijdelijke halte Scheldelei",
+                "frans": "Tijdelijke halte Scheldelei",
+                "nederlands": "Tijdelijke halte Scheldelei",
+                "duits": "Tijdelijke halte Scheldelei"
+            },
+            "omschrijving": "Periode van maandag 8 januari 2024 tot het einde van de werken.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Monday January 8, 2024 until the end of the works.",
+                "frans": "P\u00e9riode allant du lundi 8 janvier 2024 jusqu'\u00e0 la fin des travaux.",
+                "nederlands": "Periode van maandag 8 januari 2024 tot het einde van de werken.",
+                "duits": "Zeitraum von Montag 8 Januar 2024 bis zum Ende der Bauarbeiten."
+            },
+            "periode": {
+                "startDatum": "2024-01-08T00:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "2",
+                    "lijnnummer": "880",
+                    "richting": "HEEN",
+                    "omschrijving": "Kruibeke - Beveren",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/2/880/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "2",
+                    "haltenummer": "205633",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/2/205633"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        },
+        {
+            "titel": "Tijdelijke halteverplaatsing Jan Palfijn",
+            "titelMeertalig": {
+                "engels": "Tijdelijke halteverplaatsing Jan Palfijn",
+                "frans": "Tijdelijke halteverplaatsing Jan Palfijn",
+                "nederlands": "Tijdelijke halteverplaatsing Jan Palfijn",
+                "duits": "Tijdelijke halteverplaatsing Jan Palfijn"
+            },
+            "omschrijving": "Periode van maandag 31 augustus 2026 tot het einde van de werken.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Monday August 31, 2026 until the end of the works.",
+                "frans": "P\u00e9riode allant du lundi 31 ao\u00fbt 2026 jusqu'\u00e0 la fin des travaux.",
+                "nederlands": "Periode van maandag 31 augustus 2026 tot het einde van de werken.",
+                "duits": "Zeitraum von Montag 31 August 2026 bis zum Ende der Bauarbeiten."
+            },
+            "periode": {
+                "startDatum": "2026-08-31T00:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "660",
+                    "richting": "TERUG",
+                    "omschrijving": "Schoten - Ekeren - P+R Luchtbal",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/660/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "033",
+                    "richting": "TERUG",
+                    "omschrijving": "Hoboken - Wilrijk - Merksem - P+R Luchtbal",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/033/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "650",
+                    "richting": "HEEN",
+                    "omschrijving": "Kapellen - Merksem Zwaantjeslei",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/650/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "033",
+                    "richting": "HEEN",
+                    "omschrijving": "P+R Luchtbal - Merksem - Wilrijk - Hoboken",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/033/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "650",
+                    "richting": "TERUG",
+                    "omschrijving": "Merksem Zwaantjeslei - Kapellen",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/650/lijnrichtingen/TERUG"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "109919",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/109919"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        },
+        {
+            "titel": "Werken aan de kerk in Ruisbroek",
+            "titelMeertalig": {
+                "engels": "Werken aan de kerk in Ruisbroek",
+                "frans": "Werken aan de kerk in Ruisbroek",
+                "nederlands": "Werken aan de kerk in Ruisbroek",
+                "duits": "Werken aan de kerk in Ruisbroek"
+            },
+            "omschrijving": "Periode van maandag 1 juli 2024 tot het einde van de werken.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Monday July 1, 2024 until the end of the works.",
+                "frans": "P\u00e9riode allant du lundi 1 juillet 2024 jusqu'\u00e0 la fin des travaux.",
+                "nederlands": "Periode van maandag 1 juli 2024 tot het einde van de werken.",
+                "duits": "Zeitraum von Montag 1 Juli 2024 bis zum Ende der Bauarbeiten."
+            },
+            "periode": {
+                "startDatum": "2024-07-01T00:00:00"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "3",
+                    "lijnnummer": "110",
+                    "richting": "HEEN",
+                    "omschrijving": "Jette UZ - Dilbeek - Anderlecht - Ruisbroek - Halle",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/3/110/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "3",
+                    "haltenummer": "310644",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/3/310644"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/omleidingen?startDatum=2026-11-17T00:00:00"
+        }
+    ]
+}

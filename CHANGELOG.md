@@ -11,6 +11,13 @@
 
 ### Added
 
+- Detour and disruption listings: `get_all_detours` (`/omleidingen`, with
+  optional `start` and `end`, at most 30 days apart),
+  `get_detours_by_line_directions` and `get_disruptions_by_line_directions`
+  (several line directions in one call, as `(entity, line, direction)` tuples).
+  The disruptions list is returned as `Detour` objects, because that is the shape
+  the API gives it. The `berichten` (messages) endpoints are not added: all of
+  them answer 404 on the live API.
 - Line direction endpoints: `get_line_direction_timetable`,
   `get_line_direction_ride`, `get_line_direction_stops`,
   `get_line_direction_detours`, `get_line_direction_real_time_timetable` and
