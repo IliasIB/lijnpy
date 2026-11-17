@@ -11,6 +11,16 @@
 
 ### Added
 
+- Optional keyword-only arguments for the query parameters of the API; leaving
+  them out changes nothing:
+  - `valid_on` (`geldigOp`, a `datetime` or `date`): `get_stop`, `get_stops`,
+    `get_stops_by_entity`, `get_lines`, `get_lines_by_entity`, `get_directions`
+  - `day` (`datum`, a `date`): `get_timetable`, `get_detours`, `get_disruptions`
+  - `include_last_passage` (`inclusiefLaatsteDoorkomst`): `get_timetable`
+  - `max_passages` (`maxAantalDoorkomsten`): `get_real_time_timetable`
+  - `radius` and `max_stops` (`maxAantalHaltes`, at most 50): `get_stops_in_vicinity`
+
+  A `datetime` must be naive, in local Belgian time: the API takes no UTC offset.
 - `from lijnpy import KODSClientV1, DeLijnAPIException` now works
   (`lijnpy.__all__` is defined)
 
