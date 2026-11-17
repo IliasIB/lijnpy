@@ -1,0 +1,9 @@
+{
+    "halteOmleidingen": [],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/lijst/1_102675_1_101130/storingen"
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "halteLijnrichtingen": [
+        {
+            "halte": {
+                "entiteitnummer": "1",
+                "haltenummer": "102675",
+                "halteToegankelijkheden": [],
+                "hoofdHalte": null,
+                "bedieningsTypes": null,
+                "links": [
+                    {
+                        "rel": "lijnrichtingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/lijnrichtingen"
+                    },
+                    {
+                        "rel": "real-time",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/real-time"
+                    },
+                    {
+                        "rel": "dienstregelingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/dienstregelingen"
+                    },
+                    {
+                        "rel": "omleidingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/omleidingen"
+                    },
+                    {
+                        "rel": "storingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675/storingen"
+                    }
+                ]
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "180",
+                    "richting": "HEEN",
+                    "omschrijving": "Antwerpen Groenplaats - Aartselaar",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "180",
+                    "richting": "TERUG",
+                    "omschrijving": "Aartselaar - Antwerpen Groenplaats",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/180/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "182",
+                    "richting": "HEEN",
+                    "omschrijving": "Antwerpen Groenplaats - Aartselaar - Boom",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "182",
+                    "richting": "TERUG",
+                    "omschrijving": "Boom - Aartselaar - Antwerpen Groenplaats",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/182/lijnrichtingen/TERUG"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "181",
+                    "richting": "HEEN",
+                    "omschrijving": "Antwerpen Groenplaats - Aartselaar - Terhagen",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/181/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "halte": {
+                "entiteitnummer": "1",
+                "haltenummer": "101130",
+                "halteToegankelijkheden": [],
+                "hoofdHalte": null,
+                "bedieningsTypes": null,
+                "links": [
+                    {
+                        "rel": "lijnrichtingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/lijnrichtingen"
+                    },
+                    {
+                        "rel": "real-time",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/real-time"
+                    },
+                    {
+                        "rel": "dienstregelingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/dienstregelingen"
+                    },
+                    {
+                        "rel": "omleidingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/omleidingen"
+                    },
+                    {
+                        "rel": "storingen",
+                        "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130/storingen"
+                    }
+                ]
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "22",
+                    "richting": "HEEN",
+                    "omschrijving": "Groenplaats - Valaar - UZA",
+                    "links": [
+                        {
+                            "rel": "detail",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/lijst/1_102675_1_101130/lijnrichtingen"
+        }
+    ]
+}

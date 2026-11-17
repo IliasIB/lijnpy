@@ -329,6 +329,105 @@ def test_disruptions_by_line_directions_example():
     assert disruptions[0].directions[0].line_number == 33
 
 
+FIXTURE_DIRECTORY = "tests/inputs/kods_client/v1/"
+STOPS = [(1, 102675), (1, 101130)]
+
+
+def test_all_stops():
+    stops = asyncio.run(
+        get_client_for_json(FIXTURE_DIRECTORY + "all_stops.json").get_all_stops()
+    )
+    assert len(stops) == 5
+
+
+def test_stops_by_keys():
+    stops = asyncio.run(
+        get_client_for_json(FIXTURE_DIRECTORY + "stops_by_keys.json").get_stops_by_keys(
+            STOPS
+        )
+    )
+    # The API answers in the order of the stop numbers, not of the request
+    assert [stop.number for stop in stops] == [101130, 102675]
+
+
+def test_timetables_by_keys():
+    timetables = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "timetables_by_keys.json"
+        ).get_timetables_by_keys(STOPS)
+    )
+    assert [t.stop_number for t in timetables] == [102675, 101130]
+    assert timetables[0].passages
+    # A stop without passages comes back as an empty timetable
+    assert timetables[1].passages == []
+
+
+def test_directions_by_keys():
+    stop_directions = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "directions_by_keys.json"
+        ).get_directions_by_keys(STOPS)
+    )
+    assert [d.stop_number for d in stop_directions] == [102675, 101130]
+    assert stop_directions[0].entity_number == 1
+    assert stop_directions[0].directions
+
+
+def test_detours_by_keys():
+    stop_detours = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "detours_by_keys.json"
+        ).get_detours_by_keys([(1, 101130), (1, 104539)])
+    )
+    assert [d.stop_number for d in stop_detours] == [101130, 104539]
+    assert stop_detours[0].detours[0].title
+
+
+def test_disruptions_by_keys():
+    assert (
+        asyncio.run(
+            get_client_for_json(
+                FIXTURE_DIRECTORY + "disruptions_by_keys.json"
+            ).get_disruptions_by_keys(STOPS)
+        )
+        == []
+    )
+
+
+def test_disruptions_by_keys_example():
+    """A real disruption at a stop of line 33 (2026-11-17)."""
+    stop_disruptions = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "disruptions_by_keys_example.json"
+        ).get_disruptions_by_keys([(1, 151172)])
+    )
+    assert stop_disruptions[0].stop_number == 151172
+    assert stop_disruptions[0].detours
+
+
+def test_real_time_timetables_by_keys():
+    timetables = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "real_time_timetables_by_keys.json"
+        ).get_real_time_timetables_by_keys(STOPS)
+    )
+    assert timetables[0].stop_number == 102675
+    # Passages without real-time data have no real-time timestamp or vrtnum
+    passages = timetables[0].passages
+    assert any(p.real_time_timestamp is None and p.vrtnum is None for p in passages)
+    assert any(p.real_time_timestamp is not None for p in passages)
+
+
+def test_stops_by_municipalities():
+    municipalities = asyncio.run(
+        get_client_for_json(
+            FIXTURE_DIRECTORY + "stops_by_municipalities.json"
+        ).get_stops_by_municipalities([482, 483])
+    )
+    assert municipalities[0].municipality.number == 482
+    assert municipalities[0].stops
+
+
 def test_real_time_timetable():
     real_time_timetable = asyncio.run(
         get_client_for_json(

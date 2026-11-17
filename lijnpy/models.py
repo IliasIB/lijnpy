@@ -280,12 +280,14 @@ class Timetable(BaseModel):
     """A timetable of a stop
 
     Attributes:
+        stop_number (int, optional): The number of the stop, as the API gives it
         passages (list[Passage]): The passages of the schedule
         passage_notes (list[PassageNote]): The notes of the passages
         ride_notes (list[RideNote]): The notes of the rides
         detours (list[Detour]): The detours of the schedule
     """
 
+    stop_number: int | None = None
     passages: list[Passage]
     passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
     ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
@@ -293,7 +295,10 @@ class Timetable(BaseModel):
 
     def __init__(self, **kwargs):
         try:
-            kwargs["passages"] = kwargs["halteDoorkomsten"][0]["doorkomsten"]
+            # A batch request answers with no stops at all for a stop without passages
+            stops = kwargs["halteDoorkomsten"]
+            kwargs["passages"] = stops[0]["doorkomsten"] if stops else []
+            kwargs["stop_number"] = stops[0].get("haltenummer") if stops else None
         except KeyError as e:
             _logger.error(f"Failed to parse the response from the API: {e}")
             raise DeLijnAPIException from e
@@ -324,16 +329,20 @@ class Detour(BaseModel):
         description (str): The description of the detour
         period (DetourPeriod): The period of the detour
         directions (list[Direction]): The directions of the detour
-        detour_reference (int): The reference of the detour
-        detour_days (list[str]): The days of the detour
+        detour_reference (int, optional): The reference of the detour. Defaults to
+            None; the API leaves it out for disruptions at a stop.
+        detour_days (list[str]): The days of the detour. Empty when the API leaves
+            it out.
     """
 
     title: str = Field(validation_alias="titel")
     description: str = Field(validation_alias="omschrijving")
     period: DetourPeriod = Field(validation_alias="periode")
     directions: list[Direction] = Field(validation_alias="lijnrichtingen")
-    detour_reference: int = Field(validation_alias="referentieOmleiding")
-    detour_days: list[str] = Field(validation_alias="omleidingsDagen")
+    detour_reference: int | None = Field(
+        default=None, validation_alias="referentieOmleiding"
+    )
+    detour_days: list[str] = Field(default=[], validation_alias="omleidingsDagen")
 
 
 class RealTimePassage(BaseModel):
@@ -347,8 +356,11 @@ class RealTimePassage(BaseModel):
         destination (str): The destination of the ride
         vias (list[str], optional): The vias of the ride. Defaults to None.
         timetable_timestamp (datetime): The timestamp of the timetable
-        real_time_timestamp (datetime): The timestamp of the real-time
-        vrtnum (int): The number of the real-time
+        real_time_timestamp (datetime, optional): The timestamp of the real-time.
+            Defaults to None; the API leaves it out for passages with status
+            GEENREALTIME.
+        vrtnum (int, optional): The number of the real-time. Defaults to None, like
+            real_time_timestamp.
         prediction_statuses (list[str]): The statuses of the prediction
     """
 
@@ -359,8 +371,10 @@ class RealTimePassage(BaseModel):
     destination: str = Field(validation_alias="bestemming")
     vias: list[str] | None = Field(default=None)
     timetable_timestamp: datetime = Field(validation_alias="dienstregelingTijdstip")
-    real_time_timestamp: datetime = Field(validation_alias="real-timeTijdstip")
-    vrtnum: int
+    real_time_timestamp: datetime | None = Field(
+        default=None, validation_alias="real-timeTijdstip"
+    )
+    vrtnum: int | None = None
     prediction_statuses: list[str] = Field(validation_alias="predictionStatussen")
 
 
@@ -378,12 +392,14 @@ class RealTimeTimetable(BaseModel):
     """A real-time timetable of a stop
 
     Attributes:
+        stop_number (int, optional): The number of the stop, as the API gives it
         passages (list[RealTimePassage]): The real-time arrivals of the stop
         passage_notes (list[PassageNote]): The notes of the passages
         ride_notes (list[RideNote]): The notes of the rides
         detours (list[Detour]): The detours of the stop
     """
 
+    stop_number: int | None = None
     passages: list[RealTimePassage]
     passage_notes: list[PassageNote] = Field(validation_alias="doorkomstNotas")
     ride_notes: list[RideNote] = Field(validation_alias="ritNotas")
@@ -391,7 +407,10 @@ class RealTimeTimetable(BaseModel):
 
     def __init__(self, **kwargs):
         try:
-            kwargs["passages"] = kwargs["halteDoorkomsten"][0]["doorkomsten"]
+            # A batch request answers with no stops at all for a stop without passages
+            stops = kwargs["halteDoorkomsten"]
+            kwargs["passages"] = stops[0]["doorkomsten"] if stops else []
+            kwargs["stop_number"] = stops[0].get("haltenummer") if stops else None
         except KeyError as e:
             _logger.error(f"Failed to parse the response from the API: {e}")
             raise DeLijnAPIException from e
@@ -517,3 +536,44 @@ class Disruption(BaseModel):
 
     description: str = Field(validation_alias="omschrijving")
     line_directions: list[Direction] = Field(validation_alias="lijnrichtingen")
+
+
+class StopDirections(BaseModel):
+    """The line directions that serve one stop of a batch request
+
+    Attributes:
+        entity_number (int): The number of the entity of the stop
+        stop_number (int): The number of the stop
+        directions (list[Direction]): The line directions serving the stop
+    """
+
+    entity_number: int = Field(validation_alias=AliasPath("halte", "entiteitnummer"))
+    stop_number: int = Field(validation_alias=AliasPath("halte", "haltenummer"))
+    directions: list[Direction] = Field(validation_alias="lijnrichtingen")
+
+
+class StopDetours(BaseModel):
+    """The detours (or disruptions) of one stop of a batch request
+
+    Attributes:
+        entity_number (int): The number of the entity of the stop
+        stop_number (int): The number of the stop
+        detours (list[Detour]): The detours of the stop. The API describes
+            disruptions with the same fields.
+    """
+
+    entity_number: int = Field(validation_alias=AliasPath("halte", "entiteitnummer"))
+    stop_number: int = Field(validation_alias=AliasPath("halte", "haltenummer"))
+    detours: list[Detour] = Field(validation_alias="omleidingen")
+
+
+class MunicipalityStops(BaseModel):
+    """The stops of one municipality of a batch request
+
+    Attributes:
+        municipality (Municipality): The municipality
+        stops (list[Stop]): The stops in the municipality
+    """
+
+    municipality: Municipality = Field(validation_alias="gemeente")
+    stops: list[Stop] = Field(validation_alias="haltes")

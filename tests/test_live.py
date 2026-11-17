@@ -21,6 +21,7 @@ from live_calls import (
     MUNICIPALITY,
     RIDE,
     STOP,
+    STOPS,
     get_api_key,
     get_calls,
 )
@@ -70,6 +71,23 @@ PARAMETER_CALLS = {
         ENTITY, STOP, max_passages=2
     ),
     "get_disruptions": lambda c: c.get_disruptions(ENTITY, STOP, day=date.today()),
+    "get_stops_by_keys": lambda c: c.get_stops_by_keys(STOPS, valid_on=datetime.now()),
+    "get_timetables_by_keys": lambda c: c.get_timetables_by_keys(
+        STOPS, day=date.today() + timedelta(days=1)
+    ),
+    "get_directions_by_keys": lambda c: c.get_directions_by_keys(
+        STOPS, valid_on=datetime.now()
+    ),
+    "get_detours_by_keys": lambda c: c.get_detours_by_keys(STOPS, day=date.today()),
+    "get_disruptions_by_keys": lambda c: c.get_disruptions_by_keys(
+        STOPS, day=date.today()
+    ),
+    "get_real_time_timetables_by_keys": lambda c: c.get_real_time_timetables_by_keys(
+        STOPS, max_passages=2
+    ),
+    "get_stops_by_municipalities": lambda c: c.get_stops_by_municipalities(
+        [MUNICIPALITY, 483], valid_on=datetime.now()
+    ),
     "get_all_lines": lambda c: c.get_all_lines(valid_on=datetime.now()),
     "get_line": lambda c: c.get_line(ENTITY, LINE, valid_on=datetime.now()),
     "get_municipalities_by_line": lambda c: c.get_municipalities_by_line(
