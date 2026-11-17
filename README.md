@@ -66,7 +66,7 @@ De volledige API-documentatie staat op <https://iliasib.github.io/lijnpy/lijnpy.
 
 ## Bijdragen
 
-Hoe je de tests draait en de testdata vernieuwt staat in [tests/README.md](tests/README.md), en hoe een release werkt in [RELEASING.md](RELEASING.md).
+Hoe je de tests draait en de testdata vernieuwt staat in [tests/README.md](tests/README.md), hoe een release werkt in [RELEASING.md](RELEASING.md), en de OpenAPI-specificatie van De Lijn (met de verschillen met de echte API) staat in [docs/openapi/](docs/openapi/README.md).
 
 ## Licentie
 
