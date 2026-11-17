@@ -1,0 +1,409 @@
+{
+    "ritDoorkomsten": [
+        {
+            "ritnummer": "3",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [
+                "via Bist"
+            ],
+            "bestemmingKort": "Edegem UZA",
+            "doorkomsten": [
+                {
+                    "haltenummer": "102675",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "103475",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103475"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "102540",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102540"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "104539",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104539"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "101130",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ritnummer": "5",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [
+                "via Bist"
+            ],
+            "bestemmingKort": "Edegem UZA",
+            "doorkomsten": [
+                {
+                    "haltenummer": "102675",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "103475",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103475"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "102540",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102540"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "104539",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104539"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "101130",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ritnummer": "7",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [],
+            "bestemmingKort": "Edegem UZA",
+            "doorkomsten": [
+                {
+                    "doorkomstId": "2026-11-17_1022_7_1_102675",
+                    "haltenummer": "102675",
+                    "dienstregelingTijdstip": "2026-11-17T05:15:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_7_2_103475",
+                    "haltenummer": "103475",
+                    "dienstregelingTijdstip": "2026-11-17T05:16:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103475"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_7_3_102540",
+                    "haltenummer": "102540",
+                    "dienstregelingTijdstip": "2026-11-17T05:17:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102540"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_7_4_151130",
+                    "haltenummer": "151130",
+                    "dienstregelingTijdstip": "2026-11-17T05:18:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/151130"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_7_7_104945",
+                    "haltenummer": "104945",
+                    "dienstregelingTijdstip": "2026-11-17T05:20:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104945"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ritnummer": "9",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [
+                "via Bist"
+            ],
+            "bestemmingKort": "Edegem UZA",
+            "doorkomsten": [
+                {
+                    "haltenummer": "102675",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "103475",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103475"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "102540",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102540"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "104539",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104539"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "haltenummer": "101130",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ritnummer": "11",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [],
+            "bestemmingKort": "Edegem UZA",
+            "doorkomsten": [
+                {
+                    "doorkomstId": "2026-11-17_1022_11_1_102675",
+                    "haltenummer": "102675",
+                    "dienstregelingTijdstip": "2026-11-17T05:45:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102675"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_11_2_103475",
+                    "haltenummer": "103475",
+                    "dienstregelingTijdstip": "2026-11-17T05:46:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103475"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_11_3_102540",
+                    "haltenummer": "102540",
+                    "dienstregelingTijdstip": "2026-11-17T05:47:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102540"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_11_4_151130",
+                    "haltenummer": "151130",
+                    "dienstregelingTijdstip": "2026-11-17T05:48:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/151130"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_11_7_104945",
+                    "haltenummer": "104945",
+                    "dienstregelingTijdstip": "2026-11-17T05:50:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104945"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/dienstregelingen"
+        }
+    ],
+    "doorkomstNotas": [],
+    "ritNotas": [],
+    "omleidingen": []
+}

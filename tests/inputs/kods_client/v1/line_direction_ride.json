@@ -1,0 +1,98 @@
+{
+    "ritDoorkomsten": [
+        {
+            "ritnummer": "3",
+            "bestemming": "Edegem UZA",
+            "plaatsBestemming": "Edegem UZA",
+            "vias": [
+                "via Bist"
+            ],
+            "doorkomsten": [
+                {
+                    "doorkomstId": "2026-11-17_1022_3_3_105370",
+                    "haltenummer": "105370",
+                    "dienstregelingTijdstip": "2026-11-17T05:00:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/105370"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_3_4_103530",
+                    "haltenummer": "103530",
+                    "dienstregelingTijdstip": "2026-11-17T05:01:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/103530"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_3_5_101989",
+                    "haltenummer": "101989",
+                    "dienstregelingTijdstip": "2026-11-17T05:02:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101989"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_3_6_101026",
+                    "haltenummer": "101026",
+                    "dienstregelingTijdstip": "2026-11-17T05:02:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101026"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                },
+                {
+                    "doorkomstId": "2026-11-17_1022_3_7_101023",
+                    "haltenummer": "101023",
+                    "dienstregelingTijdstip": "2026-11-17T05:02:00",
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101023"
+                        },
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/rit/3?datum=2026-11-17"
+        }
+    ],
+    "doorkomstNotas": [],
+    "ritNotas": [],
+    "omleidingen": []
+}

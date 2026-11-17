@@ -1,0 +1,177 @@
+{
+    "omleidingen": [
+        {
+            "titel": "Werken in Kasteelpleinstraat - Straat afgesloten",
+            "titelMeertalig": {
+                "engels": "Werken in Kasteelpleinstraat - Straat afgesloten",
+                "frans": "Werken in Kasteelpleinstraat - Straat afgesloten",
+                "nederlands": "Werken in Kasteelpleinstraat - Straat afgesloten",
+                "duits": "Werken in Kasteelpleinstraat - Straat afgesloten"
+            },
+            "omschrijving": "Periode van woensdag 4 november 2026 tot en met maandag 21 december 2026.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Wednesday November 4, 2026 runs through Monday December 21, 2026.",
+                "frans": "P\u00e9riode allant du mercredi 4 novembre 2026 sera en vigueur jusqu'au lundi 21 d\u00e9cembre 2026.",
+                "nederlands": "Periode van woensdag 4 november 2026 tot en met maandag 21 december 2026.",
+                "duits": "Zeitraum von Mittwoch 4 November 2026 wird bis Montag 21 Dezember 2026 gelten."
+            },
+            "periode": {
+                "startDatum": "2026-11-04T00:00:00",
+                "eindDatum": "2026-12-21T23:59:59"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "022",
+                    "richting": "HEEN",
+                    "omschrijving": "Groenplaats - Valaar - UZA",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/022/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "101130",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101130"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "104539",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/104539"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        },
+        {
+            "titel": "Werken Camille Huysmanslaan richting Kiel",
+            "titelMeertalig": {
+                "engels": "Werken Camille Huysmanslaan richting Kiel",
+                "frans": "Werken Camille Huysmanslaan richting Kiel",
+                "nederlands": "Werken Camille Huysmanslaan richting Kiel",
+                "duits": "Werken Camille Huysmanslaan richting Kiel"
+            },
+            "omschrijving": "Periode van dinsdag 3 november 2026 tot en met vrijdag 11 december 2026.",
+            "omschrijvingMeertalig": {
+                "engels": "Period from Tuesday November 3, 2026 runs through Friday December 11, 2026.",
+                "frans": "P\u00e9riode allant du mardi 3 novembre 2026 sera en vigueur jusqu'au vendredi 11 d\u00e9cembre 2026.",
+                "nederlands": "Periode van dinsdag 3 november 2026 tot en met vrijdag 11 december 2026.",
+                "duits": "Zeitraum von Dienstag 3 November 2026 wird bis Freitag 11 Dezember 2026 gelten."
+            },
+            "periode": {
+                "startDatum": "2026-11-03T00:00:00",
+                "eindDatum": "2026-12-11T23:59:59"
+            },
+            "lijnrichtingen": [
+                {
+                    "entiteitnummer": "1",
+                    "lijnnummer": "022",
+                    "richting": "HEEN",
+                    "omschrijving": "Groenplaats - Valaar - UZA",
+                    "links": [
+                        {
+                            "rel": "lijnrichting",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/022/lijnrichtingen/HEEN"
+                        }
+                    ]
+                }
+            ],
+            "haltes": [
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "105485",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/105485"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "102869",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102869"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "102470",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102470"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "102950",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/102950"
+                        }
+                    ]
+                },
+                {
+                    "entiteitnummer": "1",
+                    "haltenummer": "101665",
+                    "halteToegankelijkheden": [],
+                    "hoofdHalte": null,
+                    "bedieningsTypes": null,
+                    "links": [
+                        {
+                            "rel": "halte",
+                            "url": "https://api.delijn.be/DLKernOpenData/api/v1/haltes/1/101665"
+                        }
+                    ]
+                }
+            ],
+            "referentieOmleiding": 0,
+            "omleidingsDagen": []
+        }
+    ],
+    "links": [
+        {
+            "rel": "self",
+            "url": "https://api.delijn.be/DLKernOpenData/api/v1/lijnen/1/22/lijnrichtingen/HEEN/omleidingen"
+        }
+    ]
+}

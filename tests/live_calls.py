@@ -5,6 +5,7 @@ factory that performs the call. The IDs below must exist in the live API.
 """
 
 import os
+from datetime import date
 from collections.abc import Awaitable, Callable
 
 from pydantic_extra_types.coordinate import Latitude, Longitude
@@ -22,6 +23,7 @@ REGION = "AN"  # Antwerpen transport region
 COLOR = "TU"
 LINE = 22  # Groenplaats - UZA, in entity 1
 DIRECTION = LineDirection.TO
+RIDE = 3  # a ride of line 22 in direction HEEN; the API needs the day for it
 LOCATION = GeoCoordinate(latitude=Latitude(51.2194), longitude=Longitude(4.4025))
 
 
@@ -67,6 +69,34 @@ def get_calls(
         "get_line_direction": (
             "line_direction",
             lambda: client.get_line_direction(ENTITY, LINE, DIRECTION),
+        ),
+        "get_line_direction_timetable": (
+            "line_direction_timetable",
+            lambda: client.get_line_direction_timetable(ENTITY, LINE, DIRECTION),
+        ),
+        "get_line_direction_ride": (
+            "line_direction_ride",
+            lambda: client.get_line_direction_ride(
+                ENTITY, LINE, DIRECTION, RIDE, day=date.today()
+            ),
+        ),
+        "get_line_direction_stops": (
+            "line_direction_stops",
+            lambda: client.get_line_direction_stops(ENTITY, LINE, DIRECTION),
+        ),
+        "get_line_direction_detours": (
+            "line_direction_detours",
+            lambda: client.get_line_direction_detours(ENTITY, LINE, DIRECTION),
+        ),
+        "get_line_direction_real_time_timetable": (
+            "line_direction_real_time_timetable",
+            lambda: client.get_line_direction_real_time_timetable(
+                ENTITY, LINE, DIRECTION
+            ),
+        ),
+        "get_line_direction_disruptions": (
+            "line_direction_disruptions",
+            lambda: client.get_line_direction_disruptions(ENTITY, LINE, DIRECTION),
         ),
         "get_municipalities": ("municipalities", lambda: client.get_municipalities()),
         "get_municipality": (
